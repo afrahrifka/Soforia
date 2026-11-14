@@ -1,0 +1,25 @@
+name: "📖 Perbaikan panduan"
+description: Laporkan petunjuk yang membingungkan, salah, atau kurang lengkap.
+title: "[Panduan] "
+body:
+  - type: input
+    id: lokasi
+    attributes:
+      label: Bagian mana yang perlu diperbaiki?
+      description: Sebutkan nama halaman, judul bagian, atau tautannya.
+    validations:
+      required: true
+  - type: textarea
+    id: masalah
+    attributes:
+      label: Apa yang membingungkan atau kurang tepat?
+      placeholder: "Contoh: Saya tidak tahu cara menemukan alamat Wi-Fi laptop pada langkah ini."
+    validations:
+      required: true
+  - type: textarea
+    id: saran
+    attributes:
+      label: Apa yang akan membantu?
+      description: Saran perbaikan boleh dikosongkan jika belum tahu.
+    validations:
+      required: false

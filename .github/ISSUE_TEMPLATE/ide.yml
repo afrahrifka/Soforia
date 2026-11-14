@@ -1,0 +1,37 @@
+name: "💡 Bagikan ide"
+description: Usulkan ide game, pengalaman bermain, atau perbaikan. Tidak perlu bisa coding.
+title: "[Ide] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Terima kasih sudah berbagi ide! Ceritakan dengan bahasa sehari-hari; tidak perlu tahu cara membuatnya. Issue ini dapat dilihat publik, jadi jangan cantumkan informasi pribadi, kode sesi, atau jawaban pribadi pemain.
+  - type: textarea
+    id: ide
+    attributes:
+      label: Apa idemu?
+      description: Ceritakan apa yang ingin kamu lihat atau lakukan.
+      placeholder: "Contoh: Ada permainan menyusun piknik bersama dengan dua HP sebagai kontrol."
+    validations:
+      required: true
+  - type: textarea
+    id: alasan
+    attributes:
+      label: Mengapa ide ini menarik atau membantu?
+      placeholder: "Contoh: Kami ingin permainan santai yang bisa dimainkan sambil mengobrol."
+    validations:
+      required: true
+  - type: textarea
+    id: pengalaman
+    attributes:
+      label: Seperti apa pengalaman yang kamu bayangkan?
+      description: Boleh ceritakan contoh cara bermain atau situasi penggunaannya. Kosongkan jika belum terpikir.
+    validations:
+      required: false
+  - type: textarea
+    id: tambahan
+    attributes:
+      label: Informasi tambahan
+      description: Tambahkan sketsa, gambar buatan sendiri, atau tautan jika membantu dan kamu berhak membagikannya. Tidak wajib.
+    validations:
+      required: false

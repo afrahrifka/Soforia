@@ -1,0 +1,30 @@
+{
+  "id": "orbit-duo",
+  "version": "0.1.0",
+  "apiVersion": 1,
+  "title": {
+    "id": "Orbit Berdua",
+    "en": "Orbit Together"
+  },
+  "players": {
+    "min": 2,
+    "max": 2
+  },
+  "roundMinutes": {
+    "min": 3,
+    "max": 5
+  },
+  "genres": [
+    "cooperative",
+    "arcade"
+  ],
+  "modes": [
+    "relaxed",
+    "challenge"
+  ],
+  "controllerLayout": "move-action",
+  "entry": "games/orbit-duo/index.js",
+  "assets": [],
+  "offline": true,
+  "status": "specification-only"
+}

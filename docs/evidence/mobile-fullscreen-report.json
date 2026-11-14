@@ -1,0 +1,20 @@
+{
+  "result": "PASS",
+  "checks": [
+    "controller trusted gesture enters real native Fullscreen API",
+    "controller fills available viewport with no page header/footer"
+  ],
+  "dimensions": {
+    "width": 958,
+    "height": 394,
+    "screenWidth": 1920,
+    "screenHeight": 1080,
+    "outerWidth": 958,
+    "outerHeight": 538,
+    "pixelRatio": 1,
+    "controllerWidth": 958,
+    "controllerHeight": 394,
+    "controlsOnly": true
+  },
+  "limitation": "Real Chromium desktop Fullscreen API. Desktop window geometry is controlled by the compositor; this checks the Fullscreen API and viewport fit, not physical monitor coverage. Android/iOS browser chrome and device compatibility still require phone testing."
+}

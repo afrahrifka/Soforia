@@ -1,17 +1,19 @@
-## 📝 Deskripsi
+## Ringkasan
 
----
+Jelaskan perubahan dan alasan perlunya dengan singkat.
 
-## 📋 List Perubahan
+## Issue terkait
 
-(Tempel hasil log commit Anda di sini)
+Tautkan issue jika ada, misalnya `Closes #123` jika PR ini menyelesaikannya.
 
+## Cara memeriksa
 
----
+Sebutkan langkah dan hasil pemeriksaan yang benar-benar dilakukan. Jika belum diuji, jelaskan alasannya. Lampirkan gambar untuk perubahan tampilan bila membantu, tanpa data pribadi atau secret sesi.
 
-## ✅ Checklist
+## Checklist
 
-- [ ] Judul PR saya sudah sesuai dengan format Conventional Commits.
-- [ ] Saya telah menjalankan perintah `git log` dan menempelkan hasilnya di bagian "Changelog dari Commit".
-- [ ] Kode saya sudah lolos dari semua *linter* dan *test* yang ada.
-- [ ] Saya sudah memperbarui dokumentasi yang relevan (jika ada).
+- [ ] Judul PR mengikuti format seperti `fix: perbaiki koneksi controller` atau `docs: perjelas panduan`.
+- [ ] Perubahan sesuai cakupan proyek dan dokumentasi terkait sudah diperbarui bila perlu.
+- [ ] Pengujian yang relevan sudah dijalankan atau keterbatasannya dijelaskan di atas.
+- [ ] Saya berhak menyumbangkan kode/aset ini dan mengikuti [Kode Etik](CODE_OF_CONDUCT.md).
+- [ ] Tidak ada secret sesi, jawaban pribadi, atau data pribadi dalam perubahan dan bukti.

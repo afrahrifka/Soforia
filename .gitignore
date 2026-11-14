@@ -1,0 +1,22 @@
+# Dependensi dan hasil build
+node_modules/
+dist/
+artifacts/
+.runtime/
+runtime/
+test-results/
+playwright-report/
+coverage/
+
+# Konfigurasi lokal dan data sensitif
+.env
+.env.*
+!.env.example
+*.log
+*.local
+
+# Berkas editor dan sistem
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

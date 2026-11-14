@@ -1,0 +1,37 @@
+name: "🐛 Laporkan masalah"
+description: Ceritakan sesuatu yang tidak berjalan seperti harapan, termasuk masalah instalasi.
+title: "[Masalah] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ceritakan sebisamu; tidak perlu istilah teknis. Laporan ini publik. Hapus kode QR, kode atau secret sesi, alamat pribadi, jawaban pemain, dan informasi pribadi dari gambar maupun pesan sebelum mengirim.
+  - type: textarea
+    id: kejadian
+    attributes:
+      label: Apa yang terjadi?
+      placeholder: "Contoh: Setelah memindai QR, HP tidak menampilkan tombol permainan."
+    validations:
+      required: true
+  - type: textarea
+    id: langkah
+    attributes:
+      label: Apa yang kamu lakukan sebelumnya?
+      description: Tuliskan langkah yang kamu ingat agar kami bisa mencoba mengulanginya.
+      placeholder: "1. Hubungkan HP ke Wi-Fi\n2. Buka kamera dan pindai QR\n3. ..."
+    validations:
+      required: true
+  - type: textarea
+    id: harapan
+    attributes:
+      label: Apa yang kamu harapkan terjadi?
+      placeholder: "Contoh: Tombol controller muncul di HP."
+    validations:
+      required: true
+  - type: textarea
+    id: perangkat
+    attributes:
+      label: Perangkat dan informasi tambahan
+      description: Jika tahu, sebutkan versi Main Bareng, sistem laptop, jenis HP, browser, dan pesan kesalahan. Gambar yang sudah dibersihkan boleh dilampirkan.
+    validations:
+      required: false

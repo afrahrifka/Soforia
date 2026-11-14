@@ -1,0 +1,14 @@
+import { chromium } from '@playwright/test';
+import { spawn } from 'node:child_process';
+import { writeFile, mkdtemp, rm } from 'node:fs/promises';
+import assert from 'node:assert/strict';
+if(!process.env.DISPLAY&&!process.env.WAYLAND_DISPLAY)throw Error('Desktop grafis diperlukan untuk menguji native fullscreen.');
+const port=39510,base=`http://127.0.0.1:${port}`,child=spawn(process.execPath,['dist/server.mjs','--host','127.0.0.1','--port',String(port)],{stdio:'ignore'});let browser;const profile=await mkdtemp('/tmp/main-bareng-native-fullscreen-');
+try{
+ for(let i=0;i<60;i++){try{if((await fetch(base+'/healthz')).ok)break;}catch{}await new Promise(r=>setTimeout(r,100));}
+ browser=await chromium.launchPersistentContext(profile,{viewport:null,executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE||'/usr/sbin/chromium',headless:false,args:['--no-sandbox'],ignoreDefaultArgs:['--enable-automation']});
+ const context=browser,display=context.pages()[0]||await context.newPage();let invitation;display.on('websocket',ws=>ws.on('framereceived',e=>{try{const m=JSON.parse(String(e.payload));if(m.type==='game.snapshot')invitation=m.payload.pairing.url;}catch{}}));await display.goto(`http://127.0.0.1:${port+1}/console`);await display.locator('.qr-frame img').waitFor();
+ const page=display;await page.goto(invitation);await page.locator('.touch-screen').waitFor();await page.getByRole('button',{name:'Layar penuh',exact:true}).click();await page.waitForFunction(()=>document.fullscreenElement===document.documentElement);await page.waitForTimeout(1500);
+ const dimensions=await page.evaluate(()=>({width:innerWidth,height:innerHeight,screenWidth:screen.width,screenHeight:screen.height,outerWidth,outerHeight,pixelRatio:devicePixelRatio,controllerWidth:document.querySelector('.touch-screen').getBoundingClientRect().width,controllerHeight:document.querySelector('.touch-screen').getBoundingClientRect().height,controlsOnly:document.querySelectorAll('header,footer,h1').length===0}));assert.ok(Math.abs(dimensions.controllerWidth-dimensions.width)<2&&Math.abs(dimensions.controllerHeight-dimensions.height)<2,JSON.stringify(dimensions));assert.ok(dimensions.controlsOnly);
+ const report={result:'PASS',checks:['controller trusted gesture enters real native Fullscreen API','controller fills available viewport with no page header/footer'],dimensions,limitation:'Real Chromium desktop Fullscreen API. Desktop window geometry is controlled by the compositor; this checks the Fullscreen API and viewport fit, not physical monitor coverage. Android/iOS browser chrome and device compatibility still require phone testing.'};await writeFile('docs/evidence/mobile-fullscreen-report.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));
+}finally{await browser?.close();child.kill('SIGTERM');if(child.exitCode===null)await new Promise(r=>child.once('exit',r));await rm(profile,{recursive:true,force:true});}

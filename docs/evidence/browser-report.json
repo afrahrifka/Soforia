@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-14T06:16:33.539Z",
+  "result": "PASS",
+  "checks": [
+    "QR joins without form/approval",
+    "controller has only analog, action buttons and small utilities, no header/footer/panel",
+    "laptop remains display-only",
+    "analog navigates catalog and stops on release",
+    "trusted gestures request fullscreen with navigationUI hide; denied/unsupported API leaves controls functional",
+    "portrait and landscape fit viewport without scrolling or clipped controls",
+    "analog moves Orbit character",
+    "pause/reload preserves slot and small Home returns catalog",
+    "Garden tool is direct and multi-touch preserves held analog",
+    "Seirama private answer buttons, mutual reveal, skip and all eight rounds work",
+    "no external requests or JavaScript errors"
+  ],
+  "externalRequests": [],
+  "errors": [],
+  "viewport": {
+    "display": "1440x1050",
+    "mobile": [
+      "915x412",
+      "412x915"
+    ]
+  },
+  "limitation": "Browser simulation. Fullscreen denial/unavailability are injected to test fallback, not phone hardware compatibility. Physical phone latency and WAN cable test remain unverified."
+}

@@ -1,0 +1,15 @@
+{
+  "result": "PASS",
+  "runtime": "v22.23.5",
+  "platform": "Linux x64 (current host)",
+  "checks": [
+    "archive checksum generated",
+    "extracted to directory with spaces",
+    "node_modules absent",
+    "started via start.sh from a different working directory",
+    "process uses bundled runtime rather than system Node",
+    "health, controller assets and QR served locally"
+  ],
+  "artifact": "main-bareng-0.1.0-beta.3-linux-x64-offline.tar.gz",
+  "limitation": "No physical WAN disconnection or phone hardware testing. OS libraries are still required by official Node runtime."
+}
