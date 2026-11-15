@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "scope": "architecture",
+  "summary": "Tuntaskan verifikasi dashboard, D-pad dan pustaka besar",
+  "validation": [
+    "npm test: 65/65 lulus; npm run check/build/check:docs lulus.",
+    "library-browser-check: favorit bersama/persistensi, pencarian, A–Z, D-pad, tiga viewport laptop dan tiga controller, fixture 2.500 metadata lulus.",
+    "menu-browser-check dan dashboard-two-controllers-check lulus; QR/kode dimask pada bukti.",
+    "browser-check: QR, controller, Orbit/Kebun/Seirama dan Kota 24 giliran lulus tanpa error/permintaan eksternal.",
+    "glass-direction-check lulus setelah navigasi menu test diubah ke D-pad; tidak mengubah aturan/console/controller game.",
+    "Bukti aktif: src/dashboard/evidence/library-browser-report.json; belum dua HP fisik atau pengukuran FPS."
+  ],
+  "reason": "Melanjutkan permintaan dashboard/favorit/D-pad setelah commit 03e0d98 masuk saat pengembangan; penyesuaian tes UI lintas dashboard/platform dan pencatatan bukti tanpa mengubah program game.",
+  "ownerReviewRequired": true
+}

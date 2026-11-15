@@ -1,0 +1,16 @@
+{
+  "tanggal": "2026-11-16",
+  "hasil": "lulus",
+  "checks": [
+    "favorit tersinkron dua controller; tab favorit dan kondisi kosong",
+    "pencarian judul, hasil kosong, hapus pencarian dan urutan A–Z",
+    "refresh controller mempertahankan favorit dan identitas",
+    "layar 1280/1366/1920 dan controller landscape/portrait tanpa overflow",
+    "D-pad dua pemain, arah bawah mengikuti baris grid",
+    "masuk game mengembalikan analog karakter; Home kembali ke D-pad",
+    "fixture 2.500 game: hanya delapan kartu, halaman 257/313 dan pilihan terlihat",
+    "file favorit laptop hanya menyimpan ID, tanpa secret sesi"
+  ],
+  "errors": [],
+  "batas": "Chromium dan dua controller browser; fixture 2.500 game hanya memeriksa presentasi, bukan 2.500 game terpasang atau uji HP fisik."
+}

@@ -7,6 +7,10 @@ export function catalogController(state:any,prefs:{leftHanded:boolean;large:bool
 export function syncCatalogController(state:any,connected:boolean){
  const library=state.library||emptyLibrary(),page=libraryPage(state.catalog,library,state.selected),selected=page.games.find(g=>g.id===state.selected),favorite=library.favorites.includes(state.selected);
  const caption=document.querySelector('#library-current');if(caption)caption.textContent=selected?`${selected.title} · ${page.page+1}/${page.pages}`:'Koleksi kosong';
+ const update=(action:string,label:string,icon:string)=>{const button=document.querySelector<HTMLButtonElement>(`[data-do=${action}]`);if(button){button.setAttribute('aria-label',label);const text=button.querySelector('small'),symbol=button.querySelector('span');if(text)text.textContent=label;if(symbol)symbol.textContent=icon;}};
+ update('library-filter',library.filter==='favorites'?'Semua game':'Koleksi favorit',library.filter==='favorites'?'▦':'♥');update('library-sort',library.sort==='title'?'Urutan pilihan':'Urut A–Z','≡');
+ const input=document.querySelector<HTMLInputElement>('.library-search-form input');if(input&&document.activeElement!==input&&input.dataset.dirty!=='true')input.value=library.query;
+ document.querySelectorAll<HTMLButtonElement>('[data-do=library-previous],[data-do=library-next]').forEach(b=>b.disabled=!connected||page.pages<2);
  const star=document.querySelector<HTMLButtonElement>('[data-do=library-favorite]');if(star){star.setAttribute('aria-pressed',String(favorite));star.setAttribute('aria-label',favorite?'Hapus favorit':'Tambah favorit');const icon=star.querySelector('span');if(icon)icon.textContent=favorite?'♥':'♡';}
  document.querySelectorAll<HTMLButtonElement>('.library-controller .direction-up,.library-controller .direction-down,.library-controller .direction-left,.library-controller .direction-right,.library-controller [data-do=remote-confirm],.library-controller [data-do=library-favorite]').forEach(b=>b.disabled=!connected||!page.games.length);
 }

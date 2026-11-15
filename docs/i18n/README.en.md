@@ -2,6 +2,8 @@
 
 [Indonesia](../../README.md) · **English** · [Español](README.es.md) · [Português](README.pt.md) · [日本語](README.ja.md) · [简体中文](README.zh-CN.md)
 
+The library uses a four-way D-pad, search, shared favorites saved on the laptop, alphabetical sorting and eight games per page. Character controls inside games still use the analog stick.
+
 A local console for two people: a laptop runs the authoritative server and shared display; two phone browsers become controllers on the same LAN. Gameplay needs no cloud account or internet after the application has been built.
 
 ## Run locally

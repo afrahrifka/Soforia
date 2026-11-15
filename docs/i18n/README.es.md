@@ -2,6 +2,8 @@
 
 [Indonesia](../../README.md) · [English](README.en.md) · **Español** · [Português](README.pt.md) · [日本語](README.ja.md) · [简体中文](README.zh-CN.md)
 
+La biblioteca usa una cruceta de cuatro direcciones, búsqueda, favoritos compartidos guardados en el portátil, orden alfabético y ocho juegos por página. El control analógico sigue disponible dentro de los juegos.
+
 Una consola local para dos personas. El portátil ejecuta el servidor autoritativo y la pantalla compartida; dos navegadores de móvil funcionan como mandos en la misma LAN. Después de compilar, no se necesita internet ni una cuenta en la nube.
 
 ## Empezar

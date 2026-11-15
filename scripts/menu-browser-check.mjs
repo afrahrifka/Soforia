@@ -13,7 +13,7 @@ try{
  await page.goto(app.local+'/console');await page.locator('.home-pairing img').waitFor();await page.waitForFunction(()=>document.querySelector('.qr-frame img').naturalWidth>0);
  const screenshots=[];
  async function screenshot(name){await page.waitForTimeout(650);await page.screenshot({path:`docs/evidence/${name}.png`,mask:[page.locator('.qr-frame'),page.locator('.pairing-code')],maskColor:'#b69cde'});screenshots.push(name);}
- async function fit(){assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth||document.documentElement.scrollHeight>innerHeight),false);const bounds=await page.locator('.feature-copy,.home-pairing,.home-game-row').evaluateAll(els=>els.map(el=>{const r=el.getBoundingClientRect();return {x:r.x,y:r.y,right:r.right,bottom:r.bottom};}));for(const r of bounds)assert.ok(r.x>=0&&r.y>=0&&r.right<=page.viewportSize().width&&r.bottom<=page.viewportSize().height,JSON.stringify(r));}
+ async function fit(){await page.waitForTimeout(150);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth||document.documentElement.scrollHeight>innerHeight),false);const bounds=await page.locator('.feature-copy,.home-pairing,.home-game-row').evaluateAll(els=>els.map(el=>{const r=el.getBoundingClientRect();return {x:r.x,y:r.y,right:r.right,bottom:r.bottom};}));for(const r of bounds)assert.ok(r.x>=0&&r.y>=0&&r.right<=page.viewportSize().width&&r.bottom<=page.viewportSize().height,JSON.stringify(r));}
  await fit();await screenshot('menu-purple-1920');
  const phone=await browser.newPage({viewport:{width:915,height:412},isMobile:true,hasTouch:true});await phone.goto(state.pairing.url);await phone.locator('.library-dpad').waitFor();
  const cdp=await phone.context().newCDPSession(phone);

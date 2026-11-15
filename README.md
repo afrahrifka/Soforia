@@ -18,7 +18,7 @@ npm run build
 ./play.sh
 ```
 
-Launcher mencetak URL layar operator lokal dan controller LAN serta membuka layar konsol. Scan QR dari masing-masing HP; alamat IP/port mengikuti keluaran launcher, bukan URL localhost pada HP. Kedua pemain dapat memilih game di dashboard dan menekan Main. Jeda hanya melalui tindakan pemain, bukan otomatis ketika HP terputus.
+Launcher mencetak URL layar operator lokal dan controller LAN serta membuka layar konsol. Scan QR dari masing-masing HP; alamat IP/port mengikuti keluaran launcher, bukan URL localhost pada HP. Kedua pemain memakai tombol arah pada controller untuk memilih game, lalu menekan Main. Dashboard menyediakan pencarian, favorit bersama yang tersimpan di laptop, urutan A–Z, dan delapan game per halaman; analog tetap tersedia di dalam game. Jeda hanya melalui tindakan pemain, bukan otomatis ketika HP terputus.
 
 Jika menjalankan server tanpa kiosk:
 

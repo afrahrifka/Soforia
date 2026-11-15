@@ -2,6 +2,8 @@
 
 [Indonesia](../../README.md) · [English](README.en.md) · [Español](README.es.md) · **Português** · [日本語](README.ja.md) · [简体中文](README.zh-CN.md)
 
+A biblioteca usa direcional de quatro botões, busca, favoritos compartilhados salvos no notebook, ordem alfabética e oito jogos por página. O analógico continua disponível dentro dos jogos.
+
 Um console local para duas pessoas. O notebook executa o servidor autoritativo e a tela compartilhada; dois navegadores de celular viram controles na mesma LAN. Depois da compilação, o jogo não precisa de internet nem de conta na nuvem.
 
 ## Executar
