@@ -71,3 +71,30 @@ Satu dapur top-down, dua pemain, tiga resep maksimal tiga langkah: ambil bahan, 
 ## Pola ekspansi
 
 Setiap game tambahan harus mempunyai tujuan, input, jumlah pemain, durasi, mode santai, state machine, kondisi selesai, kebijakan disconnect, anggaran aset dan acceptance sendiri. Informasi privat di HP perlu proyeksi data khusus. Nilai replay diperoleh dari seed/peta/pertanyaan, bukan menambah kompleksitas tombol.
+
+## G13 — Kota Berdua 3D
+
+Duel properti orisinal dua orang: 16 petak, empat distrik, dadu dan transaksi otoritatif, pilihan beli/lewati, peningkatan bangunan, sewa distrik, festival dan taman. Saldo awal 650; selesai setelah 12 ronde atau 24 giliran. Tidak ada utang atau eliminasi. Nilai akhir memperhitungkan uang, properti, dan biaya peningkatan; seri diperbolehkan.
+
+Dadu berputar sebelum pion melangkah ke tujuan. Pemilik boleh meningkatkan bangunan ketika singgah, maksimal dua tingkat. Miliki tiga properti satu distrik untuk sewa ganda. Aturan angka dan inventaris aset ada pada [pembenahan kualitas 3D](13-kualitas-game-3d.md). Bukan aset atau aturan lengkap Monopoli. Acceptance berikutnya: playtest balancing dengan pasangan, reconnect pada keputusan beli dan animasi, serta performa GPU laptop referensi.
+
+## Tambahan aksi G01
+
+Orbit kini mempunyai pulsa pelindung dari tombol HP: perlindungan dua detik untuk diri sendiri, sekaligus bantuan bagi pasangan dalam jarak kurang dari 200 unit, dengan cooldown delapan detik. Aturan gerbang/energi tetap berlaku. Ini perubahan mekanik atas pembenahan kualitas yang diminta pengguna dan memerlukan evaluasi playtest.
+
+## G14 — Kaca Berdua
+
+Dua pembawa mengantar satu panel kaca melewati enam dunia, 60 stage dan 240 checkpoint. Satu analog di sudut bawah untuk berjalan; tombol tahan Putar kiri/kanan untuk menggulingkan kaca serta Naikkan/Turunkan untuk tinggi; satu tombol Lompat. Kamera mengikuti tim otomatis. Setiap pemain memegang dua sudut dengan dua tangan. Kaca dapat berguling penuh pada sumbu panjang di antara pembawa; pecah saat bidang/bingkai benar-benar menyentuh benda padat, tanah atau badan; tim mengulang checkpoint terdekat. Dua pemain memilih lanjut setelah empat checkpoint stage tercapai. Layout memakai sepuluh motif yang dikombinasikan deterministik; bukan aset/peta Carry the Glass. Aturan lengkap dan batas simulasi: [Kaca Berdua](14-kaca-berdua.md). Gate fisik: satu analog dan tombol miring/tinggi, lompatan sinkron, kamera dan salah sentuh Jeda harus diuji pasangan pada dua HP nyata.
+
+
+Revisi G14: tubuh pembawa tidak lagi dikunci pada jarak tetap panjang kaca. Bingkai mempunyai pose sendiri dan empat lengan beruas menghubungkannya ke karakter membulat; target jangkauan lengan 1,4 unit. Kamera perspektif otomatis dan model lingkungan CC0 menggantikan placeholder terpilih. [Rincian perubahan dan batas](15-aset-dan-karakter-elastis.md).
+
+Revisi terbaru G14: lintasan konstruksi bertingkat, platform/ramp tersambung dengan collision yang sama dengan render, pekerja berhelm bertorso kapsul, gerak lebih cepat dan interpolasi snapshot. Detail serta bukti dan batas penerimaan ada pada [revisi map, gerak, dan controller](16-kaca-map-gerak-controller.md).
+
+Revisi 15 November: empat tangan memegang empat sudut, kemiringan horizontal ↔ vertikal dan jangkauan 2,2 unit menggantikan pegangan/batas sebelumnya. Semua 60 stage kini memakai rangkaian tantangan sudut, tinggi, lompat dan timing. [Aturan, bukti, serta batas keseruan/playtest](17-kaca-empat-sudut-dan-tantangan.md).
+
+Mode uji developer G14: dua pemain dapat memakai satu keyboard laptop tanpa HP. F2 mengaktifkan mode di layar operator; pemetaan lengkap dan batas uji ada pada [kontrol keyboard Kaca](18-kaca-keyboard.md).
+
+Revisi terbaru 15 November: guling 360° pada sumbu panjang menggantikan putaran bidang XY; angkat/turun terpisah. Badan berbenturan dengan tembok/pohon/batu dan arena menjadi jalan kota, hutan serta permukaan asteroid/bulan. [Aturan terbaru dan bukti](19-kaca-guling-dan-arena-alami.md).
+
+Revisi terbaru: tidak ada sudut wajib, aperture aturan, banner melayang, atau pecah karena jangkauan/tekanan. Rute berkelok dan rintangan lingkungan/mekanis memakai kontak fisik. [Aturan aktif dan bukti](20-kaca-perjalanan-dan-kontak-fisik.md).

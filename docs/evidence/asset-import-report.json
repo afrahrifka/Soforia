@@ -1,0 +1,14 @@
+{
+  "result": "PASS",
+  "models": 1053,
+  "packs": 8,
+  "filesChecked": 1702,
+  "bytes": 56284659,
+  "checks": [
+    "Teks lisensi CC0 tersedia pada delapan paket",
+    "Checksum semua model/data sesuai manifest",
+    "Referensi buffer dan gambar lokal tersedia",
+    "Tidak ada URL remote pada dependensi model"
+  ],
+  "limitation": "Validasi integritas dan referensi; tidak berarti seluruh 1053 model telah dipasang atau diperiksa visual dalam gameplay."
+}

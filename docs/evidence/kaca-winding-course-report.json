@@ -1,0 +1,422 @@
+{
+  "result": "FAIL",
+  "stages": 31,
+  "checkpoints": 124,
+  "results": [
+    {
+      "stage": 1,
+      "world": 1,
+      "length": 141.1638750739772,
+      "checkpoints": 4,
+      "ticks": 3157,
+      "breaks": 0,
+      "encounters": [],
+      "result": "PASS"
+    },
+    {
+      "stage": 2,
+      "world": 1,
+      "length": 169.51717784126484,
+      "checkpoints": 4,
+      "ticks": 3779,
+      "breaks": 0,
+      "encounters": [],
+      "result": "PASS"
+    },
+    {
+      "stage": 3,
+      "world": 1,
+      "length": 156.67579930141744,
+      "checkpoints": 4,
+      "ticks": 3500,
+      "breaks": 0,
+      "encounters": [],
+      "result": "PASS"
+    },
+    {
+      "stage": 4,
+      "world": 1,
+      "length": 153.17115082339043,
+      "checkpoints": 4,
+      "ticks": 3408,
+      "breaks": 0,
+      "encounters": [],
+      "result": "PASS"
+    },
+    {
+      "stage": 5,
+      "world": 1,
+      "length": 142.99307698284107,
+      "checkpoints": 4,
+      "ticks": 3193,
+      "breaks": 0,
+      "encounters": [],
+      "result": "PASS"
+    },
+    {
+      "stage": 6,
+      "world": 1,
+      "length": 164.73369659563585,
+      "checkpoints": 4,
+      "ticks": 3671,
+      "breaks": 0,
+      "encounters": [],
+      "result": "PASS"
+    },
+    {
+      "stage": 7,
+      "world": 1,
+      "length": 155.57059804172428,
+      "checkpoints": 4,
+      "ticks": 3496,
+      "breaks": 0,
+      "encounters": [],
+      "result": "PASS"
+    },
+    {
+      "stage": 8,
+      "world": 1,
+      "length": 154.162955351085,
+      "checkpoints": 4,
+      "ticks": 3432,
+      "breaks": 0,
+      "encounters": [],
+      "result": "PASS"
+    },
+    {
+      "stage": 9,
+      "world": 1,
+      "length": 137.1371774596255,
+      "checkpoints": 4,
+      "ticks": 3085,
+      "breaks": 0,
+      "encounters": [],
+      "result": "PASS"
+    },
+    {
+      "stage": 10,
+      "world": 1,
+      "length": 169.05654205001673,
+      "checkpoints": 4,
+      "ticks": 3770,
+      "breaks": 0,
+      "encounters": [],
+      "result": "PASS"
+    },
+    {
+      "stage": 11,
+      "world": 2,
+      "length": 160.8743764354232,
+      "checkpoints": 4,
+      "ticks": 3597,
+      "breaks": 0,
+      "encounters": [],
+      "result": "PASS"
+    },
+    {
+      "stage": 12,
+      "world": 2,
+      "length": 156.58033656322527,
+      "checkpoints": 4,
+      "ticks": 3490,
+      "breaks": 0,
+      "encounters": [],
+      "result": "PASS"
+    },
+    {
+      "stage": 13,
+      "world": 2,
+      "length": 145.2029985982736,
+      "checkpoints": 4,
+      "ticks": 3252,
+      "breaks": 0,
+      "encounters": [],
+      "result": "PASS"
+    },
+    {
+      "stage": 14,
+      "world": 2,
+      "length": 171.1936223131556,
+      "checkpoints": 4,
+      "ticks": 3812,
+      "breaks": 0,
+      "encounters": [],
+      "result": "PASS"
+    },
+    {
+      "stage": 15,
+      "world": 2,
+      "length": 161.80163159436907,
+      "checkpoints": 4,
+      "ticks": 3620,
+      "breaks": 0,
+      "encounters": [],
+      "result": "PASS"
+    },
+    {
+      "stage": 16,
+      "world": 2,
+      "length": 157.92778545396533,
+      "checkpoints": 4,
+      "ticks": 3517,
+      "breaks": 0,
+      "encounters": [],
+      "result": "PASS"
+    },
+    {
+      "stage": 17,
+      "world": 2,
+      "length": 142.02662078804607,
+      "checkpoints": 4,
+      "ticks": 3179,
+      "breaks": 0,
+      "encounters": [],
+      "result": "PASS"
+    },
+    {
+      "stage": 18,
+      "world": 2,
+      "length": 173.6267340544907,
+      "checkpoints": 4,
+      "ticks": 3867,
+      "breaks": 0,
+      "encounters": [],
+      "result": "PASS"
+    },
+    {
+      "stage": 19,
+      "world": 2,
+      "length": 163.44807209040917,
+      "checkpoints": 4,
+      "ticks": 3653,
+      "breaks": 0,
+      "encounters": [],
+      "result": "PASS"
+    },
+    {
+      "stage": 20,
+      "world": 2,
+      "length": 155.38133390366028,
+      "checkpoints": 4,
+      "ticks": 3462,
+      "breaks": 0,
+      "encounters": [],
+      "result": "PASS"
+    },
+    {
+      "stage": 21,
+      "world": 3,
+      "length": 150.68209985295695,
+      "checkpoints": 4,
+      "ticks": 3377,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "platform",
+          "axis": "forward"
+        },
+        {
+          "kind": "hammer"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 22,
+      "world": 3,
+      "length": 176.77109708331218,
+      "checkpoints": 4,
+      "ticks": 4066,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "platform",
+          "axis": "side"
+        },
+        {
+          "kind": "axe"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 23,
+      "world": 3,
+      "length": 165.91501509383266,
+      "checkpoints": 4,
+      "ticks": 4286,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "platform",
+          "axis": "vertical"
+        },
+        {
+          "kind": "hammer"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 24,
+      "world": 3,
+      "length": 162.3915361467843,
+      "checkpoints": 4,
+      "ticks": 4142,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "platform",
+          "axis": "forward"
+        },
+        {
+          "kind": "axe"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 25,
+      "world": 3,
+      "length": 147.5620290455991,
+      "checkpoints": 4,
+      "ticks": 3453,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "platform",
+          "axis": "side"
+        },
+        {
+          "kind": "hammer"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 26,
+      "world": 3,
+      "length": 175.93658166434935,
+      "checkpoints": 4,
+      "ticks": 4441,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "platform",
+          "axis": "vertical"
+        },
+        {
+          "kind": "axe"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 27,
+      "world": 3,
+      "length": 164.55182626192877,
+      "checkpoints": 4,
+      "ticks": 4353,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "platform",
+          "axis": "forward"
+        },
+        {
+          "kind": "hammer"
+        },
+        {
+          "kind": "axe"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 28,
+      "world": 3,
+      "length": 160.2250796852173,
+      "checkpoints": 4,
+      "ticks": 4052,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "platform",
+          "axis": "side"
+        },
+        {
+          "kind": "axe"
+        },
+        {
+          "kind": "axe"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 29,
+      "world": 3,
+      "length": 150.1941985365403,
+      "checkpoints": 4,
+      "ticks": 3783,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "platform",
+          "axis": "vertical"
+        },
+        {
+          "kind": "hammer"
+        },
+        {
+          "kind": "axe"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 30,
+      "world": 3,
+      "length": 177.7429833464345,
+      "checkpoints": 4,
+      "ticks": 4385,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "platform",
+          "axis": "forward"
+        },
+        {
+          "kind": "axe"
+        },
+        {
+          "kind": "axe"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 31,
+      "world": 4,
+      "length": 169.49791039692604,
+      "checkpoints": 4,
+      "ticks": 4239,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "platform",
+          "axis": "forward"
+        },
+        {
+          "kind": "hammer"
+        }
+      ],
+      "result": "PASS"
+    }
+  ],
+  "failure": {
+    "stage": 32,
+    "message": "Macet {\"stage\":32,\"checkpoint\":2,\"trace\":{\"s\":100.43440651045418,\"config\":{\"offset\":0,\"span\":1.8},\"targets\":[{\"x\":36.87646620260034,\"y\":3.4801285118719925,\"z\":-59.68677611009551,\"s\":107.97136687814253,\"yaw\":1.0521162599973792,\"lower\":0},{\"x\":38.4628157769659,\"y\":3.478926909782368,\"z\":-62.46589378085186,\"s\":107.97136687814253,\"yaw\":1.0521162599973792,\"lower\":0}],\"inputs\":[{\"x\":0,\"y\":0,\"glassX\":0,\"glassY\":-5.551115123125783e-15},{\"x\":0.030423467664912773,\"y\":-0.7093478784173826,\"glassX\":0,\"glassY\":-5.551115123125783e-15}]},\"players\":[{\"x\":46.5746748922323,\"z\":-54.84287765193322,\"y\":3.356942705680367,\"vy\":0,\"lift\":0.29999999999999893,\"crouch\":false,\"lifting\":false,\"rotating\":false,\"jump\":false,\"grounded\":true,\"lower\":0,\"gripHeight\":1.6999999999999988,\"support\":\"31-48\"},{\"x\":42.23794080373443,\"z\":-59.70478456823192,\"y\":3.356942705680367,\"vy\":0,\"lift\":0.29999999999999893,\"crouch\":false,\"lifting\":false,\"rotating\":false,\"jump\":false,\"grounded\":true,\"lower\":0,\"gripHeight\":1.6999999999999988,\"support\":\"31-48\"}],\"platform\":\"exit\"}"
+  },
+  "limitation": "Input sintetis dengan pengetahuan peta dan perencanaan formasi/waktu; tanpa teleport atau kekebalan. Bukan dua HP, playtest manusia atau benchmark performa."
+}

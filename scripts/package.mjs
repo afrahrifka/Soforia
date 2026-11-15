@@ -10,7 +10,8 @@ await rm(stage,{recursive:true,force:true});await mkdir(stage,{recursive:true});
 for(const file of ['start.sh','play.sh','stop.sh','deploy-local.sh','open-console.sh','LICENSE','README.md','RUN-OFFLINE.md','SPEC.md','AGENTS.md','package.json','package-lock.json','tsconfig.json'])await cp(file,join(stage,file));
 for(const dir of ['src','public','scripts','tests','docs','specs'])await cp(dir,join(stage,dir),{recursive:true});
 const dependencyTree=JSON.parse(execFileSync('npm',['ls','--omit=dev','--all','--json'],{encoding:'utf8'}));const names=new Set();function walk(node){for(const [name,entry] of Object.entries(node.dependencies||{})){if(entry.version)names.add(name);walk(entry);}}walk(dependencyTree);
-let notices='# Bundled third-party notices\n\nMain Bareng source: MIT. Illustrations, game rules, synthesized audio and questions are original project content. System fonts and emoji use the host operating system.\n\n';
+let notices='# Bundled third-party notices\n\nMain Bareng source: MIT. Aturan, kode, audio sintetis dan aset orisinal proyek berlisensi MIT. Model pihak ketiga tercantum terpisah di bawah serta pada public/assets; lisensi model tersebut tetap CC0. Font sistem dan emoji mengikuti sistem operasi.\n\n';
+notices+='## Model 3D pihak ketiga\n\n'+await readFile('public/assets/ATTRIBUTION.md','utf8')+'\n';
 for(const name of [...names].sort()){
  const dir=join('node_modules',name);const pkg=JSON.parse(await readFile(join(dir,'package.json'),'utf8'));notices+=`## ${name} ${pkg.version}\n\nLicense: ${JSON.stringify(pkg.license||'see package')}\n\n`;
  const files=(await readdir(dir)).filter(f=>/^(licen[cs]e|copying|notice)(\.|$)/i.test(f));for(const f of files)notices+='```text\n'+(await readFile(join(dir,f),'utf8'))+'\n```\n\n';

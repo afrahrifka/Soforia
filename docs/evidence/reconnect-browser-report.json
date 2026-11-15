@@ -1,0 +1,12 @@
+{
+  "tanggal": "2026-11-15",
+  "hasil": "lulus",
+  "cakupan": [
+    "scan QR tab baru kembali ke identitas lama tanpa slot ganda",
+    "offline 4,5 detik terdeteksi",
+    "online pulih otomatis ke slot dan match yang sama tanpa pause",
+    "watchdog memulihkan socket OPEN yang tidak lagi menerima snapshot",
+    "menu umum dan Kaca tanpa tombol mode/arena/pemilih stage"
+  ],
+  "batas": "Jaringan disimulasikan Playwright Chromium; perlu uji HP fisik dan perpindahan Wi-Fi."
+}

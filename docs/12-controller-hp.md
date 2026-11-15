@@ -38,3 +38,21 @@ Aplikasi mencoba `requestFullscreen({navigationUI:'hide'})` setelah controller t
 - [Report browser](evidence/browser-report.json): auto-join, kontrol saja, analog katalog/game, viewport 915×412 dan 412×915 tanpa clipping/scroll, pause/reload, Home, aksi multi-touch sambil menahan analog, satu pointerdown menghasilkan satu aksi, cancel mengirim nol, dan delapan ronde Seirama. Permintaan fullscreen ditolak/tidak tersedia disimulasikan untuk menguji fallback. Tidak ada request eksternal atau page error.
 - [Report API fullscreen native](evidence/mobile-fullscreen-report.json): API Chromium desktop dengan gesture nyata dan controller memenuhi viewport. Ukuran jendela desktop dikendalikan compositor; pengujian ini tidak membuktikan perilaku address bar pada Android/iOS. Layar laptop kiosk tetap mempunyai [bukti desktop terpisah](evidence/kiosk-report.json).
 - Pengujian dua HP fisik, kompatibilitas browser HP nyata, sentuh-ke-gambar, pemutusan WAN fisik dan soak tetap belum selesai. Status rilis masih beta; tidak menandai gerbang fisik Lulus dari simulasi browser.
+
+## Revisi dua analog dan Jeda kecil
+
+Kaca Berdua menggunakan analog karakter di kiri, analog kaca di kanan, dan satu tombol Lompat. Kedua pointer capture independen; release/cancel dan resize tidak meninggalkan input kaca tertahan. Kamera otomatis berada di laptop, tanpa analog kamera. Di seluruh game, Jeda dan bantuan berada pada baris utilitas kecil yang terpisah dari tombol aksi; Jeda memiliki dimensi 44×44 seperti Home. Lihat [rincian dan verifikasi](14-kaca-berdua.md). Ini sudah diuji dengan controller browser sintetis, belum membuktikan kenyamanan dua HP fisik.
+
+## Pembaruan 14 November 2026 — map dan controller Kaca
+
+Arahan pengguna terbaru mengganti dua analog Kaca dengan satu analog di sudut bawah serta tombol tahan putar/naik/turun dan tombol Lompat. Semua controller menempatkan analog dekat jangkauan jempol bawah, dengan mode cermin tangan kiri. Map, karakter dan gerak juga direvisi; lihat [laporan terbaru dan bukti](16-kaca-map-gerak-controller.md). Deskripsi kontrol/visual sebelumnya di dokumen ini merupakan riwayat sebelum revisi tersebut.
+
+## Revisi 15 November — reconnect dan penyederhanaan menu
+
+Menu controller kini hanya menyediakan Main dan Pengaturan; tombol mode/kesulitan, arena, pemilih stage dan lompat arena dihapus. Stage berikutnya setelah kemenangan tetap dapat dilanjutkan. Pemilih stage hanya tersedia di mode developer F2 pada laptop.
+
+Saat Wi-Fi kembali, controller mencoba reconnect otomatis ke slot yang sama. Jika membuka ulang melalui scan QR, gunakan browser HP yang sama agar secret pemulihan lokal dapat mengenali slot lama. Tunggu sekitar empat detik setelah putus agar server menandai slot terputus. Jika browser/penyimpanan berbeda, scan QR mengisi salah satu slot yang sudah terputus. Match tidak direset dan permainan tidak dijeda otomatis. Detail serta batas pengujian: [revisi protokol](05-jaringan-protokol.md#revisi-runtime-15-november--pemulihan-hp-terputus).
+
+## Revisi 15 November — dashboard untuk kedua controller
+
+Analog pemain A maupun B dapat memilih game pada dashboard. Kedua pemain dapat menekan Main atau Main lagi; keduanya melihat pilihan bersama yang sama pada layar laptop. Hak reset/pairing tetap milik pemain 1. Tidak menambahkan tombol mode/kesulitan atau pemilih stage pada HP.

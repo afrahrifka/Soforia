@@ -40,3 +40,11 @@ Uji gangguan 50/100 ms delay tambahan dan packet loss 1/3% bila alat tersedia. H
 Tidak ada crash, bug kehilangan input permanen, kebocoran jawaban, bypass host atau kegagalan offline yang diketahui. Bug kosmetik kecil boleh dicatat dengan batas yang jelas. Masing-masing tiga game wajib lolos satu sesi nyata pasangan; onboarding diuji pada sedikitnya tiga pasangan. Emulasi browser tidak menggantikan dua HP fisik.
 
 Bukti menyertakan versi artifact, commit jika ada, perangkat, perintah/aksi, hasil, batas dan referensi issue. Jangan menyimpan wajah, nama atau jawaban peserta tanpa kebutuhan; fixture dan rekaman diagnosis gunakan identitas sintetis.
+
+## Tambahan pemeriksaan 3D
+
+Setelah build, `node scripts/browser-check.mjs` memeriksa empat game melalui dua controller browser, termasuk pertandingan Kota Berdua 24 giliran, layout laptop dan error/request jaringan. `node --import tsx scripts/visual-3d-check.mjs` memeriksa model dari fixture sintetis pada empat game, jumlah resource, serta frame identik saat reduced motion aktif. Bukti dan batasnya dijelaskan di [laporan kualitas 3D](13-kualitas-game-3d.md). Keduanya tidak menggantikan uji dua HP fisik, benchmark GPU, kamera input-to-photon, atau playtest keseruan dengan pasangan.
+
+## Tambahan Kaca Berdua
+
+Jalankan `node --import tsx scripts/glass-course-check.mjs` untuk menempuh masing-masing 60 stage melalui input sintetis, lalu `node scripts/glass-browser-check.mjs` untuk memeriksa dua analog, pemilih stage, Jeda kecil, dan penyelesaian stage pertama melalui browser. Regresi `browser-check.mjs` memeriksa bahwa semua game lama menempatkan Jeda sebagai utilitas berukuran paling besar 48 px dan tidak memiliki Jeda di area aksi. [Aturan, bukti dan batas](14-kaca-berdua.md).

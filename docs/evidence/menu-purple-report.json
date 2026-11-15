@@ -1,0 +1,23 @@
+{
+  "tanggal": "2026-11-15",
+  "hasil": "lulus",
+  "cakupan": [
+    "QR termuat",
+    "navigasi lima game dari analog controller browser",
+    "satu sorotan aktif",
+    "layout tanpa scroll 1280×720, 1366×768, 1920×1080",
+    "mulai Kaca dan kembali ke menu",
+    "reduced motion",
+    "tanpa error JavaScript"
+  ],
+  "screenshots": [
+    "menu-purple-1920",
+    "menu-purple-garden",
+    "menu-purple-seirama",
+    "menu-purple-property",
+    "menu-purple-glass",
+    "menu-purple-1366"
+  ],
+  "privasi": "QR dan kode sesi ditutupi pada cuplikan",
+  "batas": "Uji Chromium, bukan dua HP fisik atau uji performa."
+}

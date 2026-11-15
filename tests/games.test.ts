@@ -47,3 +47,15 @@ test('Kebun: tombol langsung memilih alat atomik dan Antar tidak dipicu tombol S
  p.x=6;p.y=5;p.dx=1;p.dy=0;gameAction(g,0,'water');assert.equal(p.carry,'carrot');assert.equal(g.harvest.carrot,0);
  gameAction(g,0,'deposit');assert.equal(p.carry,null);assert.equal(g.harvest.carrot,1);
 });
+
+test('Kota Berdua: giliran otoritatif, dadu legal, aset dan akhir 24 giliran',()=>{
+ const g=createGame('property');gameAction(g,1,'use');assert.equal(g.moves,0);
+ for(let i=0;i<24;i++){const slot=g.turn;gameAction(g,slot,'use');for(let step=0;step<50&&['rolling','moving'].includes(g.stage);step++)tickGame(g,[],.1);if(g.pending)gameAction(g,slot,'use');assert.ok(g.dice>=1&&g.dice<=6);assert.ok(g.players.every((p:any)=>p.money>=0));assert.equal(g.moves,i+1);}
+ assert.equal(g.finished,true);gameAction(g,g.turn,'use');assert.equal(g.moves,24);
+});
+
+test('Orbit: pulsa melindungi dan menyelamatkan pasangan dekat, dengan cooldown delapan detik',()=>{
+ const g=createGame('orbit');g.players[1].down=3;gameAction(g,0,'use');assert.equal(g.players[0].pulse,8);assert.equal(g.players[1].down,0);assert.equal(g.helps,1);assert.equal(g.players[1].immune,2);
+ g.players[1].down=3;gameAction(g,0,'use');assert.equal(g.players[1].down,3);tickGame(g,[],8);assert.equal(g.players[0].pulse,0);
+ g.players[1].x=1000;g.players[1].down=3;gameAction(g,0,'use');assert.equal(g.players[1].down,3);
+});

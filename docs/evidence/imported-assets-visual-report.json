@@ -1,0 +1,175 @@
+{
+  "result": "PASS",
+  "checks": [
+    {
+      "id": "orbit",
+      "geometry": 10,
+      "textures": 11,
+      "reducedMotion": "frame statis identik",
+      "render": "PASS"
+    },
+    {
+      "id": "garden",
+      "geometry": 21,
+      "textures": 23,
+      "reducedMotion": "frame statis identik",
+      "render": "PASS"
+    },
+    {
+      "id": "property",
+      "geometry": 29,
+      "textures": 44,
+      "reducedMotion": "frame statis identik",
+      "render": "PASS"
+    },
+    {
+      "id": "seirama",
+      "geometry": 29,
+      "textures": 27,
+      "reducedMotion": "frame statis identik",
+      "render": "PASS"
+    },
+    {
+      "id": "glass",
+      "geometry": 53,
+      "textures": 48,
+      "reducedMotion": "frame statis identik",
+      "render": "PASS"
+    },
+    {
+      "id": "glass-six-worlds",
+      "render": "PASS",
+      "stageResources": [
+        {
+          "stage": 1,
+          "geometry": "59",
+          "textures": "51"
+        },
+        {
+          "stage": 12,
+          "geometry": "66",
+          "textures": "60"
+        },
+        {
+          "stage": 23,
+          "geometry": "81",
+          "textures": "80"
+        },
+        {
+          "stage": 34,
+          "geometry": "104",
+          "textures": "119"
+        },
+        {
+          "stage": 45,
+          "geometry": "113",
+          "textures": "117"
+        },
+        {
+          "stage": 56,
+          "geometry": "114",
+          "textures": "102"
+        },
+        {
+          "stage": 1,
+          "geometry": "111",
+          "textures": "93"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "downloadedModelsParsed": [
+    "kaykit-city/building_A",
+    "kaykit-city/building_B",
+    "kaykit-city/building_C",
+    "kaykit-city/building_D",
+    "kaykit-city/building_E",
+    "kaykit-city/building_F",
+    "kaykit-city/building_G",
+    "kaykit-city/building_H",
+    "kaykit-city/watertower",
+    "kaykit-resources/Copper_Bars_Stack_Medium",
+    "kaykit-resources/Fuel_A_Barrel",
+    "kaykit-resources/Fuel_A_Barrel_Dirty",
+    "kaykit-resources/Fuel_B_Barrel",
+    "kaykit-resources/Fuel_C_Barrels",
+    "kaykit-resources/Iron_Bars",
+    "kaykit-resources/Iron_Bars_Stack_Medium",
+    "kaykit-resources/Iron_Bars_Stack_Small",
+    "kaykit-resources/Pallet_Wood",
+    "kaykit-resources/Parts_Pile_Large",
+    "kaykit-resources/Parts_Pile_Medium",
+    "kaykit-resources/Textiles_Stack_Small",
+    "kaykit-resources/Wood_Log_Stack",
+    "kaykit-space/cargo_A",
+    "kaykit-space/cargo_B",
+    "kaykit-space/containers_A",
+    "kaykit-space/containers_B",
+    "kaykit-space/lander_A",
+    "kaykit-space/lander_B",
+    "kaykit-space/rock_A",
+    "kaykit-space/windturbine_tall",
+    "kenney-nature/flower_redA",
+    "kenney-nature/flower_yellowA",
+    "kenney-nature/flower_yellowB",
+    "kenney-nature/flower_yellowC",
+    "kenney-nature/plant_bush",
+    "kenney-nature/plant_bushLarge",
+    "kenney-nature/plant_bushLargeTriangle",
+    "kenney-nature/plant_bushTriangle",
+    "kenney-nature/rock_largeC",
+    "kenney-nature/rock_largeD",
+    "kenney-nature/rock_largeF",
+    "kenney-nature/tree_default",
+    "kenney-nature/tree_default_fall",
+    "kenney-nature/tree_pineDefaultA",
+    "kenney-nature/tree_pineGroundA",
+    "kenney-nature/tree_pineGroundB",
+    "kenney-nature/tree_pineRoundB",
+    "kenney-nature/tree_pineRoundC",
+    "kenney-nature/tree_pineTallA_detailed",
+    "kenney-nature/tree_pineTallB",
+    "kenney-nature/tree_pineTallC",
+    "kenney-nature/tree_pineTallC_detailed",
+    "kenney-nature/tree_pineTallD_detailed",
+    "kenney-platformer/block-grass",
+    "kenney-platformer/block-snow",
+    "kenney-platformer/crate",
+    "kenney-platformer/platform-fortified",
+    "kenney-platformer/rocks",
+    "kenney-platformer/tree-pine-snow",
+    "kenney-platformer/tree-pine-snow-small",
+    "kenney-platformer/tree-snow",
+    "quaternius-city/Building_Small_1",
+    "quaternius-city/Metal_Column_Bottom",
+    "quaternius-city/Metal_Column_Small_Bottom",
+    "quaternius-city/Metal_Column_Small_Center",
+    "quaternius-nature/Bush_Common",
+    "quaternius-nature/CommonTree_1",
+    "quaternius-nature/CommonTree_2",
+    "quaternius-nature/CommonTree_3",
+    "quaternius-nature/CommonTree_4",
+    "quaternius-nature/CommonTree_5",
+    "quaternius-nature/Fern_1",
+    "quaternius-nature/Flower_3_Group",
+    "quaternius-nature/Mushroom_Common",
+    "quaternius-nature/Mushroom_Laetiporus",
+    "quaternius-nature/Pebble_Round_2",
+    "quaternius-nature/Pebble_Round_3",
+    "quaternius-nature/Pebble_Round_5",
+    "quaternius-nature/Pine_1",
+    "quaternius-nature/Pine_3",
+    "quaternius-nature/Pine_4",
+    "quaternius-nature/Rock_Medium_1",
+    "quaternius-nature/Rock_Medium_2",
+    "quaternius-nature/TwistedTree_2",
+    "quaternius-nature/TwistedTree_3",
+    "quaternius-nature/TwistedTree_5",
+    "quaternius-village/Prop_Crate",
+    "quaternius-village/Wall_Plaster_Straight"
+  ],
+  "uniqueDownloadedModels": 88,
+  "cacheLimit": 64,
+  "limitation": "Fixture sintetis untuk memeriksa model dan reduced motion. Bukan pengujian aturan game, dua HP fisik, FPS hardware, atau input-to-photon."
+}

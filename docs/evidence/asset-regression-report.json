@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-14T10:49:29.183Z",
+  "result": "PASS",
+  "checks": [
+    "QR joins without form/approval",
+    "controller has only analog, action buttons and small utilities, no header/footer/panel",
+    "laptop remains display-only",
+    "analog navigates catalog and stops on release",
+    "trusted gestures request fullscreen with navigationUI hide; denied/unsupported API leaves controls functional",
+    "portrait and landscape fit viewport without scrolling or clipped controls",
+    "analog moves Orbit character",
+    "pause/reload preserves slot and small Home returns catalog",
+    "Garden tool is direct and multi-touch preserves held analog",
+    "Seirama private answer buttons, mutual reveal, skip and all eight rounds work",
+    "Kota Berdua: two browser controllers finish 24 animated turns, purchase/upgrade decisions and results",
+    "retained 3D geometry and texture counts stable for 24 turns; WebGL initialized",
+    "1920x1080 and 1366x768 city HUD fits stage; reduced motion renders without errors",
+    "no external requests or JavaScript errors"
+  ],
+  "externalRequests": [],
+  "errors": [],
+  "viewport": {
+    "display": "1440x1050",
+    "mobile": [
+      "915x412",
+      "412x915"
+    ]
+  },
+  "limitation": "Browser simulation. Fullscreen denial/unavailability are injected to test fallback, not phone hardware compatibility. Physical phone latency and WAN cable test remain unverified."
+}

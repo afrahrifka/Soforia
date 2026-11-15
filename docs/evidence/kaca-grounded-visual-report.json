@@ -1,0 +1,56 @@
+{
+  "tanggal": "2026-11-15",
+  "hasil": "lulus",
+  "cakupan": [
+    "enam lingkungan di atas tanah",
+    "empat pose guling 0/45/90/180 derajat",
+    "geometri dan tekstur pulih setelah pergantian enam dunia",
+    "tanpa error render/JavaScript"
+  ],
+  "resources": [
+    {
+      "stage": 1,
+      "geometries": "16",
+      "textures": "3",
+      "drawCalls": "143"
+    },
+    {
+      "stage": 11,
+      "geometries": "16",
+      "textures": "3",
+      "drawCalls": "109"
+    },
+    {
+      "stage": 21,
+      "geometries": "16",
+      "textures": "3",
+      "drawCalls": "144"
+    },
+    {
+      "stage": 31,
+      "geometries": "16",
+      "textures": "3",
+      "drawCalls": "109"
+    },
+    {
+      "stage": 41,
+      "geometries": "16",
+      "textures": "3",
+      "drawCalls": "106"
+    },
+    {
+      "stage": 51,
+      "geometries": "16",
+      "textures": "3",
+      "drawCalls": "105"
+    },
+    {
+      "stage": 1,
+      "geometries": "16",
+      "textures": "3",
+      "drawCalls": "143"
+    }
+  ],
+  "errors": [],
+  "batas": "Fixture statis Chromium. Bukan gameplay, playtest manusia, dua HP atau benchmark FPS."
+}

@@ -17,8 +17,9 @@ Issue dan lampirannya terbuka untuk publik. Jangan bagikan kode QR, secret sesi,
 2. Fork repositori, buat branch dari branch utama repositori, lalu kerjakan perubahan yang terfokus. Jangan mengasumsikan branch `dev` tersedia.
 3. Siapkan Node.js 20.19 atau lebih baru dan jalankan `npm ci`. Ikuti petunjuk pengembangan di [README](README.md).
 4. Jalankan pemeriksaan yang relevan: `npm run check`, `npm test`, dan `npm run build` untuk perubahan kode. Jelaskan pemeriksaan yang tidak dapat dijalankan. Untuk perubahan dokumentasi, periksa tautan dan isi yang berubah.
-5. Perbarui dokumentasi dan roadmap jika relevan. Catat bukti sebenarnya: pengujian browser bukan pengujian dua HP fisik, dan RTT bukan waktu sentuh-ke-gambar.
-6. Push branch dan buka pull request memakai template. Gunakan judul seperti `feat: tambah pilihan arena`, `fix: perbaiki koneksi`, atau `docs: perjelas panduan`. Scope opsional, misalnya `fix(ui): perbaiki tombol`. Validator judul memeriksa jenis dan scope yang diizinkan di [workflow](.github/workflows/pr-title-validator.yml).
-7. Tanggapi tinjauan dengan terbuka. Pemelihara akan meninjau dan memutuskan penggabungan; jangan menganggap persetujuan atau waktu respons tertentu dijamin.
+5. Jika ingin membuat pesan commit dengan panduan interaktif, jalankan `npm run commit` setelah melakukan `git add`. Commitizen dan cz-git tersedia melalui `npm ci`; instalasi global tidak diperlukan.
+6. Perbarui dokumentasi dan roadmap jika relevan. Catat bukti sebenarnya: pengujian browser bukan pengujian dua HP fisik, dan RTT bukan waktu sentuh-ke-gambar.
+7. Push branch dan buka pull request memakai template. Gunakan judul seperti `feat: tambah pilihan arena`, `fix: perbaiki koneksi`, atau `docs: perjelas panduan`. Scope opsional, misalnya `fix(ui): perbaiki tombol`. Validator judul memeriksa jenis dan scope yang diizinkan di [workflow](.github/workflows/pr-title-validator.yml).
+8. Tanggapi tinjauan dengan terbuka. Pemelihara akan meninjau dan memutuskan penggabungan; jangan menganggap persetujuan atau waktu respons tertentu dijamin.
 
 Kontribusi harus merupakan karya sendiri atau disertai izin dan lisensi yang sesuai. Proyek menggunakan [lisensi MIT](LICENSE). Fokus produk adalah dua pemain, LAN offline, controller browser HP, dan server otoritatif di laptop. Portofolio referensi bukan sumber kode, aset, atau konten untuk disalin. Jangan sertakan secret atau jawaban pribadi dalam kode, log, fixture, dan bukti.

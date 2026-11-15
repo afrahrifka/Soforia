@@ -70,3 +70,22 @@ Error memakai `code`, `messageKey`, `retryable` dan `requestId` bila ada; tidak 
 `game.snapshot` mencakup gameInstanceId, serverTick, snapshotSeq, phase, activeTime dan state publik lengkap untuk v0.1. Tidak memakai delta compression sebelum baseline terukur. Display yang kehilangan snapshot cukup menerima berikutnya; refresh meminta snapshot lengkap dan manifest versi yang sama. Client membuang snapshot dari match lama. Private snapshot dikirim hanya setelah autentikasi pemain dan hanya berisi data yang memang boleh diketahui pemain tersebut pada fase saat itu.
 
 Jika resume lewat 120 detik, slot tetap tidak otomatis diisi pemain lain selama match. Host/operator mengakhiri match lalu membuka pairing baru di lobby. Jika proses server mati, token sesi lama tidak berlaku; mulai sesi baru dengan pesan bahwa match sebelumnya tidak dapat dilanjutkan. Tick/render yang berhenti karena laptop sleep menyebabkan pause; jangan memproses durasi tidur sebagai waktu bermain.
+
+## Ekstensi input Kaca Berdua
+
+`input.state` menerima `x`/`y` untuk karakter dan opsional `glassX`/`glassY` untuk kaca. Semua komponen harus finite pada rentang −1 sampai 1; komponen kaca yang tidak disertakan dianggap nol agar controller game lama tetap kompatibel. Server menolak nilai di luar rentang. Kaca memakai aksi `jump`, `retry`, dan `next` pada game instance aktif, dengan mekanisme actionSeq yang sama. Tinggi kaca yang sudah dicapai merupakan state simulasi; menetralkan input atau pause menghentikan perubahan tinggi/rotasi tanpa mengubah pose mendadak. Posisi karakter, checkpoint dan hasil benturan tetap ditentukan server.
+
+Revisi Kaca 15 November: `glassX` kini mengendalikan kemiringan bidang kaca, bukan yaw. Nilai positif berlawanan jarum jam (Miring kiri), negatif searah jarum jam (Miring kanan). `glassY` negatif menaikkan dukungan, positif menurunkan. Snapshot memuat pose pusat dan `roll`, empat sudut diturunkan deterministik dari pose yang sama; `pressure` menggambarkan tekanan dua badan. Jeda tetap hanya dari perintah tombol Jeda. [Rincian aturan](17-kaca-empat-sudut-dan-tantangan.md).
+
+## Revisi runtime 15 November — pemulihan HP terputus
+
+Bagian ini mengganti ketentuan lama tentang reservasi 15 detik, resume 120 detik, mode/arena dari HP dan pause otomatis:
+
+- Reservasi join berlaku 5 detik. Heartbeat tanpa kabar >3,5 detik langsung melepaskan socket, menetralkan input dan menandai pemain terputus. Input basi tetap dinetralkan setelah 250 ms tanpa pause.
+- Kapasitas pairing ditentukan slot aktif/reservasi, bukan panjang daftar identitas pemain. Slot terputus dapat diisi ulang dari QR sah tanpa menambah pemain ketiga atau mereset match. QR dashboard terbuka ketika ada slot kosong/terputus. Tombol QR host juga memperhitungkan koneksi aktif.
+- Secret pemulihan acak tersimpan lokal pada browser HP; server menyimpan hash. `auth` dapat menyertakan `recoveryToken`, sedangkan token resume tetap diputar. Secret memulihkan identitas yang sama selama sesi server masih ada, termasuk scan di tab baru/browser yang sama. Satu identitas hanya mempunyai satu koneksi aktif; koneksi lama ditutup dan epoch meningkat. Penyimpanan browser dibatasi origin, sehingga perubahan alamat/port atau pindah browser memerlukan scan untuk mengisi slot terputus.
+- Slot yang diisi perangkat baru melalui QR mendapatkan credential baru; credential perangkat sebelumnya tidak berlaku lagi. Jawaban Seirama yang belum diungkap pada slot tersebut dihapus agar tidak diberikan kepada pemegang slot baru. Pemulihan dengan secret perangkat lama mempertahankan jawaban sendiri.
+- Watchdog browser menyambung ulang jika tidak menerima snapshot >4 detik meskipun WebSocket masih berstatus OPEN. Browser juga memeriksa koneksi saat online/kembali ke foreground. Game tidak dijeda otomatis. Server restart/reset mengakhiri sesi, bukan memulihkan state dari disk.
+- Controller umum hanya memilih game. Pengiriman `select` dengan `mode`/`level` ditolak `DEVELOPER_ONLY`; pemilih stage hanya tersedia pada mode developer lokal F2.
+
+Bukti: [uji gangguan browser](evidence/reconnect-browser-report.json) dan tes integrasi pada `tests/server.test.ts`. Semua data uji sintetis; tidak mencatat credential atau jawaban pengguna. Pemutusan jaringan diuji melalui simulasi browser, belum melalui dua HP fisik.

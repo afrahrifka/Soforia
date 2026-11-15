@@ -1,0 +1,14 @@
+{
+  "tanggal": "2026-11-15",
+  "hasil": "lulus",
+  "cakupan": [
+    "QR dashboard >=160px",
+    "lima game tanpa header/navbar/footer/QR otomatis",
+    "canvas memenuhi viewport pada 1366×768, 1920×1080, 1280×720",
+    "host tampil/sembunyikan QR saat bermain tanpa pause",
+    "QR otomatis tertutup setelah pemain 2 bergabung",
+    "pemain 2 tidak mempunyai tombol QR",
+    "tanpa error JavaScript"
+  ],
+  "batas": "Chromium sintetis; kemampuan scan pada HP fisik belum diuji."
+}

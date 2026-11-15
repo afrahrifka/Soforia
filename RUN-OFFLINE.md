@@ -98,3 +98,7 @@ Scan QR langsung masuk kontrol tanpa header/footer. Analog kiri memilih game pad
 Aplikasi mencoba fullscreen saat terhubung dan pada sentuhan pertama, serta meminta orientasi landscape bila didukung setelah fullscreen aktif. Tidak ada overlay wajib untuk mengaktifkan kontrol. Chrome/Safari/Firefox dan versi OS dapat menerapkan aturan yang berbeda; app tidak dapat memaksa browser yang tidak mengizinkan fullscreen. Jika address bar masih terlihat, tombol ⛶ boleh dicoba; layout tetap memenuhi area halaman yang tersedia. [Detail pengujian](docs/12-controller-hp.md).
 
 Menahan analog dan menekan aksi memakai pointer terpisah. Perubahan orientasi/ukuran layar, pointercancel dan keluar tab menetralkan input. Home dapat dipakai kedua pemain, sehingga ronde aktif akan dihentikan bila salah satu kembali ke katalog.
+
+### Jika ada salinan Main Bareng lain yang berjalan
+
+`./play.sh` kini berjalan mandiri tanpa unit systemd. Jika port 3210/3211 terpakai, launcher memilih pasangan kosong berikutnya dan mencetak alamat baru. Gunakan QR dari layar yang baru dibuka. Untuk menentukan port sendiri, gunakan `./play.sh --port 3220 --operator-port 3221`. Pemanggilan ulang memakai proses milik folder yang sama; `./stop.sh` hanya menghentikan server dengan jalur yang sesuai folder ini.

@@ -41,46 +41,20 @@ jobs:
             init
 
           scopes: |
-            auth
-            authentication
-            authorization
+            server
+            controller
+            console
+            games
+            orbit
+            kebun
+            seirama
+            network
             ui
-            api
+            accessibility
+            offline
+            tests
+            docs
+            build
             config
-            utils
-            header
-            footer
-            sidebar
-            modal
-            search
-            payment
-            user-management
-            data-processing
-            logging
-            unit-tests
-            integration-tests
-            e2e-tests
-            onboarding
-            checkout
-            user-profile
-            deployment
-            server-config
-            database-config
-            eslint
-            babel
-            webpack
-            module
-            service
-            interceptor
-            provider
-            middleware
-            filter
-            pipe
-            resolver
-            guard
-            decorator
-            library
-            websocket
             collaboration
-
           requireScope: false

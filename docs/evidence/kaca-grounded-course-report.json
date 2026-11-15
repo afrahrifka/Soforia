@@ -1,0 +1,1472 @@
+{
+  "result": "PASS",
+  "stages": 60,
+  "checkpoints": 240,
+  "results": [
+    {
+      "stage": 1,
+      "world": 1,
+      "checkpoints": 4,
+      "ticks": 1194,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": 0.2617993877991494
+        },
+        {
+          "kind": "lift",
+          "angle": 0
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 2,
+      "world": 1,
+      "checkpoints": 4,
+      "ticks": 1473,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "beam",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 0.2617993877991494
+        },
+        {
+          "kind": "crate",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": -0.2617993877991494
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 3,
+      "world": 1,
+      "checkpoints": 4,
+      "ticks": 1194,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "lift",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 0.2617993877991494
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 4,
+      "world": 1,
+      "checkpoints": 4,
+      "ticks": 1651,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": 0.2617993877991494
+        },
+        {
+          "kind": "aperture",
+          "angle": -0.2617993877991494
+        },
+        {
+          "kind": "beam",
+          "angle": 0
+        },
+        {
+          "kind": "moving",
+          "angle": 0
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 5,
+      "world": 1,
+      "checkpoints": 4,
+      "ticks": 1394,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "crate",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 1.5707963267948966
+        },
+        {
+          "kind": "lift",
+          "angle": 0
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 6,
+      "world": 1,
+      "checkpoints": 4,
+      "ticks": 1403,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "moving",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 0.4363323129985824
+        },
+        {
+          "kind": "aperture",
+          "angle": -0.4363323129985824
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 7,
+      "world": 1,
+      "checkpoints": 4,
+      "ticks": 1713,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": 1.5707963267948966
+        },
+        {
+          "kind": "beam",
+          "angle": 0
+        },
+        {
+          "kind": "lift",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 0.4363323129985824
+        },
+        {
+          "kind": "aperture",
+          "angle": -0.4363323129985824
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 8,
+      "world": 1,
+      "checkpoints": 4,
+      "ticks": 1321,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": -0.4363323129985824
+        },
+        {
+          "kind": "moving",
+          "angle": 0
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 9,
+      "world": 1,
+      "checkpoints": 4,
+      "ticks": 1706,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": 0.6108652381980153
+        },
+        {
+          "kind": "aperture",
+          "angle": 0.6108652381980153
+        },
+        {
+          "kind": "aperture",
+          "angle": -0.6108652381980153
+        },
+        {
+          "kind": "crate",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 1.5707963267948966
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 10,
+      "world": 1,
+      "checkpoints": 4,
+      "ticks": 1975,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": 0.6108652381980153
+        },
+        {
+          "kind": "aperture",
+          "angle": -0.6108652381980153
+        },
+        {
+          "kind": "moving",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": -1.5707963267948966
+        },
+        {
+          "kind": "aperture",
+          "angle": 0.6108652381980153
+        },
+        {
+          "kind": "crate",
+          "angle": 0
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 11,
+      "world": 2,
+      "checkpoints": 4,
+      "ticks": 1208,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": 0.4363323129985824
+        },
+        {
+          "kind": "lift",
+          "angle": 0
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 12,
+      "world": 2,
+      "checkpoints": 4,
+      "ticks": 1501,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "beam",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 0.4363323129985824
+        },
+        {
+          "kind": "crate",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": -0.4363323129985824
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 13,
+      "world": 2,
+      "checkpoints": 4,
+      "ticks": 1208,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "lift",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 0.4363323129985824
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 14,
+      "world": 2,
+      "checkpoints": 4,
+      "ticks": 1600,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": 0.4363323129985824
+        },
+        {
+          "kind": "aperture",
+          "angle": -0.4363323129985824
+        },
+        {
+          "kind": "beam",
+          "angle": 0
+        },
+        {
+          "kind": "moving",
+          "angle": 0
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 15,
+      "world": 2,
+      "checkpoints": 4,
+      "ticks": 1394,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "crate",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 1.5707963267948966
+        },
+        {
+          "kind": "lift",
+          "angle": 0
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 16,
+      "world": 2,
+      "checkpoints": 4,
+      "ticks": 1381,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "moving",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 0.6108652381980153
+        },
+        {
+          "kind": "aperture",
+          "angle": -0.6108652381980153
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 17,
+      "world": 2,
+      "checkpoints": 4,
+      "ticks": 1741,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": 1.5707963267948966
+        },
+        {
+          "kind": "beam",
+          "angle": 0
+        },
+        {
+          "kind": "lift",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 0.6108652381980153
+        },
+        {
+          "kind": "aperture",
+          "angle": -0.6108652381980153
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 18,
+      "world": 2,
+      "checkpoints": 4,
+      "ticks": 1271,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": -0.6108652381980153
+        },
+        {
+          "kind": "moving",
+          "angle": 0
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 19,
+      "world": 2,
+      "checkpoints": 4,
+      "ticks": 1748,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": 0.7853981633974483
+        },
+        {
+          "kind": "aperture",
+          "angle": 0.7853981633974483
+        },
+        {
+          "kind": "aperture",
+          "angle": -0.7853981633974483
+        },
+        {
+          "kind": "crate",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 1.5707963267948966
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 20,
+      "world": 2,
+      "checkpoints": 4,
+      "ticks": 1938,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": 0.7853981633974483
+        },
+        {
+          "kind": "aperture",
+          "angle": -0.7853981633974483
+        },
+        {
+          "kind": "moving",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": -1.5707963267948966
+        },
+        {
+          "kind": "aperture",
+          "angle": 0.7853981633974483
+        },
+        {
+          "kind": "crate",
+          "angle": 0
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 21,
+      "world": 3,
+      "checkpoints": 4,
+      "ticks": 1222,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": 0.6108652381980153
+        },
+        {
+          "kind": "lift",
+          "angle": 0
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 22,
+      "world": 3,
+      "checkpoints": 4,
+      "ticks": 1529,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "beam",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 0.6108652381980153
+        },
+        {
+          "kind": "crate",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": -0.6108652381980153
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 23,
+      "world": 3,
+      "checkpoints": 4,
+      "ticks": 1222,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "lift",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 0.6108652381980153
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 24,
+      "world": 3,
+      "checkpoints": 4,
+      "ticks": 1550,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": 0.6108652381980153
+        },
+        {
+          "kind": "aperture",
+          "angle": -0.6108652381980153
+        },
+        {
+          "kind": "beam",
+          "angle": 0
+        },
+        {
+          "kind": "moving",
+          "angle": 0
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 25,
+      "world": 3,
+      "checkpoints": 4,
+      "ticks": 1394,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "crate",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 1.5707963267948966
+        },
+        {
+          "kind": "lift",
+          "angle": 0
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 26,
+      "world": 3,
+      "checkpoints": 4,
+      "ticks": 1580,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "moving",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 0.7853981633974483
+        },
+        {
+          "kind": "aperture",
+          "angle": -0.7853981633974483
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 27,
+      "world": 3,
+      "checkpoints": 4,
+      "ticks": 1769,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": 1.5707963267948966
+        },
+        {
+          "kind": "beam",
+          "angle": 0
+        },
+        {
+          "kind": "lift",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 0.7853981633974483
+        },
+        {
+          "kind": "aperture",
+          "angle": -0.7853981633974483
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 28,
+      "world": 3,
+      "checkpoints": 4,
+      "ticks": 1234,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": -0.7853981633974483
+        },
+        {
+          "kind": "moving",
+          "angle": 0
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 29,
+      "world": 3,
+      "checkpoints": 4,
+      "ticks": 1814,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": 1.0471975511965976
+        },
+        {
+          "kind": "aperture",
+          "angle": 1.0471975511965976
+        },
+        {
+          "kind": "aperture",
+          "angle": -1.0471975511965976
+        },
+        {
+          "kind": "crate",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 1.5707963267948966
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 30,
+      "world": 3,
+      "checkpoints": 4,
+      "ticks": 1910,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": 1.0471975511965976
+        },
+        {
+          "kind": "aperture",
+          "angle": -1.0471975511965976
+        },
+        {
+          "kind": "moving",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": -1.5707963267948966
+        },
+        {
+          "kind": "aperture",
+          "angle": 1.0471975511965976
+        },
+        {
+          "kind": "crate",
+          "angle": 0
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 31,
+      "world": 4,
+      "checkpoints": 4,
+      "ticks": 1236,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": 0.7853981633974483
+        },
+        {
+          "kind": "lift",
+          "angle": 0
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 32,
+      "world": 4,
+      "checkpoints": 4,
+      "ticks": 1557,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "beam",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 0.7853981633974483
+        },
+        {
+          "kind": "crate",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": -0.7853981633974483
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 33,
+      "world": 4,
+      "checkpoints": 4,
+      "ticks": 1236,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "lift",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 0.7853981633974483
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 34,
+      "world": 4,
+      "checkpoints": 4,
+      "ticks": 1721,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": 0.7853981633974483
+        },
+        {
+          "kind": "aperture",
+          "angle": -0.7853981633974483
+        },
+        {
+          "kind": "beam",
+          "angle": 0
+        },
+        {
+          "kind": "moving",
+          "angle": 0
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 35,
+      "world": 4,
+      "checkpoints": 4,
+      "ticks": 1394,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "crate",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 1.5707963267948966
+        },
+        {
+          "kind": "lift",
+          "angle": 0
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 36,
+      "world": 4,
+      "checkpoints": 4,
+      "ticks": 1573,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "moving",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 1.0471975511965976
+        },
+        {
+          "kind": "aperture",
+          "angle": -1.0471975511965976
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 37,
+      "world": 4,
+      "checkpoints": 4,
+      "ticks": 1813,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": 1.5707963267948966
+        },
+        {
+          "kind": "beam",
+          "angle": 0
+        },
+        {
+          "kind": "lift",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 1.0471975511965976
+        },
+        {
+          "kind": "aperture",
+          "angle": -1.0471975511965976
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 38,
+      "world": 4,
+      "checkpoints": 4,
+      "ticks": 1391,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": -1.0471975511965976
+        },
+        {
+          "kind": "moving",
+          "angle": 0
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 39,
+      "world": 4,
+      "checkpoints": 4,
+      "ticks": 1874,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": 1.3089969389957472
+        },
+        {
+          "kind": "aperture",
+          "angle": 1.3089969389957472
+        },
+        {
+          "kind": "aperture",
+          "angle": -1.3089969389957472
+        },
+        {
+          "kind": "crate",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 1.5707963267948966
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 40,
+      "world": 4,
+      "checkpoints": 4,
+      "ticks": 2101,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": 1.3089969389957472
+        },
+        {
+          "kind": "aperture",
+          "angle": -1.3089969389957472
+        },
+        {
+          "kind": "moving",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": -1.5707963267948966
+        },
+        {
+          "kind": "aperture",
+          "angle": 1.3089969389957472
+        },
+        {
+          "kind": "crate",
+          "angle": 0
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 41,
+      "world": 5,
+      "checkpoints": 4,
+      "ticks": 1258,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": 1.0471975511965976
+        },
+        {
+          "kind": "lift",
+          "angle": 0
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 42,
+      "world": 5,
+      "checkpoints": 4,
+      "ticks": 1602,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "beam",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 1.0471975511965976
+        },
+        {
+          "kind": "crate",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": -1.0471975511965976
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 43,
+      "world": 5,
+      "checkpoints": 4,
+      "ticks": 1258,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "lift",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 1.0471975511965976
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 44,
+      "world": 5,
+      "checkpoints": 4,
+      "ticks": 1670,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": 1.0471975511965976
+        },
+        {
+          "kind": "aperture",
+          "angle": -1.0471975511965976
+        },
+        {
+          "kind": "beam",
+          "angle": 0
+        },
+        {
+          "kind": "moving",
+          "angle": 0
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 45,
+      "world": 5,
+      "checkpoints": 4,
+      "ticks": 1394,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "crate",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 1.5707963267948966
+        },
+        {
+          "kind": "lift",
+          "angle": 0
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 46,
+      "world": 5,
+      "checkpoints": 4,
+      "ticks": 1563,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "moving",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 1.3089969389957472
+        },
+        {
+          "kind": "aperture",
+          "angle": -1.3089969389957472
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 47,
+      "world": 5,
+      "checkpoints": 4,
+      "ticks": 1853,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": 1.5707963267948966
+        },
+        {
+          "kind": "beam",
+          "angle": 0
+        },
+        {
+          "kind": "lift",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 1.3089969389957472
+        },
+        {
+          "kind": "aperture",
+          "angle": -1.3089969389957472
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 48,
+      "world": 5,
+      "checkpoints": 4,
+      "ticks": 1341,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": -1.3089969389957472
+        },
+        {
+          "kind": "moving",
+          "angle": 0
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 49,
+      "world": 5,
+      "checkpoints": 4,
+      "ticks": 1874,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": 1.3089969389957472
+        },
+        {
+          "kind": "aperture",
+          "angle": 1.3089969389957472
+        },
+        {
+          "kind": "aperture",
+          "angle": -1.3089969389957472
+        },
+        {
+          "kind": "crate",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 1.5707963267948966
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 50,
+      "world": 5,
+      "checkpoints": 4,
+      "ticks": 2050,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": 1.3089969389957472
+        },
+        {
+          "kind": "aperture",
+          "angle": -1.3089969389957472
+        },
+        {
+          "kind": "moving",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": -1.5707963267948966
+        },
+        {
+          "kind": "aperture",
+          "angle": 1.3089969389957472
+        },
+        {
+          "kind": "crate",
+          "angle": 0
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 51,
+      "world": 6,
+      "checkpoints": 4,
+      "ticks": 1278,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": 1.3089969389957472
+        },
+        {
+          "kind": "lift",
+          "angle": 0
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 52,
+      "world": 6,
+      "checkpoints": 4,
+      "ticks": 1642,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "beam",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 1.3089969389957472
+        },
+        {
+          "kind": "crate",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": -1.3089969389957472
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 53,
+      "world": 6,
+      "checkpoints": 4,
+      "ticks": 1278,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "lift",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 1.3089969389957472
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 54,
+      "world": 6,
+      "checkpoints": 4,
+      "ticks": 1841,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": 1.3089969389957472
+        },
+        {
+          "kind": "aperture",
+          "angle": -1.3089969389957472
+        },
+        {
+          "kind": "beam",
+          "angle": 0
+        },
+        {
+          "kind": "moving",
+          "angle": 0
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 55,
+      "world": 6,
+      "checkpoints": 4,
+      "ticks": 1394,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "crate",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 1.5707963267948966
+        },
+        {
+          "kind": "lift",
+          "angle": 0
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 56,
+      "world": 6,
+      "checkpoints": 4,
+      "ticks": 1512,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "moving",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 1.3089969389957472
+        },
+        {
+          "kind": "aperture",
+          "angle": -1.3089969389957472
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 57,
+      "world": 6,
+      "checkpoints": 4,
+      "ticks": 1853,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": 1.5707963267948966
+        },
+        {
+          "kind": "beam",
+          "angle": 0
+        },
+        {
+          "kind": "lift",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 1.3089969389957472
+        },
+        {
+          "kind": "aperture",
+          "angle": -1.3089969389957472
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 58,
+      "world": 6,
+      "checkpoints": 4,
+      "ticks": 1290,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": -1.3089969389957472
+        },
+        {
+          "kind": "moving",
+          "angle": 0
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 59,
+      "world": 6,
+      "checkpoints": 4,
+      "ticks": 1874,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": 1.3089969389957472
+        },
+        {
+          "kind": "aperture",
+          "angle": 1.3089969389957472
+        },
+        {
+          "kind": "aperture",
+          "angle": -1.3089969389957472
+        },
+        {
+          "kind": "crate",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": 1.5707963267948966
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 60,
+      "world": 6,
+      "checkpoints": 4,
+      "ticks": 2000,
+      "breaks": 0,
+      "encounters": [
+        {
+          "kind": "aperture",
+          "angle": 1.3089969389957472
+        },
+        {
+          "kind": "aperture",
+          "angle": -1.3089969389957472
+        },
+        {
+          "kind": "moving",
+          "angle": 0
+        },
+        {
+          "kind": "aperture",
+          "angle": -1.5707963267948966
+        },
+        {
+          "kind": "aperture",
+          "angle": 1.3089969389957472
+        },
+        {
+          "kind": "crate",
+          "angle": 0
+        }
+      ],
+      "result": "PASS"
+    }
+  ],
+  "limitation": "Simulasi input dengan pengetahuan peta, tanpa teleport atau kekebalan. Bukan playtest manusia, dua HP fisik, atau bukti keseruan/balancing."
+}

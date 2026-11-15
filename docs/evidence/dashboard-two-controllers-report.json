@@ -1,0 +1,13 @@
+{
+  "tanggal": "2026-11-15",
+  "hasil": "lulus",
+  "cakupan": [
+    "analog dashboard aktif pada kedua controller",
+    "kedua controller dapat menggeser pilihan game bersama",
+    "satu sorotan game tersinkron",
+    "tombol Main pemain 2 memulai game terpilih",
+    "kedua pemain menerima tutorial/Siap",
+    "tanpa error JavaScript"
+  ],
+  "batas": "Dua controller browser sintetis; bukan dua HP fisik."
+}

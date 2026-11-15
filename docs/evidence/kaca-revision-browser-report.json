@@ -1,0 +1,14 @@
+{
+  "result": "PASS",
+  "checks": [
+    "Pemilih 60 stage dapat membuka stage 60 dan kembali ke stage 1",
+    "Satu analog di sudut bawah dan lima tombol putar/naik/turun/lompat; utilitas Jeda kecil; empat ukuran viewport muat tanpa scroll",
+    "Multi-touch: analog + Naikkan + Putar bersamaan; release per jari independen; cancel menetralkan semua tombol",
+    "Mode tangan kiri memindahkan analog ke sudut kanan bawah; bantuan tidak membuat pause",
+    "Jeda kecil bekerja, lanjut melalui Siap, kedua pemain dapat melompat",
+    "Stage 1 diselesaikan melalui analog HP, empat checkpoint, tanpa pecah; kedua pemain memilih lanjut ke stage 2"
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "limitation": "Dua controller browser sintetis. Bukan dua HP fisik, uji WAN terputus, balancing manusia, atau input-to-photon."
+}

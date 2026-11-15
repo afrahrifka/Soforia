@@ -1,0 +1,83 @@
+{
+  "result": "PASS",
+  "checks": [
+    {
+      "id": "orbit",
+      "geometry": 7,
+      "textures": 8,
+      "reducedMotion": "frame statis identik",
+      "render": "PASS"
+    },
+    {
+      "id": "garden",
+      "geometry": 7,
+      "textures": 10,
+      "reducedMotion": "frame statis identik",
+      "render": "PASS"
+    },
+    {
+      "id": "property",
+      "geometry": 7,
+      "textures": 22,
+      "reducedMotion": "frame statis identik",
+      "render": "PASS"
+    },
+    {
+      "id": "seirama",
+      "geometry": 7,
+      "textures": 5,
+      "reducedMotion": "frame statis identik",
+      "render": "PASS"
+    },
+    {
+      "id": "glass",
+      "geometry": 7,
+      "textures": 6,
+      "reducedMotion": "frame statis identik",
+      "render": "PASS"
+    },
+    {
+      "id": "glass-six-worlds",
+      "render": "PASS",
+      "stageResources": [
+        {
+          "stage": 1,
+          "geometry": "7",
+          "textures": "5"
+        },
+        {
+          "stage": 11,
+          "geometry": "7",
+          "textures": "5"
+        },
+        {
+          "stage": 21,
+          "geometry": "7",
+          "textures": "5"
+        },
+        {
+          "stage": 31,
+          "geometry": "7",
+          "textures": "5"
+        },
+        {
+          "stage": 41,
+          "geometry": "7",
+          "textures": "5"
+        },
+        {
+          "stage": 51,
+          "geometry": "7",
+          "textures": "5"
+        },
+        {
+          "stage": 1,
+          "geometry": "7",
+          "textures": "5"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "limitation": "Fixture sintetis untuk memeriksa model dan reduced motion. Bukan pengujian aturan game, dua HP fisik, FPS hardware, atau input-to-photon."
+}

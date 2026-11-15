@@ -26,13 +26,15 @@ Setelah scan, HP menampilkan kontrol saja: analog kiri, tombol aksi kanan, Home 
 
 Fullscreen dicoba otomatis dan saat sentuhan pertama; dukungannya ditentukan browser HP. Jika perlu tekan ⛶. Pada browser yang menolak API, kontrol tetap memenuhi viewport tanpa panel tambahan. [Rincian dan batas fullscreen](docs/12-controller-hp.md).
 
-## Tiga game yang tersedia
+## Katalog game
 
 | Game | Pengalaman |
 |---|---|
 | **Orbit Berdua** | Kumpulkan 12 cahaya, tolong pasangan yang terkena puing dan buka dua gerbang bersama; tiga arena |
 | **Kebun Berdua** | Tanam, siram, panen enam wortel dan enam stroberi, lalu antar ke peti bersama |
 | **Seirama** | Delapan ronde dari 40 soal orisinal, pilihan pribadi, tebak pasangan, reveal bersama dan skip tanpa penalti |
+| **Kota Berdua 3D** | Duel properti dengan distrik, bangunan, dadu, dan 12 ronde |
+| **Kaca Berdua** | Satu analog + tombol miring/tinggi/Lompat, map konstruksi, 60 stage dan 240 checkpoint |
 
 Tersedia mode santai/tantangan, tutorial, countdown, pause, hasil, rematch, menu HP, pairing otomatis, reconnect, pengaturan kontrol dan diagnosis RTT. Aturan game berjalan di server laptop; HP tidak menerima video. Jawaban Seirama belum diungkap tidak dikirim ke layar atau HP pasangan.
 
@@ -75,10 +77,23 @@ Source TypeScript berada di `src/`, antarmuka lokal di `public/`, dan bundle off
 - [Arsitektur](docs/04-arsitektur.md), [jaringan/protokol](docs/05-jaringan-protokol.md), [data/SDK](docs/06-data-sdk.md).
 - [Operasional/privasi](docs/07-operasional-privasi.md), [pengujian](docs/08-pengujian.md), [roadmap](docs/09-roadmap.md), [keputusan/sumber](docs/10-keputusan-sumber.md).
 
-`Web-Portfolio-3D` hanya referensi kualitas visual. Seluruh game, artwork CSS/SVG/canvas dan soal dibuat terpisah; tidak menyalin portofolio atau membundel game PlayStation.
+`Web-Portfolio-3D` hanya referensi kualitas visual. Kode game, artwork antarmuka dan soal dibuat terpisah. Atas izin pengguna, paket model pihak ketiga CC0 dari folder lib portofolio kini dipakai dengan sumber/lisensi tercatat; kode dan game portofolio tidak disalin. Tidak membundel game PlayStation.
 
 ## Berkontribusi dan dukungan sukarela
 
 Ide dan pengalaman bermain sangat kami hargai, bahkan tanpa kemampuan coding. Buka **Issues → New issue** dan pilih formulir yang sesuai; panduannya ada di [Panduan Kolaborasi](collaboration_guide.md). Semua peserta diharapkan mengikuti [Kode Etik](CODE_OF_CONDUCT.md). Kontribusi tersedia di bawah [lisensi MIT](LICENSE).
 
 Jika ingin mendukung proyek secara sukarela, kamu dapat [mentraktir melalui Trakteer](https://trakteer.id/oskhar). Dukungan ini tidak wajib untuk menggunakan atau berkontribusi pada proyek.
+
+## Prototipe ekspansi 3D
+
+Source terbaru menggunakan Three.js yang dibundel lokal untuk arena 3D Orbit Berdua, Kebun Berdua, serta latar Seirama. Game baru **Kota Berdua 3D** menawarkan duel properti orisinal: lempar dadu, pilih beli/lewati, terima sewa, dan bandingkan nilai aset setelah 24 giliran. Memerlukan WebGL pada browser laptop. Jalankan build dari source untuk mencoba; paket offline beta.3 yang disebut di atas belum diperbarui untuk ekspansi ini. Playtest pasangan dan benchmark perangkat fisik masih diperlukan.
+
+
+Pembenahan terbaru menambahkan diorama dengan model pesawat, tanaman, karakter dan bangunan kota orisinal, bayangan, animasi dadu/pion, serta HUD permainan. Kota Berdua kini memiliki empat distrik, peningkatan bangunan dan festival; Orbit memiliki pulsa pelindung; Kebun memberi petunjuk aksi. [Rincian permainan, inventaris aset dan verifikasi](docs/13-kualitas-game-3d.md).
+
+
+Kaca Berdua memakai satu analog di sudut bawah untuk berjalan, tombol tahan Miring kiri/kanan dan Naikkan/Turunkan untuk kaca, serta satu tombol Lompat. Tinggi kaca bertahan saat tombol dilepas; mode tangan kiri mencerminkan posisi analog. Host dapat memilih stage 1–60 dari controller katalog. Jeda semua game kini tombol kecil `Ⅱ` seperti Home, terpisah dari tombol aksi. Setiap pemain memegang dua sudut dengan dua tangan; kemiringan mengubah pegangan kiri–kanan menjadi bawah–atas. Tanah dan tekanan dua badan bisa memecahkan kaca. [Panduan empat sudut, tantangan stage, dan bukti verifikasi](docs/17-kaca-empat-sudut-dan-tantangan.md).
+
+
+Revisi terbaru Kaca Berdua menggunakan karakter humanoid membulat dengan empat lengan beruas yang dapat meregang hingga batas jangkauan, pose kaca independen, dan kamera perspektif otomatis. Pustaka lokal memuat **1.053 model CC0**; scene hanya memuat model yang dibutuhkan. [Sumber/lisensi aset dan verifikasi](docs/15-aset-dan-karakter-elastis.md).

@@ -1,0 +1,58 @@
+{
+  "result": "PASS",
+  "checks": [
+    {
+      "id": "glass",
+      "geometry": 21,
+      "textures": 8,
+      "reducedMotion": "frame statis identik",
+      "render": "PASS"
+    },
+    {
+      "id": "glass-preview",
+      "render": "PASS",
+      "stageResources": [
+        {
+          "stage": 1,
+          "geometry": "20",
+          "textures": "7"
+        },
+        {
+          "stage": 12,
+          "geometry": "21",
+          "textures": "7"
+        },
+        {
+          "stage": 23,
+          "geometry": "21",
+          "textures": "9"
+        },
+        {
+          "stage": 34,
+          "geometry": "21",
+          "textures": "7"
+        },
+        {
+          "stage": 45,
+          "geometry": "20",
+          "textures": "8"
+        },
+        {
+          "stage": 56,
+          "geometry": "21",
+          "textures": "7"
+        },
+        {
+          "stage": 1,
+          "geometry": "20",
+          "textures": "7"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "downloadedModelsParsed": [],
+  "uniqueDownloadedModels": 0,
+  "cacheLimit": 64,
+  "limitation": "Fixture sintetis untuk memeriksa model dan reduced motion. Bukan pengujian aturan game, dua HP fisik, FPS hardware, atau input-to-photon."
+}

@@ -1,0 +1,488 @@
+{
+  "result": "PASS",
+  "stages": 60,
+  "checkpoints": 240,
+  "results": [
+    {
+      "stage": 1,
+      "world": 1,
+      "checkpoints": 4,
+      "ticks": 1159,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 2,
+      "world": 1,
+      "checkpoints": 4,
+      "ticks": 1636,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 3,
+      "world": 1,
+      "checkpoints": 4,
+      "ticks": 1675,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 4,
+      "world": 1,
+      "checkpoints": 4,
+      "ticks": 1556,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 5,
+      "world": 1,
+      "checkpoints": 4,
+      "ticks": 1496,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 6,
+      "world": 1,
+      "checkpoints": 4,
+      "ticks": 1535,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 7,
+      "world": 1,
+      "checkpoints": 4,
+      "ticks": 1615,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 8,
+      "world": 1,
+      "checkpoints": 4,
+      "ticks": 1459,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 9,
+      "world": 1,
+      "checkpoints": 4,
+      "ticks": 1296,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 10,
+      "world": 1,
+      "checkpoints": 4,
+      "ticks": 1609,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 11,
+      "world": 2,
+      "checkpoints": 4,
+      "ticks": 1640,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 12,
+      "world": 2,
+      "checkpoints": 4,
+      "ticks": 1472,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 13,
+      "world": 2,
+      "checkpoints": 4,
+      "ticks": 1820,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 14,
+      "world": 2,
+      "checkpoints": 4,
+      "ticks": 1604,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 15,
+      "world": 2,
+      "checkpoints": 4,
+      "ticks": 1546,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 16,
+      "world": 2,
+      "checkpoints": 4,
+      "ticks": 1460,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 17,
+      "world": 2,
+      "checkpoints": 4,
+      "ticks": 1772,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 18,
+      "world": 2,
+      "checkpoints": 4,
+      "ticks": 1563,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 19,
+      "world": 2,
+      "checkpoints": 4,
+      "ticks": 1492,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 20,
+      "world": 2,
+      "checkpoints": 4,
+      "ticks": 1518,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 21,
+      "world": 3,
+      "checkpoints": 4,
+      "ticks": 1584,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 22,
+      "world": 3,
+      "checkpoints": 4,
+      "ticks": 1377,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 23,
+      "world": 3,
+      "checkpoints": 4,
+      "ticks": 1517,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 24,
+      "world": 3,
+      "checkpoints": 4,
+      "ticks": 1864,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 25,
+      "world": 3,
+      "checkpoints": 4,
+      "ticks": 1484,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 26,
+      "world": 3,
+      "checkpoints": 4,
+      "ticks": 1216,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 27,
+      "world": 3,
+      "checkpoints": 4,
+      "ticks": 1864,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 28,
+      "world": 3,
+      "checkpoints": 4,
+      "ticks": 1557,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 29,
+      "world": 3,
+      "checkpoints": 4,
+      "ticks": 1325,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 30,
+      "world": 3,
+      "checkpoints": 4,
+      "ticks": 1628,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 31,
+      "world": 4,
+      "checkpoints": 4,
+      "ticks": 1430,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 32,
+      "world": 4,
+      "checkpoints": 4,
+      "ticks": 1445,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 33,
+      "world": 4,
+      "checkpoints": 4,
+      "ticks": 1874,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 34,
+      "world": 4,
+      "checkpoints": 4,
+      "ticks": 1378,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 35,
+      "world": 4,
+      "checkpoints": 4,
+      "ticks": 1665,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 36,
+      "world": 4,
+      "checkpoints": 4,
+      "ticks": 1438,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 37,
+      "world": 4,
+      "checkpoints": 4,
+      "ticks": 1496,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 38,
+      "world": 4,
+      "checkpoints": 4,
+      "ticks": 1477,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 39,
+      "world": 4,
+      "checkpoints": 4,
+      "ticks": 1855,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 40,
+      "world": 4,
+      "checkpoints": 4,
+      "ticks": 1510,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 41,
+      "world": 5,
+      "checkpoints": 4,
+      "ticks": 1222,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 42,
+      "world": 5,
+      "checkpoints": 4,
+      "ticks": 1673,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 43,
+      "world": 5,
+      "checkpoints": 4,
+      "ticks": 2001,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 44,
+      "world": 5,
+      "checkpoints": 4,
+      "ticks": 1530,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 45,
+      "world": 5,
+      "checkpoints": 4,
+      "ticks": 1447,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 46,
+      "world": 5,
+      "checkpoints": 4,
+      "ticks": 1224,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 47,
+      "world": 5,
+      "checkpoints": 4,
+      "ticks": 1784,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 48,
+      "world": 5,
+      "checkpoints": 4,
+      "ticks": 1975,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 49,
+      "world": 5,
+      "checkpoints": 4,
+      "ticks": 1482,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 50,
+      "world": 5,
+      "checkpoints": 4,
+      "ticks": 1468,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 51,
+      "world": 6,
+      "checkpoints": 4,
+      "ticks": 1726,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 52,
+      "world": 6,
+      "checkpoints": 4,
+      "ticks": 1458,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 53,
+      "world": 6,
+      "checkpoints": 4,
+      "ticks": 1505,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 54,
+      "world": 6,
+      "checkpoints": 4,
+      "ticks": 1468,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 55,
+      "world": 6,
+      "checkpoints": 4,
+      "ticks": 1703,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 56,
+      "world": 6,
+      "checkpoints": 4,
+      "ticks": 1336,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 57,
+      "world": 6,
+      "checkpoints": 4,
+      "ticks": 1711,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 58,
+      "world": 6,
+      "checkpoints": 4,
+      "ticks": 1454,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 59,
+      "world": 6,
+      "checkpoints": 4,
+      "ticks": 1399,
+      "breaks": 0,
+      "result": "PASS"
+    },
+    {
+      "stage": 60,
+      "world": 6,
+      "checkpoints": 4,
+      "ticks": 1461,
+      "breaks": 0,
+      "result": "PASS"
+    }
+  ],
+  "limitation": "Simulasi aturan server dengan input sintetis dan pengetahuan peta. Bukan playtest manusia, pengujian dua HP fisik, atau bukti balancing."
+}

@@ -1,0 +1,35 @@
+{
+  "result": "PASS",
+  "checks": [
+    {
+      "id": "orbit",
+      "geometry": 7,
+      "textures": 8,
+      "reducedMotion": "frame statis identik",
+      "render": "PASS"
+    },
+    {
+      "id": "garden",
+      "geometry": 7,
+      "textures": 10,
+      "reducedMotion": "frame statis identik",
+      "render": "PASS"
+    },
+    {
+      "id": "property",
+      "geometry": 7,
+      "textures": 22,
+      "reducedMotion": "frame statis identik",
+      "render": "PASS"
+    },
+    {
+      "id": "seirama",
+      "geometry": 7,
+      "textures": 5,
+      "reducedMotion": "frame statis identik",
+      "render": "PASS"
+    }
+  ],
+  "errors": [],
+  "limitation": "Fixture sintetis untuk memeriksa model dan reduced motion. Bukan pengujian aturan game, dua HP fisik, FPS hardware, atau input-to-photon."
+}

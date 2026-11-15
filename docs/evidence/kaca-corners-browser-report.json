@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "checks": [
+    "Pemilih 60 stage dapat membuka stage 60 dan kembali ke stage 1",
+    "Satu analog di sudut bawah dan lima tombol putar/naik/turun/lompat; utilitas Jeda kecil; empat ukuran viewport muat tanpa scroll",
+    "Multi-touch: analog + Naikkan + Miring bersamaan; release per jari independen; cancel menetralkan semua tombol",
+    "Mode tangan kiri memindahkan analog ke sudut kanan bawah; bantuan tidak membuat pause",
+    "Jeda kecil bekerja, lanjut melalui Siap, kedua pemain dapat melompat",
+    "Sentuhan lantai memecahkan kaca; respawn otomatis tanpa pause",
+    "Dua analog saling mendorong: kaca terjepit pecah, lalu kembali ke checkpoint",
+    "Checkpoint dan bingkai miring 15° dilalui dengan analog/tombol browser tanpa pecah tambahan",
+    "Kaca vertikal 90° dengan pegangan bawah–atas, tanpa rotasi depan–belakang"
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "limitation": "Dua controller browser sintetis. Bukan dua HP fisik, uji WAN terputus, balancing manusia, atau input-to-photon."
+}
