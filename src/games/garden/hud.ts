@@ -1,0 +1,3 @@
+import {esc,badge} from '../../shared/html.ts';
+
+export function hud(state:any){const g=state.game;return `<div class="hud-scoreboard">${badge('WORTEL',`${g.harvest.carrot} / 6`)}${badge('STROBERI',`${g.harvest.berry} / 6`)}${badge('TUMBUH',`${g.plots.filter((p:any)=>p.stage==='ripe').length} siap panen`)}</div><div class="garden-guidance">${g.players.map((p:any,i:number)=>`<div class="team-${i}"><b>${i?'B':'A'} · ${p.carry?'Membawa '+(p.carry==='berry'?'stroberi':'wortel'):'Bibit '+(p.crop==='berry'?'stroberi':'wortel')}</b><span>${esc(g.feedback?.[i]||'Arahkan lingkaran ke petak, lalu pilih aksi di HP.')}</span></div>`).join('')}</div>`;}

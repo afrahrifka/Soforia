@@ -1,4 +1,2 @@
-// Regresi aktif: kontrol melalui server tanpa skenario sudut wajib.
-// Seluruh rute diperiksa terpisah melalui glass-course-check.mjs.
-await import('./glass-keyboard-check.mjs');
-await import('./glass-direction-check.mjs');
+// Facade lama; jalankan tooling dari folder game untuk perubahan berikutnya.
+export * from '../src/games/glass/tools/glass-browser-check.mjs';

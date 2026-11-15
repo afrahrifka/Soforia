@@ -1,0 +1,36 @@
+{
+  "tanggal": "2026-11-15",
+  "hasil": "lulus",
+  "results": [
+    {
+      "from": 1,
+      "to": 2,
+      "sameTick": true,
+      "oldStageInterpolation": false,
+      "confirmation": false
+    },
+    {
+      "from": 10,
+      "to": 11,
+      "sameTick": true,
+      "oldStageInterpolation": false,
+      "confirmation": false
+    },
+    {
+      "from": 32,
+      "to": 33,
+      "sameTick": true,
+      "oldStageInterpolation": false,
+      "confirmation": false
+    },
+    {
+      "from": 59,
+      "to": 60,
+      "sameTick": true,
+      "oldStageInterpolation": false,
+      "confirmation": false
+    }
+  ],
+  "errors": [],
+  "batas": "Fixture browser Chromium di checkpoint akhir sintetis. Menguji satu tick logika permainan, renderer/interpolasi, HUD dan markup kontrol; bukan penuntasan rute melalui dua HP."
+}

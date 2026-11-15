@@ -1,0 +1,91 @@
+{
+  "result": "PASS",
+  "results": [
+    {
+      "world": 0,
+      "muted": false,
+      "rms": 0.011794582675465357,
+      "peak": 0.21527434885501862,
+      "diagnostics": {
+        "scheduled": 103,
+        "effects": 19,
+        "biome": 0,
+        "danger": 0
+      }
+    },
+    {
+      "world": 1,
+      "muted": false,
+      "rms": 0.011113292496018036,
+      "peak": 0.21527434885501862,
+      "diagnostics": {
+        "scheduled": 94,
+        "effects": 19,
+        "biome": 1,
+        "danger": 0
+      }
+    },
+    {
+      "world": 2,
+      "muted": false,
+      "rms": 0.011720117898969321,
+      "peak": 0.21527434885501862,
+      "diagnostics": {
+        "scheduled": 109,
+        "effects": 19,
+        "biome": 2,
+        "danger": 0
+      }
+    },
+    {
+      "world": 3,
+      "muted": false,
+      "rms": 0.011830315105877221,
+      "peak": 0.21765263378620148,
+      "diagnostics": {
+        "scheduled": 99,
+        "effects": 19,
+        "biome": 3,
+        "danger": 0
+      }
+    },
+    {
+      "world": 4,
+      "muted": false,
+      "rms": 0.01139028832087096,
+      "peak": 0.21516360342502594,
+      "diagnostics": {
+        "scheduled": 108,
+        "effects": 19,
+        "biome": 4,
+        "danger": 0
+      }
+    },
+    {
+      "world": 5,
+      "muted": false,
+      "rms": 0.011129853140502787,
+      "peak": 0.21748603880405426,
+      "diagnostics": {
+        "scheduled": 92,
+        "effects": 19,
+        "biome": 5,
+        "danger": 0
+      }
+    },
+    {
+      "world": 0,
+      "muted": true,
+      "rms": 0,
+      "peak": 0,
+      "diagnostics": {
+        "scheduled": 0,
+        "effects": 0,
+        "biome": 0,
+        "danger": 0
+      }
+    }
+  ],
+  "preview": "artifacts/kaca-audio-preview.wav",
+  "limitation": "OfflineAudioContext 8 detik per bioma, memakai sequencer/efek produksi. Memeriksa sinyal, mute dan clipping; bukan penilaian keseruan musik, speaker fisik atau input-to-photon."
+}

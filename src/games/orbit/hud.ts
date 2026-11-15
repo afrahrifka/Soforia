@@ -1,0 +1,4 @@
+import {esc,badge} from '../../shared/html.ts';
+
+export function hud(state:any){const g=state.game;const count=g.energies.filter((e:any)=>e.taken).length;
+return `<div class="hud-scoreboard">${badge('CAHAYA',`${count} / 12`)}${badge('GERBANG',count<12?'Belum terbuka':g.gateOpen?'Terbuka':'Menunggu siklus')}${badge('BANTUAN TIM',String(g.helps))}</div><div class="objective-ribbon"><strong>${count<12?'Kumpulkan cahaya yang berpendar':g.gateOpen?'Satu pesawat di setiap pad gerbang':'Gerbang berganti setiap 8 detik'}</strong><span>${count<12?'Analog untuk terbang · Pulsa memberi perlindungan 2 detik pada tim di dekatmu.':`Tahan bersama 2 detik · ${Math.round(Math.min(1,g.gate/2)*100)}%`}</span><progress class="objective-meter" aria-label="Kemajuan tujuan" max="100" value="${count<12?count/12*100:Math.min(1,g.gate/2)*100}"></progress></div>`;}

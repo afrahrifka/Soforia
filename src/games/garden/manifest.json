@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "garden",
+  "title": "Kebun Berdua",
+  "tag": "TUMBUH BERSAMA",
+  "description": "Tanam sedikit kebahagiaan. Rawat kebun kecil untuk piknik kalian berdua.",
+  "duration": "5–8 menit",
+  "icon": "❀",
+  "color": "#a7d7aa",
+  "layout": "grid",
+  "instructions": "Gunakan panah untuk berjalan dan menghadap petak. Ganti alat: Bibit → Air → Keranjang. Tanam, siram, tunggu 12 detik, lalu panen dan antar ke peti di kanan bawah. Bibit berada di dua kotak kiri atas; air tersedia dari sumur.",
+  "players": 2,
+  "order": 20,
+  "menu": {
+    "title": "Kebun\nBerdua",
+    "line": "Kebahagiaan kecil, tumbuh berdua.",
+    "genre": "Simulasi santai"
+  },
+  "input": {
+    "axes": [
+      "x",
+      "y"
+    ],
+    "actions": [
+      "use",
+      "tool",
+      "plant",
+      "water",
+      "harvest",
+      "deposit"
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "roots": {
+    "game": "src/games/",
+    "dashboard": "src/dashboard/",
+    "platform": [
+      "src/platform/",
+      "src/shared/"
+    ],
+    "generated": "src/generated/"
+  },
+  "changeNotes": ".changes/",
+  "forbidden": [
+    ".runtime/",
+    "runtime/",
+    "node_modules/",
+    "dist/",
+    "artifacts/",
+    ".env",
+    "src/generated/"
+  ],
+  "documents": [
+    "README.md",
+    "CONTRIBUTING.md",
+    "collaboration_guide.md",
+    "CODE_OF_CONDUCT.md",
+    "docs/"
+  ],
+  "maintainer": "@oskhar"
+}

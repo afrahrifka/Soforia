@@ -73,4 +73,4 @@ for p in packs:lines.append(f"| {p['id']} | {p['author']} | {p['models']} | [Hal
 lines+=['',f'Total {len(models)} model. Provenance, checksum, dan modifikasi tekstur tercatat di catalog.json; teks lisensi asli ada pada tiap folder paket.','', 'Aset lokal berasal dari paket pihak ketiga berlisensi di direktori yang diizinkan pengguna. Tidak menyalin kode atau konten portofolio. Tidak mengimpor file lokal yang tidak mempunyai bukti lisensi.']
 (out/'ATTRIBUTION.md').write_text('\n'.join(lines)+'\n')
 print(f"Impor {len(models)} model / {len(packs)} paket; {sum(p.stat().st_size for p in out.rglob('*') if p.is_file())/1024**2:.1f} MiB.")
-Path('src/asset-catalog.ts').write_text('// Dibuat oleh scripts/import-assets.py dari katalog CC0.\nexport const modelCatalog:Record<string,string> = '+json.dumps({m['id']:m['url']+'?v='+m['sha256'][:12] for m in models},indent=1)+';\n')
+Path('src/shared/renderer/asset-catalog.ts').write_text('// Dibuat oleh scripts/import-assets.py dari katalog CC0.\nexport const modelCatalog:Record<string,string> = '+json.dumps({m['id']:m['url']+'?v='+m['sha256'][:12] for m in models},indent=1)+';\n')

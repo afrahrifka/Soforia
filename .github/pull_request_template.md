@@ -1,19 +1,22 @@
-## Ringkasan
+## Masalah dan hasil
 
-Jelaskan perubahan dan alasan perlunya dengan singkat.
+Jelaskan pemicu masalah dan perilaku setelah perubahan.
 
-## Issue terkait
+## Scope tunggal
 
-Tautkan issue jika ada, misalnya `Closes #123` jika PR ini menyelesaikannya.
+- Scope: `game:<id>` / `dashboard` / `platform` / `docs` / `tooling` / `assets` / `architecture`
+- Change note unik: `.changes/...json`
+- Path yang diubah:
+- Issue/penanggung jawab:
 
-## Cara memeriksa
+Satu PR untuk satu game atau satu lapisan. Perubahan lintas lapisan harus merupakan scope `architecture` yang diotorisasi dan ditinjau pemelihara, bukan pengecualian diam-diam.
 
-Sebutkan langkah dan hasil pemeriksaan yang benar-benar dilakukan. Jika belum diuji, jelaskan alasannya. Lampirkan gambar untuk perubahan tampilan bila membantu, tanpa data pribadi atau secret sesi.
+## Verifikasi aktual
 
-## Checklist
+Perintah, hasil, bukti lokal dalam modul, serta batas yang belum diuji. Browser bukan dua HP fisik; RTT bukan input-to-photon. Jangan menyertakan QR/secret sesi atau jawaban pribadi.
 
-- [ ] Judul PR mengikuti format seperti `fix: perbaiki koneksi controller` atau `docs: perjelas panduan`.
-- [ ] Perubahan sesuai cakupan proyek dan dokumentasi terkait sudah diperbarui bila perlu.
-- [ ] Pengujian yang relevan sudah dijalankan atau keterbatasannya dijelaskan di atas.
-- [ ] Saya berhak menyumbangkan kode/aset ini dan mengikuti [Kode Etik](CODE_OF_CONDUCT.md).
-- [ ] Tidak ada secret sesi, jawaban pribadi, atau data pribadi dalam perubahan dan bukti.
+- [ ] Judul `type(scope): ringkasan` sesuai cz-git/manifest.
+- [ ] Tidak menyentuh game/lapisan lain di luar scope.
+- [ ] `npm run check`, tes scope yang relevan dan build lulus atau keterbatasan dijelaskan.
+- [ ] Status/bukti game diperbarui pada folder game sendiri; tidak mengedit roadmap pusat untuk tugas game biasa.
+- [ ] Sumber/lisensi aset tersedia dan Kode Etik dipatuhi.

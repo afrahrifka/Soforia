@@ -1,0 +1,103 @@
+{
+  "result": "PASS",
+  "results": [
+    {
+      "stage": 1,
+      "biome": 0,
+      "kind": "raise",
+      "geometries": "16",
+      "textures": "3",
+      "drawCalls": "156"
+    },
+    {
+      "stage": 2,
+      "biome": 1,
+      "kind": "logSwing",
+      "geometries": "16",
+      "textures": "3",
+      "drawCalls": "132"
+    },
+    {
+      "stage": 3,
+      "biome": 2,
+      "kind": "zipper",
+      "geometries": "16",
+      "textures": "3",
+      "drawCalls": "134"
+    },
+    {
+      "stage": 4,
+      "biome": 3,
+      "kind": "ferry",
+      "geometries": "17",
+      "textures": "3",
+      "drawCalls": "134"
+    },
+    {
+      "stage": 5,
+      "biome": 4,
+      "kind": "roll",
+      "geometries": "17",
+      "textures": "3",
+      "drawCalls": "125"
+    },
+    {
+      "stage": 6,
+      "biome": 5,
+      "kind": "sweeper",
+      "geometries": "17",
+      "textures": "3",
+      "drawCalls": "127"
+    },
+    {
+      "stage": 2,
+      "biome": 1,
+      "kind": "split",
+      "geometries": "16",
+      "textures": "3",
+      "drawCalls": "118"
+    },
+    {
+      "stage": 1,
+      "biome": 0,
+      "kind": "roll",
+      "geometries": "16",
+      "textures": "3",
+      "drawCalls": "123"
+    },
+    {
+      "stage": 1,
+      "biome": 0,
+      "kind": "jump",
+      "geometries": "16",
+      "textures": "3",
+      "drawCalls": "132"
+    },
+    {
+      "stage": 1,
+      "biome": 0,
+      "kind": "traffic",
+      "geometries": "16",
+      "textures": "3",
+      "drawCalls": "136"
+    },
+    {
+      "stage": 2,
+      "biome": 1,
+      "kind": "stepping",
+      "geometries": "17",
+      "textures": "3",
+      "drawCalls": "128"
+    },
+    {
+      "stage": 1,
+      "biome": 0,
+      "kind": "raise",
+      "geometries": "16",
+      "textures": "3",
+      "drawCalls": "156"
+    }
+  ],
+  "errors": [],
+  "limitation": "Fixture statis Chromium. Memeriksa enam bioma dan bentuk tantangan; bukan gameplay, dua HP, atau benchmark FPS."
+}

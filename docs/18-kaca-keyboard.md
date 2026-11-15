@@ -10,9 +10,12 @@ Buka layar laptop `/console` melalui alamat operator lokal yang dicetak launcher
 | Miring kiri/kanan | Q/E | U/O |
 | Naikkan/turunkan kaca | R/F | I/K |
 | Lompat | Spasi | Shift kanan |
-| Setuju lanjut stage | T | L |
 
-Tahan tombol untuk berjalan, miring dan mengatur tinggi; aksi lompat/lanjut hanya satu kali per tekan. Tombol berlawanan saling menetralkan. Kamera mengikuti otomatis.
+Tahan tombol untuk berjalan, miring dan mengatur tinggi; aksi lompat hanya satu kali per tekan. Tombol berlawanan saling menetralkan. Kamera mengikuti otomatis.
+
+Stage berikutnya dimulai otomatis ketika kedua pembawa mencapai checkpoint akhir. Tidak ada tombol lanjut atau penghitung checkpoint di layar.
+
+**M** pada laptop mengubah mute audio lokal; host HP juga mempunyai tombol audio game bersama.
 
 Kontrol bersama: **P** menjeda; **Enter** melanjutkan dari jeda atau mulai ulang dari hasil; **Backspace** mengulang checkpoint; **Home** kembali ke katalog; **[ / ]** memilih stage 1–60 di katalog; **F3** keluar mode dan mengosongkan slot. Pemilih stage ini khusus mode developer F2; controller HP biasa tidak menyediakan pemilih stage atau tingkat kesulitan.
 

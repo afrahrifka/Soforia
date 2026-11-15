@@ -1,0 +1,13 @@
+{
+  "tanggal": "2026-11-15",
+  "hasil": "lulus",
+  "cakupan": [
+    "HP A dan B: Putar kiri guling pada sumbu panjang arah positif",
+    "HP A dan B: Putar kanan guling pada sumbu panjang arah negatif",
+    "Naikkan A menaikkan sisi A; Naikkan B menaikkan sisi B",
+    "mengangkat bersama menaikkan pusat tanpa guling tambahan",
+    "tombol sentuh tetap ditahan ketika snapshot client berganti stage",
+    "tanpa error JavaScript"
+  ],
+  "batas": "Dua controller browser sintetis. Perubahan stage pada pemeriksaan kontinuitas sentuh adalah fixture snapshot client, bukan perpindahan stage server melalui gameplay. Bukan dua HP fisik atau bukti balancing rute."
+}

@@ -1,0 +1,3 @@
+import type {GameServer} from '../../shared/game-contracts.ts';
+import {createGlass,tickGlass,glassAction} from './glass.ts';
+const server:GameServer={create:base=>({...base,...createGlass(base.level-1)}),tick:tickGlass,action:glassAction,publicState:g=>g,privateState:()=>({}),neutral(g,slot){for(const p of slot===undefined?g.players:[g.players[slot]]){p.lifting=false;p.rotating=false;p.jump=false;}},result:g=>({title:g.stagesCompleted===60?'Enam dunia, satu kerja sama yang luar biasa.':'Jalur terakhir berhasil dituntaskan!',detail:`${g.stagesCompleted} stage dituntaskan · ${g.cleared} checkpoint dilalui · ${g.breaks} kaca pecah.`,stars:null})};export default server;

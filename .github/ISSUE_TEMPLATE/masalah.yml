@@ -35,3 +35,12 @@ body:
       description: Jika tahu, sebutkan versi Main Bareng, sistem laptop, jenis HP, browser, dan pesan kesalahan. Gambar yang sudah dibersihkan boleh dilampirkan.
     validations:
       required: false
+
+  - type: input
+    id: scope-modul
+    attributes:
+      label: Scope game atau lapisan
+      description: "Contoh game:glass, dashboard, platform, docs; tulis ID game tanpa daftar pusat."
+      placeholder: "game:<id> atau nama lapisan"
+    validations:
+      required: false

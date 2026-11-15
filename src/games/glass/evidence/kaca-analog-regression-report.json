@@ -1,0 +1,42 @@
+{
+  "result": "PASS",
+  "results": [
+    {
+      "stage": 1,
+      "analogOnly": true,
+      "completed": false,
+      "reason": "Kaca menyentuh benda padat."
+    },
+    {
+      "stage": 2,
+      "analogOnly": true,
+      "completed": false,
+      "reason": "Kaca menyentuh benda padat."
+    },
+    {
+      "stage": 3,
+      "analogOnly": true,
+      "completed": false,
+      "reason": "tertahan collider"
+    },
+    {
+      "stage": 4,
+      "analogOnly": true,
+      "completed": false,
+      "reason": "Kaca menyentuh benda padat."
+    },
+    {
+      "stage": 5,
+      "analogOnly": true,
+      "completed": false,
+      "reason": "Kaca menyentuh benda padat."
+    },
+    {
+      "stage": 6,
+      "analogOnly": true,
+      "completed": false,
+      "reason": "Kaca menyentuh benda padat."
+    }
+  ],
+  "limitation": "Kontrol negatif enam stage awal menggunakan pengendali map yang dinonaktifkan aksi putar/tinggi/lompatnya. Bukan pencarian menyeluruh semua kemungkinan strategi manusia."
+}

@@ -1,0 +1,4 @@
+export const esc=(s:unknown)=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
+export const badge=(name:string,value:string,i?:number)=>`<div class="hud-stat ${i===undefined?'':`team-${i}`}"><small>${esc(name)}</small><strong>${esc(value)}</strong></div>`;
+export const button=(action:string,label:string,icon:string,disabled=false,extra='')=>`<button class="touch-action ${extra}" data-do="${action}" aria-label="${esc(label)}" ${disabled?'disabled':''}><span aria-hidden="true">${icon}</span><small>${esc(label)}</small></button>`;
+export const axisButton=(axis:string,value:number,label:string,icon:string,disabled=false,extra='')=>`<button class="touch-action axis-key ${extra}" data-input-axis="${axis}" data-input-value="${value}" aria-label="${esc(label)}" aria-pressed="false" ${disabled?'disabled':''}><span aria-hidden="true">${icon}</span><small>${esc(label)}</small></button>`;

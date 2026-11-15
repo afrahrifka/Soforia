@@ -1,0 +1,673 @@
+{
+  "result": "PASS",
+  "results": [
+    {
+      "stage": 1,
+      "kind": "raise",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 1,
+      "kind": "jump",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 1,
+      "kind": "roll",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 2,
+      "kind": "duck",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 2,
+      "kind": "split",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 3,
+      "kind": "roll",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 3,
+      "kind": "raise",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 4,
+      "kind": "duck",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 5,
+      "kind": "raise",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 5,
+      "kind": "roll",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 6,
+      "kind": "duck",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 6,
+      "kind": "split",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 7,
+      "kind": "raise",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 7,
+      "kind": "jump",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 8,
+      "kind": "split",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 8,
+      "kind": "roll",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 9,
+      "kind": "duck",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 9,
+      "kind": "raise",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 10,
+      "kind": "roll",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 10,
+      "kind": "split",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 11,
+      "kind": "raise",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 11,
+      "kind": "roll",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 12,
+      "kind": "jump",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 12,
+      "kind": "duck",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 13,
+      "kind": "raise",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 13,
+      "kind": "split",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 14,
+      "kind": "roll",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 14,
+      "kind": "duck",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 14,
+      "kind": "jump",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 15,
+      "kind": "jump",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 16,
+      "kind": "split",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 16,
+      "kind": "roll",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 17,
+      "kind": "duck",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 17,
+      "kind": "roll",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 18,
+      "kind": "raise",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 19,
+      "kind": "duck",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 19,
+      "kind": "raise",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 19,
+      "kind": "roll",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 20,
+      "kind": "split",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 20,
+      "kind": "jump",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 21,
+      "kind": "raise",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 22,
+      "kind": "jump",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 23,
+      "kind": "roll",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 23,
+      "kind": "split",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 24,
+      "kind": "jump",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 24,
+      "kind": "duck",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 25,
+      "kind": "jump",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 25,
+      "kind": "split",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 26,
+      "kind": "duck",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 26,
+      "kind": "roll",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 26,
+      "kind": "split",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 27,
+      "kind": "jump",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 28,
+      "kind": "raise",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 29,
+      "kind": "roll",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 30,
+      "kind": "jump",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 30,
+      "kind": "split",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 31,
+      "kind": "raise",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 31,
+      "kind": "jump",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 32,
+      "kind": "split",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 32,
+      "kind": "duck",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 32,
+      "kind": "roll",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 33,
+      "kind": "raise",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 34,
+      "kind": "split",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 35,
+      "kind": "roll",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 35,
+      "kind": "duck",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 36,
+      "kind": "raise",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 36,
+      "kind": "jump",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 37,
+      "kind": "roll",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 37,
+      "kind": "split",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 38,
+      "kind": "duck",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 39,
+      "kind": "split",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 39,
+      "kind": "raise",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 40,
+      "kind": "roll",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 40,
+      "kind": "jump",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 41,
+      "kind": "split",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 42,
+      "kind": "duck",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 42,
+      "kind": "roll",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 43,
+      "kind": "raise",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 43,
+      "kind": "roll",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 44,
+      "kind": "split",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 44,
+      "kind": "duck",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 44,
+      "kind": "jump",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 45,
+      "kind": "roll",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 46,
+      "kind": "split",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 47,
+      "kind": "raise",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 47,
+      "kind": "jump",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 48,
+      "kind": "duck",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 48,
+      "kind": "roll",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 49,
+      "kind": "split",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 49,
+      "kind": "jump",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 50,
+      "kind": "roll",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 50,
+      "kind": "split",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 51,
+      "kind": "raise",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 52,
+      "kind": "roll",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 53,
+      "kind": "duck",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 53,
+      "kind": "split",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 54,
+      "kind": "roll",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 55,
+      "kind": "raise",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 55,
+      "kind": "split",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 55,
+      "kind": "jump",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 56,
+      "kind": "roll",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 56,
+      "kind": "duck",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 56,
+      "kind": "split",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 57,
+      "kind": "raise",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 57,
+      "kind": "jump",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 58,
+      "kind": "split",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 59,
+      "kind": "roll",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 59,
+      "kind": "raise",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 60,
+      "kind": "split",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 60,
+      "kind": "duck",
+      "solutionFree": true,
+      "defaultBlocked": true
+    },
+    {
+      "stage": 60,
+      "kind": "jump",
+      "solutionFree": true,
+      "defaultBlocked": true
+    }
+  ],
+  "failures": [],
+  "limitation": "Pose geometri di encounter, bukan perjalanan input. Jalur/ketinggian nyata harus diverifikasi terpisah."
+}

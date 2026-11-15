@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "seirama",
+  "title": "Seirama",
+  "tag": "KENALI SATU SAMA LAIN",
+  "description": "Seberapa sering pikiran kalian bertemu? Tebak hal-hal kecil yang disukai pasangan.",
+  "duration": "5–10 menit",
+  "icon": "♡",
+  "color": "#edaca9",
+  "layout": "choice",
+  "instructions": "Bergantian memilih jawaban sendiri dan menebak pasangan. Pilihan tetap pribadi sampai keduanya siap mengungkap. Lewati pertanyaan kapan saja, tanpa penalti. Tidak ada penilaian kualitas hubungan.",
+  "players": 2,
+  "order": 30,
+  "menu": {
+    "title": "Seirama",
+    "line": "Dua pikiran. Satu frekuensi.",
+    "genre": "Cerita & pilihan"
+  },
+  "input": {
+    "axes": [
+      "x",
+      "y"
+    ],
+    "actions": [
+      "answer",
+      "reveal",
+      "skip",
+      "next"
+    ]
+  }
+}

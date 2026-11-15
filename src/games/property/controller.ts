@@ -1,0 +1,2 @@
+import {button} from '../../shared/html.ts';
+export function controller(state:any){const game=state.game;return {buttons:button('use',game.turn===state.you.slot?(game.pending?(game.decision==='upgrade'?'Tingkatkan':'Beli properti'):game.stage==='rolling'?'Mengundi…':game.stage==='moving'?'Berjalan…':'Lempar dadu'):'Giliran lawan','⚄',game.turn!==state.you.slot||!['ready','decision'].includes(game.stage),'accent')+button('tool','Lewati','→',!game.pending||game.turn!==state.you.slot)};}

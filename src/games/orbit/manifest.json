@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "orbit",
+  "title": "Orbit Berdua",
+  "tag": "PETUALANGAN KOOPERATIF",
+  "description": "Dua penjelajah. Satu perjalanan pulang. Kumpulkan cahaya dan buka gerbang bersama.",
+  "duration": "3–5 menit",
+  "icon": "✦",
+  "color": "#aaa0ff",
+  "layout": "move",
+  "instructions": "Geser pad untuk menerbangkan pesawat. Ambil 12 cahaya, lalu masing-masing tempati satu pad gerbang selama 2 detik. Dekati pasangan untuk membantu saat terkena puing.",
+  "players": 2,
+  "order": 10,
+  "menu": {
+    "title": "Orbit\nBerdua",
+    "line": "Temukan cahaya. Pulang bersama.",
+    "genre": "Petualangan"
+  },
+  "input": {
+    "axes": [
+      "x",
+      "y"
+    ],
+    "actions": [
+      "use"
+    ]
+  }
+}

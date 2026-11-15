@@ -1,0 +1,1 @@
+export function art(){return `<div class="art glass-art"><div class="glass-art-pane"></div><span class="glass-art-carrier a">A</span><span class="glass-art-carrier b">B</span><strong>60 STAGE · 240 CHECKPOINT</strong></div>`;}

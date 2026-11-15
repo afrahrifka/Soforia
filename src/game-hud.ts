@@ -1,18 +1,2 @@
-import {glassCourse} from './glass.ts';
-import {districts,propertyTiles,propertyPrice,propertyRent,propertyValue,upgradePrice} from './property.ts';
-const esc=(s:unknown)=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
-const badge=(name:string,value:string,i?:number)=>`<div class="hud-stat ${i===undefined?'':`team-${i}`}"><small>${esc(name)}</small><strong>${esc(value)}</strong></div>`;
-export function gameHud(state:any){
- const g=state.game;if(!g)return '';
- if(g.id==='glass')return `<div class="hud-scoreboard">${badge(glassCourse(g.stage).title,`Stage ${g.stage+1} / 60`)}${badge('CHECKPOINT',`${g.checkpoint} / 4`)}${badge('PECAH',String(g.breaks))}</div>`;
- if(g.id==='property'){
-  const tile=propertyTiles[g.players[g.turn].position],index=g.players[g.turn].position;
-  return `<div class="hud-scoreboard">${g.players.map((p:any,i:number)=>badge(`PEMAIN ${i?'B':'A'}`,`${p.money} koin · aset ${propertyValue(g,i)}`,i)).join('')}${badge('RONDE',`${Math.min(12,Math.floor(g.moves/2)+1)} / 12`)}${badge('DADU',g.dice?String(g.dice):'—')}</div><div class="city-info"><section class="city-decision"><p class="eyebrow">${g.finished?'KOTA SELESAI':`GILIRAN ${g.turn?'B':'A'}`} · ${esc(tile.name)}</p><h2>${g.stage==='rolling'?'Dadu berputar…':g.stage==='moving'?'Menuju tujuan!':g.pending?(g.decision==='upgrade'?'Tingkatkan bangunan?':'Beli properti ini?'):'Giliranmu membangun kota.'}</h2><p>${esc(g.message)}</p>${g.pending?`<div class="deal-numbers">${badge('BIAYA',String(g.decision==='upgrade'?upgradePrice(index):propertyPrice(index)))}${badge(g.decision==='upgrade'?'SEWA BARU':'SEWA DASAR',String(g.decision==='upgrade'?propertyRent(g,index)/(1+g.levels[index])*(2+g.levels[index]):propertyRent(g,index)))}${badge('DISTRIK',tile.district>=0?districts[tile.district].name:'—')}</div><p class="deal-help">${g.decision==='upgrade'?'Peningkatan menambah sewa dan nilai aset. Maksimal dua peningkatan.':'Miliki tiga properti satu distrik untuk mendapatkan sewa ganda.'}</p>`:`<p class="deal-help">${g.stage==='ready'?'Tekan Lempar dadu di HP. Dua belas ronde, tanpa eliminasi.':'Ikuti langkah pion di papan.'}</p>`}</section><section class="city-ledger"><p class="eyebrow">KABAR KOTA</p>${g.history.length?g.history.slice(0,3).map((line:string)=>`<p>${esc(line)}</p>`).join(''):'<p>Kota kecil kalian dimulai di sini.</p>'}</section></div>`;
- }
- if(g.id==='orbit'){
-  const count=g.energies.filter((e:any)=>e.taken).length;
-  return `<div class="hud-scoreboard">${badge('CAHAYA',`${count} / 12`)}${badge('GERBANG',count<12?'Belum terbuka':g.gateOpen?'Terbuka':'Menunggu siklus')}${badge('BANTUAN TIM',String(g.helps))}</div><div class="objective-ribbon"><strong>${count<12?'Kumpulkan cahaya yang berpendar':g.gateOpen?'Satu pesawat di setiap pad gerbang':'Gerbang berganti setiap 8 detik'}</strong><span>${count<12?'Analog untuk terbang · Pulsa memberi perlindungan 2 detik pada tim di dekatmu.':`Tahan bersama 2 detik · ${Math.round(Math.min(1,g.gate/2)*100)}%`}</span><progress class="objective-meter" aria-label="Kemajuan tujuan" max="100" value="${count<12?count/12*100:Math.min(1,g.gate/2)*100}"></progress></div>`;
- }
- if(g.id==='garden')return `<div class="hud-scoreboard">${badge('WORTEL',`${g.harvest.carrot} / 6`)}${badge('STROBERI',`${g.harvest.berry} / 6`)}${badge('TUMBUH',`${g.plots.filter((p:any)=>p.stage==='ripe').length} siap panen`)}</div><div class="garden-guidance">${g.players.map((p:any,i:number)=>`<div class="team-${i}"><b>${i?'B':'A'} · ${p.carry?'Membawa '+(p.carry==='berry'?'stroberi':'wortel'):'Bibit '+(p.crop==='berry'?'stroberi':'wortel')}</b><span>${esc(g.feedback?.[i]||'Arahkan lingkaran ke petak, lalu pilih aksi di HP.')}</span></div>`).join('')}</div>`;
- return '';
-}
+// Facade lama; HUD tiap game berada di src/games/<id>/hud.ts.
+export * from './platform/game-hud.ts';

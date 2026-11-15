@@ -1,25 +1,25 @@
-# Panduan Kolaborasi
+# Panduan Kolaborasi Main Bareng
 
-Terima kasih sudah membantu Main Bareng! Kamu tidak perlu bisa memprogram: ide game, laporan masalah, perbaikan tulisan, dan pengalaman bermain semuanya berguna. Baca juga [Kode Etik](CODE_OF_CONDUCT.md).
+Ide, laporan masalah, tulisan, terjemahan, desain dan playtest sama bergunanya dengan kode. Ikuti [Kode Etik](CODE_OF_CONDUCT.md). Kontribusi memakai [MIT](LICENSE); aset pihak ketiga harus mempunyai izin redistribusi dan sumber/lisensi.
 
-## Berbagi ide atau melaporkan masalah
+## Ide atau laporan masalah
 
-1. Buka tab **Issues** di GitHub, lalu pilih **New issue**.
-2. Pilih **Bagikan ide**, **Laporkan masalah**, atau **Perbaikan panduan**. Cari issue yang sudah ada terlebih dahulu; jika sama, tambahkan pengalamanmu di sana.
-3. Isi judul dan pertanyaan wajib dengan kata-katamu sendiri. Bagian opsional boleh dikosongkan. Sertakan contoh bila membantu.
-4. Kirim issue. Pemelihara dapat meminta penjelasan, mengelompokkan, atau menggabungkannya dengan issue lain. Tidak semua ide pasti dikerjakan; prioritas mengikuti roadmap dan kapasitas.
+Cari issue serupa, lalu pilih formulir **Bagikan ide**, **Laporkan masalah** atau **Perbaikan panduan**. Nyatakan scope (`game:<id>` atau lapisan), perilaku yang diharapkan, hasil yang terjadi, perangkat dan cara mengulang. Gunakan contoh sintetis. Jangan bagikan QR aktif, secret atau jawaban pribadi. Masalah keamanan dilaporkan pribadi melalui kanal pemelihara pada [profil @oskhar](https://github.com/oskhar).
 
-Issue dan lampirannya terbuka untuk publik. Jangan bagikan kode QR, secret sesi, jawaban pribadi pemain, atau informasi pribadi. Gunakan contoh sintetis. Laporkan masalah keamanan secara pribadi kepada pemelihara melalui kanal di [profil @oskhar](https://github.com/oskhar); jika kanal pribadi belum tersedia, tanyakan cara menghubungi tanpa mempublikasikan rincian celah.
+## Perubahan program dan dokumen
 
-## Mengusulkan perubahan melalui pull request
+1. Baca [AGENTS](AGENTS.md), [peta fokus AI/manusia](docs/architecture/AI-START.md), [SPEC](SPEC.md), [katalog](docs/03-katalog-game.md) dan [roadmap](docs/09-roadmap.md). Untuk pekerjaan besar yang belum diminta pemilik, diskusikan issue terlebih dahulu; instruksi pengguna yang sudah jelas tidak perlu dimintakan ulang.
+2. Ambil satu scope dan branch dari branch utama (`master`, jangan mengasumsikan `dev`). Gunakan fork/worktree terpisah bila mengerjakan beberapa task. Jangan reset perubahan yang bukan milikmu.
+3. Jalankan `npm ci`, `npm run ai:route -- --scope <scope>`, lalu baca README/AGENTS/STATUS modul. Buat satu change note unik dengan `npm run change:new`.
+4. Edit hanya path scope. Dashboard tidak mengubah game; satu game tidak mengubah game/console lain; penambahan game hanya folder ID baru melalui [scaffolder](docs/architecture/ADD-GAME.md). Registry dan scope commit ditemukan otomatis dari manifest.
+5. Jalankan tes scope, `npm run check`, `npm run build`, `npm run check:scope -- --working`, dan pemeriksaan docs bila terkait. Catat bukti nyata serta keterbatasan di status/evidence modul sendiri. Browser bukan dua HP, RTT bukan input-to-photon.
+6. Stage hanya perubahan yang diotorisasi. `npm run commit` memakai cz-git lokal. Judul wajib `type(scope): ringkasan`; scope game ialah ID manifest. Push branch dan buka PR sesuai otorisasi kontributor/pengguna.
+7. Gunakan template PR: masalah, scope, change note, path, issue/pemilik dan verifikasi. Review pemelihara menentukan penggabungan; jangan menganggap flag change note sebagai persetujuan.
 
-1. Untuk perubahan besar atau perubahan cakupan, diskusikan dulu melalui issue. Baca [spesifikasi](SPEC.md), [katalog game](docs/03-katalog-game.md), dan [roadmap](docs/09-roadmap.md).
-2. Fork repositori, buat branch dari branch utama repositori, lalu kerjakan perubahan yang terfokus. Jangan mengasumsikan branch `dev` tersedia.
-3. Siapkan Node.js 20.19 atau lebih baru dan jalankan `npm ci`. Ikuti petunjuk pengembangan di [README](README.md).
-4. Jalankan pemeriksaan yang relevan: `npm run check`, `npm test`, dan `npm run build` untuk perubahan kode. Jelaskan pemeriksaan yang tidak dapat dijalankan. Untuk perubahan dokumentasi, periksa tautan dan isi yang berubah.
-5. Jika ingin membuat pesan commit dengan panduan interaktif, jalankan `npm run commit` setelah melakukan `git add`. Commitizen dan cz-git tersedia melalui `npm ci`; instalasi global tidak diperlukan.
-6. Perbarui dokumentasi dan roadmap jika relevan. Catat bukti sebenarnya: pengujian browser bukan pengujian dua HP fisik, dan RTT bukan waktu sentuh-ke-gambar.
-7. Push branch dan buka pull request memakai template. Gunakan judul seperti `feat: tambah pilihan arena`, `fix: perbaiki koneksi`, atau `docs: perjelas panduan`. Scope opsional, misalnya `fix(ui): perbaiki tombol`. Validator judul memeriksa jenis dan scope yang diizinkan di [workflow](.github/workflows/pr-title-validator.yml).
-8. Tanggapi tinjauan dengan terbuka. Pemelihara akan meninjau dan memutuskan penggabungan; jangan menganggap persetujuan atau waktu respons tertentu dijamin.
+Status rutin game berada di folder game, bukan pada satu roadmap yang diperebutkan semua kontributor. Perubahan platform/architecture mengagregasikan status pusat. [Aturan lintas modul](docs/architecture/COLLABORATION.md) menjelaskan kapan migrasi perlu dipisah.
 
-Kontribusi harus merupakan karya sendiri atau disertai izin dan lisensi yang sesuai. Proyek menggunakan [lisensi MIT](LICENSE). Fokus produk adalah dua pemain, LAN offline, controller browser HP, dan server otoritatif di laptop. Portofolio referensi bukan sumber kode, aset, atau konten untuk disalin. Jangan sertakan secret atau jawaban pribadi dalam kode, log, fixture, dan bukti.
+## Penegakan dan AI
+
+AST import, graph browser/server, CSS namespace, scope diff, kontrak dan CI diperiksa otomatis. `npm run hooks:install` memasang hook lokal secara eksplisit. [ENFORCEMENT](docs/architecture/ENFORCEMENT.md) menjelaskan proteksi GitHub yang perlu diaktifkan pemilik serta keterbatasannya. Tidak ada jaminan semua AI otomatis membaca instruksi; lampirkan AGENTS/AI-START jika tool tidak memuatnya.
+
+Panduan utama memakai Bahasa Indonesia; README bahasa lain boleh memakai bahasa tujuan tetapi harus mempertahankan fakta, perintah dan tautan yang sama. Dukungan sukarela [Trakteer](https://trakteer.id/oskhar) tidak menjadi syarat kontribusi.

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "glass",
+  "title": "Kaca Berdua",
+  "tag": "ANGKUT KACA · 60 STAGE",
+  "description": "Dua pembawa, kaca rapuh, dan jalur penuh mesin. Angkat, gulingkan, merunduk dan lompat bersama.",
+  "duration": "2–5 menit / stage",
+  "icon": "◇",
+  "color": "#a3dbe2",
+  "layout": "carry",
+  "instructions": "Jaga kaca dari benturan. Analog untuk berjalan; Putar kiri/kanan menggulingkan kaca, Naikkan/Turunkan mengatur sisi sendiri, Lompat melewati celah. Gang sempit perlu formasi berbaris. Baca gerakan mesin, atur tinggi bersama, dan tunggu pasangan. Checkpoint akhir langsung memindahkan stage. Jeda melalui tombol Jeda.",
+  "players": 2,
+  "order": 50,
+  "menu": {
+    "title": "Kaca\nBerdua",
+    "line": "Jaga kaca. Jaga satu sama lain.",
+    "genre": "Kerja sama",
+    "showLevel": true
+  },
+  "input": {
+    "axes": [
+      "x",
+      "y",
+      "glassX",
+      "glassY"
+    ],
+    "actions": [
+      "jump",
+      "retry",
+      "next"
+    ]
+  },
+  "developer": {
+    "keyboard": true,
+    "maxLevel": 60
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "scope": "architecture",
+  "summary": "Pisahkan dashboard, platform dan kelima game; tambahkan discovery manifest, aturan kontribusi/AI dan README multibahasa.",
+  "reason": "Pengguna secara eksplisit meminta pemisahan seluruh program game/console/dashboard, registrasi tanpa hardcode dan pembaruan kolaborasi lintas repo. Perubahan Kaca dari sesi sebelumnya dipertahankan dalam migrasi ini.",
+  "ownerReviewRequired": true,
+  "validation": ["Lihat docs/23-arsitektur-modul-dan-kolaborasi.md untuk hasil final dan batas verifikasi."]
+}

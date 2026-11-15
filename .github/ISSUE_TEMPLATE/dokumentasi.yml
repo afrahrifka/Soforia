@@ -23,3 +23,12 @@ body:
       description: Saran perbaikan boleh dikosongkan jika belum tahu.
     validations:
       required: false
+
+  - type: input
+    id: scope-modul
+    attributes:
+      label: Scope game atau lapisan
+      description: "Contoh game:glass, dashboard, platform, docs; tulis ID game tanpa daftar pusat."
+      placeholder: "game:<id> atau nama lapisan"
+    validations:
+      required: false

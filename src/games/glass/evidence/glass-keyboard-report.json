@@ -1,0 +1,20 @@
+{
+  "tanggal": "2026-11-15",
+  "hasil": "lulus",
+  "lingkungan": "Chromium headless, satu keyboard sintetis; bukan dua HP atau playtest fisik",
+  "cakupan": [
+    "aktivasi dua slot tanpa HP",
+    "mulai dan siap",
+    "Q/U dan E/O menggulingkan kaca pada sumbu panjang; ujung tidak bertukar tinggi",
+    "putaran berguling melewati 360 derajat",
+    "tanpa banner dunia dan tanpa pecah saat guling bebas",
+    "tinggi dua pemain bersamaan",
+    "release satu pemain independen",
+    "blur menetralkan kedua pemain tanpa pause",
+    "gerak dua pemain",
+    "lompat",
+    "jeda",
+    "katalog dan pilih stage",
+    "keluar melepas slot"
+  ]
+}

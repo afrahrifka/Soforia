@@ -1,0 +1,3 @@
+import {button} from '../../shared/html.ts';
+export function controller(state:any){return {buttons:button('plant','Tanam','🌱',false,'garden-tool')+button('water','Siram','💧',false,'garden-tool')+button('harvest','Panen','🧺',false,'garden-tool')+button('deposit','Antar','↗',!state.game.players[state.you.slot].carry)+button('use','Aksi / bibit','✋'),actionClass:'six-actions'};}
+export function syncController(state:any){if(state.phase!=='playing')return;const p=state.game.players[state.you.slot],deposit=document.querySelector<HTMLButtonElement>('[data-do=deposit]');if(deposit)deposit.disabled=!p.carry;for(const [name,tool] of [['plant',0],['water',1],['harvest',2]])document.querySelector(`[data-do=${name}]`)?.classList.toggle('equipped',p.tool===tool);}

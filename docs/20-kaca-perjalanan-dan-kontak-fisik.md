@@ -26,3 +26,5 @@ Memeriksa screenshot resmi dan cuplikan trailer pada [Steam Carry The Glass](htt
 Playtest pasangan, dua HP nyata, rasa kamera pada tikungan, balancing rintangan dan pengukuran frame time/input-to-photon tetap perlu dilakukan. Target acceptance fisik tidak dinyatakan lulus berdasarkan simulasi.
 
 Pemeriksaan lintasan terakhir meluluskan 31 stage/124 checkpoint, lalu pengendali sintetis tersangkut di platform menyamping stage 32. Hasil seluruh 60 stage belum lulus; perlu membedakan keterbatasan pengendali uji dan masalah boarding/keluar railing melalui playtest lanjutan. Tidak menyatakan platform semua stage telah terverifikasi.
+
+Status lanjutan: masalah dermaga/stage 32 dan hasil pemeriksaan terkini dilaporkan di [revisi dermaga dan stage langsung](21-kaca-dermaga-dan-stage-langsung.md). Angka 31 stage di atas adalah hasil checkpoint historis sebelum perbaikan, bukan status terbaru.

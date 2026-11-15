@@ -1,5 +1,7 @@
 # 03 — Rekomendasi game untuk couple
 
+Catatan arsitektur aktif: katalog runtime ditemukan dari `src/games/*/manifest.json`; source/console/controller setiap game berada di foldernya sendiri. Lihat [peta modul](architecture/MODULES.md) dan [aturan penambahan game](architecture/ADD-GAME.md). Tabel desain di dokumen ini bukan registry program.
+
 Nama dan aturan di bawah adalah desain game orisinal. G01–G03 sudah tersedia pada beta pertama; status acceptance dan batas implementasi dijelaskan di [laporan beta](11-implementasi-beta.md). G04–G12 tetap usulan ekspansi. Skor kecocokan adalah penilaian desain, bukan hasil studi pengguna. Prioritas mempertimbangkan kenyamanan HP, biaya pembuatan, variasi dan peluang kerja sama.
 
 ## Katalog rekomendasi
@@ -84,7 +86,7 @@ Orbit kini mempunyai pulsa pelindung dari tombol HP: perlindungan dua detik untu
 
 ## G14 — Kaca Berdua
 
-Dua pembawa mengantar satu panel kaca melewati enam dunia, 60 stage dan 240 checkpoint. Satu analog di sudut bawah untuk berjalan; tombol tahan Putar kiri/kanan untuk menggulingkan kaca serta Naikkan/Turunkan untuk tinggi; satu tombol Lompat. Kamera mengikuti tim otomatis. Setiap pemain memegang dua sudut dengan dua tangan. Kaca dapat berguling penuh pada sumbu panjang di antara pembawa; pecah saat bidang/bingkai benar-benar menyentuh benda padat, tanah atau badan; tim mengulang checkpoint terdekat. Dua pemain memilih lanjut setelah empat checkpoint stage tercapai. Layout memakai sepuluh motif yang dikombinasikan deterministik; bukan aset/peta Carry the Glass. Aturan lengkap dan batas simulasi: [Kaca Berdua](14-kaca-berdua.md). Gate fisik: satu analog dan tombol miring/tinggi, lompatan sinkron, kamera dan salah sentuh Jeda harus diuji pasangan pada dua HP nyata.
+Dua pembawa mengantar satu panel kaca melewati enam bioma, 60 stage dan 246 checkpoint internal. Satu analog di sudut bawah untuk berjalan; tombol tahan Putar kiri/kanan untuk menggulingkan kaca serta Naikkan/Turunkan untuk tinggi; satu tombol Lompat. Kamera mengikuti tim otomatis. Setiap pemain memegang dua sudut dengan dua tangan. Kaca dapat berguling penuh pada sumbu panjang di antara pembawa; pecah saat bidang/bingkai benar-benar menyentuh benda padat, tanah atau badan; tim mengulang checkpoint terdekat. Setelah kedua pembawa mencapai checkpoint akhir, stage berikutnya langsung aktif tanpa konfirmasi, countdown, atau layar transisi. Penghitung checkpoint/progres stage tidak ditampilkan. Setiap stage mempunyai rangkaian encounter bernama, dengan 16 jenis tantangan fisik, bioma berganti dan audio lokal. Bukan aset/peta Carry the Glass. Aturan lengkap dan batas simulasi: [Kaca Berdua](14-kaca-berdua.md). Gate fisik: satu analog dan tombol miring/tinggi, lompatan sinkron, kamera dan salah sentuh Jeda harus diuji pasangan pada dua HP nyata.
 
 
 Revisi G14: tubuh pembawa tidak lagi dikunci pada jarak tetap panjang kaca. Bingkai mempunyai pose sendiri dan empat lengan beruas menghubungkannya ke karakter membulat; target jangkauan lengan 1,4 unit. Kamera perspektif otomatis dan model lingkungan CC0 menggantikan placeholder terpilih. [Rincian perubahan dan batas](15-aset-dan-karakter-elastis.md).
@@ -98,3 +100,5 @@ Mode uji developer G14: dua pemain dapat memakai satu keyboard laptop tanpa HP. 
 Revisi terbaru 15 November: guling 360° pada sumbu panjang menggantikan putaran bidang XY; angkat/turun terpisah. Badan berbenturan dengan tembok/pohon/batu dan arena menjadi jalan kota, hutan serta permukaan asteroid/bulan. [Aturan terbaru dan bukti](19-kaca-guling-dan-arena-alami.md).
 
 Revisi terbaru: tidak ada sudut wajib, aperture aturan, banner melayang, atau pecah karena jangkauan/tekanan. Rute berkelok dan rintangan lingkungan/mekanis memakai kontak fisik. [Aturan aktif dan bukti](20-kaca-perjalanan-dan-kontak-fisik.md).
+
+Revisi tantangan aktif: [rangkaian stage dan audio](22-kaca-tantangan-dan-audio.md) menggantikan map lama yang dapat dilewati hanya dengan analog.

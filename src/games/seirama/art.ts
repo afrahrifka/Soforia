@@ -1,0 +1,1 @@
+export function art(){return `<div class="art heart-art"><div class="floating-card card-back">?</div><div class="floating-card card-front">♡<small>kita.</small></div><span class="tiny-heart h1">✧</span><span class="tiny-heart h2">♡</span></div>`;}

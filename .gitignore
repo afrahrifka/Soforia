@@ -20,3 +20,7 @@ coverage/
 Thumbs.db
 .vscode/
 .idea/
+
+# Registry hasil discovery; tidak pernah diedit/commit manual
+src/generated/
+.worktrees/

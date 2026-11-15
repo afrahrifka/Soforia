@@ -121,3 +121,17 @@ Karakter tidak boleh menembus benda padat. Collision badan diperkuat untuk gerak
 ## Revisi kontak fisik dan perjalanan Kaca — 15 November 2026
 
 Arahan pengguna menggantikan seluruh gate sudut wajib/derajat, aperture aturan dan pecah akibat tekanan/jangkauan sebelumnya. Hanya kontak nyata bidang/bingkai dengan benda padat, tanah atau badan memecahkan kaca. Tidak ada banner dunia melayang. Retry/jatuh tanpa kontak tidak menambah pecah. Rute dunia berkelok dengan kamera otomatis relatif analog, lingkungan alami dan platform/palu/kapak fisik; otoritas server, LAN dan fokus dua pemain tetap. Rincian dan batas: docs/20-kaca-perjalanan-dan-kontak-fisik.md.
+
+## Perpindahan stage Kaca langsung — 15 November 2026
+
+Saat kedua pembawa mencapai checkpoint akhir dengan kaca utuh, server langsung menaikkan stage dan menempatkan tim di awal map berikutnya dalam tick yang sama. Tidak ada persetujuan pemain, countdown, panel selesai stage atau masa tunggu. Input tahan tetap aktif di controller; interpolasi visual tidak menyambungkan posisi antar-map. Stage terakhir menutup permainan melalui hasil akhir. Penghitung checkpoint, pecahan progres stage dan jarak sisa tidak ditampilkan; checkpoint internal tetap menyimpan lokasi retry. Pendekatan dermaga diluruskan dan ruang sapuan platform dibebaskan dari objek lingkungan; kontak pagar bergerak diselesaikan agar badan tidak terkunci di dalam collider.
+
+## Tantangan fisik dan audio Kaca — 15 November 2026
+
+Hasil playtest pengguna membatalkan anggapan bahwa kelulusan rute lama membuktikan kualitas stage. Map diganti 60 rangkaian encounter bernama, 16 jenis tantangan, enam bioma berganti per stage, rute terbuka dan 246 checkpoint internal. Benda padat membatasi jalan samping; lebar/tinggi/bukaan, celah lantai dan mesin nyata menuntut perubahan formasi, guling, angkat/turun, lompat dan timing bersama. Tidak ada syarat sudut atau pecah abstrak. Audio orisinal lokal pada laptop mencakup musik per bioma dan event permainan; host dapat mute bersama, laptop mempunyai mute lokal M. Perpindahan stage instan dan HUD tanpa jarak/progres tetap berlaku. Bukti, referensi dan batas: docs/22-kaca-tantangan-dan-audio.md.
+
+## Keputusan arsitektur kolaborasi — 15 November 2026
+
+Atas permintaan pengguna, dashboard, platform LAN dan setiap game dipisahkan dalam modul dengan kepemilikan path eksplisit. `src/games/<id>/manifest.json` menjadi deklarasi katalog; generator menemukan modul tanpa daftar game manual. Server, console laptop, controller HP, HUD, CSS, tes dan status game wajib berada dalam folder game itu. Scope dashboard tidak boleh mengedit game; scope game tidak boleh mengedit game lain, dashboard atau platform. Perubahan API bersama/migrasi memerlukan scope terpisah yang diotorisasi. Kontrak dan guard dijelaskan pada [laporan arsitektur](docs/23-arsitektur-modul-dan-kolaborasi.md).
+
+Pemisahan source dan bundle mempertahankan satu proses server otoritatif, dua pemain serta operasi LAN offline. Tidak menambah cloud/matchmaking atau isolasi proses. README multibahasa dan adapter AI merupakan dokumentasi kolaborasi; penegakan dilakukan pemeriksaan batas impor/CSS/diff, tes dan review. Tidak menjanjikan kepatuhan universal AI. Proteksi merge GitHub harus diaktifkan pemilik; konfigurasi lokal bukan bukti bahwa proteksi remote sudah aktif.

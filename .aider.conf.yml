@@ -1,0 +1,4 @@
+# Read-only canonical project context; tool policy may require user trust/activation.
+read:
+  - AGENTS.md
+  - docs/architecture/AI-START.md

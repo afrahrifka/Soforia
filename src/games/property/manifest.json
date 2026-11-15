@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "property",
+  "title": "Kota Berdua 3D",
+  "tag": "DUEL PROPERTI",
+  "description": "Bangun distrik, tingkatkan bangunan, dan atur uangmu. Duel kota mungil dalam 12 ronde.",
+  "duration": "5–10 menit",
+  "icon": "⌂",
+  "color": "#edc484",
+  "layout": "move",
+  "instructions": "Bergiliran lempar dadu. Pilih beli atau simpan uang saat singgah di properti kosong. Lengkapi tiga properti satu distrik untuk sewa ganda; singgah di properti sendiri untuk meningkatkan bangunan, maksimal dua tingkat. Festival memberi kejutan, taman memberi 55, dan melewati Alun-alun memberi 120. Setelah 12 ronde (24 giliran), uang + nilai bangunan menentukan pemenang. Tidak ada utang atau eliminasi.",
+  "players": 2,
+  "order": 40,
+  "menu": {
+    "title": "Kota\nBerdua",
+    "line": "Satu kota. Dua strategi.",
+    "genre": "Strategi"
+  },
+  "input": {
+    "axes": [
+      "x",
+      "y"
+    ],
+    "actions": [
+      "use",
+      "tool"
+    ]
+  }
+}

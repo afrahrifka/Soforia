@@ -1,0 +1,20 @@
+.glass-guidance{align-self:center;max-width:640px;width:100%;background:#163c41eb;border:1px solid #ceeee34d;border-radius:16px;padding:14px 20px;text-align:center}.glass-guidance strong{display:block;color:#fff0d5;font-size:18px}.glass-guidance span{display:block;color:#d0e4df;font-size:11px;line-height:1.6;margin-top:6px}.glass-guidance.stage-complete{background:#2f6054ed;border-color:#c7ed9a}.glass-art{position:relative;background:linear-gradient(155deg,#9ac6c0,#e1ceaa);overflow:hidden;display:grid;place-items:center}.glass-art-pane{width:140px;height:95px;background:linear-gradient(135deg,#e8ffff88,#87c5d6aa);border:4px solid #f1f5da;transform:rotate(-10deg);box-shadow:12px 18px 0 #365a6130}.glass-art-carrier{position:absolute;top:50%;width:38px;height:57px;border-radius:17px 17px 8px 8px;background:#edab8b;color:#36575b;display:grid;place-items:center;font-size:20px;font-weight:bold;box-shadow:0 -16px 0 -3px #e6bd71}.glass-art-carrier.a{left:16%}.glass-art-carrier.b{right:16%;background:#a6d7e3}.glass-art>strong{position:absolute;bottom:14px;color:#28544f;font-size:8px;letter-spacing:1.5px}
+
+.stage-selector section{margin-top:20px}.stage-selector section h3{font-size:12px;color:#e7d0a6;margin-bottom:10px}
+.stick-caption{color:#91aaa2;font-size:9px;letter-spacing:1px;pointer-events:none}
+.touch-screen[data-glass-controls=true] .action-zone{width:min(43vw,350px);height:min(calc(var(--controller-height,100dvh)*.62),240px);grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:1fr 1fr;gap:10px}
+.glass-actions .touch-action{border-radius:24px;padding:6px 3px;gap:5px;min-height:48px}
+.glass-actions .touch-action>span{font-size:30px}
+.glass-actions .touch-action>small{font-size:11px;white-space:nowrap}
+.glass-actions [data-glass-x="1"]{grid-column:1;grid-row:1;transform:translateY(12px)}
+.glass-actions [data-glass-y="-1"]{grid-column:2;grid-row:1}
+.glass-actions [data-glass-x="-1"]{grid-column:3;grid-row:1;transform:translateY(12px)}
+.glass-actions [data-glass-y="1"]{grid-column:2;grid-row:2}
+.glass-actions .jump-key{grid-column:3;grid-row:2;border-radius:50%}
+.glass-key.held-action{transform:translateY(3px)}
+@media(orientation:portrait){.touch-screen[data-glass-controls=true] .action-zone{width:46vw;height:min(34vh,240px);gap:6px}}
+@media(orientation:portrait){.glass-actions .touch-action{border-radius:18px}}
+@media(orientation:portrait){.glass-actions .touch-action>small{font-size:9px}}
+@media(max-height:380px) and (orientation:landscape){.touch-screen[data-glass-controls=true] .action-zone{height:63vh;gap:8px}}
+@media(max-height:380px) and (orientation:landscape){.glass-actions .touch-action>span{font-size:25px}}
+@media(max-height:380px) and (orientation:landscape){.glass-actions .touch-action>small{font-size:10px}}.console-tile .glass-art>strong{display:none}.console-tile .glass-art-pane{width:61%;height:47%;border-width:2px}.console-tile .glass-art-carrier{width:16%;height:30%;font-size:12px;box-shadow:0 -8px 0 -2px #e6bd71;top:37%;border-radius:9px 9px 4px 4px}.console-tile .glass-art-carrier.a{left:10%}.console-tile .glass-art-carrier.b{right:10%}.feature-art .glass-art-pane{width:340px;height:230px;border:6px solid #e7d8ff;background:linear-gradient(135deg,#e8deff50,#b491f230);transform:rotate(-15deg);box-shadow:18px 30px 0 #170b2922,inset 0 0 70px #d1b6f522}.feature-art .glass-art-carrier{width:65px;height:95px;top:42%;border-radius:25px 25px 12px 12px;font-size:26px;box-shadow:0 -27px 0 -5px #dfb8ed}.feature-art .glass-art-carrier.a{left:7%}.feature-art .glass-art-carrier.b{right:7%;background:#b2a6e7}.feature-art .glass-art>strong{display:none}

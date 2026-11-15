@@ -1,0 +1,11 @@
+# Aktifkan Require review from Code Owners pada ruleset branch utama.
+# Ini permintaan review; file ini sendiri tidak mengaktifkan branch protection.
+* @oskhar
+/.github/ @oskhar
+/AGENTS.md @oskhar
+/repo-policy.json @oskhar
+/scripts/ @oskhar
+/src/shared/ @oskhar
+/src/platform/ @oskhar
+/src/dashboard/ @oskhar
+/src/games/ @oskhar

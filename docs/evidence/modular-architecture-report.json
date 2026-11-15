@@ -1,0 +1,41 @@
+{
+  "tanggal": "2026-11-15",
+  "hasil": "lulus",
+  "node": "v24.22.0",
+  "arsitektur": {
+    "games": 5,
+    "modules": 81,
+    "browserModules": 52
+  },
+  "tes": {
+    "total": 60,
+    "lulus": 60,
+    "gagal": 0,
+    "tooling": 6
+  },
+  "pemeriksaan": [
+    "TypeScript dan generator",
+    "AST import/re-export dan browser/server",
+    "CSS scope dan namespace animasi",
+    "scope Git staged/working serta note baru unik",
+    "manifest game baru sintetis, host/dashboard tidak berubah, build entry dan aset, starter selesai via input",
+    "build offline ESM per game",
+    "browser produksi: QR/controller/empat game dan Kota 24 giliran",
+    "menu lima game pada tiga viewport",
+    "keyboard dan dua controller browser Kaca setelah pemindahan path",
+    "paket node-required berhasil dibuat"
+  ],
+  "bukti": {
+    "browser": "modular-browser-report.json",
+    "menu": "menu-purple-report.json",
+    "keyboard": "../../src/games/glass/evidence/glass-keyboard-report.json",
+    "controller": "../../src/games/glass/evidence/glass-direction-report.json"
+  },
+  "batas": [
+    "Bukan uji dua HP fisik, balancing pasangan atau FPS/input-to-photon",
+    "Modul/bundel terpisah tetap satu proses server; bukan sandbox keamanan",
+    "Proteksi branch GitHub/required checks belum diaktifkan oleh pekerjaan lokal",
+    "Panduan tidak menjamin semua AI memuat atau mematuhinya"
+  ],
+  "deployment": "Server lokal Soforia diperbarui pada port controller 3210/operator 3211; health, entry app dan chunk modul HTTP 200. Sesi lama berakhir. Konfigurasi sistem/deployment lain tidak diubah."
+}

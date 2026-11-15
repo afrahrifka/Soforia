@@ -1,8 +1,20 @@
+import {checkBoundaries} from './check-boundaries.mjs';
+import {generateGames} from './generate-games.mjs';
+import {compileScopedCss} from './css-scopes.mjs';
 import { build } from 'esbuild';
-import { mkdir, cp } from 'node:fs/promises';
+import { mkdir, cp, readFile, writeFile, stat, rm } from 'node:fs/promises';
+const games=await generateGames(process.cwd());
+await checkBoundaries(process.cwd());
+await rm('dist',{recursive:true,force:true});
 await mkdir('dist/public',{recursive:true});
-await build({entryPoints:['src/server.ts'],bundle:true,platform:'node',target:'node20',format:'esm',outfile:'dist/server.mjs',banner:{js:"import { createRequire } from 'node:module'; const require = createRequire(import.meta.url);"}});
-await build({entryPoints:['src/app.ts'],bundle:true,platform:'browser',target:['chrome100','safari15'],format:'esm',outfile:'dist/public/app.js'});
-for(const file of ['index.html','style.css','favicon.svg'])await cp('public/'+file,'dist/public/'+file);
+const serverEntries={server:'src/platform/server.ts',...Object.fromEntries(games.map(game=>[`games/${game.id}/server`,`src/games/${game.id}/server.ts`]))};
+const clientEntries={app:'src/platform/app.ts',dashboard:'src/dashboard/view.ts',...Object.fromEntries(games.map(game=>[`games/${game.id}/client`,`src/games/${game.id}/client.ts`]))};
+await build({entryPoints:serverEntries,bundle:true,splitting:true,platform:'node',target:'node20',format:'esm',outdir:'dist',outExtension:{'.js':'.mjs'},chunkNames:'chunks/[name]-[hash]',banner:{js:"import { createRequire } from 'node:module'; const require = createRequire(import.meta.url);"}});
+await build({entryPoints:clientEntries,bundle:true,splitting:true,platform:'browser',target:['chrome100','safari15'],format:'esm',outdir:'dist/public',chunkNames:'chunks/[name]-[hash]'});
+for(const file of ['index.html','favicon.svg'])await cp('public/'+file,'dist/public/'+file);
+let css=await readFile('src/platform/style.css','utf8');
+css+='\n'+compileScopedCss((await readFile('src/dashboard/style.css','utf8'))+'\n'+games.map(g=>`.console-home.theme-${g.id}{--home-glow:${g.color}}`).join('\n'),'dashboard');
+for(const game of games){css+='\n'+compileScopedCss(await readFile(`src/games/${game.id}/style.css`,'utf8'),`game:${game.id}`);try{if((await stat(`src/games/${game.id}/assets`)).isDirectory())await cp(`src/games/${game.id}/assets`,`dist/public/games/${game.id}/assets`,{recursive:true});}catch(error){if(error.code!=='ENOENT')throw error;}}
+await writeFile('dist/public/style.css',css);
 await cp('public/assets','dist/public/assets',{recursive:true});
 console.log('Build offline siap di dist/. Tidak memerlukan node_modules saat runtime.');

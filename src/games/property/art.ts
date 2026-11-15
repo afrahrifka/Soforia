@@ -1,0 +1,1 @@
+export function art(){return `<div class="art city-art"><div class="city-mini-board"><i></i><i></i><i></i><i></i><b>⌂</b><span>⚄</span></div><span class="city-art-caption">SATU KOTA. DUA STRATEGI.</span></div>`;}

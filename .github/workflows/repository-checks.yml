@@ -1,0 +1,67 @@
+name: Repository checks
+on:
+  pull_request:
+  push:
+    branches: [master]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  checks:
+    name: Boundaries and tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npm test
+      - run: npm run check:docs
+      - run: npm run build
+  scope:
+    name: Scoped changes
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate scope using base validator when available
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          if git cat-file -e "$BASE_SHA:scripts/check-scope.mjs" 2>/dev/null; then
+            git show "$BASE_SHA:scripts/check-scope.mjs" > "$RUNNER_TEMP/trusted-check-scope.mjs"
+            node "$RUNNER_TEMP/trusted-check-scope.mjs" --base "$BASE_SHA" --head HEAD
+          else
+            echo 'Bootstrap pertama: validator belum ada pada base; tinjauan pemelihara wajib.'
+            node scripts/check-scope.mjs --base "$BASE_SHA" --head HEAD --bootstrap
+          fi
+  browser:
+    name: Browser regression
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - name: Exercise dashboard and controller lifecycle
+        run: |
+          export PLAYWRIGHT_CHROMIUM_EXECUTABLE="$(node --input-type=module -e "import {chromium} from '@playwright/test';process.stdout.write(chromium.executablePath())")"
+          node scripts/browser-check.mjs

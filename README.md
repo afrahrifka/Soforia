@@ -1,99 +1,88 @@
-# Main Bareng
+# Main Bareng · Soforia
 
-Konsol game LAN offline untuk dua orang. **Laptop/TV menampilkan game; dua HP menjadi controller melalui browser di Wi-Fi yang sama.** Tidak memerlukan internet, akun, aplikasi HP, Tailscale atau server cloud saat bermain.
+Konsol game lokal untuk dua orang: laptop menjadi layar dan server otoritatif, dua browser HP menjadi controller melalui Wi-Fi/LAN yang sama. Setelah build tersedia, permainan tidak membutuhkan internet atau akun cloud.
 
-Versi **0.1.0-beta.3**, 14 November 2026. Implementasi pertama sudah tersedia; pengujian dua HP fisik, latency kamera dan acceptance pasangan masih diperlukan sebelum dinyatakan rilis stabil.
+**Bahasa / Languages:** [Indonesia](README.md) · [English](docs/i18n/README.en.md) · [Español](docs/i18n/README.es.md) · [Português](docs/i18n/README.pt.md) · [日本語](docs/i18n/README.ja.md) · [简体中文](docs/i18n/README.zh-CN.md)
 
-## Langsung main di laptop ini
+**Kontributor dan AI:** mulai dari [AGENTS.md](AGENTS.md), [peta fokus](docs/architecture/AI-START.md) dan [panduan kolaborasi](collaboration_guide.md). Perbaikan satu game tidak boleh mengedit dashboard, game lain atau API bersama tanpa cakupan yang sesuai.
 
-```sh
-cd ~/Github/main-bareng
-./play.sh
-```
+## Memainkan
 
-Launcher membuka Chromium/Chrome dalam fullscreen kiosk. Laptop hanya menampilkan gambar; seluruh kontrol ada di HP. Jika layar belum terbuka, jalankan `./open-console.sh`. URL alternatif: **http://127.0.0.1:3211/console** (tab biasa tidak bisa memaksa fullscreen otomatis). QR dan alamat controller HP mengikuti IP Wi-Fi yang dipilih server. Default port controller adalah 3210; port operator 3211 hanya dapat diakses dari laptop.
-
-1. Hubungkan laptop dan kedua HP ke satu router/Wi-Fi, meskipun router tidak tersambung internet.
-2. Scan QR di layar laptop; HP langsung menjadi controller A/B tanpa formulir atau persetujuan.
-3. HP A memilih game dengan analog, tekan Main untuk mulai; keduanya menekan Siap.
-4. Main sambil melihat laptop atau TV melalui HDMI.
-
-Hentikan dengan `./stop.sh`. Untuk foreground gunakan `./start.sh` dan Ctrl+C. Jika ada banyak adapter/IP, gunakan `./play.sh --host IP-WIFI-LAPTOP`. Tidak ada autostart atau perubahan konfigurasi deployment lain.
-
-## Controller HP
-
-Setelah scan, HP menampilkan kontrol saja: analog kiri, tombol aksi kanan, Home kecil dan tombol fullscreen. Menu memakai analog + Main/Mode/Arena. Kebun memiliki Tanam/Siram/Panen/Antar langsung; Seirama menyediakan empat pilihan serta Kunci/Ungkap/Lewati. Mendukung dua sentuhan bersamaan dan layout portrait/landscape.
-
-Fullscreen dicoba otomatis dan saat sentuhan pertama; dukungannya ditentukan browser HP. Jika perlu tekan ⛶. Pada browser yang menolak API, kontrol tetap memenuhi viewport tanpa panel tambahan. [Rincian dan batas fullscreen](docs/12-controller-hp.md).
-
-## Katalog game
-
-| Game | Pengalaman |
-|---|---|
-| **Orbit Berdua** | Kumpulkan 12 cahaya, tolong pasangan yang terkena puing dan buka dua gerbang bersama; tiga arena |
-| **Kebun Berdua** | Tanam, siram, panen enam wortel dan enam stroberi, lalu antar ke peti bersama |
-| **Seirama** | Delapan ronde dari 40 soal orisinal, pilihan pribadi, tebak pasangan, reveal bersama dan skip tanpa penalti |
-| **Kota Berdua 3D** | Duel properti dengan distrik, bangunan, dadu, dan 12 ronde |
-| **Kaca Berdua** | Satu analog + tombol miring/tinggi/Lompat, map konstruksi, 60 stage dan 240 checkpoint |
-
-Tersedia mode santai/tantangan, tutorial, countdown, pause, hasil, rematch, menu HP, pairing otomatis, reconnect, pengaturan kontrol dan diagnosis RTT. Aturan game berjalan di server laptop; HP tidak menerima video. Jawaban Seirama belum diungkap tidak dikirim ke layar atau HP pasangan.
-
-## Paket offline
-
-Paket siap ekstrak untuk Linux x64 dengan Node.js LTS bawaan:
-
-`artifacts/main-bareng-0.1.0-beta.3-linux-x64-offline.tar.gz`
-
-Paket ini berjalan tanpa `npm install` maupun Node yang terpasang global. Memerlukan sistem Linux x64 yang kompatibel dengan runtime resmi Node 22. Baca **[RUN-OFFLINE.md](RUN-OFFLINE.md)** untuk ekstraksi, pemilihan IP/port, penggunaan hotspot dan diagnosis Wi-Fi. Windows/macOS belum diverifikasi.
-
-## Pengembangan dan pemeriksaan
+Prasyarat pengembangan: Node.js **20.19+**, npm, browser laptop dengan WebGL, serta dua HP pada LAN yang sama. Linux menjadi host launcher utama; kenyamanan dua HP/performa lintas perangkat belum dinyatakan lulus acceptance.
 
 ```sh
 npm ci
 npm run check
 npm test
 npm run build
-./start.sh
+./play.sh
 ```
 
-Instalasi dependency awal membutuhkan internet/cache, sedangkan runtime bundle tidak. Node 22 LTS disarankan; kode juga telah dibuild/dites dengan Node 20.20.2 pada lingkungan development ini.
+Launcher mencetak URL layar operator lokal dan controller LAN serta membuka layar konsol. Scan QR dari masing-masing HP; alamat IP/port mengikuti keluaran launcher, bukan URL localhost pada HP. Kedua pemain dapat memilih game di dashboard dan menekan Main. Jeda hanya melalui tindakan pemain, bukan otomatis ketika HP terputus.
+
+Jika menjalankan server tanpa kiosk:
 
 ```sh
-# Paket dengan Node yang tersedia di laptop tujuan:
-npm run package:offline
-# Paket Linux x64 berisi runtime resmi; persiapan ini mengunduh runtime satu kali:
-node scripts/package.mjs --with-runtime
-# E2E Chromium, ubah PLAYWRIGHT_CHROMIUM_EXECUTABLE jika diperlukan:
-node scripts/browser-check.mjs
+npm start
+# Buka URL /console lokal yang dicetak terminal.
 ```
 
-Source TypeScript berada di `src/`, antarmuka lokal di `public/`, dan bundle offline di `dist/`. Detail implementasi dan keterbatasan: **[laporan beta](docs/11-implementasi-beta.md)**. Lisensi kode/aset orisinal proyek: [MIT](LICENSE); paket distribusi menyertakan notice dependency dan lisensi runtime.
+Untuk distribusi terbangun/offline lihat [RUN-OFFLINE](RUN-OFFLINE.md). Paket beta lama bukan otomatis build source terbaru. Jika perlu, bangun ulang dengan `npm run package:offline`. Jangan mengubah firewall/Tailscale/systemd atau deployment lain untuk menjalankan proyek ini.
 
-## Spesifikasi dan pengembangan berikutnya
+## Permainan yang tersedia
 
-- [Spesifikasi induk](SPEC.md).
-- [Produk untuk pasangan](docs/01-produk.md) dan [UX/controller](docs/02-ux-controller.md).
-- [12 rekomendasi game dan aturan](docs/03-katalog-game.md); Dapur Berdua adalah ekspansi berikutnya.
-- [Arsitektur](docs/04-arsitektur.md), [jaringan/protokol](docs/05-jaringan-protokol.md), [data/SDK](docs/06-data-sdk.md).
-- [Operasional/privasi](docs/07-operasional-privasi.md), [pengujian](docs/08-pengujian.md), [roadmap](docs/09-roadmap.md), [keputusan/sumber](docs/10-keputusan-sumber.md).
+| Game | Kerja sama/tantangan |
+|---|---|
+| Orbit Berdua | Mengumpulkan cahaya, membantu pasangan dan membuka gerbang bersama |
+| Kebun Berdua | Membagi tugas tanam, siram, panen dan antar hasil |
+| Seirama | Jawaban pribadi dan tebakan pasangan, hanya dibuka saat siap |
+| Kota Berdua | Duel properti, distrik, peningkatan dan keputusan ekonomi |
+| Kaca Berdua | 60 rangkaian tantangan fisik, enam bioma, angkat/guling/merunduk/lompat, mesin bergerak dan audio lokal |
 
-`Web-Portfolio-3D` hanya referensi kualitas visual. Kode game, artwork antarmuka dan soal dibuat terpisah. Atas izin pengguna, paket model pihak ketiga CC0 dari folder lib portofolio kini dipakai dengan sumber/lisensi tercatat; kode dan game portofolio tidak disalin. Tidak membundel game PlayStation.
+Kaca tidak memakai aturan sudut wajib atau pecah abstrak karena tekanan/jangkauan. Checkpoint akhir langsung berpindah stage. Tombol **♫** pemain 1 mengatur audio game bersama; **M** pada laptop mengatur mute lokal. Untuk uji dua pemain keyboard, di katalog dengan slot kosong tekan **F2**, lalu **Enter** untuk tutorial/mulai; **F3** keluar. [Kontrol lengkap](docs/18-kaca-keyboard.md).
 
-## Berkontribusi dan dukungan sukarela
+## Arsitektur untuk mengurangi konflik
 
-Ide dan pengalaman bermain sangat kami hargai, bahkan tanpa kemampuan coding. Buka **Issues → New issue** dan pilih formulir yang sesuai; panduannya ada di [Panduan Kolaborasi](collaboration_guide.md). Semua peserta diharapkan mengikuti [Kode Etik](CODE_OF_CONDUCT.md). Kontribusi tersedia di bawah [lisensi MIT](LICENSE).
+```text
+src/dashboard/          menu dan layout katalog
+src/platform/           sesi LAN, shell browser, dispatcher, renderer umum
+src/shared/             kontrak, helper, matematika dan loader aset bersama
+src/games/<id>/         program server, console, controller, HUD, audio, CSS,
+                        aset, tes, tools, evidence dan status game itu
+src/generated/          registry otomatis; ignored, bukan file kontribusi
+```
 
-Jika ingin mendukung proyek secara sukarela, kamu dapat [mentraktir melalui Trakteer](https://trakteer.id/oskhar). Dukungan ini tidak wajib untuk menggunakan atau berkontribusi pada proyek.
+Setiap game punya entry aturan dan client/console sendiri, dalam satu host LAN. [Kontrak modul](docs/architecture/MODULES.md) menjelaskan API dan arah dependensi. Facade `src/*.ts` lama dipertahankan untuk kompatibilitas script historis, bukan lokasi implementasi baru.
 
-## Prototipe ekspansi 3D
+**Registrasi tunggal:** satu folder game, satu ID unik, satu manifest. Build menemukan modul dan membuat entry/bundel otomatis; tidak mengedit array katalog atau switch di dashboard/host.
 
-Source terbaru menggunakan Three.js yang dibundel lokal untuk arena 3D Orbit Berdua, Kebun Berdua, serta latar Seirama. Game baru **Kota Berdua 3D** menawarkan duel properti orisinal: lempar dadu, pilih beli/lewati, terima sewa, dan bandingkan nilai aset setelah 24 giliran. Memerlukan WebGL pada browser laptop. Jalankan build dari source untuk mencoba; paket offline beta.3 yang disebut di atas belum diperbarui untuk ekspansi ini. Playtest pasangan dan benchmark perangkat fisik masih diperlukan.
+```sh
+npm run game:new -- --id komet --title "Komet Berdua"
+npm run change:new -- --scope game:komet --summary "Tambah Komet Berdua"
+npm test -- --scope game:komet
+npm run check
+npm run build
+npm run check:scope -- --working
+```
 
+Starter dapat dijalankan, tetapi desain dan playtest tetap tugas pembuat game. [Panduan menambah game](docs/architecture/ADD-GAME.md) memuat kontrak manifest, aset/lisensi dan batas scope.
 
-Pembenahan terbaru menambahkan diorama dengan model pesawat, tanaman, karakter dan bangunan kota orisinal, bayangan, animasi dadu/pion, serta HUD permainan. Kota Berdua kini memiliki empat distrik, peningkatan bangunan dan festival; Orbit memiliki pulsa pelindung; Kebun memberi petunjuk aksi. [Rincian permainan, inventaris aset dan verifikasi](docs/13-kualitas-game-3d.md).
+## Berkontribusi bersama manusia atau AI
 
+- Ambil/buat issue dan tetapkan satu scope: `game:<id>`, `dashboard`, `platform`, `docs`, `tooling`, `assets`, atau migrasi `architecture` yang diotorisasi.
+- Jalankan `npm run ai:route -- --scope game:glass` untuk jalur baca/tulis yang tepat. Pakai branch/worktree terpisah, bukan working tree bersama beberapa AI.
+- Simpan status, tes dan bukti rutin dalam modul sendiri. Satu change note unik menggantikan perebutan changelog/registry pusat.
+- Verifikasi `npm run check`, tes relevan, build, scope diff dan `npm run check:docs`. Commit `type(scope): ringkasan` melalui `npm run commit`; scope game dibaca dari manifest.
+- Ikuti [Kode Etik](CODE_OF_CONDUCT.md). Laporan masalah/ide/perbaikan tulisan tetap diterima tanpa harus coding.
 
-Kaca Berdua memakai satu analog di sudut bawah untuk berjalan, tombol tahan Miring kiri/kanan dan Naikkan/Turunkan untuk kaca, serta satu tombol Lompat. Tinggi kaca bertahan saat tombol dilepas; mode tangan kiri mencerminkan posisi analog. Host dapat memilih stage 1–60 dari controller katalog. Jeda semua game kini tombol kecil `Ⅱ` seperti Home, terpisah dari tombol aksi. Setiap pemain memegang dua sudut dengan dua tangan; kemiringan mengubah pegangan kiri–kanan menjadi bawah–atas. Tanah dan tekanan dua badan bisa memecahkan kaca. [Panduan empat sudut, tantangan stage, dan bukti verifikasi](docs/17-kaca-empat-sudut-dan-tantangan.md).
+Adapter instruksi disediakan untuk tool AI umum, tetapi tidak ada file yang menjamin setiap AI memuat atau menaati instruksi. Batas impor, pemisahan CSS, scope diff dan CI membantu menolak kesalahan yang dapat diperiksa. Pemilik repo masih perlu mengaktifkan required checks/Code Owner review; lihat [penegakan dan batasnya](docs/architecture/ENFORCEMENT.md).
 
+## Lisensi, privasi dan status kualitas
 
-Revisi terbaru Kaca Berdua menggunakan karakter humanoid membulat dengan empat lengan beruas yang dapat meregang hingga batas jangkauan, pose kaca independen, dan kamera perspektif otomatis. Pustaka lokal memuat **1.053 model CC0**; scene hanya memuat model yang dibutuhkan. [Sumber/lisensi aset dan verifikasi](docs/15-aset-dan-karakter-elastis.md).
+Kode, geometri dan audio orisinal memakai [MIT](LICENSE). Pustaka model pihak ketiga CC0 mempunyai [inventaris dan atribusi](public/assets/ATTRIBUTION.md); lisensi sumber tetap berlaku. Portofolio referensi bukan sumber kode/game untuk disalin.
+
+Jangan unggah QR aktif, secret sesi, jawaban pribadi atau data pribadi ke issue, fixture, screenshot atau Git. Laporan keamanan disampaikan secara pribadi melalui kanal pemelihara di [profil @oskhar](https://github.com/oskhar), bukan detail celah pada issue publik.
+
+Tes otomatis dan simulasi tidak membuktikan keseruan, dua HP fisik, FPS atau input-to-photon. Status aktif dan batasnya ada pada [roadmap](docs/09-roadmap.md), [spesifikasi](SPEC.md) dan `STATUS.md` setiap modul. Dokumen revisi bernomor lama adalah riwayat; peta path terbaru adalah [MODULES](docs/architecture/MODULES.md).
+
+Dukungan sukarela tersedia melalui [Trakteer](https://trakteer.id/oskhar); tidak wajib untuk memakai atau berkontribusi.

@@ -1,0 +1,5 @@
+import {spawnSync} from 'node:child_process';import {readdir} from 'node:fs/promises';import {generateGames} from './generate-games.mjs';
+await generateGames();const at=process.argv.indexOf('--scope'),scope=at<0?null:process.argv[at+1];
+async function collect(path){const out=[];for(const e of await readdir(path,{withFileTypes:true})){if(e.isDirectory())out.push(...await collect(path+'/'+e.name));else if(e.name.endsWith('.test.ts'))out.push(path+'/'+e.name);}return out;}
+let directories=['tests','src/games'];if(scope?.startsWith('game:')){const id=scope.slice(5);if(!/^[a-z][a-z0-9-]{1,31}$/.test(id))throw Error('Scope game tidak valid.');directories=[`src/games/${id}/tests`];}else if(scope==='platform')directories=['tests/platform'];else if(scope==='tooling')directories=['tests/tooling'];else if(scope)throw Error('Scope tes tidak dikenal.');
+const files=(await Promise.all(directories.map(collect))).flat().sort();if(!files.length)throw Error('Tidak ada tes pada scope ini.');const run=spawnSync(process.execPath,['--import','tsx','--test',...files],{stdio:'inherit'});if(run.error)throw run.error;process.exitCode=run.status??1;
