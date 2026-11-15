@@ -56,19 +56,15 @@ let lastHudElement:Element|null=null,lastHudMarkup='';
 let lastAnalogChoice=0;
 function analogInput(x:number,y:number){
  const magnitude=Math.hypot(x,y);
- if(state?.phase==='catalog'){
-  axes={x:0,y:0};if(magnitude<.45){heldDirection='';return;}
-  const direction=Math.abs(x)>Math.abs(y)?(x<0?'left':'right'):(y<0?'up':'down');
-  if(direction!==heldDirection||performance.now()-lastAnalogChoice>430){heldDirection=direction;lastAnalogChoice=performance.now();send('menu.navigate',{direction});}
- }else if(state?.phase==='playing'&&gameClient(state.game.id).analog){
+ if(state?.phase==='catalog'){axes={x:0,y:0};return; }else if(state?.phase==='playing'&&gameClient(state.game.id).analog){
   axes={x:0,y:0};if(magnitude<.45)return;const direction=Math.abs(x)>Math.abs(y)?(x<0?'left':'right'):(y<0?'up':'down');if(direction===heldDirection&&performance.now()-lastAnalogChoice<430)return;heldDirection=direction;lastAnalogChoice=performance.now();
   const next=gameClient(state.game.id).analog!(state,privateState,draftAnswer,x,y);if(next!==undefined&&next!==draftAnswer){draftAnswer=next;render();}
  }else if(state?.phase==='playing')axes={x,y};
 }
 function render(){
  if(!state)return;
- const signature=JSON.stringify([role,state.phase,state.phase==='catalog'&&!operator?'catalog':state.selected,state.mode,state.level,state.players,state.pending,state.pairing?.open,state.pairing?.code,state.countdown,state.game?gameClient(state.game.id).renderKey?.(state,privateState,{draftAnswer}):null,draftAnswer,diag]);
- if(signature!==key){axisCancel();analogCancel();menuRelease();key=signature;neutral();document.body.classList.toggle('controller-only',!operator);document.body.classList.toggle('catalog-screen',operator&&state.phase==='catalog');const retained=operator?gameCanvas:null;app.innerHTML=operator?(state.phase==='catalog'?catalogView(state,art):consoleGame()):controller();gameCanvas=document.querySelector('#game');if(retained&&gameCanvas){gameCanvas.replaceWith(retained);gameCanvas=retained;}else if(retained){release3D();}bindTouch();if(diag)showSettings(true);}
+ const signature=JSON.stringify([role,state.phase,state.phase==='catalog'&&!operator?'catalog':state.selected,state.mode,state.level,state.players,state.pending,state.pairing?.open,state.pairing?.code,state.library,state.countdown,state.game?gameClient(state.game.id).renderKey?.(state,privateState,{draftAnswer}):null,draftAnswer,diag]);
+ if(signature!==key){axisCancel();analogCancel();menuRelease();key=signature;neutral();document.body.classList.toggle('controller-only',!operator);document.body.classList.toggle('catalog-screen',state.phase==='catalog');const retained=operator?gameCanvas:null;app.innerHTML=operator?(state.phase==='catalog'?catalogView(state,art):consoleGame()):controller();gameCanvas=document.querySelector('#game');if(retained&&gameCanvas){gameCanvas.replaceWith(retained);gameCanvas=retained;}else if(retained){release3D();}bindTouch();if(diag)showSettings(true);}
 
  const pairing=document.querySelector<HTMLElement>('#game-pairing');
  if(pairing){const visible=!!(state.qrVisible&&state.pairing?.open),stamp=visible?state.pairing.code:'';if(pairing.dataset.stamp!==stamp){pairing.dataset.stamp=stamp;pairing.innerHTML=visible?`<aside class="game-qr-panel" aria-label="QR controller kedua"><div class="qr-frame"><img src="/api/qr?${state.pairing.code}" alt="Scan QR untuk pemain 2" width="240" height="240"></div><strong>Gabung sebagai pemain 2</strong><p>Scan dengan HP</p><span class="pairing-code">${esc(state.pairing.code)}</span><small>${esc(state.pairing.manualUrl)}</small></aside>`:'';}}
@@ -89,6 +85,10 @@ function bindTouch(){
   pad.onpointerdown=e=>{if(pointer!==null||pad.dataset.disabled==='true')return;pointer=e.pointerId;pad.setPointerCapture(e.pointerId);move(e);if(pointer!==null)repeat=setInterval(()=>analogInput(stick.x,stick.y),60);};
   pad.onpointermove=move;pad.onpointerup=release;pad.onpointercancel=release;pad.onlostpointercapture=release;
  }
+ const search=document.querySelector<HTMLFormElement>('.library-search-form');if(search)search.onsubmit=e=>{e.preventDefault();send('library.update',{command:'search',value:(search.elements.namedItem('query') as HTMLInputElement).value.slice(0,80)});(search.elements.namedItem('query') as HTMLInputElement).blur();};
+ let directionTimer:any=null,directionPointer:number|null=null;const releaseDirection=()=>{clearTimeout(directionTimer);directionPointer=null;document.querySelectorAll('.library-dpad .held-action').forEach(b=>b.classList.remove('held-action'));};
+ const oldRelease=analogCancel;analogCancel=menuRelease=()=>{oldRelease();releaseDirection();};
+ document.querySelectorAll<HTMLButtonElement>('[data-do=library-direction]').forEach(button=>{button.onpointerdown=e=>{if(button.disabled||!connected)return;e.preventDefault();e.stopPropagation();releaseDirection();directionPointer=e.pointerId;button.setPointerCapture(e.pointerId);button.classList.add('held-action');handleControl(button);const repeat=()=>{if(directionPointer===e.pointerId&&state?.phase==='catalog'&&!document.hidden){handleControl(button);directionTimer=setTimeout(repeat,170);}};directionTimer=setTimeout(repeat,380);};button.onpointerup=button.onpointercancel=button.onlostpointercapture=releaseDirection;button.onclick=e=>{e.preventDefault();e.stopPropagation();if(e.detail===0)handleControl(button);};});
  const held=new Map<number,{button:HTMLButtonElement;axis:string;value:number}>();
  const updateAxes=()=>{extraAxes=state?.game?Object.fromEntries(clientManifest(state.game.id).input.axes.filter(k=>k!=='x'&&k!=='y').map(k=>[k,0])):{};for(const key of held.values())extraAxes[key.axis]=(extraAxes[key.axis]||0)+key.value;for(const k of Object.keys(extraAxes))extraAxes[k]=Math.max(-1,Math.min(1,extraAxes[k]));if(state?.phase==='playing')send('input.state',{...axes,...extraAxes},true);};
  const releaseAxes=(id?:number)=>{for(const [pointer,key] of held){if(id===undefined||pointer===id){key.button.classList.remove('held-action');key.button.setAttribute('aria-pressed','false');held.delete(pointer);}}updateAxes();};
@@ -132,6 +132,13 @@ function gameSound(previous:any,next:any){
 }
 
 function handleControl(b:HTMLButtonElement){if(operator||!b||b.disabled)return;const action=b.dataset.do;if(b.hasAttribute('data-input-axis'))return;clickSound();
+ if(state.phase==='catalog'){
+  if(action==='library-direction'){send('menu.navigate',{direction:b.dataset.value});return;}
+  if(action==='library-favorite'){send('library.update',{command:'favorite',id:state.selected});return;}
+  if(action==='library-filter'){send('library.update',{command:'filter',value:state.library?.filter==='favorites'?'all':'favorites'});return;}
+  if(action==='library-sort'){send('library.update',{command:'sort',value:state.library?.sort==='title'?'featured':'title'});return;}
+  if(action==='library-previous'||action==='library-next'){send('library.update',{command:'page',value:action==='library-next'?'next':'previous'});return;}
+ }
  if(action==='pairing-toggle'){send('pairing.toggle');return;}
  if(action==='fullscreen'){requestControllerFullscreen();return;}
  if(action==='home'){axisCancel();analogCancel();send('home');return;}

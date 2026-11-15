@@ -1,3 +1,5 @@
+import {emptyLibrary,libraryGames,libraryMove} from '../shared/catalog-library.ts';
+import {favoriteStore} from './library-store.ts';
 import http from 'node:http';
 import { networkInterfaces } from 'node:os';
 import { randomBytes, randomInt, createHash } from 'node:crypto';
@@ -11,6 +13,7 @@ const token=()=>randomBytes(24).toString('hex'),hash=(s:string)=>createHash('sha
 const option=(name:string,fallback:string)=>{const i=process.argv.indexOf('--'+name);return i<0?fallback:process.argv[i+1];};
 export function lanAddresses(){return Object.entries(networkInterfaces()).filter(([n])=>!/^(lo|tailscale|docker|br-|veth|tun|wg)/.test(n)).flatMap(([name,entries])=>(entries||[]).filter(e=>e.family==='IPv4'&&!e.internal&&(/^(10\.|192\.168\.)/.test(e.address)||/^172\.(1[6-9]|2\d|3[01])\./.test(e.address))).map(e=>({name,address:e.address})));}
 export async function startServer(options:any={}){
+ const library=emptyLibrary(),favoritesStore=await favoriteStore(options.libraryFile??(process.env.MAIN_BARENG_TEST==='1'?null:resolve(process.cwd(),'.runtime/library.json')),new Set(catalog.map(g=>g.id)));library.favorites=favoritesStore.favorites;
  const addresses=lanAddresses(),host=options.host||option('host',addresses[0]?.address||'127.0.0.1'),port=Number(options.port??option('port','3210')),operatorPort=Number(options.operatorPort??option('operator-port',String(port+1)));
  if(!Number.isInteger(port)||port<1024||port>65534||!Number.isInteger(operatorPort)||operatorPort<1024||operatorPort>65535||operatorPort===port)throw Error('Port harus berbeda, antara 1024 dan 65535.');
  if(host!=='127.0.0.1'&&!addresses.some(a=>a.address===host))throw Error('Pilih --host dari IP LAN laptop, bukan alamat VPN atau interface publik.');
@@ -29,7 +32,7 @@ export async function startServer(options:any={}){
  function pause(why:string){if(['playing','countdown','tutorial'].includes(phase)){wasPaused=phase==='playing'||(phase==='countdown'&&wasPaused);phase='paused';reason=why;neutral();actionQueue=[];players.forEach(p=>p.ready=false);}}
  function snapshot(ws:any){
   const p=ws.player;
-  const pub:any={sessionId,phase,selected,mode,level,qrVisible,soundMuted,countdown:Math.ceil(countdown),reason,catalog,gameInstanceId:game?.instanceId||null,game:publicGame(game),result:game?.finished?result(game):null,keyboard:players.some(p=>p.keyboard),players:players.map(p=>({id:p.id,slot:p.slot,name:p.name,connected:connectedPlayer(p),ready:p.ready})),serverTick:tick,snapshotSeq:++snapshotSeq};
+  const pub:any={sessionId,phase,selected,mode,level,qrVisible,soundMuted,countdown:Math.ceil(countdown),reason,catalog,library,gameInstanceId:game?.instanceId||null,game:publicGame(game),result:game?.finished?result(game):null,keyboard:players.some(p=>p.keyboard),players:players.map(p=>({id:p.id,slot:p.slot,name:p.name,connected:connectedPlayer(p),ready:p.ready})),serverTick:tick,snapshotSeq:++snapshotSeq};
   
   if(ws.role==='display'){pub.pairing={url:`${base}/join#invite=${invite}`,manualUrl:`${base}/join`,code,open:performance.now()<pairUntil&&availableSlot()>=0,seconds:Math.max(0,Math.ceil((pairUntil-performance.now())/1000))};pub.network={base,addresses,local};}
   if(p)pub.you={id:p.id,slot:p.slot,host:p.slot===0};
@@ -148,14 +151,24 @@ export async function startServer(options:any={}){
     }
     if(m.type==='pairing'&&hostOnly(ws)){invite=token();code=String(randomInt(100000,1000000));pairUntil=now+300000;broadcast();return;}
     if(m.type==='reset'&&hostOnly(ws)){reset();broadcast();return;}
+    if(m.type==='library.update'&&p&&phase==='catalog'){
+     if(body.command==='favorite'){const id=body.id??selected;if(typeof id!=='string'||!catalog.some(g=>g.id===id)){fail(ws,'INVALID_INPUT','Game tidak tersedia.');return;}library.favorites=library.favorites.includes(id)?library.favorites.filter(g=>g!==id):[...library.favorites,id];favoritesStore.save(library.favorites).catch(()=>{fail(ws,'STORAGE_UNAVAILABLE','Favorit tersimpan untuk sesi ini; penyimpanan laptop tidak tersedia.');});}
+     else if(body.command==='filter'&&['all','favorites'].includes(body.value))library.filter=body.value;
+     else if(body.command==='search'&&typeof body.value==='string'&&body.value.length<=80)library.query=body.value.trim();
+     else if(body.command==='sort'&&['featured','title'].includes(body.value))library.sort=body.value;
+     else if(body.command==='page'&&['previous','next'].includes(body.value))selected=libraryMove(catalog,library,selected,body.value);
+     else{fail(ws,'INVALID_INPUT','Pilihan pustaka tidak valid.');return;}
+     const visible=libraryGames(catalog,library);if(visible.length&&!visible.some(g=>g.id===selected))selected=visible[0].id;level=1;broadcast();return;
+    }
     if(m.type==='menu.navigate'&&p&&phase==='catalog'){
      if(!['left','right','up','down'].includes(body.direction)){fail(ws,'INVALID_INPUT','Arah tidak valid.');return;}
-     const index=catalog.findIndex(g=>g.id===selected),step=['left','up'].includes(body.direction)?-1:1;selected=catalog[(index+step+catalog.length)%catalog.length].id;level=1;broadcast();return;
+     selected=libraryMove(catalog,library,selected,body.direction);level=1;broadcast();return;
     }
     if(m.type==='select'&&p&&phase==='catalog'){
-     if('mode' in body||'level' in body){fail(ws,'DEVELOPER_ONLY','Pilihan stage hanya tersedia di mode developer.');return;}if(catalog.some(g=>g.id===body.id)){if(selected!==body.id)level=1;selected=body.id;}broadcast();return;
+     if('mode' in body||'level' in body){fail(ws,'DEVELOPER_ONLY','Pilihan stage hanya tersedia di mode developer.');return;}if(libraryGames(catalog,library).some(g=>g.id===body.id)){if(selected!==body.id)level=1;selected=body.id;}broadcast();return;
     }
     if(m.type==='start'&&p&&['catalog','results'].includes(phase)){
+     if(phase==='catalog'&&!libraryGames(catalog,library).some(g=>g.id===selected)){fail(ws,'EMPTY_LIBRARY','Pilih koleksi berisi game sebelum mulai.');return;}
      if(!active()){fail(ws,'PLAYERS_REQUIRED','Sambungkan minimal satu HP dahulu.');return;}const same=phase==='results'&&game?.id===selected;game=createGame(selected,mode,level,same?game.seed:undefined);game.instanceId=token();phase='tutorial';qrVisible=false;players.forEach(p=>{p.ready=false;p.actions.clear();});neutral();actionQueue=[];broadcast();return;
     }
     if(m.type==='exit'&&hostOnly(ws)||m.type==='home'&&p){phase='catalog';qrVisible=false;game=null;neutral();actionQueue=[];players.forEach(p=>p.ready=false);broadcast();return;}
@@ -194,7 +207,7 @@ export async function startServer(options:any={}){
  },1000/60);
  async function listen(s:any,p:number,h:string){await new Promise<void>((ok,no)=>{s.once('error',no);s.listen(p,h,()=>{s.off('error',no);ok();});});}
  try{await listen(operator,operatorPort,'127.0.0.1');await listen(server,port,host);}catch(e){clearInterval(timer);operator.close();server.close();throw e;}
- return {base,local,addresses,close:async()=>{clearInterval(timer);for(const ws of clients)ws.terminate();wss.close();await Promise.all([new Promise<void>(r=>server.close(()=>r())),new Promise<void>(r=>operator.close(()=>r()))]);}};
+ return {base,local,addresses,close:async()=>{await favoritesStore.flush();clearInterval(timer);for(const ws of clients)ws.terminate();wss.close();await Promise.all([new Promise<void>(r=>server.close(()=>r())),new Promise<void>(r=>operator.close(()=>r()))]);}};
 }
 if(process.env.MAIN_BARENG_TEST!=='1'){
  startServer().then(app=>{console.log(`\n  MAIN BARENG · konsol LAN offline\n\n  Layar laptop : ${app.local}/console\n  Controller HP: ${app.base}/join\n\n  Sambungkan kedua HP ke Wi-Fi yang sama. Scan QR: HP langsung menjadi controller A/B.\n  Tidak perlu internet saat bermain. Gunakan ./stop.sh untuk menghentikan launcher.\n`);for(const name of ['SIGINT','SIGTERM'])process.once(name,()=>{app.close().then(()=>process.exit());});}).catch(e=>{console.error('Gagal menjalankan Main Bareng:',e.message,'\nPilih --host IP_LAN --port 3210 --operator-port 3211; jangan hentikan layanan lain.');process.exitCode=1;});

@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "scope": "architecture",
+  "summary": "Perbarui pustaka dashboard, favorit dan navigasi D-pad",
+  "validation": [],
+  "reason": "Pengguna meminta dashboard untuk koleksi besar, favorit bersama dan penggantian analog menu HP; memerlukan UI dashboard serta integrasi katalog/persistensi/input platform tanpa mengubah program game.",
+  "ownerReviewRequired": true
+}

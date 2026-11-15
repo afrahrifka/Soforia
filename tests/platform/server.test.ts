@@ -143,3 +143,15 @@ test('Aset modul: entry browser/chunk dapat dimuat, source dan traversal tetap t
   for(const path of ['/games/synthetic/server.ts','/private.json','/chunks/%2e%2e%2fprivate.json','/games/synthetic/assets/%2e%2e%2fserver.ts','/games/synthetic/assets/%2e%2e%2f%2e%2e%2f%2e%2e%2fprivate.json'])assert.equal((await fetch(app.base+path)).status,404,path);
  }finally{await app.close();await rm(root,{recursive:true,force:true});}
 });
+
+test('Pustaka: dua controller berbagi favorit, filter kosong tidak memulai game dan pencarian tervalidasi',async()=>{
+ const port=58500+Math.floor(Math.random()*500),app=await startServer({host:'127.0.0.1',port,operatorPort:port+1}),clients:Client[]=[];
+ try{
+  const credential=await (await fetch(app.local+'/api/operator',{method:'POST',headers:{Origin:app.local}})).json(),display=new Client(app.local,credential.token);clients.push(display);await display.wait(()=>display.state?.pairing);
+  for(let i=0;i<2;i++){const response=await fetch(app.base+'/api/join',{method:'POST',headers:{Origin:app.base,'Content-Type':'application/json'},body:JSON.stringify({invite:new URL(display.state.pairing.url).hash.slice(8)})});const player=new Client(app.base,(await response.json()).token);clients.push(player);await player.wait(()=>player.auth.role==='player');}
+  const [a,b]=clients.slice(1);a.send('library.update',{command:'favorite'});await b.wait(()=>b.state?.library.favorites.includes('orbit'));await display.wait(()=>display.state.library.favorites.includes('orbit'));
+  b.send('library.update',{command:'filter',value:'favorites'});await a.wait(()=>a.state.library.filter==='favorites');b.send('library.update',{command:'favorite'});await a.wait(()=>a.state.library.favorites.length===0);a.send('start');await a.wait(()=>a.messages.some(m=>m.type==='error'&&m.payload.code==='EMPTY_LIBRARY'));assert.equal(a.state.phase,'catalog');
+  a.send('library.update',{command:'filter',value:'all'});b.send('library.update',{command:'search',value:'Kaca'});await display.wait(()=>display.state.selected==='glass'&&display.state.library.query==='Kaca');b.send('library.update',{command:'sort',value:'title'});await a.wait(()=>a.state.library.sort==='title');b.send('library.update',{command:'search',value:'x'.repeat(81)});await b.wait(()=>b.messages.some(m=>m.type==='error'&&m.payload.code==='INVALID_INPUT'));assert.equal(b.state.library.query,'Kaca');
+  display.send('library.update',{command:'favorite'});await display.wait(()=>display.messages.some(m=>m.type==='error'&&m.payload.code==='DISPLAY_READ_ONLY'));
+ }finally{clients.forEach(c=>c.close());await app.close();}
+});
