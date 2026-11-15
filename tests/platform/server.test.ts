@@ -14,7 +14,8 @@ class Client{
  close(){clearInterval(this.timer);this.ws.close();}
 }
 test('Server LAN: layar read-only, pairing otomatis, D-pad, batas pemain, resume dan privasi', {timeout:30000},async()=>{
- const port=41000+Math.floor(Math.random()*10000),app=await startServer({host:'127.0.0.1',port,operatorPort:port+1,publicDir:new URL('../../dist/public',import.meta.url).pathname}),clients:Client[]=[],timers:any[]=[];
+ // Tes sumber harus berjalan pada checkout baru, sebelum npm run build.
+ const port=41000+Math.floor(Math.random()*10000),app=await startServer({host:'127.0.0.1',port,operatorPort:port+1,publicDir:new URL('../../public',import.meta.url).pathname}),clients:Client[]=[],timers:any[]=[];
  try{
   assert.equal((await fetch(app.base+'/healthz')).status,200);
   const model=await fetch(app.base+'/assets/kenney-platformer/models/crate.glb');assert.equal(model.status,200);assert.equal(model.headers.get('content-type'),'model/gltf-binary');assert.equal(new DataView(await model.arrayBuffer()).getUint32(0,true),0x46546c67);assert.equal((await fetch(app.base+'/assets/%2e%2e%2f..%2fpackage.json')).status,404);

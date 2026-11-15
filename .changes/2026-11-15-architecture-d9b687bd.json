@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "scope": "architecture",
+  "summary": "Perbaiki tes server agar tidak bergantung pada hasil build lokal",
+  "validation": [
+    "GitHub run 43736535387: Boundaries and tests gagal pada crate.glb 404; Browser regression lulus.",
+    "Salinan Git bersih tanpa dist mereproduksi 404 (7/8 tes platform lulus).",
+    "Perbaikan: npm test tanpa dist lulus 60/60 pada Node 24 dan Node 22.23.5.",
+    "Urutan CI check -> test -> check:docs -> build lulus dalam salinan bersih.",
+    "check:scope --working, check:docs dan git diff --check lulus.",
+    "Lihat src/platform/evidence/ci-test-report.json; run GitHub baru belum dijalankan."
+  ],
+  "reason": "Pengguna meminta perbaikan kegagalan Boundaries and tests GitHub dan mengizinkan penyesuaian workflow minor bila diperlukan. Tes platform diperbaiki dan hasil dicatat pada roadmap pusat sesuai AGENTS.md; tidak mengubah aturan game, runtime atau memperlonggar guard.",
+  "ownerReviewRequired": true
+}

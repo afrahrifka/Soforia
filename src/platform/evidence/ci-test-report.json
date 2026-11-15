@@ -1,0 +1,39 @@
+{
+  "tanggal": "2026-11-15",
+  "hasil": "lulus",
+  "sumberKegagalan": "https://github.com/oskhar/Soforia/actions/runs/43736535387",
+  "penyebab": "Tes integrasi server meminta crate.glb dari dist/public sebelum build tersedia pada checkout baru.",
+  "perbaikan": "publicDir tes menggunakan public/ yang dilacak Git; tidak ada perubahan runtime atau pengurangan assertion.",
+  "reproduksi": {
+    "lingkungan": "Salinan git archive HEAD tanpa dist; node_modules memakai symlink dependensi lokal. Bukan runner GitHub baru.",
+    "sebelum": {
+      "perintah": "npm test -- --scope platform",
+      "tes": 8,
+      "lulus": 7,
+      "gagal": 1,
+      "error": "404 !== 200"
+    },
+    "sesudah": {
+      "perintah": [
+        "npm run check",
+        "npm test",
+        "npm run check:docs",
+        "npm run build"
+      ],
+      "tes": 60,
+      "lulus": 60,
+      "gagal": 0,
+      "node": "v24.22.0"
+    },
+    "node22": {
+      "node": "v22.23.5",
+      "perintah": "npm test",
+      "kondisi": "Tanpa dist; major Node sama dengan GitHub workflow",
+      "tes": 60,
+      "lulus": 60,
+      "gagal": 0
+    }
+  },
+  "workflowDiubah": false,
+  "batas": "Hasil lokal bersih; run GitHub baru perlu dijalankan setelah perubahan dipush. Bukan uji perangkat fisik."
+}
