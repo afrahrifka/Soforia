@@ -1,4 +1,4 @@
-import client from '../client.ts';
+import client from '../client.ts';import {hud} from '../hud.ts';
 import test from 'node:test';import assert from 'node:assert/strict';
 import server,{LIMITS,sensors} from '../server.ts';import {MISSIONS,obstaclePose} from '../maps.ts';import {blocked,rectanglesOverlap,wrap} from '../physics.ts';
 const make=(n=0,mode='relaxed')=>server.create({id:'derek-angkasa',mode,level:n+1,seed:42,elapsed:0,finished:false,score:0},{random:()=>.5});
@@ -42,5 +42,9 @@ test('putaran berlebihan menimbulkan drift pelan yang bisa direm, bukan kehancur
 
 test('mode presisi memperlambat ujung lengan dan aksi ilegal tidak mengubah slot lain',()=>{const a=start(),b=start(),x=a.arm.x;step(a,{x:1},{},60);step(b,{x:1,fine:1},{},60);assert.ok(a.arm.x-x>(b.arm.x-x)*2);const before=structuredClone(a);server.action(a,2,'recall');server.action(a,0,'unknown');assert.deepEqual(a,before);});
 
+
+test('renderKey aman pada layar konsol tanpa slot pemain dan tetap membedakan A/B',()=>{const state:any={game:{mission:0,phase:'assembly',index:0,rescue:null}};assert.doesNotThrow(()=>client.renderKey!(state,{},{}));const display=client.renderKey!(state,{},{}) as string;state.you={slot:0};const a=client.renderKey!(state,{},{}) as string;state.you={slot:1};const b=client.renderKey!(state,{},{}) as string;assert.notEqual(a,b);assert.notEqual(a,display);});
+
+test('HUD memakai progress native, bukan inline style yang diblokir CSP',()=>{const g=start();g.dockHold=1;const markup=hud({game:g});assert.equal(markup.includes('style='),false);assert.ok(markup.includes('<progress class="fuel-track"'));assert.ok(markup.includes('<progress class="dock-track"'));});
 
 test('keyboard developer tidak menimpa utilitas host dan tetap memisahkan dua operator',()=>{for(const code of Object.keys(client.developer!.actions))assert.ok(!['Enter','KeyP','Home','BracketLeft','BracketRight','F2','F3','KeyM'].includes(code),code);const input=client.developer!.inputs(new Set(['KeyD','ShiftLeft','ArrowLeft','ArrowUp','Space']));assert.equal(input[0].x,1);assert.equal(input[0].fine,1);assert.equal(input[1].x,-1);assert.equal(input[1].thrust,1);assert.equal(input[1].brake,1);});

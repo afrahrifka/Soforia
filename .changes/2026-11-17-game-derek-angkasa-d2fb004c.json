@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "scope": "game:derek-angkasa",
+  "summary": "Perbaiki layar konsol yang gagal dirender saat Main ditekan dan HUD yang diblokir CSP",
+  "validation": [
+    "PASS npm test -- --scope game:derek-angkasa: 18/18 termasuk regresi renderKey tanpa slot dan HUD tanpa inline style",
+    "PASS npm run check: TypeScript dan batas modul",
+    "PASS npm run build",
+    "PASS npm test seluruh workspace: 116/116",
+    "PASS course-check.mjs: 12 misi / 36 pemasangan",
+    "PASS course-check.mjs --challenge: 12 misi / 36 pemasangan",
+    "PASS lan-check.mjs: klik Main dari controller, layar konsol merender misi tanpa page error, sensor privat dan input sentuh",
+    "PASS npm run check:docs",
+    "PASS npm run check:scope -- --working: hanya folder game dan satu change note baru"
+  ]
+}

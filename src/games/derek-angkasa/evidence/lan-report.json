@@ -1,12 +1,13 @@
 {
   "result": "PASS",
-  "sourceHash": "9c7f459064b59f5f0b4dcdafaca9df28abcbf7f5a6274fe580f12afa567443bc",
+  "sourceHash": "5f71422e1ca10b1331dd30535f1d53f7bb618e26b759fa81376c34bc346d4e20",
   "controllers": 2,
   "flow": [
     "discovery katalog",
     "pairing dua slot",
     "tutorial/siap",
     "briefing santai",
+    "layar konsol merender game tanpa error",
     "telemetri privat A/B",
     "tangkap ditolak jauh",
     "rotasi analog B",

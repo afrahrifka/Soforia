@@ -1,7 +1,7 @@
 {
   "result": "GAME_PASS_WITH_WORKSPACE_LIMITATIONS",
   "issue": "https://github.com/oskhar/Soforia/issues/22",
-  "sourceHash": "9c7f459064b59f5f0b4dcdafaca9df28abcbf7f5a6274fe580f12afa567443bc",
+  "sourceHash": "5f71422e1ca10b1331dd30535f1d53f7bb618e26b759fa81376c34bc346d4e20",
   "proofs": [
     "evidence/courses-relaxed-1-12.json",
     "evidence/courses-challenge-1-12.json",
@@ -10,7 +10,7 @@
     "evidence/lan-report.json"
   ],
   "validation": [
-    "PASS npm test -- --scope game:derek-angkasa: 16/16",
+    "PASS npm test -- --scope game:derek-angkasa: 18/18 termasuk regresi renderKey konsol tanpa slot dan HUD tanpa inline style",
     "PASS npm run check: TypeScript dan batas modul, tujuh game ditemukan otomatis",
     "PASS npm run build",
     "PASS npm run check:docs: 37 dokumen / tujuh scope game",
@@ -18,12 +18,11 @@
     "PASS audit.mjs: 12 replay / 36 pemasangan tambahan; dua kontrol negatif",
     "PASS check-assets.mjs: tiga GLB, lisensi CC0, checksum dan panel surya lokal",
     "PASS preview.mjs: 12 scene, tiga fase, empat viewport/peran, aset offline dan cleanup",
-    "PASS lan-check.mjs: dua controller browser melalui server aplikasi",
-    "PARTIAL npm test seluruh workspace: 105/106; tests/platform/server.test.ts:30 masih mengasumsikan left dari Orbit memilih Glass",
-    "BLOCKED npm run check:scope -- --working: sembilan change note gabungan",
-    "PASS validateScope subset: hanya folder Derek Angkasa dan satu catatan baru"
+    "PASS lan-check.mjs: dua controller browser melalui server aplikasi; klik Main merender layar konsol tanpa page error",
+    "PASS npm test seluruh workspace: 116/116",
+    "PASS npm run check:scope -- --working: hanya folder Derek Angkasa dan satu catatan baru"
   ],
-  "units": 16,
+  "units": 18,
   "assembly": {
     "modes": 2,
     "missionsPerMode": 12,
@@ -39,5 +38,5 @@
   "minimumChallengeFuelAtCheckpoint": 54.305078560721164,
   "videoCreated": false,
   "videoDirectory": "~/Videos/Soforia",
-  "limitation": "Target ronde manusia 6–9 menit, kelayakan pasangan, dua HP fisik, FPS/frame time/latensi dan soak belum diverifikasi. Tidak mengklaim CI remote, tidak menutup issue atau melakukan commit/push/deployment. Semua bukti memakai data sintetis dan tidak memuat secret/QR."
+  "limitation": "Target ronde manusia 6–9 menit, kelayakan pasangan, dua HP fisik, FPS/frame time/latensi dan soak belum diverifikasi. Tidak mengklaim CI remote, tidak menutup issue atau melakukan deployment. Semua bukti memakai data sintetis dan tidak memuat secret/QR."
 }

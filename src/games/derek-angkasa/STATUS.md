@@ -1,6 +1,12 @@
-# Status Derek Angkasa — 16 November 2026
+# Status Derek Angkasa — 17 November 2026
 
-**Implementasi issue #22 dapat dimainkan dan ditinjau; belum acceptance playtest pasangan/perangkat fisik.** Scope `game:derek-angkasa`, hanya folder ini dan `.changes/2026-11-16-game-derek-angkasa-f9d644a7.json`. Tidak mengubah game lain, host/dashboard/shared, daftar pusat atau deployment. Perubahan workspace sebelumnya dipertahankan.
+**Implementasi issue #22 dapat dimainkan dan ditinjau; belum acceptance playtest pasangan/perangkat fisik.**
+
+## Perbaikan 17 November — layar konsol kosong saat Main ditekan
+
+Penyebab: `renderKey` membaca `state.you.slot`, padahal snapshot layar konsol tidak mempunyai `you`. Saat snapshot permainan pertama tiba setelah Main/Siap, pengecualian terjadi di dalam render sehingga konsol berhenti memperbarui layar. `renderKey` sekarang memakai `state.you?.slot ?? 'display'`, dan tes regresi memastikan layar tanpa slot aman serta tetap membedakan A/B.
+
+HUD juga memakai elemen `<progress>` native dengan CSS scope game, menggantikan atribut `style` inline yang diblokir CSP. Bukti baru: `lan-check.mjs` membuka `/console`, menekan Main dari controller, lalu memastikan layar konsol merender misi, canvas 1280×720, satu `.fuel-track`, tanpa page error maupun request eksternal. Laporan diperbarui di `evidence/lan-report.json` dan screenshot controller di `evidence/lan-controller-*.png`. Scope `game:derek-angkasa`, hanya folder ini dan `.changes/2026-11-16-game-derek-angkasa-f9d644a7.json`. Tidak mengubah game lain, host/dashboard/shared, daftar pusat atau deployment. Perubahan workspace sebelumnya dipertahankan.
 
 ## Yang tersedia
 
@@ -13,7 +19,7 @@
 
 ## Bukti aktual
 
-- **16/16 tes scope lulus:** peran/otorisasi, capitan salah jarak/sudut/laju/spin, docking negatif dan reset dwell, checkpoint, servis/fuel kosong, batas/nonfinite, pemisahan sensor dan salinan snapshot, deadline nonterminal, showcase/replay, OBB/gantri, drift, presisi dan konflik keyboard.
+- **18/18 tes scope lulus:** peran/otorisasi, capitan salah jarak/sudut/laju/spin, docking negatif dan reset dwell, checkpoint, servis/fuel kosong, batas/nonfinite, pemisahan sensor dan salinan snapshot, deadline nonterminal, showcase/replay, OBB/gantri, drift, presisi, konflik keyboard, serta regresi renderKey konsol tanpa slot dan HUD tanpa inline style.
 - **12/12 misi santai dan 12/12 tantangan**, masing-masing **36 pemasangan**, dari briefing melalui input/aksi sampai showcase, tanpa teleport/mutasi state/kekebalan/fuel gratis. Tidak perlu recall pada rute tersebut. Bot mengetahui peta dan memakai jalur konservatif.
 - **12 replay tambahan / 36 pemasangan** setelah menyelesaikan ronde awal; konfigurasi variant 1 juga selesai tanpa recall. Dua kontrol negatif A saja dan B saja terhalang pada modul pertama.
 - Sisa propelan terendah pada checkpoint tantangan: **54,31 dari 75 unit**. Ini membuktikan rute yang diuji mempunyai cadangan, bukan semua strategi manusia pasti hemat.
@@ -26,8 +32,8 @@ Bukti: `evidence/courses-relaxed-1-12.json`, `courses-challenge-1-12.json`, `cam
 
 ## Batas workspace dan penerimaan
 
-`npm test` seluruh workspace: **105/106 lulus**. Kegagalan berada di `tests/platform/server.test.ts:30`: navigasi left dari Orbit masih menunggu Glass, padahal katalog sudah bertambah. Ini mereproduksi asumsi tes platform yang sudah dilaporkan pada STATUS Kaca sebelum tugas; tes tersebut tidak diubah dalam scope game baru. Integrasi server khusus Derek Angkasa lulus melalui pencarian katalog, tanpa asumsi urutan itu.
+`npm test` seluruh workspace: **116/116 lulus** (17 November 2026). Kegagalan lama `tests/platform/server.test.ts:30` yang mengasumsikan navigasi dari Orbit memilih Glass sudah tidak muncul pada pemeriksaan ini; tes platform tersebut tidak diubah dalam scope game.
 
-`npm run check:scope -- --working` gagal karena **sembilan change note** workspace gabungan (delapan telah ada sebelum tugas). Validasi subset folder Derek Angkasa + satu catatan baru lulus. Ini bukan klaim seluruh diff workspace milik tugas ini atau CI remote sudah hijau.
+`npm run check:scope -- --working` **lulus** dengan satu change note baru `.changes/2026-11-17-game-derek-angkasa-d2fb004c.json` dan hanya perubahan di folder game ini. Ini bukan klaim CI remote sudah hijau.
 
 Lanjutkan playtest pasangan untuk target durasi, keterbacaan lengan/cincin, ergonomi dua HP, rasa pegas/massa, kenyamanan rem dan kurva tantangan. Uji HP Android/iOS fisik dan kinerja laptop, frame time, input-to-photon, soak serta audio fisik masih diperlukan. Tidak membuat commit/push, menutup issue, memuat ulang layanan proyek atau mengubah sistem/jaringan/deployment.
