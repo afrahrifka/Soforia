@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "scope": "architecture",
+  "summary": "Tambahkan paket Windows satu-file berbasis Node SEA untuk Main Bareng",
+  "reason": "Permintaan pengguna agar aplikasi dapat dijalankan di Windows sebagai satu file EXE tanpa memasang Node.js atau dependency, dengan HP bergabung lewat QR; pekerjaan mencakup tooling packaging, dependency build, dan dokumentasi distribusi.",
+  "ownerReviewRequired": true,
+  "validation": [
+    "PASS npm test -- --scope tooling: 13/13 termasuk roundtrip, validasi batas dan buildId arsip SEA",
+    "PASS npm test seluruh workspace: 119/119",
+    "PASS npm run check: TypeScript dan batas modul",
+    "PASS npm run build",
+    "PASS npm run check:docs: 37 dokumen, tujuh scope game dan delapan adapter AI",
+    "PASS npm run check:scope -- --working: architecture, 11 file, ownerReviewRequired=true",
+    "PASS node scripts/package-windows.mjs --target linux-x64 --smoke: EXE SEA Linux berjalan, health/katalog/konsol/client Derek Angkasa dan ekstraksi aset lulus",
+    "PASS build Windows: PE32+ x86-64, 143,7 MiB, SHA-256 e1326264ca656cd3929448043d41349cab81ecc331613b5e6f1fa20cbc0e4167, berisi fuse SEA dan arsip MBSEA001",
+    "LIMITATION EXE Windows belum dieksekusi pada Windows fisik di lingkungan ini; SmartScreen, firewall, WebGL Windows dan performa perangkat nyata belum diuji",
+    "LIMITATION build lintas platform memerlukan internet sekali untuk runtime resmi Node.js v22.23.5 dan verifikasi SHA-256; runtime pengguna tidak mengunduh apa pun"
+  ]
+}

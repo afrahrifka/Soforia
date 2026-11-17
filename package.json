@@ -14,6 +14,7 @@
     "check": "node scripts/generate-games.mjs && node scripts/check-boundaries.mjs && tsc --noEmit",
     "test": "node scripts/test.mjs",
     "package:offline": "npm run build && node scripts/package.mjs",
+    "package:windows": "npm run build && node scripts/package-windows.mjs",
     "commit": "cz",
     "generate": "node scripts/generate-games.mjs",
     "check:boundaries": "node scripts/check-boundaries.mjs",
@@ -45,6 +46,7 @@
     "esbuild": "^0.28.2",
     "postcss": "^8.5.33",
     "postcss-selector-parser": "^7.2.1",
+    "postject": "^1.0.0-alpha.6",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2"
   }

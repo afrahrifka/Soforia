@@ -27,7 +27,7 @@ npm run start:normal
 # Alias: npm start. Buka URL /console lokal yang dicetak terminal.
 ```
 
-Untuk distribusi terbangun/offline lihat [RUN-OFFLINE](RUN-OFFLINE.md). Paket beta lama bukan otomatis build source terbaru. Jika perlu, bangun ulang dengan `npm run package:offline`. Mode normal tidak mengubah firewall, Tailscale, systemd atau deployment lain.
+Untuk distribusi terbangun/offline lihat [RUN-OFFLINE](RUN-OFFLINE.md). Paket beta lama bukan otomatis build source terbaru. Jika perlu, bangun ulang dengan `npm run package:offline`. Pengguna Windows dapat membuat satu file EXE tanpa dependency terpasang memakai `npm run package:windows`; lihat [panduan Windows EXE](docs/25-windows-exe.md). Mode normal tidak mengubah firewall, Tailscale, systemd atau deployment lain.
 
 ## Mode Tailscale dan TV mirror
 

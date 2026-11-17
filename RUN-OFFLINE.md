@@ -1,5 +1,15 @@
 # Menjalankan Main Bareng tanpa internet
 
+## Paket Windows satu file (EXE)
+
+Untuk pengguna Windows, buat satu file yang sudah membawa server, seluruh game dan asetnya:
+
+```sh
+npm run package:windows
+```
+
+Hasilnya `artifacts/main-bareng-0.1.0-beta.3-windows-x64.exe`. Pengguna akhir hanya menyalin file itu; **tidak perlu memasang Node.js, npm, atau dependency apa pun**. Klik dua kali EXE, izinkan akses jaringan privat saat firewall bertanya, lalu scan QR di layar konsol dari dua HP pada Wi-Fi yang sama. Browser default dipakai untuk layar laptop; ini runner server, bukan aplikasi desktop native. Langkah, pilihan `--port`/`--host`, lokasi data dan batas SmartScreen ada di [panduan Windows EXE](docs/25-windows-exe.md).
+
 ## Paket Linux x64 dengan runtime bawaan
 
 Ekstrak `main-bareng-0.1.0-beta.3-linux-x64-offline.tar.gz` lalu buka terminal di folder hasil ekstraksi:
