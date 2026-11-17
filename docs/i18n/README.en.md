@@ -42,3 +42,10 @@ npm run check:scope -- --working
 Manifest discovery registers the module automatically. Never edit a central game list or generated registry. [Adding a game](../architecture/ADD-GAME.md) explains the contract. AI instruction adapters improve discovery but cannot guarantee every tool reads or obeys them; automated checks and owner review enforce inspectable boundaries. GitHub branch protection must still be enabled by the repository owner.
 
 Code and original audio/geometry use [MIT](../../LICENSE); third-party models retain their [documented licenses](../../public/assets/ATTRIBUTION.md). Do not publish live QR codes, session secrets or private answers. Follow the [Code of Conduct](../../CODE_OF_CONDUCT.md). Automated/browser tests do not prove two-phone acceptance, fun, FPS or input-to-photon; see the [roadmap](../09-roadmap.md). Optional [Trakteer support](https://trakteer.id/oskhar) is never required.
+
+
+## Tailscale mode and TV mirrors
+
+Normal LAN: `npm run start:normal` (alias `npm start`). Optional tailnet mode: `npm run start:tailscale`; stop it with `npm run stop:tailscale`. Open the printed HTTPS `/tv` link on both screens; TVs only mirror the shared session, and the QR uses the Tailscale origin for the two phone controllers. Screens and phones need tailnet access. For TVs without a suitable Tailscale/WebGL browser, use a Tailscale laptop connected by HDMI. The dedicated HTTPS port defaults to 12443; other services are preserved. No reboot autostart is installed.
+
+[Commands, access requirements and limitations (Indonesian)](../24-tailscale-dan-tv.md).

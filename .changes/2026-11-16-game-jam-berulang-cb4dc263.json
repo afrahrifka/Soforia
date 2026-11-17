@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "scope": "game:jam-berulang",
+  "summary": "Tambahkan video simulasi untuk review developer",
+  "validation": [
+    "PASS npm test -- --scope game:jam-berulang (12 tes)",
+    "PASS npm run check",
+    "PASS npm run build",
+    "PASS npm run check:docs",
+    "PASS validasi subset scope: evidence/video-scope-report.json",
+    "BLOCKED npm run check:scope -- --working: workspace gabungan mempunyai empat change note, tiga sudah ada sebelum tugas",
+    "PASS video 5180 frame, 215.833 detik, H.264 720p24, enam distrik/bab, decode penuh; tidak ada error/aset gagal/request luar"
+  ]
+}

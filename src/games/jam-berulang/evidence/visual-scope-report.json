@@ -1,0 +1,7 @@
+{
+  "result": "PASS",
+  "scope": "game:jam-berulang",
+  "files": 73,
+  "ownerReviewRequired": false,
+  "limitation": "Validasi subset folder game yang belum tracked dan catatan revisi; bukan check seluruh workspace."
+}

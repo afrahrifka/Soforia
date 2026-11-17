@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "jam-berulang",
+  "title": "Jam Berulang",
+  "tag": "TEKA-TEKI WAKTU",
+  "description": "Pelari dan Perencana menyelamatkan enam distrik kota dengan rekaman gema dan loop satu menit.",
+  "duration": "6 arena · teka-teki waktu",
+  "icon": "◷",
+  "color": "#e6bd7b",
+  "layout": "move",
+  "instructions": "A: analog bergerak, Ambil / pasang dekat a/b/c dan E. B: Rekam untuk mengunci titik akhir, Ulang menit untuk menyimpan jejak, Putar jejak untuk menempatkan gema di pelat P/Q/R. Gema membuka G/H/I; gerbang yang dilewati dan roda terkumpul tetap tersimpan. Analog B menelusuri garis waktu, bukan menggerakkan Pelari. Santai tidak memiliki deadline; gunakan Ulang menit kapan siap. Mode lain mengulang setiap 60 detik dengan sasaran 4 loop (tantangan 3, final 4); kelebihan loop tetap boleh lanjut. Selesaikan enam distrik secara berurutan. Arena lanjut memiliki sekat fase =/V, jarum bergerak dan pelat yang perlu ditahan. Lihat fase pada HUD/garis waktu B; menunggu tidak menghapus progres.",
+  "players": 2,
+  "order": 1000,
+  "menu": {
+    "title": "Jam Berulang",
+    "line": "Satu menit. Dua penjaga. Kota yang menunggu fajar.",
+    "genre": "Puzzle asimetris · Time loop"
+  },
+  "input": {
+    "axes": [
+      "x",
+      "y"
+    ],
+    "actions": [
+      "interact",
+      "record",
+      "rewind",
+      "replay",
+      "trace",
+      "mark",
+      "seek"
+    ]
+  }
+}

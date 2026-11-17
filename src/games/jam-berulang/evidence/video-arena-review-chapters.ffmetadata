@@ -1,0 +1,32 @@
+;FFMETADATA1
+title=Jam Berulang — Simulasi Review Developer
+[CHAPTER]
+TIMEBASE=1/1000
+START=0
+END=23250
+title=1. Pelabuhan Jarum (1x)
+[CHAPTER]
+TIMEBASE=1/1000
+START=23250
+END=65333
+title=2. Kepulauan Gema (1x)
+[CHAPTER]
+TIMEBASE=1/1000
+START=65333
+END=124708
+title=3. Akuaduk Patah (1x)
+[CHAPTER]
+TIMEBASE=1/1000
+START=124708
+END=176917
+title=4. Planetarium Retak (1x)
+[CHAPTER]
+TIMEBASE=1/1000
+START=176917
+END=286375
+title=5. Arsip Jam Pasir (1x)
+[CHAPTER]
+TIMEBASE=1/1000
+START=286375
+END=505375
+title=6. Mahkota Paradoks (1x)

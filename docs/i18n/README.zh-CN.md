@@ -40,3 +40,10 @@ npm run check:scope -- --working
 系统通过 manifest 自动发现游戏，无需修改中央列表。每个游戏拥有独立的服务端规则、显示模块、手机控制器、HUD、CSS、素材、测试和状态文件。[添加游戏](../architecture/ADD-GAME.md)说明了接口要求。仓库文件无法保证所有AI都会读取并遵守指令；自动检查和所有者审核用于约束可检验的边界。GitHub分支保护仍需所有者启用。
 
 代码、原创音频与几何使用 [MIT](../../LICENSE)；第三方模型遵循[各自许可证](../../public/assets/ATTRIBUTION.md)。不要上传有效二维码、会话密钥或私人答案。请遵守[行为准则](../../CODE_OF_CONDUCT.md)。自动化测试不能证明双手机实机验收、趣味性、FPS或输入到画面的延迟；当前状态见[路线图](../09-roadmap.md)。[自愿支持](https://trakteer.id/oskhar)不是使用或贡献的前提。
+
+
+## Tailscale 模式与电视镜像
+
+普通局域网启动：`npm run start:normal`（别名 `npm start`）。可选 tailnet 模式：`npm run start:tailscale`；停止：`npm run stop:tailscale`。在两块屏幕打开终端显示的 HTTPS `/tv` 链接；电视仅显示同一局游戏，二维码使用 Tailscale 地址供两部手机加入。屏幕和手机均需能够访问 tailnet。如果电视不支持 Tailscale/WebGL，请用运行 Tailscale 的笔记本通过 HDMI 连接。专用 HTTPS 端口默认为 12443，保留其他服务，不设置开机自启。
+
+[命令、连接条件和限制（印度尼西亚语）](../24-tailscale-dan-tv.md).

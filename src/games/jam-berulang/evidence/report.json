@@ -1,0 +1,111 @@
+{
+  "result": "PASS",
+  "maps": [
+    {
+      "district": 1,
+      "drawCalls": "133",
+      "geometries": "14",
+      "assets": {
+        "pending": 0,
+        "loaded": 5,
+        "failed": []
+      }
+    },
+    {
+      "district": 2,
+      "drawCalls": "155",
+      "geometries": "14",
+      "assets": {
+        "pending": 0,
+        "loaded": 5,
+        "failed": []
+      }
+    },
+    {
+      "district": 3,
+      "drawCalls": "156",
+      "geometries": "12",
+      "assets": {
+        "pending": 0,
+        "loaded": 2,
+        "failed": []
+      }
+    },
+    {
+      "district": 4,
+      "drawCalls": "161",
+      "geometries": "11",
+      "assets": {
+        "pending": 0,
+        "loaded": 1,
+        "failed": []
+      }
+    },
+    {
+      "district": 5,
+      "drawCalls": "183",
+      "geometries": "12",
+      "assets": {
+        "pending": 0,
+        "loaded": 3,
+        "failed": []
+      }
+    },
+    {
+      "district": 6,
+      "drawCalls": "195",
+      "geometries": "9",
+      "assets": {
+        "pending": 0,
+        "loaded": 0,
+        "failed": []
+      }
+    }
+  ],
+  "campaign": [
+    {
+      "district": 1,
+      "title": "Pelabuhan Jarum",
+      "loops": 1,
+      "seconds": 15.16
+    },
+    {
+      "district": 2,
+      "title": "Kepulauan Gema",
+      "loops": 2,
+      "seconds": 29.16
+    },
+    {
+      "district": 3,
+      "title": "Akuaduk Patah",
+      "loops": 2,
+      "seconds": 46.43
+    },
+    {
+      "district": 4,
+      "title": "Planetarium Retak",
+      "loops": 2,
+      "seconds": 39.29
+    },
+    {
+      "district": 5,
+      "title": "Arsip Jam Pasir",
+      "loops": 3,
+      "seconds": 90.2
+    },
+    {
+      "district": 6,
+      "title": "Mahkota Paradoks",
+      "loops": 4,
+      "seconds": 190.38
+    }
+  ],
+  "controllers": [
+    "740x360",
+    "360x740"
+  ],
+  "errors": [],
+  "failed": [],
+  "external": [],
+  "limitation": "Fixture Chromium dengan scene dan komponen controller asli serta klik aksi; tidak membuktikan dua HP fisik, reconnect WebSocket, FPS target atau keseruan."
+}

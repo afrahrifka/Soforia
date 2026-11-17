@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "scope": "game:jam-berulang",
+  "summary": "Rombak kota dengan material PBR dan lingkungan 3D berlapis",
+  "validation": [
+    "PASS npm test -- --scope game:jam-berulang (12 tes)",
+    "PASS npm run check",
+    "PASS npm run build",
+    "PASS npm run check:docs",
+    "PASS node src/games/jam-berulang/tools/check-assets.mjs (32 aset)",
+    "PASS preview enam distrik dan controller; model ditunggu hingga selesai",
+    "BLOCKED npm run check:scope -- --working: tiga change note pada workspace gabungan; dua sudah ada sebelumnya"
+  ]
+}

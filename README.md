@@ -1,6 +1,6 @@
 # Main Bareng · Soforia
 
-Konsol game lokal untuk dua orang: laptop menjadi layar dan server otoritatif, dua browser HP menjadi controller melalui Wi-Fi/LAN yang sama. Setelah build tersedia, permainan tidak membutuhkan internet atau akun cloud.
+Konsol game lokal untuk dua orang: laptop menjadi layar dan server otoritatif, dua browser HP menjadi controller melalui Wi-Fi/LAN yang sama. Setelah build tersedia, mode LAN tidak membutuhkan internet atau akun cloud. Mode Tailscale opsional menghubungkan pasangan dan beberapa TV melalui tailnet.
 
 **Bahasa / Languages:** [Indonesia](README.md) · [English](docs/i18n/README.en.md) · [Español](docs/i18n/README.es.md) · [Português](docs/i18n/README.pt.md) · [日本語](docs/i18n/README.ja.md) · [简体中文](docs/i18n/README.zh-CN.md)
 
@@ -23,11 +23,21 @@ Launcher mencetak URL layar operator lokal dan controller LAN serta membuka laya
 Jika menjalankan server tanpa kiosk:
 
 ```sh
-npm start
-# Buka URL /console lokal yang dicetak terminal.
+npm run start:normal
+# Alias: npm start. Buka URL /console lokal yang dicetak terminal.
 ```
 
-Untuk distribusi terbangun/offline lihat [RUN-OFFLINE](RUN-OFFLINE.md). Paket beta lama bukan otomatis build source terbaru. Jika perlu, bangun ulang dengan `npm run package:offline`. Jangan mengubah firewall/Tailscale/systemd atau deployment lain untuk menjalankan proyek ini.
+Untuk distribusi terbangun/offline lihat [RUN-OFFLINE](RUN-OFFLINE.md). Paket beta lama bukan otomatis build source terbaru. Jika perlu, bangun ulang dengan `npm run package:offline`. Mode normal tidak mengubah firewall, Tailscale, systemd atau deployment lain.
+
+## Mode Tailscale dan TV mirror
+
+```sh
+npm run build
+npm run start:tailscale
+# Terminal lain: npm run stop:tailscale
+```
+
+Buka link HTTPS **`/tv`** yang dicetak terminal pada kedua layar. TV hanya mirror dari sesi yang sama, tanpa slot pemain atau aksi game. Scan QR pada TV dengan HP; QR memakai alamat Tailscale, lalu dua HP mengendalikan permainan sebagai A/B. Perangkat layar dan HP perlu akses tailnet. Bila TV tidak menjalankan Tailscale/browser WebGL, gunakan laptop dengan Tailscale melalui HDMI. Mode ini memakai port HTTPS khusus (default 12443) tanpa menimpa service lain; bukan autostart saat reboot. [Panduan perintah, port, akses pasangan dan batas TV](docs/24-tailscale-dan-tv.md).
 
 ## Permainan yang tersedia
 

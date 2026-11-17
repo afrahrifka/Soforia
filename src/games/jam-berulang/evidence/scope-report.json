@@ -1,0 +1,8 @@
+{
+  "scope": "game:jam-berulang",
+  "files": 36,
+  "ownerReviewRequired": false,
+  "result": "PASS",
+  "method": "validateScope subset path tugas; tidak mengubah index/worktree lain",
+  "workingCheck": "FAIL: workspace mempunyai dua change note termasuk pekerjaan game:glass yang sudah ada sebelum tugas"
+}

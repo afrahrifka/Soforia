@@ -40,3 +40,10 @@ npm run check:scope -- --working
 El manifiesto registra el juego automáticamente, sin listas centrales. Cada juego posee servidor, consola, mando, HUD, CSS, pruebas, recursos y estado propios. [Contrato de ampliación](../architecture/ADD-GAME.md). Las instrucciones no pueden garantizar que toda IA las lea; las comprobaciones automáticas y la revisión del propietario aportan control. El propietario debe activar la protección de rama.
 
 Código y audio/geometría originales: [MIT](../../LICENSE). Modelos externos: [licencias documentadas](../../public/assets/ATTRIBUTION.md). No publiques QR activos, secretos de sesión ni respuestas privadas. Respeta el [Código de Conducta](../../CODE_OF_CONDUCT.md). Las pruebas automáticas no demuestran diversión, dos móviles físicos, FPS ni latencia de entrada a imagen; consulta la [hoja de ruta](../09-roadmap.md). [Apoyo voluntario](https://trakteer.id/oskhar), nunca obligatorio.
+
+
+## Modo Tailscale y pantallas espejo
+
+LAN normal: `npm run start:normal` (alias `npm start`). Modo tailnet opcional: `npm run start:tailscale`; para detenerlo: `npm run stop:tailscale`. Abra el enlace HTTPS `/tv` mostrado en ambas pantallas: solo reflejan la misma sesión; el QR utiliza el origen Tailscale para los dos controles móviles. Pantallas y teléfonos necesitan acceso a la tailnet. Si el televisor no admite Tailscale y WebGL, conecte por HDMI un portátil con Tailscale. El puerto HTTPS dedicado predeterminado es 12443 y se conservan los demás servicios. No se configura inicio automático tras reiniciar.
+
+[Comandos, requisitos y límites (indonesio)](../24-tailscale-dan-tv.md).

@@ -11,7 +11,9 @@ const art=(id:string)=>gameClient(id).art?.()||`<div class="art">${clientManifes
 const getDeveloper=()=>gameClient(state?.game?.id||state?.selected||catalog[0].id).developer||gameClient(catalog.find(g=>g.developer?.keyboard)?.id||catalog[0].id).developer;
 const app=document.querySelector('#app') as HTMLElement;
 const esc=(s:any)=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
-const operator=location.pathname==='/console'&&location.hostname==='127.0.0.1';
+const localOperator=location.pathname==='/console'&&location.hostname==='127.0.0.1';
+// /tv selalu layar murni, termasuk ketika dibuka pada laptop operator.
+const operator=localOperator||['/console','/tv'].includes(location.pathname);
 let invite=new URLSearchParams(location.hash.slice(1)).get('invite')||'';
 if(location.hash)history.replaceState(null,'',location.pathname);
 let socket:WebSocket,state:any=null,privateState:any={},auth:any={},seq=0,actionSeq=0,credential=sessionStore.getItem('mb-token')||localStore.getItem('mb-resume')||'',role='',key='',retry=0,connected=false,wasConnected=false,stopReconnect=false,gameCanvas:HTMLCanvasElement|null=null,lastSnapshot=performance.now(),lastFrame=performance.now(),frameSamples:number[]=[],fps=60,rtts:number[]=[],reconnectTimer:any;
@@ -21,7 +23,7 @@ let muted=localStore.getItem('mb-muted')==='1',leftHanded=localStore.getItem('mb
 document.body.classList.toggle('reduced',reduced);
 document.body.classList.toggle('display-only',operator);
 function toast(message:string){const el=document.querySelector('#toast')!;el.textContent=message;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),4000);}
-function send(type:string,payload:any={},game=false){if(operator&&!['heartbeat','dev.keyboard'].includes(type))return;if(socket?.readyState!==1)return;socket.send(JSON.stringify({v:1,type,sessionId:auth.sessionId,connectionEpoch:auth.connectionEpoch,seq:++seq,...(game?{gameInstanceId:state?.gameInstanceId}:{}),payload}));}
+function send(type:string,payload:any={},game=false){if(operator&&type!=='heartbeat'&&!(localOperator&&type==='dev.keyboard'))return;if(socket?.readyState!==1)return;socket.send(JSON.stringify({v:1,type,sessionId:auth.sessionId,connectionEpoch:auth.connectionEpoch,seq:++seq,...(game?{gameInstanceId:state?.gameInstanceId}:{}),payload}));}
 function act(name:string,value?:any){send('action',{name,value,actionSeq:++actionSeq},true);}
 function neutral(){axes={x:0,y:0};if(state?.phase==='playing')send('input.state',{...axes,...extraAxes},true);}
 function connect(){
@@ -35,7 +37,7 @@ function connect(){
   if(message.type==='error')toast(p.message);
   if(message.type==='pong'&&typeof p.sent==='number'){rtts.push(performance.now()-p.sent);if(rtts.length>1000)rtts.shift();}
  };
- socket.onclose=e=>{axisCancel();connected=false;analogCancel();neutral();if(!operator&&state)syncTouch(state,false,muted);if(stopReconnect)return;if(e.code===4001||e.code===4000||e.code===4003){sessionStore.removeItem('mb-token');localStore.removeItem('mb-resume');credential='';role='';state=null;key='';if(operator){if(e.code===4001){bootDisplay();}else{app.innerHTML='<div class="loading">Layar dipindahkan ke jendela konsol lain.</div>';}}else{if(invite){const nextInvite=invite;invite='';autoJoin(nextInvite);}else{showJoin();toast(e.reason||'Sesi berakhir. Scan QR kembali.');}}return;}toast('Koneksi terputus. Menghubungkan kembali…');retry++;reconnectTimer=setTimeout(connect,Math.min(5000,500*2**Math.min(retry,4))+Math.random()*200);};
+ socket.onclose=e=>{axisCancel();connected=false;analogCancel();neutral();if(!operator&&state)syncTouch(state,false,muted);if(stopReconnect)return;if(e.code===4001||e.code===4000||e.code===4003){if(!operator){sessionStore.removeItem('mb-token');localStore.removeItem('mb-resume');}credential='';role='';state=null;key='';if(operator){if(e.code===4001||!localOperator){bootDisplay();}else{app.innerHTML='<div class="loading">Layar dipindahkan ke jendela konsol lain.</div>';}}else{if(invite){const nextInvite=invite;invite='';autoJoin(nextInvite);}else{showJoin();toast(e.reason||'Sesi berakhir. Scan QR kembali.');}}return;}toast('Koneksi terputus. Menghubungkan kembali…');retry++;reconnectTimer=setTimeout(connect,Math.min(5000,500*2**Math.min(retry,4))+Math.random()*200);};
  socket.onerror=()=>{};
 }
 function logo(){return '<span class="logo-mark">m<span>✦</span></span>';}
@@ -119,7 +121,7 @@ async function showJoin(){
 function showSettings(diagnostics=false){
  menuRelease();
  document.body.classList.add('controls-modal');
- document.querySelector('#modal')?.remove();const modal=document.createElement('div');modal.id='modal';modal.className='modal';modal.innerHTML=`<section class="settings-panel"><div class="section-title"><h2>${diagnostics?'Jaringan & bantuan':'Buat senyaman kalian'}</h2><button data-do="close-settings" class="icon-button" aria-label="Tutup">×</button></div>${diagnostics?`<p>Gunakan satu Wi-Fi pribadi yang sama. Guest Wi-Fi bisa memblokir koneksi antarperangkat.</p><div class="info-box"><strong>${esc(state?.network?.base||location.origin)}</strong><p>RTT aplikasi: <span id="diag-rtt">—</span><br>Render: <span id="diag-fps">—</span><br>Koneksi: <span id="diag-connection">—</span></p></div><p>Jika HP tidak terhubung: periksa alamat IP, izin jaringan lokal browser, client isolation router dan firewall port aplikasi. Aplikasi tidak mengubah firewall atau Tailscale.</p><p class="muted">RTT adalah perjalanan pulang-pergi pesan, bukan ukuran sentuh-ke-gambar.</p>`:`<button class="setting-row" data-do="mute">Suara sintetis lokal <b>${muted?'Mati':'Aktif'}</b></button><button class="setting-row" data-do="motion">Kurangi animasi <b>${reduced?'Aktif':'Mati'}</b></button><button class="setting-row" data-do="left">Kontrol kidal <b>${leftHanded?'Aktif':'Mati'}</b></button><button class="setting-row" data-do="large">Tombol lebih besar <b>${large?'Aktif':'Mati'}</b></button><p class="muted">Preferensi tersimpan di browser perangkat ini.</p>`}${state?.you?.host?'<button class="danger full" data-do="reset">Akhiri ruang & hapus sesi</button>':''}${!operator?'<button class="subtle full" data-do="logout">Keluar controller</button>':''}</section>`;document.body.append(modal);
+ document.querySelector('#modal')?.remove();const modal=document.createElement('div');modal.id='modal';modal.className='modal';modal.innerHTML=`<section class="settings-panel"><div class="section-title"><h2>${diagnostics?'Jaringan & bantuan':'Buat senyaman kalian'}</h2><button data-do="close-settings" class="icon-button" aria-label="Tutup">×</button></div>${diagnostics?`<p>Mode LAN: gunakan Wi-Fi pribadi yang sama. Mode Tailscale: aktifkan Tailscale dan akses link sesi yang sama.</p><div class="info-box"><strong>${esc(state?.network?.base||location.origin)}</strong><p>RTT aplikasi: <span id="diag-rtt">—</span><br>Render: <span id="diag-fps">—</span><br>Koneksi: <span id="diag-connection">—</span></p></div><p>Jika HP tidak terhubung: periksa alamat IP, izin jaringan lokal browser, client isolation router dan firewall port aplikasi. Mode Tailscale memakai proxy Serve khusus; firewall dan service lain tidak diubah.</p><p class="muted">RTT adalah perjalanan pulang-pergi pesan, bukan ukuran sentuh-ke-gambar.</p>`:`<button class="setting-row" data-do="mute">Suara sintetis lokal <b>${muted?'Mati':'Aktif'}</b></button><button class="setting-row" data-do="motion">Kurangi animasi <b>${reduced?'Aktif':'Mati'}</b></button><button class="setting-row" data-do="left">Kontrol kidal <b>${leftHanded?'Aktif':'Mati'}</b></button><button class="setting-row" data-do="large">Tombol lebih besar <b>${large?'Aktif':'Mati'}</b></button><p class="muted">Preferensi tersimpan di browser perangkat ini.</p>`}${state?.you?.host?'<button class="danger full" data-do="reset">Akhiri ruang & hapus sesi</button>':''}${!operator?'<button class="subtle full" data-do="logout">Keluar controller</button>':''}</section>`;document.body.append(modal);
 }
 let audio:AudioContext;
 function clickSound(){if(muted)return;try{audio??=new AudioContext();if(audio.state==='suspended')audio.resume();const o=audio.createOscillator(),v=audio.createGain();o.type='sine';o.frequency.setValueAtTime(520,audio.currentTime);o.frequency.exponentialRampToValueAtTime(290,audio.currentTime+.07);v.gain.setValueAtTime(.035,audio.currentTime);v.gain.exponentialRampToValueAtTime(.001,audio.currentTime+.09);o.connect(v);v.connect(audio.destination);o.start();o.stop(audio.currentTime+.1);}catch{}}
@@ -190,10 +192,10 @@ function draw(time:number){requestAnimationFrame(draw);const dt=time-lastFrame;l
  if(!gameCanvas||!state?.game)return;draw3D(gameCanvas,!reduced?(gameClient(state.game.id).frameState?.(state.game,time)||state.game):state.game,time/1000,{instance:state.gameInstanceId,reduced});
 }
 requestAnimationFrame(draw);
-async function bootDisplay(){try{const response=await fetch('/api/operator',{method:'POST'});if(!response.ok)throw Error('Buka URL layar laptop yang ditampilkan terminal.');credential=(await response.json()).token;connect();}catch(e:any){app.innerHTML=`<div class="loading">${esc(e.message)}</div>`;}}
+async function bootDisplay(){try{const response=await fetch(localOperator?'/api/operator':'/api/display',{method:'POST'});if(!response.ok)throw Error('Layar belum dapat tersambung. Periksa koneksi jaringan dan muat ulang /tv.');credential=(await response.json()).token;connect();}catch(e:any){app.innerHTML=`<div class="loading">${esc(e.message)}</div>`;}}
 async function init(){
  if(operator){await bootDisplay();}
- else if(location.pathname==='/console'){app.innerHTML='<div class="loading">Buka layar konsol melalui URL lokal di terminal laptop.<br>Di HP, buka /join untuk menjadi controller.</div>';}
+
  else if(credential)connect();else if(invite){const scanned=invite;invite='';autoJoin(scanned);}else showJoin();
 }
 init();
@@ -202,9 +204,9 @@ init();
 const keyboardHeld=new Set<string>();
 const keyboardCodes=()=>new Set(['Enter','KeyP','Home','BracketLeft','BracketRight','F2','F3',...(getDeveloper()?.codes||[])]);
 function keyboardSend(command:string,extra:any={}){send('dev.keyboard',{command,...extra},true);}
-function releaseKeyboard(){keyboardHeld.clear();if(operator&&state?.keyboard)keyboardSend('neutral');}
+function releaseKeyboard(){keyboardHeld.clear();if(localOperator&&state?.keyboard)keyboardSend('neutral');}
 window.addEventListener('keydown',e=>{
- if(!operator||!connected||!keyboardCodes().has(e.code))return;
+ if(!localOperator||!connected||!keyboardCodes().has(e.code))return;
  if(e.code!=='F2'&&!state?.keyboard)return;
  e.preventDefault();if(e.repeat)return;keyboardHeld.add(e.code);
  if(e.code==='F2'){releaseKeyboard();if(!state?.keyboard)keyboardSend('enable');return;}
@@ -216,11 +218,11 @@ window.addEventListener('keydown',e=>{
  const actions=getDeveloper()?.actions||{};
  if(actions[e.code])keyboardSend('action',{slot:actions[e.code][0],name:actions[e.code][1]});
 });
-window.addEventListener('keyup',e=>{if(operator&&state?.keyboard&&keyboardCodes().has(e.code)){e.preventDefault();keyboardHeld.delete(e.code);}});
+window.addEventListener('keyup',e=>{if(localOperator&&state?.keyboard&&keyboardCodes().has(e.code)){e.preventDefault();keyboardHeld.delete(e.code);}});
 window.addEventListener('blur',releaseKeyboard);window.addEventListener('pagehide',releaseKeyboard);
 document.addEventListener('visibilitychange',()=>{if(document.hidden)releaseKeyboard();});
 setInterval(()=>{
- if(!operator||!connected||!state?.keyboard||state.phase!=='playing'||document.hidden){keyboardHeld.clear();return;}
+ if(!localOperator||!connected||!state?.keyboard||state.phase!=='playing'||document.hidden){keyboardHeld.clear();return;}
  keyboardSend('input',{inputs:getDeveloper()?.inputs(keyboardHeld)||[]});
 },1000/30);
 

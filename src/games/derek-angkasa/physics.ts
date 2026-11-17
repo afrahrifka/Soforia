@@ -1,0 +1,9 @@
+import {BOUNDS,MISSIONS,cargoSize,obstaclePose,type V} from './maps.ts';
+export const clamp=(n:number,a:number,b:number)=>Math.max(a,Math.min(b,n));
+export const wrap=(a:number)=>Math.atan2(Math.sin(a),Math.cos(a));
+export function rotated(x:number,y:number,angle:number):V{return {x:x*Math.cos(angle)-y*Math.sin(angle),y:x*Math.sin(angle)+y*Math.cos(angle)};}
+type Rect=V&{hx:number;hy:number;angle:number};
+export function rectanglesOverlap(a:Rect,b:Rect,margin=0){for(const angle of [a.angle,b.angle])for(const add of [0,Math.PI/2]){const q=angle+add,ux=Math.cos(q),uy=Math.sin(q),radius=(r:Rect)=>Math.abs(Math.cos(r.angle)*ux+Math.sin(r.angle)*uy)*r.hx+Math.abs(-Math.sin(r.angle)*ux+Math.cos(r.angle)*uy)*r.hy;if(Math.abs((a.x-b.x)*ux+(a.y-b.y)*uy)>radius(a)+radius(b)+margin)return false;}return true;}
+export function circleOverlap(a:Rect,b:V,r:number){const p=rotated(b.x-a.x,b.y-a.y,-a.angle),x=clamp(p.x,-a.hx,a.hx),y=clamp(p.y,-a.hy,a.hy);return Math.hypot(p.x-x,p.y-y)<r;}
+export function blocked(mission:number,pose:V&{angle:number;kind:string},time:number,installed:any[]=[],swept=false){const a={...pose,...cargoSize(pose.kind as any)},c=Math.cos(a.angle),s=Math.sin(a.angle),ex=Math.abs(c)*a.hx+Math.abs(s)*a.hy,ey=Math.abs(s)*a.hx+Math.abs(c)*a.hy;if(Math.abs(a.x)+ex>BOUNDS.x||Math.abs(a.y)+ey>BOUNDS.y)return 'boundary';if(circleOverlap(a,{x:0,y:0},1.35))return 'hub';for(const o of MISSIONS[mission].obstacles){const p=obstaclePose(o,time);if(o.kind==='rock'||swept&&o.kind==='sweep'){if(circleOverlap(a,o,o.kind==='rock'?o.w:Math.hypot(o.w,o.h)/2+.08))return o.id;}else if(rectanglesOverlap(a,{...p,hx:o.w/2,hy:o.h/2}))return o.id;}for(const p of installed)if(rectanglesOverlap(a,{...p,...cargoSize(p.kind)}))return 'installed';return null;}
+export function safePose(mission:number,pose:any,time=0,installed:any[]=[],swept=false){return !blocked(mission,pose,time,installed,swept);}

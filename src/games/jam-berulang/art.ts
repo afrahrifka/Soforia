@@ -1,0 +1,1 @@
+export function art(){return `<div class="art clock-art"><div class="clock-art-orbit"></div><div class="clock-art-dial"><i></i><b>◷</b></div><div class="clock-art-city">▥ ▤ ▥ ▥ ▤</div><span>JAM<br>BERULANG</span><small>SATU MENIT UNTUK SELAMANYA</small></div>`;}

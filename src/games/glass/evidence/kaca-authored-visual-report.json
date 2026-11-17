@@ -5,97 +5,121 @@
       "stage": 1,
       "biome": 0,
       "kind": "raise",
-      "geometries": "16",
+      "geometries": "133",
       "textures": "3",
-      "drawCalls": "156"
+      "drawCalls": "283"
     },
     {
       "stage": 2,
       "biome": 1,
       "kind": "logSwing",
-      "geometries": "16",
+      "geometries": "71",
       "textures": "3",
-      "drawCalls": "132"
+      "drawCalls": "212"
     },
     {
       "stage": 3,
       "biome": 2,
       "kind": "zipper",
-      "geometries": "16",
+      "geometries": "115",
       "textures": "3",
-      "drawCalls": "134"
+      "drawCalls": "244"
     },
     {
       "stage": 4,
       "biome": 3,
       "kind": "ferry",
-      "geometries": "17",
+      "geometries": "147",
       "textures": "3",
-      "drawCalls": "134"
+      "drawCalls": "284"
     },
     {
       "stage": 5,
       "biome": 4,
       "kind": "roll",
-      "geometries": "17",
+      "geometries": "102",
       "textures": "3",
-      "drawCalls": "125"
+      "drawCalls": "218"
     },
     {
       "stage": 6,
       "biome": 5,
       "kind": "sweeper",
-      "geometries": "17",
+      "geometries": "142",
       "textures": "3",
-      "drawCalls": "127"
+      "drawCalls": "258"
     },
     {
       "stage": 2,
       "biome": 1,
       "kind": "split",
-      "geometries": "16",
+      "geometries": "64",
       "textures": "3",
-      "drawCalls": "118"
+      "drawCalls": "191"
     },
     {
       "stage": 1,
       "biome": 0,
       "kind": "roll",
-      "geometries": "16",
+      "geometries": "55",
       "textures": "3",
-      "drawCalls": "123"
+      "drawCalls": "177"
     },
     {
       "stage": 1,
       "biome": 0,
       "kind": "jump",
-      "geometries": "16",
+      "geometries": "131",
       "textures": "3",
-      "drawCalls": "132"
+      "drawCalls": "284"
     },
     {
       "stage": 1,
       "biome": 0,
       "kind": "traffic",
-      "geometries": "16",
+      "geometries": "70",
       "textures": "3",
-      "drawCalls": "136"
+      "drawCalls": "204"
     },
     {
       "stage": 2,
       "biome": 1,
       "kind": "stepping",
-      "geometries": "17",
+      "geometries": "119",
       "textures": "3",
-      "drawCalls": "128"
+      "drawCalls": "246"
+    },
+    {
+      "stage": 1,
+      "biome": 0,
+      "kind": "threadHop",
+      "geometries": "43",
+      "textures": "3",
+      "drawCalls": "165"
+    },
+    {
+      "stage": 1,
+      "biome": 0,
+      "kind": "threadBridge",
+      "geometries": "28",
+      "textures": "3",
+      "drawCalls": "154"
+    },
+    {
+      "stage": 3,
+      "biome": 2,
+      "kind": "threadHammer",
+      "geometries": "35",
+      "textures": "3",
+      "drawCalls": "150"
     },
     {
       "stage": 1,
       "biome": 0,
       "kind": "raise",
-      "geometries": "16",
+      "geometries": "133",
       "textures": "3",
-      "drawCalls": "156"
+      "drawCalls": "283"
     }
   ],
   "errors": [],

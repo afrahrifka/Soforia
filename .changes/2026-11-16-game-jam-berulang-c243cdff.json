@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "scope": "game:jam-berulang",
+  "summary": "Simpan video review di Videos di luar repo",
+  "validation": [
+    "PASS checksum SHA-256 identik sebelum/sesudah pemindahan 7.678.240 byte",
+    "PASS scan repo tanpa berkas video (kecuali .git/node_modules)",
+    "PASS node --check pada kedua tool video",
+    "PASS npm test -- --scope game:jam-berulang (12 tes)",
+    "PASS npm run check",
+    "PASS npm run build",
+    "PASS npm run check:docs",
+    "BLOCKED npm run check:scope -- --working: lima change note, empat sudah ada sebelum tugas"
+  ]
+}

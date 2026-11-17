@@ -1,5 +1,6 @@
+import {solidProfile,type Vec3} from './glass-collision.ts';
 import {obbOverlap,obbHullOverlap,WORLD_BASIS,moveGlassBody,circleBoxSeparation,GLASS_BODY_RADIUS} from './glass-collision.ts';
-import {glassCourse,glassWorlds,groundHeight,staticFloorAt,propParts,courseParts,platformPose,inPlatform,type GlassCourse,type GlassProp,type GlassPart} from './glass-world.ts';
+import {glassCourse,glassWorlds,groundHeight,staticFloorAt,propParts,courseParts,localCourseParts,platformPose,inPlatform,type GlassCourse,type GlassProp,type GlassPart} from './glass-world.ts';
 import {routePoint,routeProject,routeControls} from './glass-route.ts';
 import {planGlassCamera} from './glass-camera.ts';
 export {glassCourse,glassWorlds,propParts,platformPose,groundHeight,staticFloorAt};
@@ -36,10 +37,23 @@ export function bodyHitsPart(p:any,part:GlassPart){const height=1.67*Math.max(.3
   if(p.y>=part.center.y+part.half[1]||p.y+height<=part.center.y-part.half[1])return false;
   const dx=p.x-part.center.x,dz=p.z-part.center.z,u=Math.max(0,Math.abs(dx*part.basis[0].x+dz*part.basis[0].z)-part.half[0]),v=Math.max(0,Math.abs(dx*part.basis[2].x+dz*part.basis[2].z)-part.half[2]);return u*u+v*v<GLASS_BODY_RADIUS**2-1e-9;
  }
- return broadOverlap(center,WORLD_BASIS,half,part)&&(part.geometry&&part.geometry!=='box'?obbHullOverlap(center,WORLD_BASIS,half,part.center,part.basis,part.half,part.geometry):obbOverlap(center,WORLD_BASIS,half,part.center,part.basis,part.half));}
+ if(!broadOverlap(center,WORLD_BASIS,half,part))return false;
+ if(!part.geometry||part.geometry==='box')return obbOverlap(center,WORLD_BASIS,half,part.center,part.basis,part.half);
+ // Irisan hull pada tinggi badan diproyeksikan ke lantai. Footprint badan
+ // berbentuk lingkaran, sehingga lorong diagonal tidak memakai kotak tubuh lebih lebar.
+ const profile=solidProfile(part.geometry),vertices=profile.vertices.map(v=>({x:part.center.x+part.basis[0].x*v.x*part.half[0]+part.basis[1].x*v.y*part.half[1]+part.basis[2].x*v.z*part.half[2],y:part.center.y+part.basis[0].y*v.x*part.half[0]+part.basis[1].y*v.y*part.half[1]+part.basis[2].y*v.z*part.half[2],z:part.center.z+part.basis[0].z*v.x*part.half[0]+part.basis[1].z*v.y*part.half[1]+part.basis[2].z*v.z*part.half[2]}));
+ const points=vertices.filter(v=>v.y>=p.y&&v.y<=p.y+height);
+ for(const [a,b] of profile.edges)for(const y of [p.y,p.y+height]){const u=vertices[a],v=vertices[b];if((u.y-y)*(v.y-y)<0){const t=(y-u.y)/(v.y-u.y);points.push({x:u.x+(v.x-u.x)*t,y,z:u.z+(v.z-u.z)*t});}}
+ if(!points.length)return false;points.sort((a,b)=>a.x-b.x||a.z-b.z);
+ const cross=(a:Vec3,b:Vec3,c:Vec3)=>(b.x-a.x)*(c.z-a.z)-(b.z-a.z)*(c.x-a.x),lower:Vec3[]=[],upper:Vec3[]=[];
+ for(const q of points){while(lower.length>1&&cross(lower.at(-2)!,lower.at(-1)!,q)<=0)lower.pop();lower.push(q);}for(const q of [...points].reverse()){while(upper.length>1&&cross(upper.at(-2)!,upper.at(-1)!,q)<=0)upper.pop();upper.push(q);}
+ const hull=lower.slice(0,-1).concat(upper.slice(0,-1));if(hull.length===0)return Math.hypot(p.x-points[0].x,p.z-points[0].z)<GLASS_BODY_RADIUS;
+ if(hull.length>=3&&hull.every((a,i)=>cross(a,hull[(i+1)%hull.length],p)>=-1e-9))return true;
+ return hull.some((a,i)=>{const b=hull[(i+1)%hull.length],dx=b.x-a.x,dz=b.z-a.z,t=Math.max(0,Math.min(1,((p.x-a.x)*dx+(p.z-a.z)*dz)/(dx*dx+dz*dz||1)));return (p.x-a.x-dx*t)**2+(p.z-a.z-dz*t)**2<GLASS_BODY_RADIUS**2-1e-9;});}
+
 export function tickGlass(g:any,inputs:any[],dt:number){
  if(g.finished)return;if(g.retryTime>0){g.retryTime-=dt;if(g.retryTime<=0){place(g);g.message=`Kembali ke checkpoint ${g.checkpoint}.`;}return;}
- const course=glassCourse(g.stage),now=g.elapsed||0,parts=courseParts(course,now),platforms=course.obstacles.filter(o=>o.kind==='platform');
+ const course=glassCourse(g.stage),now=g.elapsed||0,parts=localCourseParts(course,now,[...g.players,g.pane]),platforms=course.obstacles.filter(o=>o.kind==='platform');
  for(const [i,p] of g.players.entries()){
   const input=inputs[i]||{},length=Math.max(1,Math.hypot(input.x||0,input.y||0)),glassY=Math.max(-1,Math.min(1,input.glassY||0));p.lifting=glassY<-.1;p.rotating=Math.abs(input.glassX||0)>.1;
   p.gripHeight=Math.max(.05,Math.min(2.6,p.gripHeight-glassY*1.2*dt));p.lower=Math.max(0,GLASS_GRIP_HEIGHT-p.gripHeight);p.lift=Math.max(0,p.gripHeight-GLASS_GRIP_HEIGHT);p.crouch=p.gripHeight<1.05;
@@ -73,5 +87,5 @@ export function tickGlass(g:any,inputs:any[],dt:number){
  if(!g.retryTime)for(const depth of [-.0275,.0275])for(const u of [-1,-.5,0,.5,1])for(const v of [-1,0,1]){const point=glassPoint(g,u*1.2,v*.6,depth),floor=staticFloorAt(course,point.x,point.z)?groundHeight(course,point.x,point.z):-7;if(point.y<=floor+.001){shatter(g,'Kaca menyentuh tanah.');break;}}
  if(!g.retryTime&&g.players.every((p:any)=>!p.support&&p.y<routeProject(course.route,p.x,p.z).y-3)){g.recoveryKind='fall';g.retryTime=1.1;g.message='Tim jatuh dari jalur. Kembali ke checkpoint tanpa menghitung kaca pecah.';g.revision++;neutralGlass(g);}
  const center=routeProject(course.route,pane.x,pane.z);g.progress=center.s;g.camera=planGlassCamera(g,course,dt);
- if(g.retryTime)return;const station=course.checkpoints[g.checkpoint];if(station!==undefined){const target=routePoint(course.route,station);if(g.players.every((p:any)=>Math.hypot(p.x-target.x,p.z-target.z)<4&&p.grounded)&&Math.hypot(pane.x-target.x,pane.z-target.z)<3){g.checkpoint++;g.cleared++;g.revision++;g.message='Checkpoint tersimpan.';if(g.checkpoint===course.checkpoints.length){g.stagesCompleted++;if(g.stage===59){g.finished=true;}else{g.stage++;g.checkpoint=0;place(g);g.message='Antar kaca tanpa menyentuh benda padat.';}}}}
+ if(g.retryTime)return;const station=course.checkpoints[g.checkpoint];if(station!==undefined){const target=routePoint(course.route,station);const last=course.encounters.filter(e=>e.group===g.checkpoint).at(-1)!;const cleared=g.players.every((p:any)=>routeProject(course.route,p.x,p.z).s>last.to+GLASS_BODY_RADIUS);if(cleared&&g.players.every((p:any)=>Math.hypot(p.x-target.x,p.z-target.z)<4&&p.grounded)&&Math.hypot(pane.x-target.x,pane.z-target.z)<3){g.checkpoint++;g.cleared++;g.revision++;g.message='Checkpoint tersimpan.';if(g.checkpoint===course.checkpoints.length){g.stagesCompleted++;if(g.stage===59){g.finished=true;}else{g.stage++;g.checkpoint=0;place(g);g.message='Antar kaca tanpa menyentuh benda padat.';}}}}
 }

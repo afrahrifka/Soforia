@@ -1,0 +1,41 @@
+{
+  "author": "Kenney Vleugels",
+  "license": "CC0-1.0",
+  "publisher": "https://kenney.nl/assets/space-kit",
+  "mirrorCommit": "440916aabc30abe014cb33ad90bd150bfbf22dd0",
+  "acquisitionNote": "Arsip publisher HTTP 403; salinan GLB dan lisensi asli diunduh dari mirror commit tetap. Tidak mengambil kode/game mirror.",
+  "files": [
+    {
+      "file": "KENNEY_License.txt",
+      "bytes": 610,
+      "sha256": "bd4e050e69d41351282c4d53f943cd4d80a80b968593e60653ba5292637941b7",
+      "download": "https://raw.githubusercontent.com/euuuuuuan/voidclad-public/440916aabc30abe014cb33ad90bd150bfbf22dd0/assets/vendor/kenney_space_kit/KENNEY_License.txt"
+    },
+    {
+      "file": "satelliteDish.glb",
+      "bytes": 19528,
+      "sha256": "db27a561b66fabda45a6ce2bcf41d650852e89e15bb9f63b68133ad1293aed8b",
+      "download": "https://raw.githubusercontent.com/euuuuuuan/voidclad-public/440916aabc30abe014cb33ad90bd150bfbf22dd0/assets/vendor/kenney_space_kit/satelliteDish.glb"
+    },
+    {
+      "file": "satelliteDish_detailed.glb",
+      "bytes": 26044,
+      "sha256": "143dd36b2c427e3201110967a18fd836bc7aa8002dbf3e44efa42c75fbb44ae5",
+      "download": "https://raw.githubusercontent.com/euuuuuuan/voidclad-public/440916aabc30abe014cb33ad90bd150bfbf22dd0/assets/vendor/kenney_space_kit/satelliteDish_detailed.glb"
+    },
+    {
+      "file": "satelliteDish_large.glb",
+      "bytes": 13948,
+      "sha256": "8fe696a37081a0a6f1c56ab867f447f33a498ef9f1daabb5aabc62b1ce09277e",
+      "download": "https://raw.githubusercontent.com/euuuuuuan/voidclad-public/440916aabc30abe014cb33ad90bd150bfbf22dd0/assets/vendor/kenney_space_kit/satelliteDish_large.glb"
+    }
+  ],
+  "existingAssets": [
+    {
+      "id": "kaykit-space/solarpanel",
+      "source": "https://kaylousberg.itch.io/space-base-bits",
+      "license": "CC0-1.0",
+      "licenseFile": "public/assets/kaykit-space/LICENSE.txt"
+    }
+  ]
+}

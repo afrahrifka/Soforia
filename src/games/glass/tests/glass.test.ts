@@ -1,4 +1,4 @@
-import {glassLevels} from '../glass-levels.ts';
+import {glassLevels,encounterBudget} from '../glass-levels.ts';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import * as T from 'three';
@@ -16,7 +16,7 @@ function step(g:any,a:any=idle,b:any=idle,n=1){for(let i=0;i<n;i++)tickGame(g,[a
 function worldPose(g:any,s:number){const course=glassCourse(g.stage),center=routePoint(course.route,s);g.players.forEach((p:any,i:number)=>{const q=routePoint(course.route,s,i?1.8:-1.8);p.x=q.x;p.z=q.z;p.y=groundHeight(course,p.x,p.z);p.vy=0;p.grounded=true;});g.pane={...g.pane,x:center.x,y:(g.players[0].y+g.players[1].y)/2+1.4,z:center.z,yaw:center.yaw,roll:0,slope:0};g.camera=planGlassCamera(g,course,1/60,true);}
 
 test('Kaca: 60 rute terbuka memiliki rangkaian tantangan dan checkpoint fisik unik',()=>{
- const fingerprints=new Set();for(let stage=0;stage<60;stage++){const c=glassCourse(stage);assert.equal(c.checkpoints.length,c.encounters.length);assert.ok(c.route.length>90);assert.ok(c.checkpoints.every((s,i)=>i===0||s>c.checkpoints[i-1]));assert.ok(Math.hypot(c.route.points.at(-1)!.x-c.route.points[0].x,c.route.points.at(-1)!.z-c.route.points[0].z)>35,'rute terbuka, bukan loop');assert.equal(c.world,glassLevels[stage].biome);fingerprints.add(JSON.stringify([c.route.points,c.obstacles]));assert.ok(c.obstacles.every(o=>!['aperture','moving','beam','lift'].includes(o.kind)));}assert.equal(fingerprints.size,60);
+ const fingerprints=new Set();for(let stage=0;stage<60;stage++){const c=glassCourse(stage);assert.equal(c.checkpoints.length,glassLevels[stage].segments.length);assert.ok(c.encounters.length>=c.checkpoints.length*2);assert.ok(c.route.length>90);assert.ok(c.checkpoints.every((s,i)=>i===0||s>c.checkpoints[i-1]));assert.ok(Math.hypot(c.route.points.at(-1)!.x-c.route.points[0].x,c.route.points.at(-1)!.z-c.route.points[0].z)>14,'ujung rute tidak menumpuk spawn pada arena padat');assert.equal(c.world,glassLevels[stage].biome);fingerprints.add(JSON.stringify([c.route.points,c.obstacles]));assert.ok(c.obstacles.every(o=>!['aperture','moving','beam','lift'].includes(o.kind)));}assert.equal(fingerprints.size,60);
 });
 test('Kaca: proyeksi lintasan dan kontrol kamera konsisten pada seluruh arah',()=>{
  const c=glassCourse(2);for(let s=3;s<c.route.length-3;s+=3){const p=routePoint(c.route,s,1);const near=routeProject(c.route,p.x,p.z);assert.ok(Math.abs(near.s-s)<.15);assert.ok(Math.abs(near.lateral-1)<.02);const input=routeControls(p.yaw,0,-1);assert.ok(Math.hypot(input.x+Math.sin(p.yaw),input.z+Math.cos(p.yaw))<1e-10);}
@@ -69,7 +69,7 @@ test('Kaca: SAT dua kotak dunia mendeteksi kontak tanpa aturan orientasi',()=>{
  const basis=glassBasis(createGame('glass'));assert.equal(obbOverlap({x:0,y:0,z:0},basis,[1.2,.6,.03],{x:4,y:0,z:0},WORLD_BASIS,[.5,.5,.5]),false);assert.equal(obbOverlap({x:0,y:0,z:0},basis,[1.2,.6,.03],{x:1,y:0,z:0},WORLD_BASIS,[.5,.5,.5]),true);
 });
 test('Kaca: mesh tanah/jalan mempunyai lubang lift nyata dan angka finite',()=>{
- for(const stage of [0,10,20,21,22,40]){const c=glassCourse(stage);for(const positions of [glassTerrainTriangles(c),glassRoadTriangles(c)]){assert.ok(positions.length>0);assert.ok(positions.every(Number.isFinite));assert.equal(positions.length%9,0);}assert.equal(c.gaps.length,c.encounters.filter(e=>['ferry','sideFerry','lift'].includes(e.kind)).length);}
+ for(const stage of [0,10,20,21,22,40]){const c=glassCourse(stage);for(const positions of [glassTerrainTriangles(c),glassRoadTriangles(c)]){assert.ok(positions.length>0);assert.ok(positions.every(Number.isFinite));assert.equal(positions.length%9,0);}assert.equal(c.gaps.length,c.encounters.filter(e=>['ferry','sideFerry','lift','turntable'].includes(e.kind)).length+c.encounters.reduce((n,e)=>n+(e.kind==='stepping'?2:e.kind==='threadBridge'?(e.group>=2?4:2):0),0));}
 });
 test('Kaca: netral menghentikan kontrol tanpa mereset tinggi atau orientasi',()=>{
  const g=createGame('glass');step(g,{...idle,glassX:.2,glassY:-1},idle,12);const before={roll:g.pane.roll,height:g.players[0].gripHeight};neutralGlass(g);step(g,idle,idle,30);assert.equal(g.pane.roll,before.roll);assert.equal(g.players[0].gripHeight,before.height);assert.equal(g.players[0].lifting,false);assert.equal(g.players[0].rotating,false);
@@ -100,10 +100,30 @@ test('Kaca: pagar platform yang masuk ke badan tidak mengunci semua gerak pemain
 });
 
 test('Kaca: celah jembatan putus harus dilompati; berjalan tidak dapat naik dari jurang',()=>{
- const c=glassCourse(1),gap=c.gaps[0];
+ const c=glassCourse(1),stepping=c.encounters.find(e=>e.kind==='stepping')!,gap=c.gaps.find(g=>Math.abs(g.s-stepping.s)<3)!;
  for(const jump of [false,true]){
   const g=createGame('glass','relaxed',2,42);worldPose(g,gap.s-1.2);if(jump){gameAction(g,0,'jump');gameAction(g,1,'jump');}
   step(g,{...idle,y:-1},{...idle,y:-1},54);const s=routeProject(c.route,g.pane.x,g.pane.z).s;
   if(jump){assert.equal(g.breaks,0);assert.ok(s>gap.s+gap.d/2);assert.ok(g.players.every((p:any)=>p.grounded));}else assert.ok(s<gap.s+gap.d/2,'tidak menapak ke bank seberang tanpa melompat');
+ }
+});
+
+
+test('Kaca: checkpoint menutup rangkaian bertambah, bukan satu encounter',()=>{
+ for(let stage=0;stage<60;stage++){const c=glassCourse(stage);let previous=0;for(let i=0;i<c.checkpoints.length;i++){const encounters=c.encounters.filter(e=>e.group===i);assert.equal(encounters.length,encounterBudget(stage,i));assert.ok(encounters.every(e=>e.s>previous&&e.to<c.checkpoints[i]));previous=c.checkpoints[i];}assert.ok(c.obstacles.every(o=>o.kind!=='boundary'));}
+ const g=createGame('glass'),c=glassCourse(0);worldPose(g,(c.encounters[0].to+c.encounters[1].from)/2);step(g);assert.equal(g.checkpoint,0);worldPose(g,c.checkpoints[0]);step(g);assert.equal(g.checkpoint,1);gameAction(g,0,'retry');step(g,idle,idle,40);assert.equal(g.checkpoint,1);assert.ok(Math.abs(g.progress-c.checkpoints[0])<2);
+});
+
+test('Kaca: indeks collision lokal tetap menyertakan setiap kontak volume dari geometri penuh',async()=>{
+ const {localCourseParts,courseParts}=await import('../glass-world.ts');for(const stage of [0,1,2,3,4,5]){const c=glassCourse(stage),g=createGame('glass','relaxed',stage+1,42);for(const e of c.encounters){worldPose(g,e.s);g.pane.roll=Math.PI/3;const all=courseParts(c,1.23),local=new Set(localCourseParts(c,1.23,[...g.players,g.pane]));for(const part of all)if(glassHitsPart(g,part)||g.players.some((p:any)=>bodyHitsPart(p,part)))assert.ok(local.has(part)||localHasPart(local,part),`Kontak hilang ${stage}:${part.kind}`);}}
+ function localHasPart(parts:Set<any>,target:any){return [...parts].some(p=>p.id===target.id&&Math.hypot(p.center.x-target.center.x,p.center.y-target.center.y,p.center.z-target.center.z)<1e-8);}
+});
+
+test('Kaca: badan membulat tidak membesar pada lorong diagonal dan tetap menabrak hull batu',()=>{
+ for(const angle of [0,Math.PI/4,Math.PI/3]){
+  const c=Math.cos(angle),s=Math.sin(angle),part:any={center:{x:0,y:1,z:0},basis:[{x:c,y:0,z:-s},{x:0,y:1,z:0},{x:s,y:0,z:c}],half:[1,3,1],color:'#888',id:'diagonal-stone',kind:'rock',geometry:'gem'};
+  const body=(u:number,v:number)=>({x:c*u+s*v,y:0,z:-s*u+c*v});
+  assert.equal(bodyHitsPart(body(.8,.8),part),false,'ruang luar hull harus tetap dapat dilalui');
+  assert.equal(bodyHitsPart(body(.7,.7),part),true,'kontak lingkaran terhadap hull tetap padat');
  }
 });

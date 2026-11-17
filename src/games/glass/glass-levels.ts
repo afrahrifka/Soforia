@@ -1,6 +1,8 @@
+import {glassArenas} from './glass-arenas.ts';
 /** Rangkaian tantangan orisinal. Metadata membantu authoring/uji, bukan syarat menang. */
-export type GlassChallenge='roll'|'raise'|'duck'|'jump'|'split'|'hammer'|'axe'|'sweeper'|'crusher'|'traffic'|'logSwing'|'ferry'|'sideFerry'|'lift'|'stepping'|'zipper';
-export type GlassLevel={name:string;biome:number;route:number;challenges:GlassChallenge[];tempo:number};
+export type GlassChallenge='roll'|'raise'|'duck'|'jump'|'split'|'hammer'|'axe'|'sweeper'|'crusher'|'traffic'|'logSwing'|'ferry'|'sideFerry'|'lift'|'stepping'|'zipper'|'threadHop'|'threadBridge'|'threadHammer'|'iris'|'scissor'|'breathing'|'weave'|'tiltWeave'|'turntable';
+export type GlassSegment={name:string;challenges:GlassChallenge[]};
+export type GlassLevel={name:string;biome:number;route:number;challenges:GlassChallenge[];segments:GlassSegment[];tempo:number;arena:string;headings:number[];grade:number};
 const rows:[string,number,GlassChallenge[]][]=[
  ['Gang Pengiriman',0,['raise','jump','traffic','roll']],['Akar & Ranting',1,['duck','jump','logSwing','split']],['Pergantian Shift',2,['roll','crusher','raise','sweeper']],['Jembatan Embun',3,['jump','ferry','duck','axe']],['Muatan Orbit',4,['raise','traffic','roll','lift']],['Lintasan Es',5,['duck','sweeper','jump','split']],
  ['Pasar Bergerak',0,['traffic','raise','crusher','jump']],['Dua Jalur Batang',1,['split','logSwing','roll','jump']],['Pabrik Berdenyut',2,['crusher','sweeper','duck','raise']],['Dermaga Menyamping',3,['sideFerry','roll','axe','split']],['Kargo Melayang',4,['ferry','raise','traffic','roll']],['Palu di Salju',5,['hammer','jump','duck','lift']],
@@ -15,6 +17,36 @@ const rows:[string,number,GlassChallenge[]][]=[
 ];
 for(const i of [1,3,5,7,17,37,53]){const index=rows[i][2].indexOf('jump');if(index>=0)rows[i][2][index]='stepping';}
 for(const i of [2,8,20,26,38,56]){const index=rows[i][2].indexOf('crusher');if(index>=0)rows[i][2][index]='zipper';}
-export const glassLevels:GlassLevel[]=rows.map(([name,biome,challenges],stage)=>({name,biome,challenges,route:(stage*5+Math.floor(stage/6))%12,tempo:1+Math.floor(stage/6)*.035}));
+// Komposisi per rangkaian: anchor dipadukan dengan gerak/formasi yang berbeda,
+// bukan mengambil prefix daftar yang sama pada setiap kemunculan anchor.
+const companions:GlassChallenge[][]=[
+ ['jump','threadHop','traffic','roll','threadBridge','duck'],
+ ['raise','stepping','logSwing','split','threadHammer','roll'],
+ ['threadHop','duck','zipper','raise','scissor','split'],
+ ['duck','threadBridge','axe','raise','iris','jump'],
+ ['roll','raise','traffic','lift','breathing','threadHop'],
+ ['jump','split','hammer','duck','threadBridge','raise']
+];
+export function encounterBudget(stage:number,index:number){const band=stage<6?[2,2,3,3]:stage<18?[2,3,3,4]:stage<36?[3,3,4,4]:stage<54?[3,4,4,5]:[3,4,5,5,6];return band[index];}
+export const glassLevels:GlassLevel[]=rows.map(([name,biome,anchors],stage)=>{
+ const chapter=Math.floor(stage/6),segments=anchors.map((anchor,index)=>{
+  const sequence:GlassChallenge[]=[anchor];const pool=companions[(biome+index+chapter)%6];
+  for(let i=1;i<encounterBudget(stage,index);i++){
+   let kind=pool[(i-1+chapter)%pool.length];
+   if(chapter<2&&['iris','scissor','breathing'].includes(kind))kind=['hammer','axe','crusher'][['iris','scissor','breathing'].indexOf(kind)] as GlassChallenge;
+   if(sequence.at(-1)===kind)kind=i%2?'threadHop':'split';sequence.push(kind);
+  }
+  if(stage>=6&&index===1)sequence[1]=(['breathing','scissor','iris'] as GlassChallenge[])[chapter%3];
+  if(stage>=24&&index===2)sequence[2]=(['iris','breathing','scissor'] as GlassChallenge[])[biome%3];
+  if(stage>=42&&index===3)sequence[3]=(['scissor','iris','breathing'] as GlassChallenge[])[biome%3];
+  if(biome===1&&index===1)sequence[sequence.length-1]='weave';
+  if(stage>=6&&index===2)sequence[sequence.length-1]='tiltWeave';
+  if(stage>=8&&index===3)sequence[sequence.length-1]='turntable';
+  return {name:`${name} · ${glassArenas[stage][0]} ${index+1}`,challenges:sequence};
+ });
+ // Setiap arena mempertahankan tantangan statis dan mesin. Anchor tetap dipakai
+ // sebagai pengenal lokal; jumlah encounter tidak diperlakukan sebagai keseruan.
+ return {name,biome,segments,challenges:segments.flatMap(s=>s.challenges),route:stage,arena:glassArenas[stage][0],headings:glassArenas[stage][1],grade:1+chapter*.2+(biome%3)*.15,tempo:1+chapter*.025};
+});
 export function glassLevel(stage:number){return glassLevels[Math.max(0,Math.min(59,Math.floor(stage)))];}
-export const glassMovingKinds=new Set(['platform','hammer','axe','sweeper','crusher','traffic','logSwing','zipper']);
+export const glassMovingKinds=new Set(['platform','hammer','axe','sweeper','crusher','traffic','logSwing','zipper','iris','scissor','breathing']);

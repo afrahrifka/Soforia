@@ -1,0 +1,15 @@
+{
+  "result": "PASS",
+  "mode": "Tailscale HTTPS/WSS nyata pada host sendiri",
+  "checks": [
+    "dua TV serentak tanpa slot pemain",
+    "QR berasal dari origin mode aktif",
+    "klik/Enter/F2 TV tidak mengirim mutasi",
+    "dua controller A/B melalui UI asli",
+    "scene pertandingan sama pada kedua TV",
+    "refresh TV tidak mengganti pertandingan/pemain",
+    "browser HP membuka TV tanpa merebut slot"
+  ],
+  "errors": [],
+  "limitation": "Chromium sintetis di laptop; belum TV/dua HP fisik atau latency antarkota. Tidak ada QR/token/snapshot sesi disimpan."
+}

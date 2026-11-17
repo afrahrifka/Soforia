@@ -1,0 +1,2 @@
+import {readFile} from 'node:fs/promises';import {createHash} from 'node:crypto';
+export async function arenaSourceHash(){const files=['glass-levels.ts','glass-pacing.ts','glass-arenas.ts','glass-route.ts','glass-world.ts','glass.ts','glass-collision.ts','tools/glass-route-driver.mjs'];const data=await Promise.all(files.map(p=>readFile(new URL('../'+p,import.meta.url))));const hash=createHash('sha256');for(const d of data)hash.update(d).update('\0');return hash.digest('hex');}

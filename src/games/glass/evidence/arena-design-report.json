@@ -1,0 +1,2508 @@
+{
+  "result": "PASS",
+  "stages": [
+    {
+      "stage": 1,
+      "name": "Gang Pengiriman",
+      "arena": "Dermaga S",
+      "headings": [
+        0,
+        0.9,
+        0,
+        -0.8,
+        0
+      ],
+      "segments": [
+        [
+          "raise",
+          "jump"
+        ],
+        [
+          "jump",
+          "raise"
+        ],
+        [
+          "traffic",
+          "threadHop",
+          "duck"
+        ],
+        [
+          "roll",
+          "duck",
+          "threadBridge"
+        ]
+      ],
+      "spacing": 24,
+      "grade": 1,
+      "tempo": 1,
+      "length": 298.62923448299193
+    },
+    {
+      "stage": 2,
+      "name": "Akar & Ranting",
+      "arena": "Tepi sungai bercabang",
+      "headings": [
+        0,
+        -0.7,
+        0.15,
+        0.9,
+        0
+      ],
+      "segments": [
+        [
+          "duck",
+          "raise"
+        ],
+        [
+          "stepping",
+          "threadHop"
+        ],
+        [
+          "logSwing",
+          "duck",
+          "threadBridge"
+        ],
+        [
+          "split",
+          "roll",
+          "raise"
+        ]
+      ],
+      "spacing": 24,
+      "grade": 1.15,
+      "tempo": 1,
+      "length": 308.04900615322055
+    },
+    {
+      "stage": 3,
+      "name": "Pergantian Shift",
+      "arena": "Siku ventilasi",
+      "headings": [
+        0,
+        1,
+        1.8,
+        1,
+        0.2
+      ],
+      "segments": [
+        [
+          "roll",
+          "threadHop"
+        ],
+        [
+          "zipper",
+          "duck"
+        ],
+        [
+          "raise",
+          "roll",
+          "raise"
+        ],
+        [
+          "sweeper",
+          "jump",
+          "split"
+        ]
+      ],
+      "spacing": 24,
+      "grade": 1.3,
+      "tempo": 1,
+      "length": 316.99092884913813
+    },
+    {
+      "stage": 4,
+      "name": "Jembatan Embun",
+      "arena": "Lengkung tapal kuda",
+      "headings": [
+        0,
+        -1,
+        -1.8,
+        -1,
+        0
+      ],
+      "segments": [
+        [
+          "stepping",
+          "duck"
+        ],
+        [
+          "ferry",
+          "roll"
+        ],
+        [
+          "duck",
+          "jump",
+          "split"
+        ],
+        [
+          "axe",
+          "jump",
+          "threadHop"
+        ]
+      ],
+      "spacing": 24,
+      "grade": 1,
+      "tempo": 1,
+      "length": 297.79092884913723
+    },
+    {
+      "stage": 5,
+      "name": "Muatan Orbit",
+      "arena": "Orbit tangga",
+      "headings": [
+        0,
+        0.5,
+        1,
+        1.5,
+        2
+      ],
+      "segments": [
+        [
+          "raise",
+          "roll"
+        ],
+        [
+          "traffic",
+          "jump"
+        ],
+        [
+          "roll",
+          "jump",
+          "threadHop"
+        ],
+        [
+          "lift",
+          "raise",
+          "stepping"
+        ]
+      ],
+      "spacing": 24,
+      "grade": 1.15,
+      "tempo": 1,
+      "length": 310.38060167260113
+    },
+    {
+      "stage": 6,
+      "name": "Lintasan Es",
+      "arena": "Retakan diagonal",
+      "headings": [
+        0,
+        -0.5,
+        -1,
+        -1.5,
+        -2
+      ],
+      "segments": [
+        [
+          "duck",
+          "jump"
+        ],
+        [
+          "sweeper",
+          "jump"
+        ],
+        [
+          "stepping",
+          "raise",
+          "stepping"
+        ],
+        [
+          "split",
+          "threadHop",
+          "duck"
+        ]
+      ],
+      "spacing": 24,
+      "grade": 1.3,
+      "tempo": 1,
+      "length": 321.58060167260004
+    },
+    {
+      "stage": 7,
+      "name": "Pasar Bergerak",
+      "arena": "Pelabuhan berundak",
+      "headings": [
+        0,
+        0.8,
+        -0.1,
+        0.7,
+        0
+      ],
+      "segments": [
+        [
+          "traffic",
+          "stepping"
+        ],
+        [
+          "raise",
+          "scissor",
+          "zipper"
+        ],
+        [
+          "crusher",
+          "threadBridge",
+          "axe"
+        ],
+        [
+          "jump",
+          "raise",
+          "traffic",
+          "lift"
+        ]
+      ],
+      "spacing": 23.55,
+      "grade": 1.2,
+      "tempo": 1.025,
+      "length": 347.79096298420257
+    },
+    {
+      "stage": 8,
+      "name": "Dua Jalur Batang",
+      "arena": "Akar berpilin",
+      "headings": [
+        0,
+        -0.6,
+        0.3,
+        -0.8,
+        0
+      ],
+      "segments": [
+        [
+          "split",
+          "duck"
+        ],
+        [
+          "logSwing",
+          "scissor",
+          "axe"
+        ],
+        [
+          "roll",
+          "raise",
+          "traffic"
+        ],
+        [
+          "stepping",
+          "split",
+          "hammer",
+          "duck"
+        ]
+      ],
+      "spacing": 23.55,
+      "grade": 1.3499999999999999,
+      "tempo": 1.025,
+      "length": 354.1356103239129
+    },
+    {
+      "stage": 9,
+      "name": "Pabrik Berdenyut",
+      "arena": "Kisi zigzag",
+      "headings": [
+        0,
+        1,
+        0.25,
+        1.2,
+        0.4
+      ],
+      "segments": [
+        [
+          "zipper",
+          "threadBridge"
+        ],
+        [
+          "sweeper",
+          "scissor",
+          "traffic"
+        ],
+        [
+          "duck",
+          "split",
+          "hammer"
+        ],
+        [
+          "raise",
+          "threadHop",
+          "traffic",
+          "roll"
+        ]
+      ],
+      "spacing": 23.55,
+      "grade": 1.5,
+      "tempo": 1.025,
+      "length": 359.4656473787782
+    },
+    {
+      "stage": 10,
+      "name": "Dermaga Menyamping",
+      "arena": "Terusan batu",
+      "headings": [
+        0,
+        -1,
+        -0.15,
+        -1.1,
+        0
+      ],
+      "segments": [
+        [
+          "sideFerry",
+          "raise"
+        ],
+        [
+          "roll",
+          "scissor",
+          "hammer"
+        ],
+        [
+          "axe",
+          "threadHop",
+          "traffic"
+        ],
+        [
+          "split",
+          "stepping",
+          "logSwing",
+          "split"
+        ]
+      ],
+      "spacing": 23.55,
+      "grade": 1.2,
+      "tempo": 1.025,
+      "length": 349.8003811091027
+    },
+    {
+      "stage": 11,
+      "name": "Kargo Melayang",
+      "arena": "Cincin antena",
+      "headings": [
+        0,
+        0.75,
+        1.5,
+        2,
+        2.5
+      ],
+      "segments": [
+        [
+          "ferry",
+          "split"
+        ],
+        [
+          "raise",
+          "scissor",
+          "traffic"
+        ],
+        [
+          "traffic",
+          "stepping",
+          "logSwing"
+        ],
+        [
+          "roll",
+          "duck",
+          "zipper",
+          "raise"
+        ]
+      ],
+      "spacing": 23.55,
+      "grade": 1.3499999999999999,
+      "tempo": 1.025,
+      "length": 356.75366801656287
+    },
+    {
+      "stage": 12,
+      "name": "Palu di Salju",
+      "arena": "Lidah gletser",
+      "headings": [
+        0,
+        -0.75,
+        -1.5,
+        -2,
+        -2.5
+      ],
+      "segments": [
+        [
+          "hammer",
+          "threadHop"
+        ],
+        [
+          "jump",
+          "scissor",
+          "logSwing"
+        ],
+        [
+          "duck",
+          "threadHop",
+          "zipper"
+        ],
+        [
+          "lift",
+          "threadBridge",
+          "axe",
+          "raise"
+        ]
+      ],
+      "spacing": 23.55,
+      "grade": 1.5,
+      "tempo": 1.025,
+      "length": 365.9311680165622
+    },
+    {
+      "stage": 13,
+      "name": "Bongkar Muat",
+      "arena": "Atap patah",
+      "headings": [
+        0,
+        0.6,
+        -0.35,
+        0.55,
+        -0.2
+      ],
+      "segments": [
+        [
+          "raise",
+          "zipper"
+        ],
+        [
+          "traffic",
+          "iris",
+          "raise"
+        ],
+        [
+          "split",
+          "traffic",
+          "lift"
+        ],
+        [
+          "crusher",
+          "hammer",
+          "duck",
+          "threadBridge"
+        ]
+      ],
+      "spacing": 23.1,
+      "grade": 1.4,
+      "tempo": 1.05,
+      "length": 343.39890756812395
+    },
+    {
+      "stage": 14,
+      "name": "Gerbang Akar",
+      "arena": "Kelokan mangrove",
+      "headings": [
+        0,
+        -0.8,
+        0.1,
+        0.85,
+        0.2
+      ],
+      "segments": [
+        [
+          "roll",
+          "axe"
+        ],
+        [
+          "duck",
+          "iris",
+          "lift"
+        ],
+        [
+          "logSwing",
+          "hammer",
+          "duck"
+        ],
+        [
+          "jump",
+          "traffic",
+          "roll",
+          "threadBridge"
+        ]
+      ],
+      "spacing": 23.1,
+      "grade": 1.5499999999999998,
+      "tempo": 1.05,
+      "length": 351.53554955191066
+    },
+    {
+      "stage": 15,
+      "name": "Tiga Ketukan Mesin",
+      "arena": "Pipa diagonal",
+      "headings": [
+        0,
+        0.65,
+        1.3,
+        0.7,
+        0
+      ],
+      "segments": [
+        [
+          "sweeper",
+          "traffic"
+        ],
+        [
+          "crusher",
+          "iris",
+          "duck"
+        ],
+        [
+          "jump",
+          "traffic",
+          "roll"
+        ],
+        [
+          "hammer",
+          "logSwing",
+          "split",
+          "threadHammer"
+        ]
+      ],
+      "spacing": 23.1,
+      "grade": 1.7,
+      "tempo": 1.05,
+      "length": 359.35868666121786
+    },
+    {
+      "stage": 16,
+      "name": "Tebing Dua Tinggi",
+      "arena": "Sabit tambang",
+      "headings": [
+        0,
+        -0.65,
+        -1.3,
+        -0.7,
+        0
+      ],
+      "segments": [
+        [
+          "split",
+          "hammer"
+        ],
+        [
+          "lift",
+          "iris",
+          "roll"
+        ],
+        [
+          "axe",
+          "logSwing",
+          "split"
+        ],
+        [
+          "roll",
+          "zipper",
+          "raise",
+          "scissor"
+        ]
+      ],
+      "spacing": 23.1,
+      "grade": 1.4,
+      "tempo": 1.05,
+      "length": 345.9486866612207
+    },
+    {
+      "stage": 17,
+      "name": "Terowongan Servis",
+      "arena": "Palka bersudut",
+      "headings": [
+        0,
+        0.9,
+        1.7,
+        2.4,
+        3.1
+      ],
+      "segments": [
+        [
+          "duck",
+          "traffic"
+        ],
+        [
+          "roll",
+          "iris",
+          "split"
+        ],
+        [
+          "crusher",
+          "zipper",
+          "raise"
+        ],
+        [
+          "sideFerry",
+          "axe",
+          "raise",
+          "iris"
+        ]
+      ],
+      "spacing": 23.1,
+      "grade": 1.5499999999999998,
+      "tempo": 1.05,
+      "length": 351.75337078626586
+    },
+    {
+      "stage": 18,
+      "name": "Rahang Beku",
+      "arena": "Lembah V",
+      "headings": [
+        0,
+        -0.9,
+        -1.7,
+        -2.4,
+        -3.1
+      ],
+      "segments": [
+        [
+          "crusher",
+          "logSwing"
+        ],
+        [
+          "axe",
+          "iris",
+          "raise"
+        ],
+        [
+          "raise",
+          "axe",
+          "raise"
+        ],
+        [
+          "stepping",
+          "traffic",
+          "lift",
+          "breathing"
+        ]
+      ],
+      "spacing": 23.1,
+      "grade": 1.7,
+      "tempo": 1.05,
+      "length": 362.3433707862688
+    },
+    {
+      "stage": 19,
+      "name": "Truk & Terpal",
+      "arena": "Halaman silang",
+      "headings": [
+        0,
+        0.45,
+        -0.45,
+        0.45,
+        -0.45
+      ],
+      "segments": [
+        [
+          "traffic",
+          "raise",
+          "iris"
+        ],
+        [
+          "duck",
+          "breathing",
+          "breathing"
+        ],
+        [
+          "raise",
+          "duck",
+          "threadBridge",
+          "raise"
+        ],
+        [
+          "roll",
+          "threadHop",
+          "threadBridge",
+          "duck"
+        ]
+      ],
+      "spacing": 22.65,
+      "grade": 1.6,
+      "tempo": 1.075,
+      "length": 384.19413716314887
+    },
+    {
+      "stage": 20,
+      "name": "Batang Berayun",
+      "arena": "Akar bertangga",
+      "headings": [
+        0,
+        -0.95,
+        -0.25,
+        -1.15,
+        -0.4
+      ],
+      "segments": [
+        [
+          "logSwing",
+          "lift",
+          "breathing"
+        ],
+        [
+          "split",
+          "breathing",
+          "threadBridge"
+        ],
+        [
+          "jump",
+          "roll",
+          "threadBridge",
+          "duck"
+        ],
+        [
+          "axe",
+          "split",
+          "threadHammer",
+          "roll"
+        ]
+      ],
+      "spacing": 22.65,
+      "grade": 1.75,
+      "tempo": 1.075,
+      "length": 401.74100274819745
+    },
+    {
+      "stage": 21,
+      "name": "Lorong Derek",
+      "arena": "Rahang berbelok",
+      "headings": [
+        0,
+        0.95,
+        0.1,
+        -0.75,
+        0.1
+      ],
+      "segments": [
+        [
+          "raise",
+          "duck",
+          "threadBridge"
+        ],
+        [
+          "lift",
+          "breathing",
+          "threadBridge"
+        ],
+        [
+          "zipper",
+          "split",
+          "threadHammer",
+          "roll"
+        ],
+        [
+          "sweeper",
+          "raise",
+          "scissor",
+          "split"
+        ]
+      ],
+      "spacing": 22.65,
+      "grade": 1.9000000000000001,
+      "tempo": 1.075,
+      "length": 406.2189640434147
+    },
+    {
+      "stage": 22,
+      "name": "Angkut Seberang",
+      "arena": "Amfiteater tebing",
+      "headings": [
+        0,
+        -0.9,
+        -1.65,
+        -0.85,
+        0
+      ],
+      "segments": [
+        [
+          "ferry",
+          "roll",
+          "threadBridge"
+        ],
+        [
+          "axe",
+          "breathing",
+          "threadHammer"
+        ],
+        [
+          "sideFerry",
+          "raise",
+          "scissor",
+          "split"
+        ],
+        [
+          "jump",
+          "raise",
+          "iris",
+          "jump"
+        ]
+      ],
+      "spacing": 22.65,
+      "grade": 1.6,
+      "tempo": 1.075,
+      "length": 393.1430495519109
+    },
+    {
+      "stage": 23,
+      "name": "Palka Tekanan",
+      "arena": "Spiral kargo",
+      "headings": [
+        0,
+        0.4,
+        1.2,
+        2,
+        2.8
+      ],
+      "segments": [
+        [
+          "roll",
+          "split",
+          "threadHammer"
+        ],
+        [
+          "crusher",
+          "breathing",
+          "scissor"
+        ],
+        [
+          "split",
+          "raise",
+          "iris",
+          "jump"
+        ],
+        [
+          "traffic",
+          "lift",
+          "breathing",
+          "threadHop"
+        ]
+      ],
+      "spacing": 22.65,
+      "grade": 1.75,
+      "tempo": 1.075,
+      "length": 404.01338923197164
+    },
+    {
+      "stage": 24,
+      "name": "Jurang Angin",
+      "arena": "Retak menyiku",
+      "headings": [
+        0,
+        -0.4,
+        -1.2,
+        -2,
+        -2.8
+      ],
+      "segments": [
+        [
+          "sideFerry",
+          "raise",
+          "scissor"
+        ],
+        [
+          "hammer",
+          "breathing",
+          "iris"
+        ],
+        [
+          "jump",
+          "lift",
+          "breathing",
+          "threadHop"
+        ],
+        [
+          "duck",
+          "threadHop",
+          "threadBridge",
+          "raise"
+        ]
+      ],
+      "spacing": 22.65,
+      "grade": 1.9000000000000001,
+      "tempo": 1.075,
+      "length": 413.9658892319786
+    },
+    {
+      "stage": 25,
+      "name": "Jadwal Silang",
+      "arena": "Gang berbentuk kilat",
+      "headings": [
+        0,
+        0.7,
+        -0.2,
+        0.8,
+        -0.1
+      ],
+      "segments": [
+        [
+          "traffic",
+          "breathing",
+          "threadHop"
+        ],
+        [
+          "jump",
+          "scissor",
+          "raise"
+        ],
+        [
+          "crusher",
+          "threadBridge",
+          "iris",
+          "jump"
+        ],
+        [
+          "split",
+          "threadHammer",
+          "roll",
+          "raise"
+        ]
+      ],
+      "spacing": 22.2,
+      "grade": 1.8,
+      "tempo": 1.1,
+      "length": 378.0466081499929
+    },
+    {
+      "stage": 26,
+      "name": "Lorong Ranting",
+      "arena": "Sungai berjuntai",
+      "headings": [
+        0,
+        -0.55,
+        0.4,
+        -0.5,
+        0.4
+      ],
+      "segments": [
+        [
+          "duck",
+          "threadBridge",
+          "raise"
+        ],
+        [
+          "roll",
+          "scissor",
+          "duck"
+        ],
+        [
+          "logSwing",
+          "threadHammer",
+          "breathing",
+          "raise"
+        ],
+        [
+          "split",
+          "scissor",
+          "split",
+          "threadHop"
+        ]
+      ],
+      "spacing": 22.2,
+      "grade": 1.95,
+      "tempo": 1.1,
+      "length": 391.33288904126414
+    },
+    {
+      "stage": 27,
+      "name": "Palu Berantai",
+      "arena": "Galeri silang",
+      "headings": [
+        0,
+        0.8,
+        1.6,
+        0.8,
+        0.1
+      ],
+      "segments": [
+        [
+          "hammer",
+          "threadBridge",
+          "duck"
+        ],
+        [
+          "zipper",
+          "scissor",
+          "roll"
+        ],
+        [
+          "sweeper",
+          "scissor",
+          "scissor",
+          "threadHop"
+        ],
+        [
+          "jump",
+          "iris",
+          "jump",
+          "duck"
+        ]
+      ],
+      "spacing": 22.2,
+      "grade": 2.1,
+      "tempo": 1.1,
+      "length": 397.3326914854077
+    },
+    {
+      "stage": 28,
+      "name": "Tambang Bertingkat",
+      "arena": "Tanduk ngarai",
+      "headings": [
+        0,
+        -0.8,
+        -1.6,
+        -0.8,
+        -0.1
+      ],
+      "segments": [
+        [
+          "lift",
+          "threadHammer",
+          "roll"
+        ],
+        [
+          "raise",
+          "scissor",
+          "split"
+        ],
+        [
+          "axe",
+          "iris",
+          "iris",
+          "duck"
+        ],
+        [
+          "ferry",
+          "breathing",
+          "threadHop",
+          "roll"
+        ]
+      ],
+      "spacing": 22.2,
+      "grade": 1.8,
+      "tempo": 1.1,
+      "length": 390.71269148540915
+    },
+    {
+      "stage": 29,
+      "name": "Transfer Satelit",
+      "arena": "Dock naik melingkar",
+      "headings": [
+        0,
+        0.6,
+        1.4,
+        2.2,
+        3
+      ],
+      "segments": [
+        [
+          "sideFerry",
+          "scissor",
+          "split"
+        ],
+        [
+          "traffic",
+          "scissor",
+          "jump"
+        ],
+        [
+          "roll",
+          "breathing",
+          "breathing",
+          "roll"
+        ],
+        [
+          "crusher",
+          "threadBridge",
+          "raise",
+          "jump"
+        ]
+      ],
+      "spacing": 22.2,
+      "grade": 1.95,
+      "tempo": 1.1,
+      "length": 393.75800410740146
+    },
+    {
+      "stage": 30,
+      "name": "Jembatan Putih",
+      "arena": "Gletser pecah tiga",
+      "headings": [
+        0,
+        -0.6,
+        -1.4,
+        -2.2,
+        -3
+      ],
+      "segments": [
+        [
+          "jump",
+          "iris",
+          "jump"
+        ],
+        [
+          "ferry",
+          "scissor",
+          "threadHop"
+        ],
+        [
+          "hammer",
+          "threadBridge",
+          "scissor",
+          "jump"
+        ],
+        [
+          "split",
+          "threadBridge",
+          "duck",
+          "jump"
+        ]
+      ],
+      "spacing": 22.2,
+      "grade": 2.1,
+      "tempo": 1.1,
+      "length": 403.9780041074045
+    },
+    {
+      "stage": 31,
+      "name": "Jam Sibuk",
+      "arena": "Jalur layang miring",
+      "headings": [
+        0,
+        0.85,
+        -0.15,
+        0.55,
+        0.1
+      ],
+      "segments": [
+        [
+          "traffic",
+          "raise",
+          "jump"
+        ],
+        [
+          "crusher",
+          "iris",
+          "jump"
+        ],
+        [
+          "raise",
+          "roll",
+          "iris",
+          "stepping"
+        ],
+        [
+          "jump",
+          "split",
+          "threadHop",
+          "duck"
+        ]
+      ],
+      "spacing": 21.75,
+      "grade": 2,
+      "tempo": 1.125,
+      "length": 373.5726569492333
+    },
+    {
+      "stage": 32,
+      "name": "Dua Pembawa Satu Akar",
+      "arena": "Rimbun berbalik",
+      "headings": [
+        0,
+        -0.85,
+        0.15,
+        -0.55,
+        -0.1
+      ],
+      "segments": [
+        [
+          "split",
+          "duck",
+          "jump"
+        ],
+        [
+          "duck",
+          "iris",
+          "raise"
+        ],
+        [
+          "logSwing",
+          "split",
+          "breathing",
+          "duck"
+        ],
+        [
+          "roll",
+          "jump",
+          "duck",
+          "threadBridge"
+        ]
+      ],
+      "spacing": 21.75,
+      "grade": 2.15,
+      "tempo": 1.125,
+      "length": 385.9226569492376
+    },
+    {
+      "stage": 33,
+      "name": "Sabuk Perakitan",
+      "arena": "Sirkuit tungku",
+      "headings": [
+        0,
+        0.7,
+        1.45,
+        2.15,
+        2.85
+      ],
+      "segments": [
+        [
+          "sweeper",
+          "roll",
+          "raise"
+        ],
+        [
+          "raise",
+          "iris",
+          "threadHop"
+        ],
+        [
+          "crusher",
+          "jump",
+          "scissor",
+          "threadBridge"
+        ],
+        [
+          "hammer",
+          "threadHop",
+          "roll",
+          "raise"
+        ]
+      ],
+      "spacing": 21.75,
+      "grade": 2.3,
+      "tempo": 1.125,
+      "length": 393.6870936572504
+    },
+    {
+      "stage": 34,
+      "name": "Lembah Kapak",
+      "arena": "Bibir kawah",
+      "headings": [
+        0,
+        -0.7,
+        -1.45,
+        -2.15,
+        -2.85
+      ],
+      "segments": [
+        [
+          "axe",
+          "split",
+          "threadHop"
+        ],
+        [
+          "sideFerry",
+          "iris",
+          "duck"
+        ],
+        [
+          "split",
+          "threadHop",
+          "iris",
+          "raise"
+        ],
+        [
+          "lift",
+          "raise",
+          "jump",
+          "split"
+        ]
+      ],
+      "spacing": 21.75,
+      "grade": 2,
+      "tempo": 1.125,
+      "length": 383.66209365725155
+    },
+    {
+      "stage": 35,
+      "name": "Hanggar Tertutup",
+      "arena": "Kargo bentuk garpu",
+      "headings": [
+        0,
+        1,
+        0.35,
+        1.3,
+        0.6
+      ],
+      "segments": [
+        [
+          "roll",
+          "jump",
+          "duck"
+        ],
+        [
+          "duck",
+          "iris",
+          "roll"
+        ],
+        [
+          "traffic",
+          "raise",
+          "breathing",
+          "split"
+        ],
+        [
+          "crusher",
+          "duck",
+          "jump",
+          "threadHop"
+        ]
+      ],
+      "spacing": 21.75,
+      "grade": 2.15,
+      "tempo": 1.125,
+      "length": 385.6164020879772
+    },
+    {
+      "stage": 36,
+      "name": "Bongkaran Es",
+      "arena": "Lereng gunting",
+      "headings": [
+        0,
+        -1,
+        -0.35,
+        -1.3,
+        -0.6
+      ],
+      "segments": [
+        [
+          "raise",
+          "threadHop",
+          "roll"
+        ],
+        [
+          "hammer",
+          "iris",
+          "jump"
+        ],
+        [
+          "jump",
+          "duck",
+          "scissor",
+          "threadHop"
+        ],
+        [
+          "sideFerry",
+          "roll",
+          "raise",
+          "stepping"
+        ]
+      ],
+      "spacing": 21.75,
+      "grade": 2.3,
+      "tempo": 1.125,
+      "length": 396.60390208797816
+    },
+    {
+      "stage": 37,
+      "name": "Gang Dua Lantai",
+      "arena": "Kota tiga bahu",
+      "headings": [
+        0,
+        0.5,
+        -0.5,
+        0.65,
+        -0.25
+      ],
+      "segments": [
+        [
+          "lift",
+          "jump",
+          "threadHop"
+        ],
+        [
+          "traffic",
+          "breathing",
+          "stepping",
+          "logSwing"
+        ],
+        [
+          "roll",
+          "threadHop",
+          "iris",
+          "zipper"
+        ],
+        [
+          "split",
+          "duck",
+          "threadBridge",
+          "axe",
+          "raise"
+        ]
+      ],
+      "spacing": 21.3,
+      "grade": 2.2,
+      "tempo": 1.15,
+      "length": 417.2570533595315
+    },
+    {
+      "stage": 38,
+      "name": "Hutan Mengetuk",
+      "arena": "Akar ular",
+      "headings": [
+        0,
+        -0.5,
+        0.5,
+        -0.65,
+        0.25
+      ],
+      "segments": [
+        [
+          "logSwing",
+          "raise",
+          "stepping"
+        ],
+        [
+          "stepping",
+          "breathing",
+          "duck",
+          "zipper"
+        ],
+        [
+          "duck",
+          "threadHop",
+          "breathing",
+          "axe"
+        ],
+        [
+          "hammer",
+          "roll",
+          "raise",
+          "traffic",
+          "lift"
+        ]
+      ],
+      "spacing": 21.3,
+      "grade": 2.35,
+      "tempo": 1.15,
+      "length": 429.5170533595296
+    },
+    {
+      "stage": 39,
+      "name": "Piston Bergantian",
+      "arena": "Siku bintang",
+      "headings": [
+        0,
+        0.9,
+        1.6,
+        0.65,
+        -0.2
+      ],
+      "segments": [
+        [
+          "zipper",
+          "threadHop",
+          "duck"
+        ],
+        [
+          "split",
+          "breathing",
+          "threadBridge",
+          "axe"
+        ],
+        [
+          "sweeper",
+          "roll",
+          "scissor",
+          "traffic"
+        ],
+        [
+          "raise",
+          "jump",
+          "split",
+          "hammer",
+          "duck"
+        ]
+      ],
+      "spacing": 21.3,
+      "grade": 2.5,
+      "tempo": 1.15,
+      "length": 431.72600274819763
+    },
+    {
+      "stage": 40,
+      "name": "Jejak di Tebing",
+      "arena": "Terusan berundak",
+      "headings": [
+        0,
+        -0.9,
+        -1.6,
+        -0.65,
+        0.2
+      ],
+      "segments": [
+        [
+          "roll",
+          "duck",
+          "threadBridge"
+        ],
+        [
+          "ferry",
+          "breathing",
+          "raise",
+          "traffic"
+        ],
+        [
+          "axe",
+          "jump",
+          "iris",
+          "hammer"
+        ],
+        [
+          "jump",
+          "threadHop",
+          "split",
+          "traffic",
+          "roll"
+        ]
+      ],
+      "spacing": 21.3,
+      "grade": 2.2,
+      "tempo": 1.15,
+      "length": 413.9060027481941
+    },
+    {
+      "stage": 41,
+      "name": "Satelit Menyilang",
+      "arena": "Orbit elips patah",
+      "headings": [
+        0,
+        0.55,
+        1.25,
+        2.05,
+        2.75
+      ],
+      "segments": [
+        [
+          "traffic",
+          "roll",
+          "raise"
+        ],
+        [
+          "sideFerry",
+          "breathing",
+          "split",
+          "hammer"
+        ],
+        [
+          "crusher",
+          "jump",
+          "breathing",
+          "traffic"
+        ],
+        [
+          "split",
+          "raise",
+          "stepping",
+          "logSwing",
+          "split"
+        ]
+      ],
+      "spacing": 21.3,
+      "grade": 2.35,
+      "tempo": 1.15,
+      "length": 434.82439338260366
+    },
+    {
+      "stage": 42,
+      "name": "Gua Salju",
+      "arena": "Sumbu es miring",
+      "headings": [
+        0,
+        -0.55,
+        -1.25,
+        -2.05,
+        -2.75
+      ],
+      "segments": [
+        [
+          "duck",
+          "jump",
+          "split"
+        ],
+        [
+          "roll",
+          "breathing",
+          "threadHop",
+          "traffic"
+        ],
+        [
+          "hammer",
+          "raise",
+          "scissor",
+          "logSwing"
+        ],
+        [
+          "lift",
+          "threadHop",
+          "duck",
+          "zipper",
+          "raise"
+        ]
+      ],
+      "spacing": 21.3,
+      "grade": 2.5,
+      "tempo": 1.15,
+      "length": 439.62939338260077
+    },
+    {
+      "stage": 43,
+      "name": "Antar Sebelum Tutup",
+      "arena": "Jembatan petir",
+      "headings": [
+        0,
+        0.75,
+        -0.25,
+        0.85,
+        0.05
+      ],
+      "segments": [
+        [
+          "raise",
+          "stepping",
+          "logSwing"
+        ],
+        [
+          "crusher",
+          "scissor",
+          "zipper",
+          "raise"
+        ],
+        [
+          "traffic",
+          "threadBridge",
+          "iris",
+          "raise"
+        ],
+        [
+          "roll",
+          "raise",
+          "traffic",
+          "scissor",
+          "breathing"
+        ]
+      ],
+      "spacing": 21.3,
+      "grade": 2.4000000000000004,
+      "tempo": 1.175,
+      "length": 409.8873501345699
+    },
+    {
+      "stage": 44,
+      "name": "Cabang yang Patah",
+      "arena": "Tajuk berliku",
+      "headings": [
+        0,
+        -0.75,
+        0.25,
+        -0.85,
+        -0.05
+      ],
+      "segments": [
+        [
+          "split",
+          "duck",
+          "zipper"
+        ],
+        [
+          "logSwing",
+          "scissor",
+          "axe",
+          "raise"
+        ],
+        [
+          "duck",
+          "raise",
+          "breathing",
+          "lift"
+        ],
+        [
+          "jump",
+          "split",
+          "hammer",
+          "iris",
+          "threadBridge"
+        ]
+      ],
+      "spacing": 21.3,
+      "grade": 2.5500000000000003,
+      "tempo": 1.175,
+      "length": 428.8473501345666
+    },
+    {
+      "stage": 45,
+      "name": "Ruang Pengujian",
+      "arena": "Pabrik berporos",
+      "headings": [
+        0,
+        0.8,
+        1.55,
+        2.3,
+        3.05
+      ],
+      "segments": [
+        [
+          "roll",
+          "threadBridge",
+          "axe"
+        ],
+        [
+          "sweeper",
+          "scissor",
+          "traffic",
+          "lift"
+        ],
+        [
+          "crusher",
+          "split",
+          "scissor",
+          "duck"
+        ],
+        [
+          "hammer",
+          "threadHop",
+          "traffic",
+          "breathing",
+          "threadBridge"
+        ]
+      ],
+      "spacing": 21.3,
+      "grade": 2.7,
+      "tempo": 1.175,
+      "length": 436.48686462083447
+    },
+    {
+      "stage": 46,
+      "name": "Tebing Naik Turun",
+      "arena": "Kelopak jurang",
+      "headings": [
+        0,
+        -0.8,
+        -1.55,
+        -2.3,
+        -3.05
+      ],
+      "segments": [
+        [
+          "lift",
+          "raise",
+          "traffic"
+        ],
+        [
+          "axe",
+          "scissor",
+          "hammer",
+          "duck"
+        ],
+        [
+          "ferry",
+          "threadHop",
+          "iris",
+          "roll"
+        ],
+        [
+          "split",
+          "stepping",
+          "logSwing",
+          "scissor",
+          "threadHammer"
+        ]
+      ],
+      "spacing": 21.3,
+      "grade": 2.4000000000000004,
+      "tempo": 1.175,
+      "length": 425.056864620835
+    },
+    {
+      "stage": 47,
+      "name": "Dok Gravitasi",
+      "arena": "Satelit belah ketupat",
+      "headings": [
+        0,
+        1,
+        0.2,
+        -0.65,
+        0.2
+      ],
+      "segments": [
+        [
+          "sideFerry",
+          "split",
+          "hammer"
+        ],
+        [
+          "raise",
+          "scissor",
+          "traffic",
+          "roll"
+        ],
+        [
+          "crusher",
+          "stepping",
+          "breathing",
+          "split"
+        ],
+        [
+          "jump",
+          "duck",
+          "zipper",
+          "iris",
+          "scissor"
+        ]
+      ],
+      "spacing": 21.3,
+      "grade": 2.5500000000000003,
+      "tempo": 1.175,
+      "length": 428.89524914717117
+    },
+    {
+      "stage": 48,
+      "name": "Lintasan Badai",
+      "arena": "Bilah gletser",
+      "headings": [
+        0,
+        -1,
+        -0.2,
+        0.65,
+        -0.2
+      ],
+      "segments": [
+        [
+          "hammer",
+          "threadHop",
+          "traffic"
+        ],
+        [
+          "duck",
+          "scissor",
+          "logSwing",
+          "split"
+        ],
+        [
+          "axe",
+          "duck",
+          "scissor",
+          "raise"
+        ],
+        [
+          "roll",
+          "threadBridge",
+          "axe",
+          "breathing",
+          "iris"
+        ]
+      ],
+      "spacing": 21.3,
+      "grade": 2.7,
+      "tempo": 1.175,
+      "length": 431.2602491471767
+    },
+    {
+      "stage": 49,
+      "name": "Pengiriman Rapuh",
+      "arena": "Kota spiral luar",
+      "headings": [
+        0,
+        0.65,
+        1.4,
+        2.25,
+        3.1
+      ],
+      "segments": [
+        [
+          "split",
+          "zipper",
+          "raise"
+        ],
+        [
+          "traffic",
+          "iris",
+          "raise",
+          "iris"
+        ],
+        [
+          "jump",
+          "traffic",
+          "iris",
+          "breathing"
+        ],
+        [
+          "crusher",
+          "hammer",
+          "duck",
+          "scissor",
+          "raise"
+        ]
+      ],
+      "spacing": 21.3,
+      "grade": 2.6,
+      "tempo": 1.2,
+      "length": 412.90443962806944
+    },
+    {
+      "stage": 50,
+      "name": "Rimba Berayun",
+      "arena": "Pusaran akar",
+      "headings": [
+        0,
+        -0.65,
+        -1.4,
+        -2.25,
+        -3.1
+      ],
+      "segments": [
+        [
+          "logSwing",
+          "axe",
+          "raise"
+        ],
+        [
+          "roll",
+          "iris",
+          "lift",
+          "breathing"
+        ],
+        [
+          "split",
+          "hammer",
+          "breathing",
+          "threadBridge"
+        ],
+        [
+          "axe",
+          "traffic",
+          "roll",
+          "iris",
+          "duck"
+        ]
+      ],
+      "spacing": 21.3,
+      "grade": 2.75,
+      "tempo": 1.2,
+      "length": 437.4994396280649
+    },
+    {
+      "stage": 51,
+      "name": "Konser Mesin",
+      "arena": "Rangka tungku terlipat",
+      "headings": [
+        0,
+        0.95,
+        0.3,
+        1.25,
+        0.5
+      ],
+      "segments": [
+        [
+          "sweeper",
+          "traffic",
+          "lift"
+        ],
+        [
+          "crusher",
+          "iris",
+          "duck",
+          "threadBridge"
+        ],
+        [
+          "raise",
+          "traffic",
+          "scissor",
+          "threadBridge"
+        ],
+        [
+          "hammer",
+          "logSwing",
+          "split",
+          "breathing",
+          "roll"
+        ]
+      ],
+      "spacing": 21.3,
+      "grade": 2.9,
+      "tempo": 1.2,
+      "length": 434.1107966861854
+    },
+    {
+      "stage": 52,
+      "name": "Dua Dermaga",
+      "arena": "Kelokan jurang ganda",
+      "headings": [
+        0,
+        -0.95,
+        -0.3,
+        -1.25,
+        -0.5
+      ],
+      "segments": [
+        [
+          "ferry",
+          "hammer",
+          "duck"
+        ],
+        [
+          "sideFerry",
+          "iris",
+          "roll",
+          "threadBridge"
+        ],
+        [
+          "roll",
+          "logSwing",
+          "iris",
+          "threadHammer"
+        ],
+        [
+          "lift",
+          "zipper",
+          "raise",
+          "scissor",
+          "split"
+        ]
+      ],
+      "spacing": 21.3,
+      "grade": 2.6,
+      "tempo": 1.2,
+      "length": 427.2507966861838
+    },
+    {
+      "stage": 53,
+      "name": "Pelabuhan Malam",
+      "arena": "Orbit bersusun",
+      "headings": [
+        0,
+        0.45,
+        1.15,
+        1.95,
+        2.75
+      ],
+      "segments": [
+        [
+          "traffic",
+          "threadHop",
+          "roll"
+        ],
+        [
+          "crusher",
+          "iris",
+          "split",
+          "threadHammer"
+        ],
+        [
+          "duck",
+          "zipper",
+          "breathing",
+          "scissor"
+        ],
+        [
+          "split",
+          "axe",
+          "raise",
+          "iris",
+          "jump"
+        ]
+      ],
+      "spacing": 21.3,
+      "grade": 2.75,
+      "tempo": 1.2,
+      "length": 429.5050019676274
+    },
+    {
+      "stage": 54,
+      "name": "Puncak Gletser",
+      "arena": "Celah es terpintal",
+      "headings": [
+        0,
+        -0.45,
+        -1.15,
+        -1.95,
+        -2.75
+      ],
+      "segments": [
+        [
+          "lift",
+          "logSwing",
+          "split"
+        ],
+        [
+          "hammer",
+          "iris",
+          "raise",
+          "scissor"
+        ],
+        [
+          "stepping",
+          "axe",
+          "scissor",
+          "iris"
+        ],
+        [
+          "roll",
+          "traffic",
+          "lift",
+          "breathing",
+          "threadHop"
+        ]
+      ],
+      "spacing": 21.3,
+      "grade": 2.9,
+      "tempo": 1.2,
+      "length": 449.0850019676336
+    },
+    {
+      "stage": 55,
+      "name": "Shift Terakhir",
+      "arena": "Kota rusuk naga",
+      "headings": [
+        0,
+        0.85,
+        -0.25,
+        0.7,
+        -0.15
+      ],
+      "segments": [
+        [
+          "traffic",
+          "raise",
+          "iris"
+        ],
+        [
+          "raise",
+          "breathing",
+          "breathing",
+          "threadHop"
+        ],
+        [
+          "split",
+          "duck",
+          "iris",
+          "raise",
+          "jump"
+        ],
+        [
+          "crusher",
+          "roll",
+          "threadBridge",
+          "scissor",
+          "jump"
+        ],
+        [
+          "jump",
+          "split",
+          "threadHammer",
+          "roll",
+          "raise",
+          "stepping"
+        ]
+      ],
+      "spacing": 21.3,
+      "grade": 2.8,
+      "tempo": 1.225,
+      "length": 578.57502925627
+    },
+    {
+      "stage": 56,
+      "name": "Jantung Rimba",
+      "arena": "Mahkota rimba",
+      "headings": [
+        0,
+        -0.85,
+        0.25,
+        -0.7,
+        0.15
+      ],
+      "segments": [
+        [
+          "roll",
+          "lift",
+          "breathing"
+        ],
+        [
+          "logSwing",
+          "breathing",
+          "threadBridge",
+          "raise"
+        ],
+        [
+          "duck",
+          "roll",
+          "breathing",
+          "duck",
+          "jump"
+        ],
+        [
+          "split",
+          "threadHop",
+          "threadHammer",
+          "iris",
+          "raise"
+        ],
+        [
+          "axe",
+          "raise",
+          "scissor",
+          "split",
+          "threadHop",
+          "duck"
+        ]
+      ],
+      "spacing": 21.3,
+      "grade": 2.9499999999999997,
+      "tempo": 1.225,
+      "length": 608.3650292562661
+    },
+    {
+      "stage": 57,
+      "name": "Rantai Produksi",
+      "arena": "Spiral produksi",
+      "headings": [
+        0,
+        0.9,
+        1.7,
+        2.5,
+        3.3
+      ],
+      "segments": [
+        [
+          "zipper",
+          "duck",
+          "threadBridge"
+        ],
+        [
+          "sweeper",
+          "breathing",
+          "threadBridge",
+          "duck"
+        ],
+        [
+          "raise",
+          "split",
+          "scissor",
+          "roll",
+          "raise"
+        ],
+        [
+          "hammer",
+          "raise",
+          "scissor",
+          "breathing",
+          "threadHop"
+        ],
+        [
+          "jump",
+          "raise",
+          "iris",
+          "jump",
+          "duck",
+          "threadBridge"
+        ]
+      ],
+      "spacing": 21.3,
+      "grade": 3.0999999999999996,
+      "tempo": 1.225,
+      "length": 610.4851934793306
+    },
+    {
+      "stage": 58,
+      "name": "Ekspedisi Puncak",
+      "arena": "Ngarai cakar",
+      "headings": [
+        0,
+        -0.9,
+        -1.7,
+        -2.5,
+        -3.3
+      ],
+      "segments": [
+        [
+          "ferry",
+          "roll",
+          "threadBridge"
+        ],
+        [
+          "lift",
+          "breathing",
+          "threadHammer",
+          "roll"
+        ],
+        [
+          "axe",
+          "raise",
+          "iris",
+          "split",
+          "threadHop"
+        ],
+        [
+          "sideFerry",
+          "raise",
+          "iris",
+          "scissor",
+          "duck"
+        ],
+        [
+          "split",
+          "lift",
+          "breathing",
+          "threadHop",
+          "roll",
+          "raise"
+        ]
+      ],
+      "spacing": 21.3,
+      "grade": 2.8,
+      "tempo": 1.225,
+      "length": 605.8801934793416
+    },
+    {
+      "stage": 59,
+      "name": "Jalur Pulang Orbit",
+      "arena": "Mandala orbit",
+      "headings": [
+        0,
+        0.7,
+        1.5,
+        2.3,
+        3.1
+      ],
+      "segments": [
+        [
+          "roll",
+          "split",
+          "threadHammer"
+        ],
+        [
+          "traffic",
+          "breathing",
+          "scissor",
+          "split"
+        ],
+        [
+          "crusher",
+          "raise",
+          "breathing",
+          "jump",
+          "duck"
+        ],
+        [
+          "raise",
+          "lift",
+          "breathing",
+          "iris",
+          "roll"
+        ],
+        [
+          "lift",
+          "duck",
+          "threadBridge",
+          "raise",
+          "jump",
+          "split"
+        ]
+      ],
+      "spacing": 21.3,
+      "grade": 2.9499999999999997,
+      "tempo": 1.225,
+      "length": 617.2643297826144
+    },
+    {
+      "stage": 60,
+      "name": "Kaca di Puncak",
+      "arena": "Puncak serpihan",
+      "headings": [
+        0,
+        -0.7,
+        -1.5,
+        -2.3,
+        -3.1
+      ],
+      "segments": [
+        [
+          "split",
+          "raise",
+          "scissor"
+        ],
+        [
+          "hammer",
+          "breathing",
+          "iris",
+          "jump"
+        ],
+        [
+          "duck",
+          "lift",
+          "scissor",
+          "threadHop",
+          "roll"
+        ],
+        [
+          "axe",
+          "duck",
+          "threadBridge",
+          "breathing",
+          "jump"
+        ],
+        [
+          "jump",
+          "roll",
+          "threadBridge",
+          "duck",
+          "jump",
+          "threadHop"
+        ]
+      ],
+      "spacing": 21.3,
+      "grade": 3.0999999999999996,
+      "tempo": 1.225,
+      "length": 620.5643297826008
+    }
+  ],
+  "fixtures": [
+    {
+      "stage": 1,
+      "kind": "raise",
+      "file": "arena-01-raise.png"
+    },
+    {
+      "stage": 2,
+      "kind": "duck",
+      "file": "arena-02-duck.png"
+    },
+    {
+      "stage": 3,
+      "kind": "roll",
+      "file": "arena-03-roll.png"
+    },
+    {
+      "stage": 4,
+      "kind": "stepping",
+      "file": "arena-04-stepping.png"
+    },
+    {
+      "stage": 5,
+      "kind": "raise",
+      "file": "arena-05-raise.png"
+    },
+    {
+      "stage": 6,
+      "kind": "duck",
+      "file": "arena-06-duck.png"
+    },
+    {
+      "stage": 13,
+      "kind": "iris",
+      "file": "arena-13-iris.png"
+    },
+    {
+      "stage": 7,
+      "kind": "scissor",
+      "file": "arena-07-scissor.png"
+    },
+    {
+      "stage": 18,
+      "kind": "breathing",
+      "file": "arena-18-breathing.png"
+    }
+  ],
+  "errors": [],
+  "limitation": "Atlas geometri dan fixture statis, bukan perjalanan input atau penilaian keseruan manusia."
+}

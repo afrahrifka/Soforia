@@ -1,0 +1,15 @@
+{
+  "result": "PASS",
+  "transport": "WebSocket loopback dengan host asli",
+  "checks": [
+    "dua role privat",
+    "kunci rekaman",
+    "ulang menit",
+    "replay aktif",
+    "resume slot B mempertahankan jejak",
+    "disconnect tanpa pause",
+    "jeda manual membekukan clock",
+    "permainan baru membersihkan progres"
+  ],
+  "limitation": "Dua client sintetis di satu komputer; bukan dua HP fisik atau gangguan AP/WAN."
+}

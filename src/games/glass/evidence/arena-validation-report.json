@@ -1,0 +1,48 @@
+{
+  "result": "PASS_SCOPED_WITH_REPOSITORY_LIMITATIONS",
+  "glass": {
+    "tests": 37,
+    "result": "PASS",
+    "stages": 60,
+    "checkpoints": 246,
+    "encounters": 882,
+    "sourceHash": "c176853ee3f6c321ce9fa6e73985c7fbc6e5c800a4c58589c97f0f30236370a9",
+    "negativeControls": 6,
+    "sceneFixtures": 9
+  },
+  "jamBerulang": {
+    "tests": 17,
+    "result": "PASS",
+    "arenas": 6,
+    "browserErrors": [],
+    "externalRequests": [],
+    "solverLoops": [
+      1,
+      2,
+      2,
+      2,
+      3,
+      4
+    ]
+  },
+  "commands": {
+    "npm run check": "PASS",
+    "npm run build": "PASS",
+    "npm run check:docs": "PASS",
+    "npm test -- --scope game:glass": "PASS",
+    "npm test -- --scope game:jam-berulang": "PASS",
+    "glass-arena-preview.mjs": "PASS",
+    "jam-berulang/tools/preview.mjs": "PASS",
+    "audit-arenas.mjs": "PASS",
+    "npm test": "85/86 pada run gabungan sebelum dua tes regresi terakhir ditambahkan; satu kegagalan tes katalog platform",
+    "tests/platform/server.test.ts": "8/9; kegagalan sama: baris 30 mengasumsikan left dari orbit menuju glass, sedangkan katalog memiliki jam-berulang sebagai entri terakhir",
+    "npm run check:scope -- --working": "FAIL: enam change note workspace gabungan; lima sudah ada sebelum tugas",
+    "validateScope subset architecture": "PASS; review pemelihara masih diwajibkan policy"
+  },
+  "limitations": [
+    "Belum playtest manusia/pasangan atau dua HP fisik",
+    "Belum benchmark FPS/input-to-photon",
+    "Fingerprint/solver bukan bukti keseruan atau persepsi keunikan manusia",
+    "Video lama di ~/Videos tidak diperbarui dan bukan bukti arena baru"
+  ]
+}

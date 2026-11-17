@@ -8,7 +8,7 @@ Ekstrak `main-bareng-0.1.0-beta.3-linux-x64-offline.tar.gz` lalu buka terminal d
 ./play.sh
 ```
 
-Launcher menyalakan server. Pada Linux dengan user systemd, ia memakai unit sementara `main-bareng.service` agar proses tetap hidup setelah terminal ditutup. Launcher juga membuka layar laptop otomatis dalam mode kiosk fullscreen Chromium/Chrome dengan profil aplikasi terpisah. Browser perlu sudah terpasang pada laptop; tidak dibutuhkan instalasi di HP. Tidak membutuhkan npm, unduhan dependency, akun, atau internet saat menjalankan paket. Runtime Node.js LTS sudah disertakan; sistem masih membutuhkan Linux x64 kompatibel dengan runtime resmi Node 22 (glibc dan libstdc++ sistem). Paket ini bukan installer universal Android/Windows/macOS.
+Launcher menyalakan server. Launcher menyimpan PID dan log di `.runtime/` serta melepas proses melalui nohup/setsid bila tersedia, tanpa memasang unit systemd. Launcher juga membuka layar laptop otomatis dalam mode kiosk fullscreen Chromium/Chrome dengan profil aplikasi terpisah. Browser perlu sudah terpasang pada laptop; tidak dibutuhkan instalasi di HP. Tidak membutuhkan npm, unduhan dependency, akun, atau internet saat menjalankan paket. Runtime Node.js LTS sudah disertakan; sistem masih membutuhkan Linux x64 kompatibel dengan runtime resmi Node 22 (glibc dan libstdc++ sistem). Paket ini bukan installer universal Android/Windows/macOS.
 
 Untuk berjalan di foreground:
 
@@ -24,7 +24,7 @@ Setelah startup, terminal menampilkan dua URL:
 1. Hubungkan laptop dan kedua HP ke router Wi-Fi yang sama. Router boleh tidak mempunyai koneksi internet. Pesan HP “Wi-Fi tanpa internet” normal; pilih tetap terhubung bila diminta.
 2. Buka layar laptop. Scan QR dari kedua HP dengan kamera bawaan, atau buka alamat controller dan isi kode ruang.
 3. Setelah scan QR, HP langsung masuk ke controller A/B tanpa nama, formulir, atau persetujuan. Maksimal dua controller. Alamat manual tetap memakai kode ruang.
-4. Gunakan analog HP A untuk menggeser game yang disorot di laptop. Tekan **Main** untuk mulai, lalu kedua HP menekan **Siap**. **Mode** mengganti mode; **Arena** mengganti arena.
+4. Gunakan D-pad controller untuk memilih game. Tekan **Main**, lalu pemain yang terhubung menekan **Siap**. Mode/stage tidak dipilih dari controller biasa.
 5. Lihat permainan pada laptop/TV; HP menjadi controller. Seluruh menu permainan dapat dioperasikan dari HP A.
 
 Tidak ada streaming video ke HP. Aturan game, timer dan collision berjalan di laptop. Jawaban Seirama dikirim hanya kepada pemiliknya sampai kedua pemain siap mengungkap.
@@ -45,7 +45,7 @@ Ganti contoh IP dengan IP nyata laptop. QR menyesuaikan alamat tersebut. Jika po
 ./stop.sh
 ```
 
-Untuk foreground gunakan Ctrl+C. Unit sementara tidak mengaktifkan autostart saat reboot; jalankan launcher lagi setelah menyalakan laptop. Di sistem tanpa user systemd, gunakan `./start.sh` di terminal yang dibiarkan terbuka. Log startup dan PID launcher ada di `.runtime/`, tanpa token atau jawaban. Menutup proses menghapus sesi; scan QR ulang setelah server dinyalakan kembali.
+Untuk foreground gunakan Ctrl+C. Tidak ada autostart saat reboot; jalankan launcher lagi setelah menyalakan laptop. Untuk proses foreground gunakan `./start.sh` di terminal yang dibiarkan terbuka. Log startup dan PID launcher ada di `.runtime/`, tanpa token atau jawaban. Menutup proses menghapus sesi; scan QR ulang setelah server dinyalakan kembali.
 
 ## Jika HP gagal terhubung
 
@@ -54,8 +54,8 @@ Untuk foreground gunakan Ctrl+C. Unit sementara tidak mengaktifkan autostart saa
 - Izinkan akses jaringan lokal jika browser meminta.
 - Periksa firewall TCP port game yang dipilih (default 3210) pada jaringan pribadi. Port operator 3211 hanya loopback dan tidak perlu dibuka untuk HP.
 - Hotspot HP/laptop boleh dicoba jika perangkat benar-benar saling dapat mengakses; dukungannya berbeda antarperangkat.
-- Jangan mengunci HP atau berpindah aplikasi ketika bermain. Jika terjadi, game pause; kembali ke controller lalu kedua pemain tekan Siap.
-- Jika tab ditutup/sessionStorage terhapus, akhiri ruang dari laptop dan scan ulang. Reload tab dengan sesi yang masih sah memulihkan slot.
+- Jangan mengunci HP atau berpindah aplikasi ketika bermain. Input terputus dinetralkan; permainan terus berjalan tanpa pause otomatis. Kembali ke controller untuk reconnect.
+- Browser/origin yang sama menyimpan credential pemulihan; reload atau scan ulang dapat memulihkan slot selama sesi server masih ada.
 
 HTTP LAN ditujukan untuk Wi-Fi pribadi tepercaya; traffic tidak terenkripsi. Tidak perlu dan tidak ada perubahan Tailscale, port forwarding router, UPnP, atau deployment lain.
 
@@ -102,3 +102,8 @@ Menahan analog dan menekan aksi memakai pointer terpisah. Perubahan orientasi/uk
 ### Jika ada salinan Main Bareng lain yang berjalan
 
 `./play.sh` kini berjalan mandiri tanpa unit systemd. Jika port 3210/3211 terpakai, launcher memilih pasangan kosong berikutnya dan mencetak alamat baru. Gunakan QR dari layar yang baru dibuka. Untuk menentukan port sendiri, gunakan `./play.sh --port 3220 --operator-port 3221`. Pemanggilan ulang memakai proses milik folder yang sama; `./stop.sh` hanya menghentikan server dengan jalur yang sesuai folder ini.
+
+
+## TV tambahan dan mode Tailscale opsional
+
+Mode normal tetap `./start.sh` atau `npm run start:normal` dari source. TV LAN tambahan membuka `http://IP-LAN-LAPTOP:PORT/tv`. Untuk pasangan melalui tailnet, setelah build jalankan `npm run start:tailscale` (atau `./runtime/bin/node scripts/start-tailscale.mjs` pada paket dengan runtime). Mode Tailscale memerlukan Tailscale aktif dan jaringan yang bekerja; tidak termasuk klaim offline di atas. Semua TV hanya mirror; QR menyesuaikan mode. [Panduan lengkap, start/stop dan port](docs/24-tailscale-dan-tv.md).

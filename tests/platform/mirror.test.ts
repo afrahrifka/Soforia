@@ -1,0 +1,33 @@
+import test from 'node:test';import assert from 'node:assert/strict';import http from 'node:http';import {WebSocket} from 'ws';import QRCode from 'qrcode';
+process.env.MAIN_BARENG_TEST='1';const {startServer}=await import('../../src/platform/server.ts');
+class ViewerClient {
+ ws:WebSocket;state:any;auth:any;events:any[]=[];seq=0;heartbeat:any;
+ constructor(url:string,token:string,origin=url,host?:string){this.ws=new WebSocket(url.replace('http','ws')+'/ws',{origin,...(host?{headers:{Host:host}}:{})});this.ws.on('open',()=>this.ws.send(JSON.stringify({v:1,type:'auth',payload:{token}})));this.ws.on('message',buffer=>{const m=JSON.parse(String(buffer));this.events.push(m);if(m.type==='auth.ok')this.auth=m.payload;if(m.type==='game.snapshot')this.state=m.payload;});this.heartbeat=setInterval(()=>{if(this.auth)this.send('heartbeat',{sent:0});},500);}
+ send(type:string,payload:any={},game=false){this.ws.send(JSON.stringify({v:1,type,payload,seq:++this.seq,sessionId:this.auth.sessionId,connectionEpoch:this.auth.connectionEpoch,...(game?{gameInstanceId:this.state.gameInstanceId}:{})}));}
+ async wait(fn:()=>boolean){const end=Date.now()+6500;while(Date.now()<end){if(fn())return;await new Promise(r=>setTimeout(r,15));}throw Error('Timeout kondisi mirror sintetis');}
+ close(){clearInterval(this.heartbeat);this.ws.close();}
+}
+function request(base:string,path:string,method='GET',origin=base,host=new URL(base).host,body?:unknown):Promise<{status:number;text:string;json:()=>any}>{return new Promise((ok,no)=>{const req=http.request(base+path,{method,headers:{Host:host,Origin:origin,...(body?{'Content-Type':'application/json'}:{})}},res=>{let text='';res.on('data',c=>text+=c);res.on('end',()=>ok({status:res.statusCode!,text,json:()=>JSON.parse(text)}));});req.on('error',no);req.end(body?JSON.stringify(body):undefined);});}
+test('Dua TV mirror + operator bersamaan, read-only server, QR identik, dua slot dan refresh tanpa pause',{timeout:15000},async()=>{
+ const port=44000+Math.floor(Math.random()*1000)*2,app=await startServer({host:'127.0.0.1',port,operatorPort:port+1}),peers:ViewerClient[]=[];
+ try{
+ const op=await request(app.local,'/api/operator','POST');const operator=new ViewerClient(app.local,op.json().token);peers.push(operator);await operator.wait(()=>!!operator.state);
+ const mirror=async()=>{const r=await request(app.base,'/api/display','POST');assert.equal(r.status,200);const p=new ViewerClient(app.base,r.json().token);peers.push(p);await p.wait(()=>p.auth?.role==='mirror');await p.wait(()=>!!p.state);return p;};
+ const tv1=await mirror(),tv2=await mirror();assert.equal(operator.ws.readyState,1);assert.equal(tv1.ws.readyState,1);assert.equal(tv2.state.players.length,0);assert.equal(tv1.state.pairing.url,tv2.state.pairing.url);assert.equal(tv1.state.sessionId,operator.state.sessionId);
+ for(const type of ['start','select','pause','pairing.toggle','reset','input.state','action','dev.keyboard','library.update']){const count=tv1.events.filter(m=>m.type==='error').length;tv1.send(type,{command:'enable',id:'garden',name:'interact'},true);await tv1.wait(()=>tv1.events.filter(m=>m.type==='error').length>count);assert.equal(tv1.events.filter(m=>m.type==='error').at(-1).payload.code,'DISPLAY_READ_ONLY');}
+ const invite=new URL(tv1.state.pairing.url).hash.slice(8),svg=await request(app.base,'/api/qr');assert.equal(svg.status,200);assert.equal(svg.text,await QRCode.toString(tv1.state.pairing.url,{type:'svg',margin:1,color:{dark:'#172123',light:'#ffffff'},width:240}));
+ const join=async()=>{const r=await request(app.base,'/api/join','POST',app.base,new URL(app.base).host,{invite});assert.equal(r.status,200);const p=new ViewerClient(app.base,r.json().token);peers.push(p);await p.wait(()=>p.auth?.role==='player');return p;};
+ const a=await join(),b=await join();assert.deepEqual([a.auth.slot,b.auth.slot],[0,1]);a.send('start');await a.wait(()=>a.state?.phase==='tutorial');await b.wait(()=>b.state?.phase==='tutorial');a.send('ready');b.send('ready');await a.wait(()=>a.state.phase==='playing');await tv2.wait(()=>tv2.state.phase==='playing');assert.equal(tv1.state.gameInstanceId,tv2.state.gameInstanceId);assert.equal(tv1.events.some(e=>e.type==='private.state'),false);assert.equal('you' in tv1.state,false);
+ tv1.close();await tv2.wait(()=>tv2.state.phase==='playing');const replacement=await mirror();await replacement.wait(()=>replacement.state?.phase==='playing');assert.equal(replacement.state.gameInstanceId,tv2.state.gameInstanceId);assert.equal(replacement.state.players.length,2);assert.equal(operator.ws.readyState,1);assert.equal(tv2.ws.readyState,1);
+ }finally{peers.forEach(p=>p.close());await app.close();}
+});
+test('Proxy HTTPS Tailscale: QR origin publik, WSS origin tepat, operator tidak terpublikasi',{timeout:10000},async()=>{
+ const port=47000+Math.floor(Math.random()*1000)*2,origin='https://soforia.example.ts.net:12443',host=new URL(origin).host,app=await startServer({host:'127.0.0.1',port,operatorPort:port+1,networkMode:'tailscale',publicOrigin:origin}),backend=`http://127.0.0.1:${port}`,peers:ViewerClient[]=[];
+ try{
+ assert.equal((await request(backend,'/api/display','POST','https://evil.invalid',host)).status,403);assert.equal((await request(backend,'/api/operator','POST',origin,host)).status,403);
+ const r=await request(backend,'/api/display','POST',origin,host);assert.equal(r.status,200);const tv=new ViewerClient(backend,r.json().token,origin,host);peers.push(tv);await tv.wait(()=>!!tv.state);assert.equal(new URL(tv.state.pairing.url).origin,origin);assert.equal(new URL(tv.state.pairing.url).pathname,'/join');assert.equal(tv.state.network.tv,origin+'/tv');assert.equal(tv.state.network.mode,'tailscale');
+ const info=await request(backend,'/api/info','GET',origin,host);assert.equal(info.json().base,origin);const qr=await request(backend,'/api/qr','GET',origin,host);assert.equal(qr.status,200);assert.equal(qr.text,await QRCode.toString(tv.state.pairing.url,{type:'svg',margin:1,color:{dark:'#172123',light:'#ffffff'},width:240}));
+ const invite=new URL(tv.state.pairing.url).hash.slice(8),joined=await request(backend,'/api/join','POST',origin,host,{invite});assert.equal(joined.status,200);const a=new ViewerClient(backend,joined.json().token,origin,host);peers.push(a);await a.wait(()=>a.auth?.slot===0);assert.equal(a.auth.role,'player');
+ const forged=await request(backend,'/api/info','GET',origin,'evil.invalid');assert.equal(forged.status,403);assert.equal((await request(backend,'/api/display','POST','http://'+host,host)).status,403);
+ }finally{peers.forEach(p=>p.close());await app.close();}
+});

@@ -1,0 +1,14 @@
+[
+  {
+    "path": "public/assets/kenney-nature/models/tree_default_fall.glb",
+    "sha256": "f8e90ed7f7771644998a7c361302213af04350150b3ea0631e8384d26506efa2",
+    "source": "https://kenney.nl/assets/nature-kit",
+    "license": "CC0"
+  },
+  {
+    "path": "public/assets/kenney-nature/LICENSE.txt",
+    "sha256": "cb96b75e3560ac78d7a53ce6f083f4cdb5c53faea6141b62d63458dcfe1e4b9d",
+    "source": "https://kenney.nl/assets/nature-kit",
+    "license": "CC0"
+  }
+]

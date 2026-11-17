@@ -1,0 +1,24 @@
+{
+  "result": "PASS",
+  "sourceHash": "9c7f459064b59f5f0b4dcdafaca9df28abcbf7f5a6274fe580f12afa567443bc",
+  "controllers": 2,
+  "flow": [
+    "discovery katalog",
+    "pairing dua slot",
+    "tutorial/siap",
+    "briefing santai",
+    "telemetri privat A/B",
+    "tangkap ditolak jauh",
+    "rotasi analog B",
+    "rem tahan B",
+    "gerak analog A",
+    "tangkap sah",
+    "pointer B bertahan melalui perubahan capit",
+    "tolak pasang jauh",
+    "release/netral",
+    "Home"
+  ],
+  "errors": [],
+  "external": [],
+  "limitation": "Dua konteks Chromium dan sentuhan CDP melalui server lokal; bukan dua HP fisik, latensi input-to-photon atau acceptance performa. Tidak menyimpan token, QR atau URL undangan."
+}

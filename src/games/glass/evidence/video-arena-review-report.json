@@ -1,0 +1,599 @@
+{
+  "result": "PASS",
+  "video": "/home/oskhar/Videos/Soforia/carry-the-glass-arena-review-20261116063234.mp4",
+  "sourceHash": "c176853ee3f6c321ce9fa6e73985c7fbc6e5c800a4c58589c97f0f30236370a9",
+  "fps": 24,
+  "width": 1280,
+  "height": 720,
+  "frames": 7263,
+  "duration": 302.625,
+  "bytes": 55453979,
+  "fullDecode": "PASS",
+  "chapters": [
+    {
+      "index": 1,
+      "stage": 1,
+      "title": "1. Gang Pengiriman · Angkat muatan + Lompat bersama",
+      "seconds": 0,
+      "sourceFrom": 0,
+      "sourceTo": 19.0500000000002,
+      "fromS": 0,
+      "toS": 55,
+      "kinds": [
+        "raise",
+        "jump"
+      ],
+      "speed": 1
+    },
+    {
+      "index": 2,
+      "stage": 1,
+      "title": "1. Gang Pengiriman · Arus silang",
+      "seconds": 20.583333333333332,
+      "sourceFrom": 48.9999999999985,
+      "sourceTo": 54.99999999999816,
+      "fromS": 133.75964451073278,
+      "toS": 148.75964451073278,
+      "kinds": [
+        "traffic"
+      ],
+      "speed": 1
+    },
+    {
+      "index": 3,
+      "stage": 1,
+      "title": "1. Gang Pengiriman · Satu baris + lompat terpisah",
+      "seconds": 28.125,
+      "sourceFrom": 60.79999999999783,
+      "sourceTo": 66.54999999999751,
+      "fromS": 159.09297784406567,
+      "toS": 174.09297784406567,
+      "kinds": [
+        "threadHop"
+      ],
+      "speed": 1
+    },
+    {
+      "index": 4,
+      "stage": 1,
+      "title": "1. Gang Pengiriman · Ratakan lalu merunduk",
+      "seconds": 35.416666666666664,
+      "sourceFrom": 74.01666666666375,
+      "sourceTo": 81.89999999999664,
+      "fromS": 187.9034353604053,
+      "toS": 202.9034353604053,
+      "kinds": [
+        "duck"
+      ],
+      "speed": 1
+    },
+    {
+      "index": 5,
+      "stage": 1,
+      "title": "1. Gang Pengiriman · Guling dan ubah formasi",
+      "seconds": 44.833333333333336,
+      "sourceFrom": 92.66666666666269,
+      "sourceTo": 97.99999999999572,
+      "fromS": 223.80326045701872,
+      "toS": 238.80326045701872,
+      "kinds": [
+        "roll"
+      ],
+      "speed": 1
+    },
+    {
+      "index": 6,
+      "stage": 1,
+      "title": "1. Gang Pengiriman · Pijakan sempit beruntun",
+      "seconds": 51.708333333333336,
+      "sourceFrom": 116.64999999999466,
+      "sourceTo": 122.39999999999434,
+      "fromS": 270.68118253494026,
+      "toS": 285.68118253494026,
+      "kinds": [
+        "threadBridge"
+      ],
+      "speed": 1
+    },
+    {
+      "index": 7,
+      "stage": 2,
+      "title": "2. Akar & Ranting · Jembatan putus",
+      "seconds": 59,
+      "sourceFrom": 32.11666666666613,
+      "sourceTo": 37.44999999999916,
+      "fromS": 79.17891102447321,
+      "toS": 94.17891102447321,
+      "kinds": [
+        "stepping"
+      ],
+      "speed": 1
+    },
+    {
+      "index": 8,
+      "stage": 2,
+      "title": "2. Akar & Ranting · Batang berayun",
+      "seconds": 65.875,
+      "sourceFrom": 59.86666666666455,
+      "sourceTo": 65.24999999999758,
+      "fromS": 142.18138627347167,
+      "toS": 157.18138627347167,
+      "kinds": [
+        "logSwing"
+      ],
+      "speed": 1
+    },
+    {
+      "index": 9,
+      "stage": 2,
+      "title": "2. Akar & Ranting · Tinggi dua sisi berbeda",
+      "seconds": 72.79166666666667,
+      "sourceFrom": 99.78333333332895,
+      "sourceTo": 107.66666666666184,
+      "fromS": 227.22077085910274,
+      "toS": 242.22077085910274,
+      "kinds": [
+        "split"
+      ],
+      "speed": 1
+    },
+    {
+      "index": 10,
+      "stage": 3,
+      "title": "3. Pergantian Shift · Piston bergantian",
+      "seconds": 82.20833333333333,
+      "sourceFrom": 38.16666666666578,
+      "sourceTo": 44.49999999999876,
+      "fromS": 78.18246785886438,
+      "toS": 93.18246785886438,
+      "kinds": [
+        "zipper"
+      ],
+      "speed": 1
+    },
+    {
+      "index": 11,
+      "stage": 3,
+      "title": "3. Pergantian Shift · Batang penyapu",
+      "seconds": 90.08333333333333,
+      "sourceFrom": 105.9833333333286,
+      "sourceTo": 111.8166666666616,
+      "fromS": 234.99092884913813,
+      "toS": 249.99092884913813,
+      "kinds": [
+        "sweeper"
+      ],
+      "speed": 1
+    },
+    {
+      "index": 12,
+      "stage": 4,
+      "title": "4. Jembatan Embun · Feri maju-mundur",
+      "seconds": 97.45833333333333,
+      "sourceFrom": 28.733333333332983,
+      "sourceTo": 39.0333333333324,
+      "fromS": 68.98246785886438,
+      "toS": 83.98246785886438,
+      "kinds": [
+        "ferry"
+      ],
+      "speed": 1
+    },
+    {
+      "index": 13,
+      "stage": 4,
+      "title": "4. Jembatan Embun · Kapak berayun",
+      "seconds": 109.29166666666667,
+      "sourceFrom": 101.44999999999553,
+      "sourceTo": 108.83333333332844,
+      "fromS": 222.9649548231634,
+      "toS": 237.9649548231634,
+      "kinds": [
+        "axe"
+      ],
+      "speed": 1
+    },
+    {
+      "index": 14,
+      "stage": 5,
+      "title": "5. Muatan Orbit · Lift dua tebing",
+      "seconds": 118.20833333333333,
+      "sourceFrom": 95.73333333332918,
+      "sourceTo": 105.14999999999532,
+      "fromS": 230.3806016726011,
+      "toS": 245.3806016726011,
+      "kinds": [
+        "lift"
+      ],
+      "speed": 1
+    },
+    {
+      "index": 15,
+      "stage": 6,
+      "title": "6. Lintasan Es · Ratakan lalu merunduk",
+      "seconds": 129.16666666666666,
+      "sourceFrom": 4.966666666666654,
+      "sourceTo": 12.850000000000218,
+      "fromS": 13.889075630252101,
+      "toS": 28.8890756302521,
+      "kinds": [
+        "duck"
+      ],
+      "speed": 1
+    },
+    {
+      "index": 16,
+      "stage": 7,
+      "title": "7. Pasar Bergerak · Bilah gunting",
+      "seconds": 138.58333333333334,
+      "sourceFrom": 35.68333333333259,
+      "sourceTo": 41.06666666666562,
+      "fromS": 97.95537914378535,
+      "toS": 112.95537914378535,
+      "kinds": [
+        "scissor"
+      ],
+      "speed": 1
+    },
+    {
+      "index": 17,
+      "stage": 7,
+      "title": "7. Pasar Bergerak · Rahang mesin",
+      "seconds": 145.5,
+      "sourceFrom": 65.26666666666425,
+      "sourceTo": 70.64999999999728,
+      "fromS": 156.8750658223986,
+      "toS": 171.8750658223986,
+      "kinds": [
+        "crusher"
+      ],
+      "speed": 1
+    },
+    {
+      "index": 18,
+      "stage": 10,
+      "title": "10. Dermaga Menyamping · Feri menyamping",
+      "seconds": 152.41666666666666,
+      "sourceFrom": 2.933333333333328,
+      "sourceTo": 16.683333333333668,
+      "fromS": 10,
+      "toS": 25,
+      "kinds": [
+        "sideFerry"
+      ],
+      "speed": 1
+    },
+    {
+      "index": 19,
+      "stage": 10,
+      "title": "10. Dermaga Menyamping · Palu berputar",
+      "seconds": 167.70833333333334,
+      "sourceFrom": 57.316666666664695,
+      "sourceTo": 62.649999999997725,
+      "fromS": 124.82327866967563,
+      "toS": 139.82327866967563,
+      "kinds": [
+        "hammer"
+      ],
+      "speed": 1
+    },
+    {
+      "index": 20,
+      "stage": 13,
+      "title": "13. Bongkar Muat · Iris bintang",
+      "seconds": 174.58333333333334,
+      "sourceFrom": 45.31666666666538,
+      "sourceTo": 53.39999999999825,
+      "fromS": 97.85584448699109,
+      "toS": 112.85584448699109,
+      "kinds": [
+        "iris"
+      ],
+      "speed": 1
+    },
+    {
+      "index": 21,
+      "stage": 15,
+      "title": "15. Tiga Ketukan Mesin · Satu baris + palu",
+      "seconds": 184.20833333333334,
+      "sourceFrom": 140.8666666666709,
+      "sourceTo": 148.20000000001008,
+      "fromS": 331.4363122319947,
+      "toS": 346.4363122319947,
+      "kinds": [
+        "threadHammer"
+      ],
+      "speed": 1
+    },
+    {
+      "index": 22,
+      "stage": 18,
+      "title": "18. Rahang Beku · Dinding bernapas",
+      "seconds": 193.08333333333334,
+      "sourceFrom": 130.63333333332943,
+      "sourceTo": 136.0500000000004,
+      "fromS": 334.38616554609393,
+      "toS": 349.38616554609393,
+      "kinds": [
+        "breathing"
+      ],
+      "speed": 1
+    },
+    {
+      "index": 23,
+      "stage": 37,
+      "title": "37. Gang Dua Lantai · Guling dan ubah formasi + Satu baris + lompat terpisah + Iris bintang + Piston bergantian",
+      "seconds": 200.04166666666666,
+      "sourceFrom": 83.6666666666632,
+      "sourceTo": 123.83333333332759,
+      "fromS": 193.47594710492234,
+      "toS": 287.73100174973143,
+      "kinds": [
+        "roll",
+        "threadHop",
+        "iris",
+        "zipper"
+      ],
+      "speed": 1
+    },
+    {
+      "index": 24,
+      "stage": 60,
+      "title": "60. Kaca di Puncak · Lompat bersama + Guling dan ubah formasi + Pijakan sempit beruntun + Ratakan lalu merunduk + Lompat bersama + Satu baris + lompat terpisah",
+      "seconds": 241.75,
+      "sourceFrom": 198.56666666671683,
+      "sourceTo": 257.9000000000941,
+      "fromS": 474.60507302585165,
+      "toS": 613.5667622150338,
+      "kinds": [
+        "jump",
+        "roll",
+        "threadBridge",
+        "duck",
+        "jump",
+        "threadHop"
+      ],
+      "speed": 1
+    }
+  ],
+  "selectedStages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    10,
+    13,
+    15,
+    18,
+    37,
+    60
+  ],
+  "coverage": [
+    "axe",
+    "breathing",
+    "crusher",
+    "duck",
+    "ferry",
+    "hammer",
+    "iris",
+    "jump",
+    "lift",
+    "logSwing",
+    "raise",
+    "roll",
+    "scissor",
+    "sideFerry",
+    "split",
+    "stepping",
+    "sweeper",
+    "threadBridge",
+    "threadHammer",
+    "threadHop",
+    "traffic",
+    "zipper"
+  ],
+  "runs": [
+    {
+      "stage": 1,
+      "ticks": 7416,
+      "expectedTicks": 7416,
+      "completed": true,
+      "breaks": 0,
+      "actions": {
+        "roll": 1068,
+        "raise": 1014,
+        "lower": 964,
+        "jump": 18,
+        "wait": 35
+      }
+    },
+    {
+      "stage": 2,
+      "ticks": 7895,
+      "expectedTicks": 7895,
+      "completed": true,
+      "breaks": 0,
+      "actions": {
+        "roll": 1346,
+        "raise": 1298,
+        "lower": 1091,
+        "jump": 16,
+        "wait": 31
+      }
+    },
+    {
+      "stage": 3,
+      "ticks": 8126,
+      "expectedTicks": 8126,
+      "completed": true,
+      "breaks": 0,
+      "actions": {
+        "roll": 1772,
+        "raise": 905,
+        "lower": 935,
+        "jump": 8,
+        "wait": 32
+      }
+    },
+    {
+      "stage": 4,
+      "ticks": 7756,
+      "expectedTicks": 7756,
+      "completed": true,
+      "breaks": 0,
+      "actions": {
+        "roll": 612,
+        "raise": 929,
+        "lower": 712,
+        "jump": 14,
+        "wait": 140
+      }
+    },
+    {
+      "stage": 5,
+      "ticks": 7472,
+      "expectedTicks": 7472,
+      "completed": true,
+      "breaks": 0,
+      "actions": {
+        "roll": 1340,
+        "raise": 384,
+        "lower": 508,
+        "jump": 14,
+        "wait": 38
+      }
+    },
+    {
+      "stage": 6,
+      "ticks": 7686,
+      "expectedTicks": 7686,
+      "completed": true,
+      "breaks": 0,
+      "actions": {
+        "roll": 452,
+        "raise": 944,
+        "lower": 980,
+        "jump": 20,
+        "wait": 0
+      }
+    },
+    {
+      "stage": 7,
+      "ticks": 8838,
+      "expectedTicks": 8838,
+      "completed": true,
+      "breaks": 0,
+      "actions": {
+        "roll": 884,
+        "raise": 352,
+        "lower": 462,
+        "jump": 14,
+        "wait": 471
+      }
+    },
+    {
+      "stage": 10,
+      "ticks": 9074,
+      "expectedTicks": 9074,
+      "completed": true,
+      "breaks": 0,
+      "actions": {
+        "roll": 890,
+        "raise": 682,
+        "lower": 743,
+        "jump": 10,
+        "wait": 374
+      }
+    },
+    {
+      "stage": 13,
+      "ticks": 9365,
+      "expectedTicks": 9365,
+      "completed": true,
+      "breaks": 0,
+      "actions": {
+        "roll": 622,
+        "raise": 919,
+        "lower": 975,
+        "jump": 8,
+        "wait": 682
+      }
+    },
+    {
+      "stage": 15,
+      "ticks": 8966,
+      "expectedTicks": 8966,
+      "completed": true,
+      "breaks": 0,
+      "actions": {
+        "roll": 614,
+        "raise": 586,
+        "lower": 494,
+        "jump": 4,
+        "wait": 640
+      }
+    },
+    {
+      "stage": 18,
+      "ticks": 8206,
+      "expectedTicks": 8206,
+      "completed": true,
+      "breaks": 0,
+      "actions": {
+        "roll": 0,
+        "raise": 508,
+        "lower": 694,
+        "jump": 4,
+        "wait": 458
+      }
+    },
+    {
+      "stage": 37,
+      "ticks": 10810,
+      "expectedTicks": 10810,
+      "completed": true,
+      "breaks": 0,
+      "actions": {
+        "roll": 1814,
+        "raise": 755,
+        "lower": 593,
+        "jump": 24,
+        "wait": 336
+      }
+    },
+    {
+      "stage": 60,
+      "ticks": 15475,
+      "expectedTicks": 15475,
+      "completed": true,
+      "breaks": 0,
+      "actions": {
+        "roll": 1910,
+        "raise": 1383,
+        "lower": 1169,
+        "jump": 36,
+        "wait": 266
+      }
+    }
+  ],
+  "errors": [],
+  "failed": [],
+  "external": [],
+  "limitation": "Montase cuplikan dari rute input nyata, bukan seluruh kampanye 60 stage. Setiap stage sampel dijalankan dari spawn sampai selesai tanpa teleport/kekebalan; jumlah tick sama dengan audit arena. Potongan antar-bab menghilangkan sebagian perjalanan. Gameplay cuplikan 1×; pengantar 1,5 detik menahan simulasi. Render offline 24 fps tanpa audio; bukan playtest manusia, dua HP fisik, FPS realtime atau latensi.",
+  "storage": "~/Videos/Soforia",
+  "sha256": "3b194bb50b46bb90323482468535bc6491acf99768be13f5b3706a5b80013102",
+  "validationFrames": [
+    {
+      "seconds": 177.58333333333334,
+      "file": "/home/oskhar/Videos/Soforia/carry-the-glass-arena-review-20261116063234-sample-iris.png"
+    },
+    {
+      "seconds": 290.625,
+      "file": "/home/oskhar/Videos/Soforia/carry-the-glass-arena-review-20261116063234-sample-final.png"
+    }
+  ],
+  "visualInspection": "PASS: dua frame hasil encode diperiksa (rintangan/replay dan bagian akhir)."
+}

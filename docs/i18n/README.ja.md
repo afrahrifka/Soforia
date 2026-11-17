@@ -40,3 +40,10 @@ npm run check:scope -- --working
 manifestから自動登録するため、中央リストの編集は不要です。各ゲームはサーバー、画面、コントローラー、HUD、CSS、素材、テスト、状態記録を所有します。[追加手順](../architecture/ADD-GAME.md)。全AIが指示を読み守る保証はありません。自動チェックと所有者レビューで検査可能な境界を守ります。GitHubのブランチ保護は所有者による設定が必要です。
 
 コードと独自音声・形状は [MIT](../../LICENSE)、外部モデルは[個別ライセンス](../../public/assets/ATTRIBUTION.md)です。有効なQR、セッション秘密情報、非公開回答は投稿しないでください。[行動規範](../../CODE_OF_CONDUCT.md)を守ってください。自動テストは実機2台、楽しさ、FPS、入力から表示までの遅延を証明しません。[ロードマップ](../09-roadmap.md)で現状を確認できます。[任意の支援](https://trakteer.id/oskhar)は利用条件ではありません。
+
+
+## Tailscale モードと TV ミラー
+
+通常の LAN 起動は `npm run start:normal`（別名 `npm start`）です。任意の tailnet モードは `npm run start:tailscale`、停止は `npm run stop:tailscale` です。表示された HTTPS `/tv` リンクを両画面で開きます。TV は同じセッションの表示専用で、QR は 2 台のスマートフォン用に Tailscale の URL を使います。画面とスマートフォンには tailnet へのアクセスが必要です。TV で Tailscale/WebGL を使えない場合は、Tailscale を実行するノート PC を HDMI 接続してください。専用 HTTPS ポートの既定値は 12443 で、他のサービスを保持します。再起動時の自動起動は設定しません。
+
+[コマンド、接続条件、制限（インドネシア語）](../24-tailscale-dan-tv.md).

@@ -1,0 +1,35 @@
+{
+  "result": "PASS_WITH_WORKSPACE_SCOPE_LIMITATION",
+  "sourceHash": "89b504ece0cc2c71b3d370b34f0179566d219c17765afabd609b674117146c8f",
+  "sourceHashesMatch": true,
+  "stages": 60,
+  "checkpoints": 246,
+  "encounters": 882,
+  "metrics": {
+    "before": {
+      "meanPath": 398.983691333264,
+      "maxEmpty": 40.320994844973896,
+      "meanEmptyDistance": 347.53273929521913
+    },
+    "after": {
+      "meanPath": 213.16130084114383,
+      "maxEmpty": 20.739790007899202,
+      "meanEmptyDistance": 158.60428493677574
+    }
+  },
+  "validation": [
+    "PASS npm test -- --scope game:glass: 39/39",
+    "PASS npm run check",
+    "PASS npm run build",
+    "PASS npm run check:docs",
+    "PASS glass-course-check.mjs: 60 stage / 246 checkpoint / nol pecah pada hash sama",
+    "PASS audit-arenas.mjs: enam kontrol negatif terhalang",
+    "PASS pacing-metrics.mjs: panjang/jarak kosong di bawah ambang regresi",
+    "PASS glass-arena-preview.mjs: atlas 60 stage / 12 fixture",
+    "PASS validateScope: subset game:glass + satu change note",
+    "TERHALANG npm run check:scope -- --working: 8 change note workspace gabungan"
+  ],
+  "videoCreated": false,
+  "videoDirectory": "~/Videos/Soforia",
+  "limitation": "Bukti input sintetis map-aware, geometri dan fixture renderer. Bukan playtest pasangan, dua HP fisik, benchmark atau acceptance balancing manusia. Tidak melakukan commit/push/deployment; perubahan workspace sebelumnya dipertahankan."
+}

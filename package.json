@@ -23,7 +23,10 @@
     "hooks:install": "git config core.hooksPath .githooks",
     "postinstall": "node scripts/generate-games.mjs",
     "change:new": "node scripts/new-change.mjs",
-    "check:docs": "node scripts/check-docs.mjs"
+    "check:docs": "node scripts/check-docs.mjs",
+    "start:normal": "node dist/server.mjs",
+    "start:tailscale": "node scripts/start-tailscale.mjs",
+    "stop:tailscale": "node scripts/start-tailscale.mjs --stop"
   },
   "dependencies": {
     "qrcode": "^1.5.4",

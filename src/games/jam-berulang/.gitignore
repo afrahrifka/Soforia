@@ -1,0 +1,7 @@
+# Video review disimpan di ~/Videos, bukan repository.
+*.mp4
+*.webm
+*.mov
+*.mkv
+*.avi
+*.m4v

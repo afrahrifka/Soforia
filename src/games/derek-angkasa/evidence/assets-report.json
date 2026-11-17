@@ -1,0 +1,32 @@
+{
+  "result": "PASS",
+  "license": "CC0-1.0",
+  "files": [
+    {
+      "file": "satelliteDish.glb",
+      "bytes": 19528,
+      "meshes": 1,
+      "embedded": true,
+      "sha256": "db27a561b66fabda45a6ce2bcf41d650852e89e15bb9f63b68133ad1293aed8b"
+    },
+    {
+      "file": "satelliteDish_detailed.glb",
+      "bytes": 26044,
+      "meshes": 1,
+      "embedded": true,
+      "sha256": "143dd36b2c427e3201110967a18fd836bc7aa8002dbf3e44efa42c75fbb44ae5"
+    },
+    {
+      "file": "satelliteDish_large.glb",
+      "bytes": 13948,
+      "meshes": 1,
+      "embedded": true,
+      "sha256": "8fe696a37081a0a6f1c56ab867f447f33a498ef9f1daabb5aabc62b1ce09277e"
+    }
+  ],
+  "shared": {
+    "file": "public/assets/kaykit-space/models/solarpanel.gltf",
+    "sha256": "b3bb80eea30bbfe05af098b0899a87e2f98fdf6822d7bd260a02cc6340daa357"
+  },
+  "limitation": "Verifikasi checksum, GLB dan file lisensi. Publisher Kenney HTTP 403; chain sumber mirror dan lisensi asli dicatat, bukan klaim unduhan langsung publisher."
+}

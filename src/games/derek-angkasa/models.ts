@@ -1,0 +1,10 @@
+import * as T from 'three';import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+const cache=new Map<string,{refs:number;promise:Promise<T.Group>;source?:T.Group}>(),loader=new GLTFLoader();let pending=0,loaded=0,failed=0;
+export const modelStats=()=>({pending,loaded,failed,cached:cache.size});
+function dispose(root:T.Group){const geometries=new Set<T.BufferGeometry>(),materials=new Set<T.Material>(),textures=new Set<T.Texture>();root.traverse(o=>{if(o instanceof T.Mesh){geometries.add(o.geometry);for(const m of Array.isArray(o.material)?o.material:[o.material]){materials.add(m);for(const value of Object.values(m))if(value instanceof T.Texture)textures.add(value);}}});geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());textures.forEach(t=>t.dispose());}
+export function dish(parent:T.Object3D,file:string,height:number,fallback:T.Object3D[]=[]){
+ const url='/games/derek-angkasa/assets/'+file,root=new T.Group();parent.add(root);let item=cache.get(url);
+ if(!item){pending++;const entry={refs:0,promise:null as any,source:undefined};item=entry;cache.set(url,entry);entry.promise=loader.loadAsync(url).then(g=>{const source=g.scene,bounds=new T.Box3().setFromObject(source),size=bounds.getSize(new T.Vector3()),center=bounds.getCenter(new T.Vector3()),wrapper=new T.Group();source.position.set(-center.x,-bounds.min.y,-center.z);source.scale.setScalar(1);wrapper.add(source);wrapper.scale.setScalar(1/Math.max(.01,size.y));entry.source=wrapper;pending--;loaded++;if(!entry.refs){dispose(wrapper);cache.delete(url);}return wrapper;}).catch(e=>{pending--;failed++;cache.delete(url);throw e;});}
+ item.refs++;let active=true;const entry=item;root.userData.releaseAsset=()=>{if(!active)return;active=false;entry.refs--;if(!entry.refs&&entry.source){dispose(entry.source);cache.delete(url);}};
+ entry.promise.then(source=>{if(!active)return;const model=source.clone(true);model.scale.multiplyScalar(height);model.traverse(o=>{if(o instanceof T.Mesh){o.castShadow=true;o.receiveShadow=true;}});root.add(model);fallback.forEach(o=>o.visible=false);}).catch(()=>{root.userData.assetFailed=true;});return root;
+}

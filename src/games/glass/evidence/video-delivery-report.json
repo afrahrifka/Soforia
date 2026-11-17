@@ -1,0 +1,36 @@
+{
+  "result": "PASS",
+  "outputs": {
+    "glass": {
+      "video": "/home/oskhar/Videos/Soforia/carry-the-glass-arena-review-20261116063234.mp4",
+      "duration": 302.625,
+      "bytes": 55453979,
+      "frames": 7263,
+      "fps": 24,
+      "chapters": 24,
+      "fullDecode": "PASS",
+      "sha256": "3b194bb50b46bb90323482468535bc6491acf99768be13f5b3706a5b80013102",
+      "guide": "/home/oskhar/Videos/Soforia/carry-the-glass-review-guide.md"
+    },
+    "jam-berulang": {
+      "video": "/home/oskhar/Videos/Soforia/jam-berulang-arena-review-20261116062936.mp4",
+      "duration": 505.375,
+      "bytes": 14249678,
+      "frames": 12129,
+      "fps": 24,
+      "chapters": 6,
+      "fullDecode": "PASS",
+      "sha256": "b3147ef56b1977fee4379320f8447bef1e095634503cb4f63101c50e470c0478",
+      "guide": "/home/oskhar/Videos/Soforia/jam-berulang-review-guide.md"
+    }
+  },
+  "repositoryVideoCount": 0,
+  "tests": {
+    "glass": 37,
+    "jamBerulang": 17,
+    "check": "PASS",
+    "build": "PASS",
+    "docs": "PASS"
+  },
+  "limitation": "Render offline dan pemain sintetis; tidak membuktikan kelayakan manusia atau performa realtime. Scope seluruh workspace terhalang tujuh catatan gabungan."
+}

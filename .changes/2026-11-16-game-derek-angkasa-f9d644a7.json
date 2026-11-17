@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "scope": "game:derek-angkasa",
+  "summary": "Implementasikan Derek Angkasa issue 22 dengan kampanye perakitan orbital, map authored dan aset berlisensi",
+  "validation": [
+    "PASS npm test -- --scope game:derek-angkasa: 16/16",
+    "PASS npm run check: TypeScript dan batas modul, tujuh game ditemukan otomatis",
+    "PASS npm run build",
+    "PASS npm run check:docs: 37 dokumen / tujuh scope game",
+    "PASS course-check.mjs: 12 misi / 36 pemasangan pada masing-masing dua mode",
+    "PASS audit.mjs: 12 replay / 36 pemasangan tambahan; dua kontrol negatif",
+    "PASS check-assets.mjs: tiga GLB, lisensi CC0, checksum dan panel surya lokal",
+    "PASS preview.mjs: 12 scene, tiga fase, empat viewport/peran, aset offline dan cleanup",
+    "PASS lan-check.mjs: dua controller browser melalui server aplikasi",
+    "PARTIAL npm test seluruh workspace: 105/106; tests/platform/server.test.ts:30 masih mengasumsikan left dari Orbit memilih Glass",
+    "BLOCKED npm run check:scope -- --working: sembilan change note gabungan",
+    "PASS validateScope subset: hanya folder Derek Angkasa dan satu catatan baru"
+  ]
+}

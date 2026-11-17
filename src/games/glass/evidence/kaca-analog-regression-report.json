@@ -11,7 +11,7 @@
       "stage": 2,
       "analogOnly": true,
       "completed": false,
-      "reason": "Kaca menyentuh benda padat."
+      "reason": "tertahan collider"
     },
     {
       "stage": 3,
@@ -35,7 +35,7 @@
       "stage": 6,
       "analogOnly": true,
       "completed": false,
-      "reason": "Kaca menyentuh benda padat."
+      "reason": "tertahan collider"
     }
   ],
   "limitation": "Kontrol negatif enam stage awal menggunakan pengendali map yang dinonaktifkan aksi putar/tinggi/lompatnya. Bukan pencarian menyeluruh semua kemungkinan strategi manusia."

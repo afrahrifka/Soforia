@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "scope": "architecture",
+  "summary": "Buat video simulasi gameplay dua game untuk review developer",
+  "validation": [
+    "PASS npm test -- --scope game:glass (37 tes)",
+    "PASS npm test -- --scope game:jam-berulang (17 tes)",
+    "PASS npm run check",
+    "PASS npm run build",
+    "PASS npm run check:docs",
+    "PASS 13 stage Kaca melalui input: jumlah tick identik audit, 22 jenis rintangan, 24 bab video",
+    "PASS enam arena Jam Berulang selesai berurutan, enam bab video",
+    "PASS decode penuh kedua MP4 720p24, jumlah frame/metadata dan inspeksi visual frame",
+    "PASS semua video di ~/Videos/Soforia; checksum pemindahan identik; scan repo tanpa video",
+    "BLOCKED npm run check:scope -- --working: tujuh change note gabungan, enam sudah ada sebelum tugas",
+    "PASS validateScope subset architecture; bukti video-review-scope-report.json"
+  ],
+  "reason": "Pengguna meminta video gameplay Carry the Glass dan Jam Berulang; tool dan metadata di dua folder game, video di Videos di luar repo.",
+  "ownerReviewRequired": true
+}

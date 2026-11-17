@@ -1,0 +1,316 @@
+{
+  "result": "PASS",
+  "sourceHash": "9c7f459064b59f5f0b4dcdafaca9df28abcbf7f5a6274fe580f12afa567443bc",
+  "results": [
+    {
+      "mission": 1,
+      "file": "mission-01.png",
+      "assets": {
+        "own": {
+          "pending": 0,
+          "loaded": 3,
+          "failed": 0,
+          "cached": 3
+        },
+        "shared": {
+          "pending": 1,
+          "failed": 0,
+          "loaded": 0,
+          "cached": 1
+        }
+      },
+      "drawCalls": 120,
+      "geometries": 50
+    },
+    {
+      "mission": 2,
+      "file": "mission-02.png",
+      "assets": {
+        "own": {
+          "pending": 0,
+          "loaded": 6,
+          "failed": 0,
+          "cached": 3
+        },
+        "shared": {
+          "pending": 0,
+          "failed": 0,
+          "loaded": 1,
+          "cached": 1
+        }
+      },
+      "drawCalls": 156,
+      "geometries": 50
+    },
+    {
+      "mission": 3,
+      "file": "mission-03.png",
+      "assets": {
+        "own": {
+          "pending": 0,
+          "loaded": 9,
+          "failed": 0,
+          "cached": 3
+        },
+        "shared": {
+          "pending": 0,
+          "failed": 0,
+          "loaded": 1,
+          "cached": 1
+        }
+      },
+      "drawCalls": 160,
+      "geometries": 55
+    },
+    {
+      "mission": 4,
+      "file": "mission-04.png",
+      "assets": {
+        "own": {
+          "pending": 0,
+          "loaded": 12,
+          "failed": 0,
+          "cached": 3
+        },
+        "shared": {
+          "pending": 0,
+          "failed": 0,
+          "loaded": 1,
+          "cached": 1
+        }
+      },
+      "drawCalls": 187,
+      "geometries": 52
+    },
+    {
+      "mission": 5,
+      "file": "mission-05.png",
+      "assets": {
+        "own": {
+          "pending": 3,
+          "loaded": 12,
+          "failed": 0,
+          "cached": 3
+        },
+        "shared": {
+          "pending": 0,
+          "failed": 0,
+          "loaded": 1,
+          "cached": 1
+        }
+      },
+      "drawCalls": 185,
+      "geometries": 52
+    },
+    {
+      "mission": 6,
+      "file": "mission-06.png",
+      "assets": {
+        "own": {
+          "pending": 0,
+          "loaded": 18,
+          "failed": 0,
+          "cached": 3
+        },
+        "shared": {
+          "pending": 0,
+          "failed": 0,
+          "loaded": 1,
+          "cached": 1
+        }
+      },
+      "drawCalls": 274,
+      "geometries": 51
+    },
+    {
+      "mission": 7,
+      "file": "mission-07.png",
+      "assets": {
+        "own": {
+          "pending": 3,
+          "loaded": 18,
+          "failed": 0,
+          "cached": 3
+        },
+        "shared": {
+          "pending": 0,
+          "failed": 0,
+          "loaded": 1,
+          "cached": 1
+        }
+      },
+      "drawCalls": 177,
+      "geometries": 53
+    },
+    {
+      "mission": 8,
+      "file": "mission-08.png",
+      "assets": {
+        "own": {
+          "pending": 0,
+          "loaded": 24,
+          "failed": 0,
+          "cached": 3
+        },
+        "shared": {
+          "pending": 0,
+          "failed": 0,
+          "loaded": 1,
+          "cached": 1
+        }
+      },
+      "drawCalls": 278,
+      "geometries": 52
+    },
+    {
+      "mission": 9,
+      "file": "mission-09.png",
+      "assets": {
+        "own": {
+          "pending": 0,
+          "loaded": 27,
+          "failed": 0,
+          "cached": 3
+        },
+        "shared": {
+          "pending": 0,
+          "failed": 0,
+          "loaded": 1,
+          "cached": 1
+        }
+      },
+      "drawCalls": 169,
+      "geometries": 57
+    },
+    {
+      "mission": 10,
+      "file": "mission-10.png",
+      "assets": {
+        "own": {
+          "pending": 0,
+          "loaded": 30,
+          "failed": 0,
+          "cached": 3
+        },
+        "shared": {
+          "pending": 0,
+          "failed": 0,
+          "loaded": 1,
+          "cached": 1
+        }
+      },
+      "drawCalls": 256,
+      "geometries": 54
+    },
+    {
+      "mission": 11,
+      "file": "mission-11.png",
+      "assets": {
+        "own": {
+          "pending": 3,
+          "loaded": 30,
+          "failed": 0,
+          "cached": 3
+        },
+        "shared": {
+          "pending": 0,
+          "failed": 0,
+          "loaded": 1,
+          "cached": 1
+        }
+      },
+      "drawCalls": 216,
+      "geometries": 51
+    },
+    {
+      "mission": 12,
+      "file": "mission-12.png",
+      "assets": {
+        "own": {
+          "pending": 0,
+          "loaded": 36,
+          "failed": 0,
+          "cached": 3
+        },
+        "shared": {
+          "pending": 0,
+          "failed": 0,
+          "loaded": 1,
+          "cached": 1
+        }
+      },
+      "drawCalls": 234,
+      "geometries": 53
+    }
+  ],
+  "snapshots": [
+    {
+      "name": "carrying",
+      "kind": "sampel perjalanan input"
+    },
+    {
+      "name": "showcase",
+      "kind": "sampel perjalanan input"
+    },
+    {
+      "name": "briefing",
+      "kind": "pose sintetis"
+    }
+  ],
+  "controllers": [
+    {
+      "slot": 0,
+      "viewport": {
+        "width": 740,
+        "height": 360
+      },
+      "buttons": 4,
+      "overflow": false
+    },
+    {
+      "slot": 1,
+      "viewport": {
+        "width": 740,
+        "height": 360
+      },
+      "buttons": 4,
+      "overflow": false
+    },
+    {
+      "slot": 0,
+      "viewport": {
+        "width": 360,
+        "height": 740
+      },
+      "buttons": 4,
+      "overflow": false
+    },
+    {
+      "slot": 1,
+      "viewport": {
+        "width": 360,
+        "height": 740
+      },
+      "buttons": 4,
+      "overflow": false
+    }
+  ],
+  "cleanup": {
+    "own": {
+      "pending": 0,
+      "loaded": 42,
+      "failed": 0,
+      "cached": 0
+    },
+    "shared": {
+      "pending": 0,
+      "failed": 0,
+      "loaded": 1,
+      "cached": 1
+    }
+  },
+  "errors": [],
+  "failed": [],
+  "external": [],
+  "limitation": "Fixture renderer dan viewport browser sintetis; carrying/showcase dari input map-aware. Bukan playtest pasangan, dua HP fisik, FPS realtime atau latensi."
+}

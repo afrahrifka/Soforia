@@ -1,0 +1,9 @@
+{
+ "schemaVersion":1,"id":"derek-angkasa","title":"Derek Angkasa","tag":"PERAKITAN ORBITAL KOOPERATIF",
+ "description":"Satu lengan. Dua operator. Rakit habitat, sayap surya dan observatorium di dua belas pelabuhan orbit.",
+ "duration":"Target 6–9 menit / stasiun · 12 misi","icon":"✧","color":"#8bdfef","layout":"move","players":2,"order":1010,
+ "instructions":"A: analog menggerakkan ujung lengan, Capit menangkap/melepas, Pasang menyiapkan penguncian, tahan Pelan untuk presisi. B: analog kiri/kanan memutar modul, tahan Dorong/Mundur untuk translasi dan Rem untuk meredam gerak. A membaca jarak; B membaca sudut. Sejajarkan sebelum menutup capit. Dekati port yang menyala, putar ke sudut pasang, diamkan dan tahan Rem sambil pemasangan disiapkan. Tiga modul per stasiun; tiap pemasangan memulihkan bahan bakar. Servis mengembalikan modul aktif tanpa menghapus checkpoint. Santai tanpa deadline; Tantangan memakai target waktu dan bahan bakar lebih kecil, tetapi selalu boleh lanjut. Setelah selesai, putar stasiun memakai analog sebelum memilih misi berikut/ulang/selesai.",
+ "menu":{"title":"Derek\nAngkasa","line":"Satu lengan. Dua operator. Satu rumah di orbit.","genre":"Puzzle fisika · Peran asimetris"},
+ "input":{"axes":["x","y","thrust","brake","fine"],"actions":["grip","dock","recall","next","previous","start-relaxed","start-challenge","replay","finish","reset-view"]},
+ "developer":{"keyboard":true,"maxLevel":12}
+}

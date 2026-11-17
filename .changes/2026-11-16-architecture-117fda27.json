@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "scope": "architecture",
+  "summary": "Rombak identitas arena dan progres tantangan Kaca serta Jam Berulang",
+  "validation": [
+    "PASS npm test -- --scope game:glass (37 tes)",
+    "PASS npm test -- --scope game:jam-berulang (17 tes)",
+    "PASS npm run check",
+    "PASS npm run build",
+    "PASS npm run check:docs",
+    "PASS 60 stage/246 checkpoint input tanpa teleport/kekebalan; hash sama; 6 kontrol negatif analog terhalang",
+    "PASS atlas 60 stage, 9 fixture scene Kaca, 6 scene/controller Jam Berulang; tanpa error/request internet",
+    "PASS validateScope subset architecture dua folder game + roadmap + catatan ini",
+    "FAIL npm test global: tes katalog platform masih mengasumsikan 5 game; reproduksi 8/9 tes platform lulus",
+    "FAIL npm run check:scope -- --working: 6 change note gabungan, 5 sudah ada sebelum tugas"
+  ],
+  "reason": "Pengguna secara eksplisit meminta perbaikan seluruh arena dan tingkat kesulitan kedua game; perubahan dibatasi dua folder game dan roadmap.",
+  "ownerReviewRequired": true
+}

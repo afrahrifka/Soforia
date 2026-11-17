@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "scope": "architecture",
+  "summary": "Mode Tailscale dan layar TV mirror multi-display dengan QR remote",
+  "validation": [
+    "PASS npm test: 113/113 tes global, termasuk 14 platform dan 9 tooling",
+    "PASS npm run check",
+    "PASS npm run build",
+    "PASS npm run check:docs",
+    "PASS git diff --check",
+    "PASS browser LAN dan Tailscale HTTPS/WSS: dua TV, dua HP sintetis, QR origin, F2/klik/Enter read-only, refresh dan browser controller",
+    "PASS deployment HTTPS port khusus, health 200, konfigurasi Serve lama tidak berubah; stop memulihkan config persis",
+    "PASS validateScope subset path architecture tugas ini",
+    "BLOCKED npm run check:scope -- --working: 10 change note gabungan; 9 sudah ada sebelum tugas",
+    "BELUM DIUJI TV/dua HP fisik, WAN antarkota, FPS/RTT/input-to-photon"
+  ],
+  "reason": "Pengguna secara eksplisit meminta deployment Soforia melalui Tailscale, TV mirror remote, QR Tailscale, dan perintah start normal/Tailscale; scope host, launcher, tes serta dokumentasi tanpa mengubah game atau deployment lain.",
+  "ownerReviewRequired": true
+}

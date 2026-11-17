@@ -1,0 +1,36 @@
+{
+  "result": "FAIL",
+  "sourceHash": "356fcd9ebcb8b9c0ddb28cce9229c8582c3996aea0e7f20007de948b26457c97",
+  "range": [
+    1,
+    6
+  ],
+  "stages": 1,
+  "checkpoints": 4,
+  "results": [
+    {
+      "stage": 1,
+      "world": 1,
+      "length": 106.09658073937064,
+      "checkpoints": 4,
+      "ticks": 3246,
+      "actions": {
+        "roll": 664,
+        "raise": 486,
+        "lower": 466,
+        "jump": 18,
+        "wait": 160
+      },
+      "breaks": 0,
+      "encounters": [
+        "traffic"
+      ],
+      "result": "PASS"
+    }
+  ],
+  "failure": {
+    "stage": 2,
+    "message": "{\"stage\":2,\"ticks\":969,\"s\":32.637238544266744,\"message\":\"Kaca menyentuh tanah.\",\"breaks\":1,\"players\":[{\"x\":-8.6266435400419,\"z\":-18.81226757143929,\"y\":-0.11694514491106126,\"vy\":-5.366666666666667,\"lift\":8.881784197001252e-16,\"crouch\":false,\"lifting\":false,\"rotating\":false,\"jump\":false,\"grounded\":false,\"lower\":0,\"gripHeight\":1.4000000000000008,\"support\":null},{\"x\":-10.924959279291054,\"z\":-22.00986466824867,\"y\":1.0018284084743712,\"vy\":0,\"lift\":8.881784197001252e-16,\"crouch\":false,\"lifting\":false,\"rotating\":false,\"jump\":false,\"grounded\":true,\"lower\":0,\"gripHeight\":1.4000000000000008,\"support\":null}],\"pane\":{\"x\":-9.775836869279972,\"z\":-20.411076478802116,\"y\":1.9843063494512998,\"yaw\":2.147863339954036,\"tilt\":1.5686202536255316,\"roll\":1.5686202536255316,\"slope\":0.43620744490834673}}"
+  },
+  "limitation": "Input sintetis dengan pengetahuan peta dan perencanaan formasi/waktu; tanpa teleport atau kekebalan. Bukan dua HP, playtest manusia atau benchmark performa."
+}

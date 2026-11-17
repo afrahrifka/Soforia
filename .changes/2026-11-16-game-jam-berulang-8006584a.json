@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "scope": "game:jam-berulang",
+  "summary": "Implementasi Jam Berulang dengan kampanye kota dan replay deterministik",
+  "validation": [
+    "PASS: npm test -- --scope game:jam-berulang (12 tes, termasuk integrasi dua client WebSocket)",
+    "PASS: npm run check",
+    "PASS: npm run build",
+    "PASS: npm run check:docs",
+    "PASS: node --import tsx src/games/jam-berulang/tools/preview.mjs (6 distrik, timeline hasil, controller portrait/landscape, tanpa request luar)",
+    "PASS: validateScope subset seluruh path Jam Berulang dan change note miliknya",
+    "BLOCKED: npm run check:scope -- --working menemukan 2 change note karena pekerjaan Kaca yang sudah ada; perubahan tersebut dipertahankan",
+    "BELUM DIUJI: dua HP fisik, FPS/RTT/input-to-photon, WAN-off fisik, soak dan playtest pasangan"
+  ]
+}

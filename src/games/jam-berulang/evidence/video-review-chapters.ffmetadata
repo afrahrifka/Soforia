@@ -1,0 +1,32 @@
+;FFMETADATA1
+title=Jam Berulang — Simulasi Review Developer
+[CHAPTER]
+TIMEBASE=1/1000
+START=0
+END=26500
+title=1. Alun-alun Detik (1x)
+[CHAPTER]
+TIMEBASE=1/1000
+START=26500
+END=54000
+title=2. Gang Gema (1x)
+[CHAPTER]
+TIMEBASE=1/1000
+START=54000
+END=79833
+title=3. Kanal Kuningan (2x)
+[CHAPTER]
+TIMEBASE=1/1000
+START=79833
+END=113833
+title=4. Kebun Pendulum (2x)
+[CHAPTER]
+TIMEBASE=1/1000
+START=113833
+END=156708
+title=5. Arsip Tengah Malam (2x)
+[CHAPTER]
+TIMEBASE=1/1000
+START=156708
+END=215833
+title=6. Menara Fajar (2x)

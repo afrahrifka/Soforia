@@ -1,0 +1,56 @@
+{
+  "tanggal": "2026-11-16",
+  "timestampUTC": "2026-11-15T21:47:09.864Z",
+  "hasil": "lulus",
+  "dashboardCommit": "b7a9238",
+  "scope": "game:glass",
+  "struktur": {
+    "stages": 60,
+    "encounters": 876,
+    "jenis": 19,
+    "checkpoints": 246,
+    "encounterPerCheckpoint": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "boundaryGenerik": false
+  },
+  "verifikasi": {
+    "tesKeseluruhan": 68,
+    "tesGagal": 0,
+    "ruteStage": 60,
+    "ruteCheckpoint": 246,
+    "teleport": false,
+    "kekebalan": false,
+    "kontrolNegatifAnalog": 6,
+    "fixtureVisual": 15,
+    "keyboard": "lulus",
+    "controllerBrowserDuaPemain": "lulus",
+    "typeCheck": "lulus",
+    "build": "lulus",
+    "scopeCheck": "lulus"
+  },
+  "sourceSha256": {
+    "glass-levels.ts": "53e0f2f8c7b1e6fbbc4bda7639ab89bb5899622a646cae9bad3a91ab938b3e83",
+    "glass-route.ts": "aa1d8f7c993ece85b82880d71fc7ea908c221065eef601bf30ba875c085eff15",
+    "glass-world.ts": "e427ee48151a534ef353c9c68ad76e1f0a31fc6f6a734fd556c66d087db04e5d",
+    "glass.ts": "1e8e58e1365a71df5d2f9e969b6068baea3a0e411abad5f45cd3cee3a1503c48",
+    "console.ts": "e18c44e07c10f397c76294b036cab9bd12858f001ec798180b0adeaa36e36b2d"
+  },
+  "bukti": [
+    "kaca-authored-course-report.json",
+    "kaca-authored-visual-report.json",
+    "kaca-analog-regression-report.json",
+    "glass-keyboard-report.json",
+    "glass-direction-report.json"
+  ],
+  "batas": [
+    "Pengendali rute memakai pengetahuan peta/formasi/waktu; bukan playtest pasangan.",
+    "Fixture visual menempatkan pose secara sintetis, terpisah dari bukti rute input.",
+    "Belum acceptance dua HP fisik, keyboard rollover fisik, FPS/frame time atau input-to-photon.",
+    "Penilaian kreativitas, kesulitan dan kenyamanan membutuhkan playtest developer/pasangan."
+  ]
+}

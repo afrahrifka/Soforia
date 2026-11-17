@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "scope": "game:glass",
+  "summary": "Padatkan rangkaian Kaca dan ganti perjalanan kosong dengan tantangan berantai",
+  "validation": [
+    "PASS npm test -- --scope game:glass: 39/39",
+    "PASS npm run check",
+    "PASS npm run build",
+    "PASS npm run check:docs",
+    "PASS glass-course-check.mjs: 60 stage / 246 checkpoint / nol pecah pada hash sama",
+    "PASS audit-arenas.mjs: enam kontrol negatif terhalang",
+    "PASS pacing-metrics.mjs: panjang/jarak kosong di bawah ambang regresi",
+    "PASS glass-arena-preview.mjs: atlas 60 stage / 12 fixture",
+    "PASS validateScope: subset game:glass + satu change note",
+    "TERHALANG npm run check:scope -- --working: 8 change note workspace gabungan"
+  ]
+}

@@ -1,0 +1,23 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {WebSocket} from 'ws';import {writeFile} from 'node:fs/promises';
+process.env.MAIN_BARENG_TEST='1';const {startServer}=await import('../../../platform/server.ts');
+class Peer {
+ ws:WebSocket;auth:any;state:any;personal:any;token:string;seq=0;actionSeq=0;heartbeat:any;
+ constructor(base:string,token:string){this.token=token;this.ws=new WebSocket(base.replace('http','ws')+'/ws',{origin:base});this.ws.on('open',()=>this.ws.send(JSON.stringify({v:1,type:'auth',payload:{token}})));this.ws.on('message',data=>{const m=JSON.parse(String(data));if(m.type==='auth.ok'){this.auth=m.payload;this.token=m.payload.token??this.token;}if(m.type==='game.snapshot')this.state=m.payload;if(m.type==='private.state')this.personal=m.payload;});this.heartbeat=setInterval(()=>{if(this.auth)this.send('heartbeat',{sent:0});},500);}
+ send(type:string,payload:any={},game=false){if(this.ws.readyState===1)this.ws.send(JSON.stringify({v:1,type,payload,sessionId:this.auth.sessionId,connectionEpoch:this.auth.connectionEpoch,seq:++this.seq,...(game?{gameInstanceId:this.state.gameInstanceId}:{})}));}
+ act(name:string){this.send('action',{name,actionSeq:++this.actionSeq},true);}
+ async wait(fn:()=>boolean){const end=Date.now()+7000;while(Date.now()<end){if(fn())return;await new Promise(r=>setTimeout(r,20));}throw Error('Timeout kondisi integrasi Jam Berulang');}
+ close(){clearInterval(this.heartbeat);this.ws.close();}
+}
+test('dua controller WebSocket: role privat, rekaman, replay, reconnect, jeda manual dan rematch bersih',{timeout:20000},async()=>{
+ const port=57000+Math.floor(Math.random()*1500),app=await startServer({host:'127.0.0.1',port,operatorPort:port+1}),peers:Peer[]=[];
+ try{
+ const credential=await (await fetch(app.local+'/api/operator',{method:'POST',headers:{Origin:app.local}})).json();const display=new Peer(app.local,credential.token);peers.push(display);await display.wait(()=>!!display.state?.pairing);const invite=new URL(display.state.pairing.url).hash.slice(8);
+ const join=async()=>{const r=await fetch(app.base+'/api/join',{method:'POST',headers:{Origin:app.base,'Content-Type':'application/json'},body:JSON.stringify({invite,name:'Penjaga Sintetis'})});assert.equal(r.status,200);const p=new Peer(app.base,(await r.json()).token);peers.push(p);await p.wait(()=>p.auth?.role==='player');return p;};
+ const a=await join(),b=await join();a.send('select',{id:'jam-berulang'});await a.wait(()=>a.state.selected==='jam-berulang');a.send('start');await a.wait(()=>a.state.phase==='tutorial');await b.wait(()=>b.state?.phase==='tutorial');a.send('ready');b.send('ready');await a.wait(()=>a.state.phase==='playing');await b.wait(()=>b.personal?.role==='planner');assert.equal(a.personal.role,'runner');assert.equal('timeline' in a.personal,false);assert.ok(Array.isArray(b.personal.timeline));
+ await b.wait(()=>b.state.game.clock>.65);b.act('record');await b.wait(()=>!b.state.game.recording);b.act('rewind');await b.wait(()=>b.state.game.loop===2&&b.state.game.traceCount===1);b.act('replay');await b.wait(()=>b.state.game.replaying&&!!b.state.game.ghost);
+ const token=b.token;b.close();await a.wait(()=>!a.state.players[1].connected);assert.equal(a.state.phase,'playing');const restored=new Peer(app.base,token);peers.push(restored);await restored.wait(()=>restored.auth?.slot===1&&restored.personal?.role==='planner');await restored.wait(()=>restored.state?.game?.loop===2);assert.equal(restored.state.game.traceCount,1);assert.equal(restored.state.game.replaying,true);assert.ok(restored.personal.timeline.length>1);
+ a.send('pause');await a.wait(()=>a.state.phase==='paused');const clock=a.state.game.clock;await new Promise(r=>setTimeout(r,150));assert.equal(a.state.game.clock,clock);a.send('ready');restored.send('ready');await a.wait(()=>a.state.phase==='playing');
+ a.send('home');await a.wait(()=>a.state.phase==='catalog');a.send('select',{id:'jam-berulang'});a.send('start');await a.wait(()=>a.state.phase==='tutorial');assert.equal(a.state.game.loop,1);assert.equal(a.state.game.traceCount,0);assert.deepEqual(a.state.game.collected,[]);
+ await writeFile(new URL('../evidence/network-report.json',import.meta.url),JSON.stringify({result:'PASS',transport:'WebSocket loopback dengan host asli',checks:['dua role privat','kunci rekaman','ulang menit','replay aktif','resume slot B mempertahankan jejak','disconnect tanpa pause','jeda manual membekukan clock','permainan baru membersihkan progres'],limitation:'Dua client sintetis di satu komputer; bukan dua HP fisik atau gangguan AP/WAN.'},null,2)+'\n');
+ }finally{peers.forEach(p=>p.close());await app.close();}
+});

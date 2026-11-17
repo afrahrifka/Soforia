@@ -1,0 +1,226 @@
+[
+  {
+    "file": "building_blacksmith_blue.gltf",
+    "source": "https://raw.githubusercontent.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0/main/addons/kaykit_medieval_hexagon_pack/Assets/gltf/buildings/blue/building_blacksmith_blue.gltf",
+    "sha256": "2f3e3c5b2b4033cb823145bd0f9538d2a14c8cb3490060273dba33b3d0663a8f",
+    "bytes": 186503,
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "building_church_blue.gltf",
+    "source": "https://raw.githubusercontent.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0/main/addons/kaykit_medieval_hexagon_pack/Assets/gltf/buildings/blue/building_church_blue.gltf",
+    "sha256": "33ac9a461543713f9d298c3928143fcb26227571df10e34ecc91e3b63c6c3c7e",
+    "bytes": 142093,
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "building_home_A_blue.gltf",
+    "source": "https://raw.githubusercontent.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0/main/addons/kaykit_medieval_hexagon_pack/Assets/gltf/buildings/blue/building_home_A_blue.gltf",
+    "sha256": "69a2899c16d7f238dcff8fee9dbf7d9b82d962fd1a85503c21c3dcb0c4a3b588",
+    "bytes": 96246,
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "building_home_B_blue.gltf",
+    "source": "https://raw.githubusercontent.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0/main/addons/kaykit_medieval_hexagon_pack/Assets/gltf/buildings/blue/building_home_B_blue.gltf",
+    "sha256": "0a2b38f63aa518afa2b3d7bddf58e0dd41748fdea5121d59d74f9ed7eb6c7844",
+    "bytes": 131942,
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "building_market_blue.gltf",
+    "source": "https://raw.githubusercontent.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0/main/addons/kaykit_medieval_hexagon_pack/Assets/gltf/buildings/blue/building_market_blue.gltf",
+    "sha256": "a0e795a73c59f500163cc222428e91c7e34cc3b6c29e25506f3197481a2abddb",
+    "bytes": 225327,
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "building_tavern_blue.gltf",
+    "source": "https://raw.githubusercontent.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0/main/addons/kaykit_medieval_hexagon_pack/Assets/gltf/buildings/blue/building_tavern_blue.gltf",
+    "sha256": "5b680283213ab17b5d8baa44eba44a55bc3b3c451874a4e0ba941a5bc619b93e",
+    "bytes": 250249,
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "building_tower_A_blue.gltf",
+    "source": "https://raw.githubusercontent.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0/main/addons/kaykit_medieval_hexagon_pack/Assets/gltf/buildings/blue/building_tower_A_blue.gltf",
+    "sha256": "874329e220c4068f87ca7bdf6a5c0f085c042f881dfe66323f373d333861a742",
+    "bytes": 173741,
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "building_watermill_blue.gltf",
+    "source": "https://raw.githubusercontent.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0/main/addons/kaykit_medieval_hexagon_pack/Assets/gltf/buildings/blue/building_watermill_blue.gltf",
+    "sha256": "71747bb2c63f4922e130cfb59ded902b611da7e0b847975624767289a229dc00",
+    "bytes": 171816,
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "building_well_blue.gltf",
+    "source": "https://raw.githubusercontent.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0/main/addons/kaykit_medieval_hexagon_pack/Assets/gltf/buildings/blue/building_well_blue.gltf",
+    "sha256": "06599fa921723f7309a01a1418a6d283b036d2bb0d6a973741227d37f3092ac1",
+    "bytes": 78897,
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "building_windmill_blue.gltf",
+    "source": "https://raw.githubusercontent.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0/main/addons/kaykit_medieval_hexagon_pack/Assets/gltf/buildings/blue/building_windmill_blue.gltf",
+    "sha256": "64318c0a88ece8f00ed02420ac8f48cc62b3d29058442b39e58f16456e7c6a0b",
+    "bytes": 213150,
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "cloud_big.gltf",
+    "source": "https://raw.githubusercontent.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0/main/addons/kaykit_medieval_hexagon_pack/Assets/gltf/decoration/nature/cloud_big.gltf",
+    "sha256": "bef4d8d6b0af021fe5e43204a7c2cf5e1cfaaa464cd97d44711a352960cca539",
+    "bytes": 42210,
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "cloud_small.gltf",
+    "source": "https://raw.githubusercontent.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0/main/addons/kaykit_medieval_hexagon_pack/Assets/gltf/decoration/nature/cloud_small.gltf",
+    "sha256": "498283de588581e65484fd941415ff4fcc0ea6eef9343509a0a54874d7beb45c",
+    "bytes": 33238,
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "hills_A_trees.gltf",
+    "source": "https://raw.githubusercontent.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0/main/addons/kaykit_medieval_hexagon_pack/Assets/gltf/decoration/nature/hills_A_trees.gltf",
+    "sha256": "3b581932b4249d9cb1c62b9a92080d944d806c831e434515280f4cd6b638daec",
+    "bytes": 63798,
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "hills_B_trees.gltf",
+    "source": "https://raw.githubusercontent.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0/main/addons/kaykit_medieval_hexagon_pack/Assets/gltf/decoration/nature/hills_B_trees.gltf",
+    "sha256": "cd09bb1ab67b14cf32d219de6d1124c216c53a7c466e700fd490d3eead2283c9",
+    "bytes": 56049,
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "mountain_A_grass_trees.gltf",
+    "source": "https://raw.githubusercontent.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0/main/addons/kaykit_medieval_hexagon_pack/Assets/gltf/decoration/nature/mountain_A_grass_trees.gltf",
+    "sha256": "3bf0d824ce5fa243436729bdc92f58375c4689dda6591cd8a7a55ddbc4e0f8fb",
+    "bytes": 58867,
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "mountain_B_grass_trees.gltf",
+    "source": "https://raw.githubusercontent.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0/main/addons/kaykit_medieval_hexagon_pack/Assets/gltf/decoration/nature/mountain_B_grass_trees.gltf",
+    "sha256": "477064f9f3d22dd3f715da3f972e4a49d59f7bf92245d042ff9a39821c982cf1",
+    "bytes": 66675,
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "rock_single_A.gltf",
+    "source": "https://raw.githubusercontent.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0/main/addons/kaykit_medieval_hexagon_pack/Assets/gltf/decoration/nature/rock_single_A.gltf",
+    "sha256": "bd15197890f64db47612d6d62acf9577c81b138410650e8c198359090d1c8f29",
+    "bytes": 24034,
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "rock_single_B.gltf",
+    "source": "https://raw.githubusercontent.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0/main/addons/kaykit_medieval_hexagon_pack/Assets/gltf/decoration/nature/rock_single_B.gltf",
+    "sha256": "ec56cea61efcffd1bd5ee078d43c0e6fb61e83eb326f957a0db60e2d96f97f22",
+    "bytes": 24587,
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "rock_single_C.gltf",
+    "source": "https://raw.githubusercontent.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0/main/addons/kaykit_medieval_hexagon_pack/Assets/gltf/decoration/nature/rock_single_C.gltf",
+    "sha256": "2b1bec3caec35f7aaaa7e757db2bbd89aef02e918e1ef43d8ed088fd20404edb",
+    "bytes": 25339,
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "tree_single_A.gltf",
+    "source": "https://raw.githubusercontent.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0/main/addons/kaykit_medieval_hexagon_pack/Assets/gltf/decoration/nature/tree_single_A.gltf",
+    "sha256": "8d979205572cc513314afec8a98f7df75a8f5280a8d6dbe452565035fcc542a9",
+    "bytes": 26872,
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "tree_single_B.gltf",
+    "source": "https://raw.githubusercontent.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0/main/addons/kaykit_medieval_hexagon_pack/Assets/gltf/decoration/nature/tree_single_B.gltf",
+    "sha256": "c5273916adc6ecb2a035ef90b5120e3126683e40f09fc61bffdb944ce4dbe2e2",
+    "bytes": 32243,
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "trees_A_small.gltf",
+    "source": "https://raw.githubusercontent.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0/main/addons/kaykit_medieval_hexagon_pack/Assets/gltf/decoration/nature/trees_A_small.gltf",
+    "sha256": "7ff6e29cee3b19e835c0f9f1f5dc9885843a801fc5dc61295eb59d85696aaa9a",
+    "bytes": 60437,
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "waterlily_A.gltf",
+    "source": "https://raw.githubusercontent.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0/main/addons/kaykit_medieval_hexagon_pack/Assets/gltf/decoration/nature/waterlily_A.gltf",
+    "sha256": "3c42ef96ea86b71f95675ebd6d147b96520e3e5cf26776cd70f1572a25855af9",
+    "bytes": 25880,
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "waterplant_A.gltf",
+    "source": "https://raw.githubusercontent.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0/main/addons/kaykit_medieval_hexagon_pack/Assets/gltf/decoration/nature/waterplant_A.gltf",
+    "sha256": "e0bd07154a6d7201025f4dec2e600b36b988e41c8aaca10b76094463e26c0242",
+    "bytes": 26397,
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "waterplant_B.gltf",
+    "source": "https://raw.githubusercontent.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0/main/addons/kaykit_medieval_hexagon_pack/Assets/gltf/decoration/nature/waterplant_B.gltf",
+    "sha256": "4780e46ed28992e4389e7fa18e8787fabcadfc3c1ad7dd3f3af2c2c9731af051",
+    "bytes": 30160,
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "barrel.gltf",
+    "source": "https://raw.githubusercontent.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0/main/addons/kaykit_medieval_hexagon_pack/Assets/gltf/decoration/props/barrel.gltf",
+    "sha256": "3d5477459016a9ab90239e4ea2066c7c079f25e40b00c2b2519ea9897d051b99",
+    "bytes": 43148,
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "crate_A_small.gltf",
+    "source": "https://raw.githubusercontent.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0/main/addons/kaykit_medieval_hexagon_pack/Assets/gltf/decoration/props/crate_A_small.gltf",
+    "sha256": "74105b5a0b1115a6db2ee843eecb84550a29e1718be9dcc27b8b716fbed49104",
+    "bytes": 31758,
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "sack.gltf",
+    "source": "https://raw.githubusercontent.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0/main/addons/kaykit_medieval_hexagon_pack/Assets/gltf/decoration/props/sack.gltf",
+    "sha256": "1d7d5deee0be27d6e153040caaaba2a8176d55dc74890f76b3bcb5ccc15b4c6f",
+    "bytes": 26723,
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "wheelbarrow.gltf",
+    "source": "https://raw.githubusercontent.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0/main/addons/kaykit_medieval_hexagon_pack/Assets/gltf/decoration/props/wheelbarrow.gltf",
+    "sha256": "113d57fc1d842bc7149b78434c245dbb7c37c137ebc19173bf0bc2287cbb81a5",
+    "bytes": 47780,
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "cobblestone-nor_gl.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/cobblestone_floor_001/cobblestone_floor_001_nor_gl_1k.jpg",
+    "sha256": "f5c92ea5f9d09c35fee6f75884f4496a61a08ac0a1fe427d5a1ae7d1e15c4280",
+    "bytes": 995098,
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "cobblestone-rough.jpg",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/cobblestone_floor_001/cobblestone_floor_001_rough_1k.jpg",
+    "sha256": "ac7cfc342f9d13b5dff1972200daaf864fbdf5455a2ed2da96491b823f411f36",
+    "bytes": 403395,
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "cobblestone-diff.jpg",
+    "source": "https://polyhaven.com/a/cobblestone_floor_001",
+    "sha256": "893d3e7b4506c5935cbc6aca5b914d637bd4464484bcaa5d69e2ee205bb9ae9c",
+    "bytes": 626906,
+    "license": "CC0-1.0"
+  }
+]

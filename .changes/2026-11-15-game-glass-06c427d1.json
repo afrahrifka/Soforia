@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "scope": "game:glass",
+  "summary": "Rangkai tantangan Kaca sebelum checkpoint dan ganti pembatas dengan lanskap bioma",
+  "validation": [
+    "npm test: 68/68 lulus; npm run check/build/check:docs lulus.",
+    "Rute 60 stage/246 checkpoint dengan input map-aware lulus tanpa teleport/kekebalan; 876 encounter dan 19 jenis.",
+    "Tes gabungan lompat+guling, rangkaian checkpoint dan kelengkapan kandidat collision lulus.",
+    "Keyboard, dua controller browser, fixture visual enam bioma dan kontrol negatif analog enam stage lulus.",
+    "Laporan aktif dan batas: src/games/glass/evidence/kaca-chain-report.json; bukan playtest pasangan/dua HP atau benchmark FPS."
+  ]
+}

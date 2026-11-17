@@ -1,0 +1,1516 @@
+{
+  "result": "PASS",
+  "sourceHash": "c176853ee3f6c321ce9fa6e73985c7fbc6e5c800a4c58589c97f0f30236370a9",
+  "range": [
+    1,
+    60
+  ],
+  "stages": 60,
+  "checkpoints": 246,
+  "encounters": 882,
+  "results": [
+    {
+      "stage": 1,
+      "world": 1,
+      "length": 298.62923448299193,
+      "checkpoints": 4,
+      "ticks": 7416,
+      "actions": {
+        "roll": 1068,
+        "raise": 1014,
+        "lower": 964,
+        "jump": 18,
+        "wait": 35
+      },
+      "breaks": 0,
+      "encounters": [
+        "traffic"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 2,
+      "world": 2,
+      "length": 308.04900615322055,
+      "checkpoints": 4,
+      "ticks": 7895,
+      "actions": {
+        "roll": 1346,
+        "raise": 1298,
+        "lower": 1091,
+        "jump": 16,
+        "wait": 31
+      },
+      "breaks": 0,
+      "encounters": [
+        "logSwing"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 3,
+      "world": 3,
+      "length": 316.99092884913813,
+      "checkpoints": 4,
+      "ticks": 8126,
+      "actions": {
+        "roll": 1772,
+        "raise": 905,
+        "lower": 935,
+        "jump": 8,
+        "wait": 32
+      },
+      "breaks": 0,
+      "encounters": [
+        "zipper"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 4,
+      "world": 4,
+      "length": 297.79092884913723,
+      "checkpoints": 4,
+      "ticks": 7756,
+      "actions": {
+        "roll": 612,
+        "raise": 929,
+        "lower": 712,
+        "jump": 14,
+        "wait": 140
+      },
+      "breaks": 0,
+      "encounters": [
+        "ferry",
+        "axe"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 5,
+      "world": 5,
+      "length": 310.38060167260113,
+      "checkpoints": 4,
+      "ticks": 7472,
+      "actions": {
+        "roll": 1340,
+        "raise": 384,
+        "lower": 508,
+        "jump": 14,
+        "wait": 38
+      },
+      "breaks": 0,
+      "encounters": [
+        "traffic",
+        "lift"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 6,
+      "world": 6,
+      "length": 321.58060167260004,
+      "checkpoints": 4,
+      "ticks": 7686,
+      "actions": {
+        "roll": 452,
+        "raise": 944,
+        "lower": 980,
+        "jump": 20,
+        "wait": 0
+      },
+      "breaks": 0,
+      "encounters": [],
+      "result": "PASS"
+    },
+    {
+      "stage": 7,
+      "world": 1,
+      "length": 347.79096298420257,
+      "checkpoints": 4,
+      "ticks": 8838,
+      "actions": {
+        "roll": 884,
+        "raise": 352,
+        "lower": 462,
+        "jump": 14,
+        "wait": 471
+      },
+      "breaks": 0,
+      "encounters": [
+        "traffic",
+        "scissor",
+        "zipper",
+        "crusher",
+        "axe",
+        "traffic",
+        "lift"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 8,
+      "world": 2,
+      "length": 354.1356103239129,
+      "checkpoints": 4,
+      "ticks": 8659,
+      "actions": {
+        "roll": 440,
+        "raise": 1208,
+        "lower": 1205,
+        "jump": 4,
+        "wait": 163
+      },
+      "breaks": 0,
+      "encounters": [
+        "logSwing",
+        "scissor",
+        "axe",
+        "traffic",
+        "hammer"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 9,
+      "world": 3,
+      "length": 359.4656473787782,
+      "checkpoints": 4,
+      "ticks": 9248,
+      "actions": {
+        "roll": 1514,
+        "raise": 786,
+        "lower": 757,
+        "jump": 12,
+        "wait": 388
+      },
+      "breaks": 0,
+      "encounters": [
+        "zipper",
+        "scissor",
+        "traffic",
+        "hammer",
+        "traffic"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 10,
+      "world": 4,
+      "length": 349.8003811091027,
+      "checkpoints": 4,
+      "ticks": 9074,
+      "actions": {
+        "roll": 890,
+        "raise": 682,
+        "lower": 743,
+        "jump": 10,
+        "wait": 374
+      },
+      "breaks": 0,
+      "encounters": [
+        "sideFerry",
+        "scissor",
+        "hammer",
+        "axe",
+        "traffic",
+        "logSwing"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 11,
+      "world": 5,
+      "length": 356.75366801656287,
+      "checkpoints": 4,
+      "ticks": 9187,
+      "actions": {
+        "roll": 880,
+        "raise": 1088,
+        "lower": 827,
+        "jump": 4,
+        "wait": 166
+      },
+      "breaks": 0,
+      "encounters": [
+        "ferry",
+        "scissor",
+        "traffic",
+        "traffic",
+        "logSwing",
+        "zipper"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 12,
+      "world": 6,
+      "length": 365.9311680165622,
+      "checkpoints": 4,
+      "ticks": 9327,
+      "actions": {
+        "roll": 1520,
+        "raise": 566,
+        "lower": 420,
+        "jump": 20,
+        "wait": 380
+      },
+      "breaks": 0,
+      "encounters": [
+        "hammer",
+        "scissor",
+        "logSwing",
+        "zipper",
+        "lift",
+        "axe"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 13,
+      "world": 1,
+      "length": 343.39890756812395,
+      "checkpoints": 4,
+      "ticks": 9365,
+      "actions": {
+        "roll": 622,
+        "raise": 919,
+        "lower": 975,
+        "jump": 8,
+        "wait": 682
+      },
+      "breaks": 0,
+      "encounters": [
+        "zipper",
+        "traffic",
+        "iris",
+        "traffic",
+        "lift",
+        "crusher",
+        "hammer"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 14,
+      "world": 2,
+      "length": 351.53554955191066,
+      "checkpoints": 4,
+      "ticks": 8731,
+      "actions": {
+        "roll": 626,
+        "raise": 614,
+        "lower": 442,
+        "jump": 10,
+        "wait": 322
+      },
+      "breaks": 0,
+      "encounters": [
+        "axe",
+        "iris",
+        "lift",
+        "logSwing",
+        "hammer",
+        "traffic"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 15,
+      "world": 3,
+      "length": 359.35868666121786,
+      "checkpoints": 4,
+      "ticks": 8966,
+      "actions": {
+        "roll": 614,
+        "raise": 586,
+        "lower": 494,
+        "jump": 4,
+        "wait": 640
+      },
+      "breaks": 0,
+      "encounters": [
+        "traffic",
+        "crusher",
+        "iris",
+        "traffic",
+        "hammer",
+        "logSwing",
+        "threadHammer"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 16,
+      "world": 4,
+      "length": 345.9486866612207,
+      "checkpoints": 4,
+      "ticks": 8723,
+      "actions": {
+        "roll": 948,
+        "raise": 867,
+        "lower": 763,
+        "jump": 0,
+        "wait": 310
+      },
+      "breaks": 0,
+      "encounters": [
+        "hammer",
+        "lift",
+        "iris",
+        "axe",
+        "logSwing",
+        "zipper",
+        "scissor"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 17,
+      "world": 5,
+      "length": 351.75337078626586,
+      "checkpoints": 4,
+      "ticks": 8902,
+      "actions": {
+        "roll": 874,
+        "raise": 1096,
+        "lower": 951,
+        "jump": 0,
+        "wait": 202
+      },
+      "breaks": 0,
+      "encounters": [
+        "traffic",
+        "iris",
+        "crusher",
+        "zipper",
+        "sideFerry",
+        "axe",
+        "iris"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 18,
+      "world": 6,
+      "length": 362.3433707862688,
+      "checkpoints": 4,
+      "ticks": 8206,
+      "actions": {
+        "roll": 0,
+        "raise": 508,
+        "lower": 694,
+        "jump": 4,
+        "wait": 458
+      },
+      "breaks": 0,
+      "encounters": [
+        "crusher",
+        "logSwing",
+        "axe",
+        "iris",
+        "axe",
+        "traffic",
+        "lift",
+        "breathing"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 19,
+      "world": 1,
+      "length": 384.19413716314887,
+      "checkpoints": 4,
+      "ticks": 9640,
+      "actions": {
+        "roll": 914,
+        "raise": 1432,
+        "lower": 1368,
+        "jump": 22,
+        "wait": 416
+      },
+      "breaks": 0,
+      "encounters": [
+        "traffic",
+        "iris",
+        "breathing",
+        "breathing"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 20,
+      "world": 2,
+      "length": 401.74100274819745,
+      "checkpoints": 4,
+      "ticks": 10355,
+      "actions": {
+        "roll": 1086,
+        "raise": 852,
+        "lower": 764,
+        "jump": 14,
+        "wait": 378
+      },
+      "breaks": 0,
+      "encounters": [
+        "logSwing",
+        "lift",
+        "breathing",
+        "breathing",
+        "axe",
+        "threadHammer"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 21,
+      "world": 3,
+      "length": 406.2189640434147,
+      "checkpoints": 4,
+      "ticks": 10879,
+      "actions": {
+        "roll": 1774,
+        "raise": 1107,
+        "lower": 1118,
+        "jump": 10,
+        "wait": 371
+      },
+      "breaks": 0,
+      "encounters": [
+        "lift",
+        "breathing",
+        "zipper",
+        "threadHammer",
+        "scissor"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 22,
+      "world": 4,
+      "length": 393.1430495519109,
+      "checkpoints": 4,
+      "ticks": 10248,
+      "actions": {
+        "roll": 892,
+        "raise": 604,
+        "lower": 731,
+        "jump": 8,
+        "wait": 521
+      },
+      "breaks": 0,
+      "encounters": [
+        "ferry",
+        "axe",
+        "breathing",
+        "threadHammer",
+        "sideFerry",
+        "scissor",
+        "iris"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 23,
+      "world": 5,
+      "length": 404.01338923197164,
+      "checkpoints": 4,
+      "ticks": 10809,
+      "actions": {
+        "roll": 1070,
+        "raise": 701,
+        "lower": 743,
+        "jump": 8,
+        "wait": 749
+      },
+      "breaks": 0,
+      "encounters": [
+        "threadHammer",
+        "crusher",
+        "breathing",
+        "scissor",
+        "iris",
+        "traffic",
+        "lift",
+        "breathing"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 24,
+      "world": 6,
+      "length": 413.9658892319786,
+      "checkpoints": 4,
+      "ticks": 10468,
+      "actions": {
+        "roll": 1344,
+        "raise": 796,
+        "lower": 650,
+        "jump": 22,
+        "wait": 139
+      },
+      "breaks": 0,
+      "encounters": [
+        "sideFerry",
+        "scissor",
+        "hammer",
+        "breathing",
+        "iris",
+        "lift",
+        "breathing"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 25,
+      "world": 1,
+      "length": 378.0466081499929,
+      "checkpoints": 4,
+      "ticks": 9199,
+      "actions": {
+        "roll": 1348,
+        "raise": 667,
+        "lower": 665,
+        "jump": 16,
+        "wait": 342
+      },
+      "breaks": 0,
+      "encounters": [
+        "traffic",
+        "breathing",
+        "scissor",
+        "crusher",
+        "iris",
+        "threadHammer"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 26,
+      "world": 2,
+      "length": 391.33288904126414,
+      "checkpoints": 4,
+      "ticks": 10318,
+      "actions": {
+        "roll": 1520,
+        "raise": 1602,
+        "lower": 1365,
+        "jump": 10,
+        "wait": 373
+      },
+      "breaks": 0,
+      "encounters": [
+        "scissor",
+        "logSwing",
+        "threadHammer",
+        "breathing",
+        "scissor"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 27,
+      "world": 3,
+      "length": 397.3326914854077,
+      "checkpoints": 4,
+      "ticks": 9849,
+      "actions": {
+        "roll": 1780,
+        "raise": 508,
+        "lower": 486,
+        "jump": 16,
+        "wait": 169
+      },
+      "breaks": 0,
+      "encounters": [
+        "hammer",
+        "zipper",
+        "scissor",
+        "scissor",
+        "scissor",
+        "iris"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 28,
+      "world": 4,
+      "length": 390.71269148540915,
+      "checkpoints": 4,
+      "ticks": 10185,
+      "actions": {
+        "roll": 1066,
+        "raise": 801,
+        "lower": 764,
+        "jump": 6,
+        "wait": 366
+      },
+      "breaks": 0,
+      "encounters": [
+        "lift",
+        "threadHammer",
+        "scissor",
+        "axe",
+        "iris",
+        "iris",
+        "ferry",
+        "breathing"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 29,
+      "world": 5,
+      "length": 393.75800410740146,
+      "checkpoints": 4,
+      "ticks": 10134,
+      "actions": {
+        "roll": 1330,
+        "raise": 596,
+        "lower": 497,
+        "jump": 12,
+        "wait": 603
+      },
+      "breaks": 0,
+      "encounters": [
+        "sideFerry",
+        "scissor",
+        "traffic",
+        "scissor",
+        "breathing",
+        "breathing",
+        "crusher"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 30,
+      "world": 6,
+      "length": 403.9780041074045,
+      "checkpoints": 4,
+      "ticks": 9942,
+      "actions": {
+        "roll": 1344,
+        "raise": 630,
+        "lower": 543,
+        "jump": 28,
+        "wait": 161
+      },
+      "breaks": 0,
+      "encounters": [
+        "iris",
+        "ferry",
+        "scissor",
+        "hammer",
+        "scissor"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 31,
+      "world": 1,
+      "length": 373.5726569492333,
+      "checkpoints": 4,
+      "ticks": 8968,
+      "actions": {
+        "roll": 892,
+        "raise": 717,
+        "lower": 902,
+        "jump": 16,
+        "wait": 209
+      },
+      "breaks": 0,
+      "encounters": [
+        "traffic",
+        "crusher",
+        "iris",
+        "iris"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 32,
+      "world": 2,
+      "length": 385.9226569492376,
+      "checkpoints": 4,
+      "ticks": 10149,
+      "actions": {
+        "roll": 620,
+        "raise": 1944,
+        "lower": 1643,
+        "jump": 12,
+        "wait": 286
+      },
+      "breaks": 0,
+      "encounters": [
+        "iris",
+        "logSwing",
+        "breathing"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 33,
+      "world": 3,
+      "length": 393.6870936572504,
+      "checkpoints": 4,
+      "ticks": 9732,
+      "actions": {
+        "roll": 2232,
+        "raise": 792,
+        "lower": 658,
+        "jump": 22,
+        "wait": 280
+      },
+      "breaks": 0,
+      "encounters": [
+        "iris",
+        "crusher",
+        "scissor",
+        "hammer"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 34,
+      "world": 4,
+      "length": 383.66209365725155,
+      "checkpoints": 4,
+      "ticks": 9866,
+      "actions": {
+        "roll": 898,
+        "raise": 1301,
+        "lower": 1374,
+        "jump": 12,
+        "wait": 81
+      },
+      "breaks": 0,
+      "encounters": [
+        "axe",
+        "sideFerry",
+        "iris",
+        "iris",
+        "lift"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 35,
+      "world": 5,
+      "length": 385.6164020879772,
+      "checkpoints": 4,
+      "ticks": 9965,
+      "actions": {
+        "roll": 1048,
+        "raise": 1402,
+        "lower": 1157,
+        "jump": 10,
+        "wait": 361
+      },
+      "breaks": 0,
+      "encounters": [
+        "iris",
+        "traffic",
+        "breathing",
+        "crusher"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 36,
+      "world": 6,
+      "length": 396.60390208797816,
+      "checkpoints": 4,
+      "ticks": 9863,
+      "actions": {
+        "roll": 1774,
+        "raise": 692,
+        "lower": 696,
+        "jump": 18,
+        "wait": 90
+      },
+      "breaks": 0,
+      "encounters": [
+        "hammer",
+        "iris",
+        "scissor",
+        "sideFerry"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 37,
+      "world": 1,
+      "length": 417.2570533595315,
+      "checkpoints": 4,
+      "ticks": 10810,
+      "actions": {
+        "roll": 1814,
+        "raise": 755,
+        "lower": 593,
+        "jump": 24,
+        "wait": 336
+      },
+      "breaks": 0,
+      "encounters": [
+        "lift",
+        "traffic",
+        "breathing",
+        "logSwing",
+        "iris",
+        "zipper",
+        "axe"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 38,
+      "world": 2,
+      "length": 429.5170533595296,
+      "checkpoints": 4,
+      "ticks": 11653,
+      "actions": {
+        "roll": 1332,
+        "raise": 1072,
+        "lower": 950,
+        "jump": 14,
+        "wait": 1037
+      },
+      "breaks": 0,
+      "encounters": [
+        "logSwing",
+        "breathing",
+        "zipper",
+        "breathing",
+        "axe",
+        "hammer",
+        "traffic",
+        "lift"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 39,
+      "world": 3,
+      "length": 431.72600274819763,
+      "checkpoints": 4,
+      "ticks": 11142,
+      "actions": {
+        "roll": 1360,
+        "raise": 1214,
+        "lower": 1250,
+        "jump": 12,
+        "wait": 417
+      },
+      "breaks": 0,
+      "encounters": [
+        "zipper",
+        "breathing",
+        "axe",
+        "scissor",
+        "traffic",
+        "hammer"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 40,
+      "world": 4,
+      "length": 413.9060027481941,
+      "checkpoints": 4,
+      "ticks": 10609,
+      "actions": {
+        "roll": 1624,
+        "raise": 811,
+        "lower": 1013,
+        "jump": 14,
+        "wait": 290
+      },
+      "breaks": 0,
+      "encounters": [
+        "ferry",
+        "breathing",
+        "traffic",
+        "axe",
+        "iris",
+        "hammer",
+        "traffic"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 41,
+      "world": 5,
+      "length": 434.82439338260366,
+      "checkpoints": 4,
+      "ticks": 10881,
+      "actions": {
+        "roll": 436,
+        "raise": 1248,
+        "lower": 1186,
+        "jump": 6,
+        "wait": 421
+      },
+      "breaks": 0,
+      "encounters": [
+        "traffic",
+        "sideFerry",
+        "breathing",
+        "hammer",
+        "crusher",
+        "breathing",
+        "traffic",
+        "logSwing"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 42,
+      "world": 6,
+      "length": 439.62939338260077,
+      "checkpoints": 4,
+      "ticks": 11799,
+      "actions": {
+        "roll": 1782,
+        "raise": 1425,
+        "lower": 1142,
+        "jump": 12,
+        "wait": 552
+      },
+      "breaks": 0,
+      "encounters": [
+        "breathing",
+        "traffic",
+        "hammer",
+        "scissor",
+        "logSwing",
+        "lift",
+        "zipper"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 43,
+      "world": 1,
+      "length": 409.8873501345699,
+      "checkpoints": 4,
+      "ticks": 9651,
+      "actions": {
+        "roll": 1322,
+        "raise": 944,
+        "lower": 926,
+        "jump": 12,
+        "wait": 443
+      },
+      "breaks": 0,
+      "encounters": [
+        "logSwing",
+        "crusher",
+        "scissor",
+        "zipper",
+        "traffic",
+        "iris",
+        "traffic",
+        "scissor",
+        "breathing"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 44,
+      "world": 2,
+      "length": 428.8473501345666,
+      "checkpoints": 4,
+      "ticks": 11164,
+      "actions": {
+        "roll": 612,
+        "raise": 1367,
+        "lower": 1439,
+        "jump": 10,
+        "wait": 712
+      },
+      "breaks": 0,
+      "encounters": [
+        "zipper",
+        "logSwing",
+        "scissor",
+        "axe",
+        "breathing",
+        "lift",
+        "hammer",
+        "iris"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 45,
+      "world": 3,
+      "length": 436.48686462083447,
+      "checkpoints": 4,
+      "ticks": 10976,
+      "actions": {
+        "roll": 1104,
+        "raise": 618,
+        "lower": 531,
+        "jump": 20,
+        "wait": 670
+      },
+      "breaks": 0,
+      "encounters": [
+        "axe",
+        "scissor",
+        "traffic",
+        "lift",
+        "crusher",
+        "scissor",
+        "hammer",
+        "traffic",
+        "breathing"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 46,
+      "world": 4,
+      "length": 425.056864620835,
+      "checkpoints": 4,
+      "ticks": 10734,
+      "actions": {
+        "roll": 1064,
+        "raise": 795,
+        "lower": 768,
+        "jump": 10,
+        "wait": 289
+      },
+      "breaks": 0,
+      "encounters": [
+        "lift",
+        "traffic",
+        "axe",
+        "scissor",
+        "hammer",
+        "ferry",
+        "iris",
+        "logSwing",
+        "scissor",
+        "threadHammer"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 47,
+      "world": 5,
+      "length": 428.89524914717117,
+      "checkpoints": 4,
+      "ticks": 11232,
+      "actions": {
+        "roll": 874,
+        "raise": 1034,
+        "lower": 984,
+        "jump": 6,
+        "wait": 789
+      },
+      "breaks": 0,
+      "encounters": [
+        "sideFerry",
+        "hammer",
+        "scissor",
+        "traffic",
+        "crusher",
+        "breathing",
+        "zipper",
+        "iris",
+        "scissor"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 48,
+      "world": 6,
+      "length": 431.2602491471767,
+      "checkpoints": 4,
+      "ticks": 10477,
+      "actions": {
+        "roll": 922,
+        "raise": 1093,
+        "lower": 983,
+        "jump": 12,
+        "wait": 355
+      },
+      "breaks": 0,
+      "encounters": [
+        "hammer",
+        "traffic",
+        "scissor",
+        "logSwing",
+        "axe",
+        "scissor",
+        "axe",
+        "breathing",
+        "iris"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 49,
+      "world": 1,
+      "length": 412.90443962806944,
+      "checkpoints": 4,
+      "ticks": 9733,
+      "actions": {
+        "roll": 440,
+        "raise": 1169,
+        "lower": 1065,
+        "jump": 2,
+        "wait": 494
+      },
+      "breaks": 0,
+      "encounters": [
+        "zipper",
+        "traffic",
+        "iris",
+        "iris",
+        "traffic",
+        "iris",
+        "breathing",
+        "crusher",
+        "hammer",
+        "scissor"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 50,
+      "world": 2,
+      "length": 437.4994396280649,
+      "checkpoints": 4,
+      "ticks": 10776,
+      "actions": {
+        "roll": 1330,
+        "raise": 592,
+        "lower": 719,
+        "jump": 8,
+        "wait": 522
+      },
+      "breaks": 0,
+      "encounters": [
+        "logSwing",
+        "axe",
+        "iris",
+        "lift",
+        "breathing",
+        "hammer",
+        "breathing",
+        "axe",
+        "traffic",
+        "iris"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 51,
+      "world": 3,
+      "length": 434.1107966861854,
+      "checkpoints": 4,
+      "ticks": 10899,
+      "actions": {
+        "roll": 1086,
+        "raise": 732,
+        "lower": 719,
+        "jump": 14,
+        "wait": 431
+      },
+      "breaks": 0,
+      "encounters": [
+        "traffic",
+        "lift",
+        "crusher",
+        "iris",
+        "traffic",
+        "scissor",
+        "hammer",
+        "logSwing",
+        "breathing"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 52,
+      "world": 4,
+      "length": 427.2507966861838,
+      "checkpoints": 4,
+      "ticks": 11655,
+      "actions": {
+        "roll": 1780,
+        "raise": 756,
+        "lower": 642,
+        "jump": 4,
+        "wait": 525
+      },
+      "breaks": 0,
+      "encounters": [
+        "ferry",
+        "hammer",
+        "sideFerry",
+        "iris",
+        "logSwing",
+        "iris",
+        "threadHammer",
+        "lift",
+        "zipper",
+        "scissor"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 53,
+      "world": 5,
+      "length": 429.5050019676274,
+      "checkpoints": 4,
+      "ticks": 10914,
+      "actions": {
+        "roll": 1338,
+        "raise": 1073,
+        "lower": 1034,
+        "jump": 6,
+        "wait": 605
+      },
+      "breaks": 0,
+      "encounters": [
+        "traffic",
+        "crusher",
+        "iris",
+        "threadHammer",
+        "zipper",
+        "breathing",
+        "scissor",
+        "axe",
+        "iris"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 54,
+      "world": 6,
+      "length": 449.0850019676336,
+      "checkpoints": 4,
+      "ticks": 11132,
+      "actions": {
+        "roll": 618,
+        "raise": 481,
+        "lower": 498,
+        "jump": 10,
+        "wait": 527
+      },
+      "breaks": 0,
+      "encounters": [
+        "lift",
+        "logSwing",
+        "hammer",
+        "iris",
+        "scissor",
+        "axe",
+        "scissor",
+        "iris",
+        "traffic",
+        "lift",
+        "breathing"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 55,
+      "world": 1,
+      "length": 578.57502925627,
+      "checkpoints": 5,
+      "ticks": 14051,
+      "actions": {
+        "roll": 1340,
+        "raise": 1557,
+        "lower": 1664,
+        "jump": 22,
+        "wait": 358
+      },
+      "breaks": 0,
+      "encounters": [
+        "traffic",
+        "iris",
+        "breathing",
+        "breathing",
+        "iris",
+        "crusher",
+        "scissor",
+        "threadHammer"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 56,
+      "world": 2,
+      "length": 608.3650292562661,
+      "checkpoints": 5,
+      "ticks": 15814,
+      "actions": {
+        "roll": 2226,
+        "raise": 2003,
+        "lower": 1844,
+        "jump": 18,
+        "wait": 396
+      },
+      "breaks": 0,
+      "encounters": [
+        "lift",
+        "breathing",
+        "logSwing",
+        "breathing",
+        "breathing",
+        "threadHammer",
+        "iris",
+        "axe",
+        "scissor"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 57,
+      "world": 3,
+      "length": 610.4851934793306,
+      "checkpoints": 5,
+      "ticks": 15821,
+      "actions": {
+        "roll": 2444,
+        "raise": 1921,
+        "lower": 2083,
+        "jump": 28,
+        "wait": 595
+      },
+      "breaks": 0,
+      "encounters": [
+        "zipper",
+        "breathing",
+        "scissor",
+        "hammer",
+        "scissor",
+        "breathing",
+        "iris"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 58,
+      "world": 4,
+      "length": 605.8801934793416,
+      "checkpoints": 5,
+      "ticks": 16058,
+      "actions": {
+        "roll": 2152,
+        "raise": 1513,
+        "lower": 1322,
+        "jump": 16,
+        "wait": 242
+      },
+      "breaks": 0,
+      "encounters": [
+        "ferry",
+        "lift",
+        "breathing",
+        "threadHammer",
+        "axe",
+        "iris",
+        "sideFerry",
+        "iris",
+        "scissor",
+        "lift",
+        "breathing"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 59,
+      "world": 5,
+      "length": 617.2643297826144,
+      "checkpoints": 5,
+      "ticks": 16420,
+      "actions": {
+        "roll": 1784,
+        "raise": 2037,
+        "lower": 1851,
+        "jump": 12,
+        "wait": 554
+      },
+      "breaks": 0,
+      "encounters": [
+        "threadHammer",
+        "traffic",
+        "breathing",
+        "scissor",
+        "crusher",
+        "breathing",
+        "lift",
+        "breathing",
+        "iris",
+        "lift"
+      ],
+      "result": "PASS"
+    },
+    {
+      "stage": 60,
+      "world": 6,
+      "length": 620.5643297826008,
+      "checkpoints": 5,
+      "ticks": 15475,
+      "actions": {
+        "roll": 1910,
+        "raise": 1383,
+        "lower": 1169,
+        "jump": 36,
+        "wait": 266
+      },
+      "breaks": 0,
+      "encounters": [
+        "scissor",
+        "hammer",
+        "breathing",
+        "iris",
+        "lift",
+        "scissor",
+        "axe",
+        "breathing"
+      ],
+      "result": "PASS"
+    }
+  ],
+  "negative": [
+    {
+      "stage": 1,
+      "result": "BLOCKED",
+      "reason": "{\"stage\":1,\"ticks\":316,\"s\":16.746666666666705,\"message\":\"Kaca menyentuh benda padat.\",\"breaks\":1,\"players\":[{\"x\":-1.8,\"z\":-10.793333333333374,\"y\":0.06748167182924546,\"vy\":0,\"lift\":0,\"crouch\":false,\"lifting\":false,\"rotating\":false,\"jump\":false,\"grounded\":true,\"lower\":0,\"gripHeight\":1.4,\"support\":null},{\"x\":1.8,\"z\":-10.793333333333374,\"y\":0.06748167182924546,\"vy\":0,\"lift\":0,\"crouch\":false,\"lifting\":false,\"rotating\":false,\"jump\":false,\"grounded\":true,\"lower\":0,\"gripHeight\":1.4,\"support\":null}],\"pane\":{\"x\":0,\"z\":-10.615760081581598,\"y\":1.466768118440974,\"yaw\":0,\"tilt\":0,\"roll\":0,\"slope\":0}}"
+    },
+    {
+      "stage": 2,
+      "result": "BLOCKED",
+      "reason": "Macet {\"stage\":2,\"s\":18.89333333333338,\"ticks\":2778,\"players\":[{\"x\":-1.8,\"z\":-12.89333333333338,\"y\":0.26133617110981144,\"vy\":0,\"lift\":0,\"crouch\":false,\"lifting\":false,\"rotating\":false,\"jump\":false,\"grounded\":true,\"lower\":0,\"gripHeight\":1.4,\"support\":null},{\"x\":1.8,\"z\":-12.89333333333338,\"y\":0.26133617110981144,\"vy\":0,\"lift\":0,\"crouch\":false,\"lifting\":false,\"rotating\":false,\"jump\":false,\"grounded\":true,\"lower\":0,\"gripHeight\":1.4,\"support\":null}],\"targets\":[{\"x\":-1.8,\"z\":-13.59333333333338},{\"x\":1.8,\"z\":-13.59333333333338}],\"control\":[{\"x\":0,\"y\":-0.7368421052631572,\"glassX\":0,\"glassY\":0},{\"x\":0,\"y\":-0.7368421052631572,\"glassX\":0,\"glassY\":0}],\"config\":{\"offset\":0,\"yawOffset\":0,\"span\":1.8,\"roll\":0,\"grips\":[1.4,1.4],\"speed\":2.8},\"ferries\":[],\"blocking\":[{\"id\":\"1-0\",\"kind\":\"awning\",\"center\":{\"x\":0,\"y\":1.4153796739063664,\"z\":-13.934426229508198}}]}"
+    },
+    {
+      "stage": 3,
+      "result": "BLOCKED",
+      "reason": "Macet {\"stage\":3,\"s\":15.300000000000033,\"ticks\":2692,\"players\":[{\"x\":-1.8,\"z\":-9.300000000000033,\"y\":0.3919021987714094,\"vy\":0,\"lift\":0,\"crouch\":false,\"lifting\":false,\"rotating\":false,\"jump\":false,\"grounded\":true,\"lower\":0,\"gripHeight\":1.4,\"support\":null},{\"x\":1.8,\"z\":-9.300000000000033,\"y\":0.3919021987714094,\"vy\":0,\"lift\":0,\"crouch\":false,\"lifting\":false,\"rotating\":false,\"jump\":false,\"grounded\":true,\"lower\":0,\"gripHeight\":1.4,\"support\":null}],\"targets\":[{\"x\":-1.8,\"z\":-10.000000000000032},{\"x\":1.8,\"z\":-10.000000000000032}],\"control\":[{\"x\":0,\"y\":-0.7368421052631572,\"glassX\":0,\"glassY\":0},{\"x\":0,\"y\":-0.7368421052631572,\"glassX\":0,\"glassY\":0}],\"config\":{\"offset\":0,\"yawOffset\":0,\"span\":1.8,\"roll\":0,\"grips\":[1.4,1.4],\"speed\":2.8},\"ferries\":[],\"blocking\":[]}"
+    },
+    {
+      "stage": 4,
+      "result": "BLOCKED",
+      "reason": "{\"stage\":4,\"ticks\":306,\"s\":16.046666666666702,\"message\":\"Kaca menyentuh benda padat.\",\"breaks\":1,\"players\":[{\"x\":-1.8,\"z\":-10.046666666666704,\"y\":-1.389978497899398,\"vy\":-6.7666666666666675,\"lift\":0,\"crouch\":false,\"lifting\":false,\"rotating\":false,\"jump\":false,\"grounded\":false,\"lower\":0,\"gripHeight\":1.4,\"support\":null},{\"x\":1.8,\"z\":-10.046666666666704,\"y\":-1.389978497899398,\"vy\":-6.7666666666666675,\"lift\":0,\"crouch\":false,\"lifting\":false,\"rotating\":false,\"jump\":false,\"grounded\":false,\"lower\":0,\"gripHeight\":1.4,\"support\":null}],\"pane\":{\"x\":0,\"z\":-10.002877641907478,\"y\":0.3829099735935476,\"yaw\":0,\"tilt\":0,\"roll\":0,\"slope\":0}}"
+    },
+    {
+      "stage": 5,
+      "result": "BLOCKED",
+      "reason": "{\"stage\":5,\"ticks\":357,\"s\":18.660000000000046,\"message\":\"Kaca menyentuh benda padat.\",\"breaks\":1,\"players\":[{\"x\":-1.8,\"z\":-12.706666666666713,\"y\":0.28463578285542035,\"vy\":0,\"lift\":0,\"crouch\":false,\"lifting\":false,\"rotating\":false,\"jump\":false,\"grounded\":true,\"lower\":0,\"gripHeight\":1.4,\"support\":null},{\"x\":1.8,\"z\":-12.706666666666713,\"y\":0.28463578285542035,\"vy\":0,\"lift\":0,\"crouch\":false,\"lifting\":false,\"rotating\":false,\"jump\":false,\"grounded\":true,\"lower\":0,\"gripHeight\":1.4,\"support\":null}],\"pane\":{\"x\":0,\"z\":-12.529093414914938,\"y\":1.681988001642561,\"yaw\":0,\"tilt\":0,\"roll\":0,\"slope\":0}}"
+    },
+    {
+      "stage": 6,
+      "result": "BLOCKED",
+      "reason": "{\"stage\":6,\"ticks\":401,\"s\":20.713333333333388,\"message\":\"Kaca menyentuh benda padat.\",\"breaks\":1,\"players\":[{\"x\":-1.8,\"z\":-14.760000000000055,\"y\":0.6301726017437418,\"vy\":0,\"lift\":0,\"crouch\":false,\"lifting\":false,\"rotating\":false,\"jump\":false,\"grounded\":true,\"lower\":0,\"gripHeight\":1.4,\"support\":null},{\"x\":1.8,\"z\":-14.760000000000055,\"y\":0.6301726017437418,\"vy\":0,\"lift\":0,\"crouch\":false,\"lifting\":false,\"rotating\":false,\"jump\":false,\"grounded\":true,\"lower\":0,\"gripHeight\":1.4,\"support\":null}],\"pane\":{\"x\":0,\"z\":-14.58242674824828,\"y\":2.024893413681458,\"yaw\":0,\"tilt\":0,\"roll\":0,\"slope\":0}}"
+    }
+  ],
+  "limitation": "Gabungan tiga rentang input sintetis pada hash source yang sama, tanpa teleport/kekebalan. Rute mengetahui peta dan merencanakan fase. Bukan playtest, dua HP fisik, benchmark atau bukti keseruan manusia."
+}

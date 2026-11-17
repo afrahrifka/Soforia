@@ -1,0 +1,122 @@
+;FFMETADATA1
+title=Carry the Glass — Review Arena dan Gameplay
+[CHAPTER]
+TIMEBASE=1/1000
+START=0
+END=20583
+title=1. Gang Pengiriman · Angkat muatan + Lompat bersama
+[CHAPTER]
+TIMEBASE=1/1000
+START=20583
+END=28125
+title=1. Gang Pengiriman · Arus silang
+[CHAPTER]
+TIMEBASE=1/1000
+START=28125
+END=35417
+title=1. Gang Pengiriman · Satu baris + lompat terpisah
+[CHAPTER]
+TIMEBASE=1/1000
+START=35417
+END=44833
+title=1. Gang Pengiriman · Ratakan lalu merunduk
+[CHAPTER]
+TIMEBASE=1/1000
+START=44833
+END=51708
+title=1. Gang Pengiriman · Guling dan ubah formasi
+[CHAPTER]
+TIMEBASE=1/1000
+START=51708
+END=59000
+title=1. Gang Pengiriman · Pijakan sempit beruntun
+[CHAPTER]
+TIMEBASE=1/1000
+START=59000
+END=65875
+title=2. Akar & Ranting · Jembatan putus
+[CHAPTER]
+TIMEBASE=1/1000
+START=65875
+END=72792
+title=2. Akar & Ranting · Batang berayun
+[CHAPTER]
+TIMEBASE=1/1000
+START=72792
+END=82208
+title=2. Akar & Ranting · Tinggi dua sisi berbeda
+[CHAPTER]
+TIMEBASE=1/1000
+START=82208
+END=90083
+title=3. Pergantian Shift · Piston bergantian
+[CHAPTER]
+TIMEBASE=1/1000
+START=90083
+END=97458
+title=3. Pergantian Shift · Batang penyapu
+[CHAPTER]
+TIMEBASE=1/1000
+START=97458
+END=109292
+title=4. Jembatan Embun · Feri maju-mundur
+[CHAPTER]
+TIMEBASE=1/1000
+START=109292
+END=118208
+title=4. Jembatan Embun · Kapak berayun
+[CHAPTER]
+TIMEBASE=1/1000
+START=118208
+END=129167
+title=5. Muatan Orbit · Lift dua tebing
+[CHAPTER]
+TIMEBASE=1/1000
+START=129167
+END=138583
+title=6. Lintasan Es · Ratakan lalu merunduk
+[CHAPTER]
+TIMEBASE=1/1000
+START=138583
+END=145500
+title=7. Pasar Bergerak · Bilah gunting
+[CHAPTER]
+TIMEBASE=1/1000
+START=145500
+END=152417
+title=7. Pasar Bergerak · Rahang mesin
+[CHAPTER]
+TIMEBASE=1/1000
+START=152417
+END=167708
+title=10. Dermaga Menyamping · Feri menyamping
+[CHAPTER]
+TIMEBASE=1/1000
+START=167708
+END=174583
+title=10. Dermaga Menyamping · Palu berputar
+[CHAPTER]
+TIMEBASE=1/1000
+START=174583
+END=184208
+title=13. Bongkar Muat · Iris bintang
+[CHAPTER]
+TIMEBASE=1/1000
+START=184208
+END=193083
+title=15. Tiga Ketukan Mesin · Satu baris + palu
+[CHAPTER]
+TIMEBASE=1/1000
+START=193083
+END=200042
+title=18. Rahang Beku · Dinding bernapas
+[CHAPTER]
+TIMEBASE=1/1000
+START=200042
+END=241750
+title=37. Gang Dua Lantai · Guling dan ubah formasi + Satu baris + lompat terpisah + Iris bintang + Piston bergantian
+[CHAPTER]
+TIMEBASE=1/1000
+START=241750
+END=302625
+title=60. Kaca di Puncak · Lompat bersama + Guling dan ubah formasi + Pijakan sempit beruntun + Ratakan lalu merunduk + Lompat bersama + Satu baris + lompat terpisah

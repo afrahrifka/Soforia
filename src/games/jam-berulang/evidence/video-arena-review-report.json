@@ -1,0 +1,352 @@
+{
+  "result": "PASS",
+  "sourceHash": "ab871f6bb98f9f1632437c79624715309481993727a0639826b800c6460631d8",
+  "video": "/home/oskhar/Videos/Soforia/jam-berulang-arena-review-20261116062936.mp4",
+  "frames": 12129,
+  "fps": 24,
+  "duration": 505.375,
+  "bytes": 14249678,
+  "codec": "h264",
+  "chapters": [
+    {
+      "district": 1,
+      "title": "Pelabuhan Jarum",
+      "seconds": 0,
+      "speed": 1
+    },
+    {
+      "district": 2,
+      "title": "Kepulauan Gema",
+      "seconds": 23.25,
+      "speed": 1
+    },
+    {
+      "district": 3,
+      "title": "Akuaduk Patah",
+      "seconds": 65.33333333333333,
+      "speed": 1
+    },
+    {
+      "district": 4,
+      "title": "Planetarium Retak",
+      "seconds": 124.70833333333333,
+      "speed": 1
+    },
+    {
+      "district": 5,
+      "title": "Arsip Jam Pasir",
+      "seconds": 176.91666666666666,
+      "speed": 1
+    },
+    {
+      "district": 6,
+      "title": "Mahkota Paradoks",
+      "seconds": 286.375,
+      "speed": 1
+    }
+  ],
+  "completed": [
+    {
+      "district": 0,
+      "loops": 1,
+      "time": 15.161290322580733,
+      "overtime": false,
+      "timeline": [],
+      "events": [
+        {
+          "t": 4.19354838709677,
+          "label": "Roda a tersimpan lintas loop"
+        },
+        {
+          "t": 8.387096774193587,
+          "label": "Roda b tersimpan lintas loop"
+        },
+        {
+          "t": 12.580645161290384,
+          "label": "Roda c tersimpan lintas loop"
+        }
+      ]
+    },
+    {
+      "district": 1,
+      "loops": 2,
+      "time": 25.292741935483477,
+      "overtime": false,
+      "timeline": [
+        {
+          "id": 1,
+          "events": [
+            {
+              "t": 3.8709677419354667,
+              "label": "Rekaman dikunci; gema akan menetap di titik terakhir."
+            }
+          ],
+          "duration": 3.8709677419354667
+        }
+      ],
+      "events": [
+        {
+          "t": 0,
+          "label": "Gema diputar."
+        },
+        {
+          "t": 8.370967741935539,
+          "label": "Gerbang G terkait permanen"
+        },
+        {
+          "t": 12.38951612903236,
+          "label": "Roda a tersimpan lintas loop"
+        },
+        {
+          "t": 20.131451612903135,
+          "label": "Roda b tersimpan lintas loop"
+        },
+        {
+          "t": 23.679838709677124,
+          "label": "Roda c tersimpan lintas loop"
+        }
+      ]
+    },
+    {
+      "district": 2,
+      "loops": 2,
+      "time": 41.5870967741923,
+      "overtime": false,
+      "timeline": [
+        {
+          "id": 2,
+          "events": [
+            {
+              "t": 4.8387096774193425,
+              "label": "Rekaman dikunci; gema akan menetap di titik terakhir."
+            }
+          ],
+          "duration": 4.8387096774193425
+        }
+      ],
+      "events": [
+        {
+          "t": 0,
+          "label": "Gema diputar."
+        },
+        {
+          "t": 15.336290322580778,
+          "label": "Gerbang G terkait permanen"
+        },
+        {
+          "t": 20.645161290322463,
+          "label": "Roda a tersimpan lintas loop"
+        },
+        {
+          "t": 27.096774193547905,
+          "label": "Roda b tersimpan lintas loop"
+        },
+        {
+          "t": 37.07096774193446,
+          "label": "Roda c tersimpan lintas loop"
+        }
+      ]
+    },
+    {
+      "district": 3,
+      "loops": 2,
+      "time": 38.64516129032152,
+      "overtime": false,
+      "timeline": [
+        {
+          "id": 3,
+          "events": [
+            {
+              "t": 0.6451612903225764,
+              "label": "Rekaman dikunci; gema akan menetap di titik terakhir."
+            }
+          ],
+          "duration": 0.6451612903225764
+        }
+      ],
+      "events": [
+        {
+          "t": 0,
+          "label": "Gema diputar."
+        },
+        {
+          "t": 21.40080645161277,
+          "label": "Gerbang G terkait permanen"
+        },
+        {
+          "t": 24.129032258064235,
+          "label": "Roda a tersimpan lintas loop"
+        },
+        {
+          "t": 31.87096774193476,
+          "label": "Roda b tersimpan lintas loop"
+        },
+        {
+          "t": 37.35483870967642,
+          "label": "Roda c tersimpan lintas loop"
+        }
+      ]
+    },
+    {
+      "district": 4,
+      "loops": 3,
+      "time": 71.10564516128935,
+      "overtime": false,
+      "timeline": [
+        {
+          "id": 4,
+          "events": [
+            {
+              "t": 0.6451612903225816,
+              "label": "Rekaman dikunci; gema akan menetap di titik terakhir."
+            }
+          ],
+          "duration": 0.6451612903225816
+        },
+        {
+          "id": 5,
+          "events": [
+            {
+              "t": 0,
+              "label": "Gema diputar."
+            },
+            {
+              "t": 15.07822580645175,
+              "label": "Gerbang H terkait permanen"
+            },
+            {
+              "t": 18.4516129032258,
+              "label": "Rekaman dikunci; gema akan menetap di titik terakhir."
+            }
+          ],
+          "duration": 18.4516129032258
+        }
+      ],
+      "events": [
+        {
+          "t": 0,
+          "label": "Gema diputar."
+        },
+        {
+          "t": 39.35725806451502,
+          "label": "Gerbang G terkait permanen"
+        },
+        {
+          "t": 47.89193548386943,
+          "label": "Roda a tersimpan lintas loop"
+        },
+        {
+          "t": 52.73064516128854,
+          "label": "Roda b tersimpan lintas loop"
+        },
+        {
+          "t": 69.49274193548258,
+          "label": "Roda c tersimpan lintas loop"
+        }
+      ]
+    },
+    {
+      "district": 5,
+      "loops": 4,
+      "time": 140.79919354840146,
+      "overtime": false,
+      "timeline": [
+        {
+          "id": 6,
+          "events": [
+            {
+              "t": 0.6451612903225764,
+              "label": "Rekaman dikunci; gema akan menetap di titik terakhir."
+            }
+          ],
+          "duration": 0.6451612903225764
+        },
+        {
+          "id": 7,
+          "events": [
+            {
+              "t": 0,
+              "label": "Gema diputar."
+            },
+            {
+              "t": 10.755645161290389,
+              "label": "Gerbang G terkait permanen"
+            },
+            {
+              "t": 14.129032258064615,
+              "label": "Rekaman dikunci; gema akan menetap di titik terakhir."
+            }
+          ],
+          "duration": 14.129032258064615
+        },
+        {
+          "id": 8,
+          "events": [
+            {
+              "t": 0,
+              "label": "Gema diputar."
+            },
+            {
+              "t": 29.941935483870328,
+              "label": "Gerbang H terkait permanen"
+            },
+            {
+              "t": 34.81048387096684,
+              "label": "Rekaman dikunci; gema akan menetap di titik terakhir."
+            }
+          ],
+          "duration": 34.81048387096684
+        }
+      ],
+      "events": [
+        {
+          "t": 0,
+          "label": "Gema diputar."
+        },
+        {
+          "t": 100.07822580645734,
+          "label": "Gerbang I terkait permanen"
+        },
+        {
+          "t": 112.48387096775016,
+          "label": "Roda a tersimpan lintas loop"
+        },
+        {
+          "t": 124.5040322580752,
+          "label": "Roda b tersimpan lintas loop"
+        },
+        {
+          "t": 140.15403225807873,
+          "label": "Roda c tersimpan lintas loop"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "requests": [],
+  "assetFailures": [],
+  "limitation": "Render offline fixed-step 24 fps, tanpa audio. Seluruh distrik 1×, jeda penjelasan membekukan waktu simulasi. Semua perjalanan/gerbang melalui input dan aksi server asli; reset posisi hanya rewind/transisi aturan game. Bukan playtest manusia, dua HP fisik atau benchmark FPS/latensi.",
+  "fullDecode": "PASS",
+  "embeddedChapters": 6,
+  "storage": "~/Videos/Soforia",
+  "sha256": "b3147ef56b1977fee4379320f8447bef1e095634503cb4f63101c50e470c0478",
+  "posters": [
+    "/home/oskhar/Videos/Soforia/jam-berulang-arena-review-20261116062936-district-1.png",
+    "/home/oskhar/Videos/Soforia/jam-berulang-arena-review-20261116062936-district-2.png",
+    "/home/oskhar/Videos/Soforia/jam-berulang-arena-review-20261116062936-district-3.png",
+    "/home/oskhar/Videos/Soforia/jam-berulang-arena-review-20261116062936-district-4.png",
+    "/home/oskhar/Videos/Soforia/jam-berulang-arena-review-20261116062936-district-5.png",
+    "/home/oskhar/Videos/Soforia/jam-berulang-arena-review-20261116062936-district-6.png"
+  ],
+  "validationFrames": [
+    {
+      "seconds": 41.25,
+      "file": "/home/oskhar/Videos/Soforia/jam-berulang-arena-review-20261116062936-sample-replay.png"
+    },
+    {
+      "seconds": 503.375,
+      "file": "/home/oskhar/Videos/Soforia/jam-berulang-arena-review-20261116062936-sample-final.png"
+    }
+  ],
+  "visualInspection": "PASS: dua frame hasil encode diperiksa (rintangan/replay dan bagian akhir)."
+}

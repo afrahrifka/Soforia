@@ -14,7 +14,12 @@ export function buildConsole(g:any,kit:SceneKit){
  scene.background=new T.Color(sky);scene.fog=new T.Fog(sky,48,155);kit.camera=new T.PerspectiveCamera(46,targetAspect(),.1,230);
  if(keyLight){keyLight.color.set(space?'#cbd8ff':'#fff1dd');keyLight.intensity=space?2:2.6;}
  box(world,space?'#5b6984':forest?'#70875a':'#84956f',0,-7.3,-20,600,.6,600);
- const mesh=(positions:number[],color:string)=>{const geo=new T.BufferGeometry();geo.setAttribute('position',new T.Float32BufferAttribute(positions,3));geo.computeVertexNormals();const object=new T.Mesh(geo,material(color));object.receiveShadow=true;object.userData.ownedGeometry=geo;world.add(object);};
+ // Map lebih panjang: pecah mesh tanah/jalan agar frustum dapat membuang
+ // bagian jauh. Semua segitiga dipertahankan, termasuk potongan lubang.
+ const mesh=(positions:number[],color:string)=>{
+  const chunks=new Map<string,number[]>();for(let i=0;i<positions.length;i+=9){const x=(positions[i]+positions[i+3]+positions[i+6])/3,z=(positions[i+2]+positions[i+5]+positions[i+8])/3,key=`${Math.floor(x/20)},${Math.floor(z/20)}`,chunk=chunks.get(key)||[];for(let j=0;j<9;j++)chunk.push(positions[i+j]);chunks.set(key,chunk);}
+  for(const chunk of chunks.values()){const geo=new T.BufferGeometry();geo.setAttribute('position',new T.Float32BufferAttribute(chunk,3));geo.computeVertexNormals();geo.computeBoundingSphere();const object=new T.Mesh(geo,material(color));object.receiveShadow=true;object.userData.ownedGeometry=geo;world.add(object);}
+ };
  mesh(glassTerrainTriangles(course),theme.ground);mesh(glassRoadTriangles(course),theme.road);
  if(course.gaps.length){mesh(glassPitTriangles(course),new T.Color(theme.stone).multiplyScalar(.48).getStyle());for(const gap of course.gaps){const water=box(world,['#417f9c','#397f7e','#946b4d','#4f9394','#344467','#698baa'][course.world],gap.x,gap.bottom+.02,gap.z,gap.w,.04,gap.d);water.rotation.y=gap.yaw;water.receiveShadow=false;}}
  const batches=new Map<string,T.Matrix4[]>(),matrix=new T.Matrix4(),basisMatrix=new T.Matrix4(),v0=new T.Vector3(),v1=new T.Vector3(),v2=new T.Vector3(),quaternion=new T.Quaternion();
@@ -24,7 +29,7 @@ export function buildConsole(g:any,kit:SceneKit){
  const moving:{prop:typeof course.obstacles[number];meshes:T.Mesh[]}[]=[];
  for(const o of course.obstacles){
   const parts=propParts(course,o,g.elapsed||0);
-  if(glassMovingKinds.has(o.kind)){moving.push({prop:o,meshes:parts.map(part=>{const object=new T.Mesh(geometry('box'),material(part.color));object.matrixAutoUpdate=false;object.matrix.copy(partMatrix(part));object.castShadow=object.receiveShadow=true;world.add(object);return object;})});}
+  if(glassMovingKinds.has(o.kind)){moving.push({prop:o,meshes:parts.map(part=>{const object=new T.Mesh(geometry(part.geometry||'box'),material(part.color));object.matrixAutoUpdate=false;object.matrix.copy(partMatrix(part));object.castShadow=object.receiveShadow=true;world.add(object);return object;})});}
   else for(const part of parts)batch((part.geometry||'box')+'|'+part.color,partMatrix(part));
   if(o.kind==='car'){
    decor(o,0,o.bottom+1.1,-1.035,1.44,.44,.018,'#b5d3dc');decor(o,0,o.bottom+1.1,1.135,1.44,.44,.018,'#b5d3dc');

@@ -1,0 +1,7 @@
+Cobblestone Floor 001 — Poly Haven
+Source: https://polyhaven.com/a/cobblestone_floor_001
+License: CC0 1.0 Universal
+https://creativecommons.org/publicdomain/zero/1.0/
+Policy: https://polyhaven.com/license
+Downloaded 16 November 2026: 1K JPG diffuse, OpenGL normal, roughness.
+Original files preserved; checksums and download URLs in ../evidence/visual-assets.json.
